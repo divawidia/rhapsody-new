@@ -107,7 +107,7 @@
       <div class="container">
         <div class="title-area text-center">
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-            <img alt="" width="50" src="//img/icon/circle-icon.svg">
+            <img alt="" width="50" src="/img/icon/circle-icon.svg">
           </div>
           <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
           <h2 class="sec-title" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Our Programs</h2>
@@ -128,7 +128,7 @@
               </div>
               <div class="category-content">
                 <h5 class="category-title">
-                  <a href="front-office.html">Front Office</a>
+                  <a href="{{ route('front-office') }}">Front Office</a>
                 </h5>
               </div>
             </div>
@@ -144,7 +144,7 @@
               </div>
               <div class="category-content">
                 <h5 class="category-title">
-                  <a href="house-keeping.html">House Keeping</a>
+                  <a href="{{ route('housekeeping') }}">House Keeping</a>
                 </h5>
               </div>
             </div>
@@ -160,7 +160,7 @@
               </div>
               <div class="category-content">
                 <h5 class="category-title">
-                  <a href="f&b-product.html">Food & Baverage Product</a>
+                  <a href="{{ route('f&b-product') }}">Food & Baverage Product</a>
                 </h5>
               </div>
             </div>
@@ -176,7 +176,7 @@
               </div>
               <div class="category-content">
                 <h5 class="category-title">
-                  <a href="f&b-service.html">Food & Baverage Service</a>
+                  <a href="{{ route('f&b-service') }}">Food & Baverage Service</a>
                 </h5>
               </div>
             </div>
@@ -257,7 +257,7 @@
                   <h2 class="cta-title h1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     Top Quality Facilities For Learning at Affordable Price
                   </h2>
-                  <a href="facilities.html" class="vs-btn style2-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"
+                  <a href="{{ route('fasilitas') }}" class="vs-btn style2-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"
                     ><i class="fa-solid fa-angle-right"></i>More Info</a
                   >
                 </div>
@@ -282,23 +282,23 @@
             <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
               <div class="course-style2">
                 <div class="course-img">
-                  <a href="facilities.html"
+                  <a href="{{ route('fasilitas') }}"
                     ><img
                       class="w-100"
-                      src="/img/course/course-2-1.jpg"
+                      src="/img/course/fb-service1.jpg"
                       alt="Course Img"
                   /></a>
                 </div>
                 <div class="course-content">
                   <h3 class="h5 course-name">
-                    <a href="facilities.html" class="text-inherit"
+                    <a href="{{ route('fasilitas') }}" class="text-inherit"
                       >Sensory Gastro Lab</a
                     >
                   </h3>
                   <div class="course-meta"></div>
                   <div class="course-footer">
                     <div class="course-teacher">
-                      <a href="facilities.html" class="text-inherit-body"
+                      <a href="{{ route('fasilitas') }}" class="text-inherit-body"
                         >Lab restaurant dengan konsep creative fun dinning
                          yang dikembangkan untuk mengasah kretifitas mahasiswa
                          dalam bidang food & baverages</a
@@ -311,16 +311,16 @@
             <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
               <div class="course-style2">
                 <div class="course-img">
-                  <a href="facilities.html"
+                  <a href="{{ route('fasilitas') }}"
                     ><img
                       class="w-100"
-                      src="/img/course/course-2-2.jpg"
+                      src="/img/course/alenia-kitchen.jpg"
                       alt="Course Img"
                   /></a>
                 </div>
                 <div class="course-content">
                   <h3 class="h5 course-name">
-                    <a href="facilities.html" class="text-inherit"
+                    <a href="{{ route('fasilitas') }}" class="text-inherit"
                       >Alenia Kitchen</a
                     >
                   </h3>
@@ -328,7 +328,7 @@
                   </div>
                   <div class="course-footer">
                     <div class="course-teacher">
-                      <a href="facilities.html" class="text-inherit-body"
+                      <a href="{{ route('fasilitas') }}" class="text-inherit-body"
                         >Food production lab yang dikembangkan untuk mahasiswa
                         yang memiliki passion di bidang food production</a
                       >
@@ -340,16 +340,16 @@
             <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
               <div class="course-style2">
                 <div class="course-img">
-                  <a href="facilities.html"
+                  <a href="{{ route('fasilitas') }}"
                     ><img
                       class="w-100"
-                      src="/img/course/course-2-3.jpg"
+                      src="/img/course/hk3.jpg"
                       alt="Course Img"
                   /></a>
                 </div>
                 <div class="course-content">
                   <h3 class="h5 course-name">
-                    <a href="facilities.html" class="text-inherit"
+                    <a href="{{ route('fasilitas') }}" class="text-inherit"
                       >Alpha Suite</a
                     >
                   </h3>
@@ -357,7 +357,7 @@
                   </div>
                   <div class="course-footer">
                     <div class="course-teacher">
-                      <a href="facilities.html" class="text-inherit-body"
+                      <a href="{{ route('fasilitas') }}" class="text-inherit-body"
                         >Mockup room dengan design modern minimalis untuk
                         tempat praktik mahasiswa bidang room division</a
                       >
@@ -500,7 +500,7 @@
       <div class="container">
         <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
-            <img alt="" width="50" src="//img/icon/circle-icon.svg"></img>
+            <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
           </div>
           <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">PLEASURES HAVE TO REPUDIATED </span>
           <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Top Companies</h2>

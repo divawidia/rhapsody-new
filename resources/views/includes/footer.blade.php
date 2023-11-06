@@ -12,7 +12,7 @@ Footer Area
                     <div class="widget footer-widget">
                         <div class="vs-widget-about">
                             <div class="footer-logo">
-                                <a href="index.html"
+                                <a href="{{ route('home') }}"
                                     ><img src="/img/logo.png" alt="logo"
                                 /></a>
                             </div>
@@ -65,33 +65,21 @@ Footer Area
                     <h3 class="widget_title">Our Programs</h3>
                     <div class="menu-all-pages-container footer-menu">
                         <ul class="menu">
-                        <li><a href="front-office.html">Front Office (D1)</a></li>
-                        <li><a href="house-keeping.html">House Keeping (D1)</a></li>
-                        <li>
-                            <a href="f&b-service.html"
-                            >Food & Baverage Service (D1)</a
-                            >
-                        </li>
-                        <li>
-                            <a href="f&b-product.html"
-                            >Food & Baverage Product (D1)</a
-                            >
-                        </li>
-                        <li>
-                            <a href="laundry&hk.html">
-                            Laundry & House Keeping (Executive Class)</a
-                            >
-                        </li>
-                        <li>
-                            <a href="galley&cook.html"
-                            >Galley & Cook (Executive Class)</a
-                            >
-                        </li>
-                        <li>
-                            <a href="bar&service.html"
-                            >Bar & Service (Executive Class)</a
-                            >
-                        </li>
+                            <li><a href="{{ route('front-office') }}">Front Office (D1)</a></li>
+                            <li><a href="{{ route('housekeeping') }}">House Keeping (D1)</a></li>
+                            <li>
+                                <a href="{{ route('f&b-service') }}">Food & Baverage Service (D1)</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('f&b-product') }}">Food & Baverage Product (D1)</a>
+                            </li>
+                            <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping (Executive Class)</a></li>
+                            <li>
+                                <a href="{{ route('galley&cook') }}">Galley & Cook (Executive Class)</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('bar&service') }}">Bar & Service (Executive Class)</a>
+                            </li>
                         </ul>
                     </div>
                     </div>
@@ -102,7 +90,7 @@ Footer Area
                         <h4 class="contact-title">Looking to Study With Us?</h4>
                         <p class="contact-text">Speak to our admin</p>
                         <a
-                        href="https://wa.me/6287761451536"
+                        href="https://wa.me/6287761360697"
                         class="contact-number h5 fs-6"
                         ><i class="fa-brands fa-whatsapp"></i> +62877-6136-0697</a
                         >
@@ -118,7 +106,7 @@ Footer Area
             <div class="text-center col-lg-auto">
                 <p class="copyright-text">
                 Copyright <i class="fal fa-copyright"></i> 2023
-                <a href="index.html">Rhapsody Hospitality Development Center</a
+                <a href="{{ route('home') }}">Rhapsody Hospitality Development Center</a
                 >. All Rights Reserved
                 </p>
             </div>

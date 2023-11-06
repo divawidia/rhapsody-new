@@ -5,224 +5,616 @@
 @endsection
 
 @section('content')
-<!--==============================
-    Breadcumb
-============================== -->
     <div
-      class="breadcumb-wrapper"
-      style="background: url('/img/breadcumb/breadcumb-bg.png');
-            background-repeat: no-repeat;
-            background-size: cover;"
+        class="breadcumb-wrapper"
+        data-bg-src="/img/breadcumb/breadcumb-bg.png"
     >
-      <div class="container z-index-common">
-        <div class="breadcumb-content">
-          <h1 class="breadcumb-title"data-aos="fade-right" data-aos-duration="1000">Housekeeping</h1>
-          <p class="breadcumb-text"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-            Diploma 1
-          </p>
-          <div class="breadcumb-menu-wrap">
-            <ul class="breadcumb-menu">
-              <li><a href="{{ route('home') }}">HOME</a></li>
-              <li>ABOUT US</li>
-            </ul>
-          </div>
+        <div class="container z-index-common">
+            <div class="breadcumb-content">
+                <h1 class="breadcumb-title">Galley & Cook</h1>
+                <p class="breadcumb-text">Executive Class Hybrid</p>
+                <div class="breadcumb-menu-wrap">
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Galley & Cook</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-<!--==============================
-  Course Area
-==============================-->
-<section class="course-details space-top space-extra-bottom">
-    <div class="container">
-        <div class="row flex-row-reverse gx-50">
-            <div class="col-lg-8">
-                <div class="mega-hover course-img" data-aos="fade-up"
-                     data-aos-duration="1000">
-                    <img src="/img/course/course-2-3.jpg" alt="front-office" />
-                </div>
-                <h2 class="course-title" data-aos="fade-up"
-                    data-aos-duration="1000" data-aos-delay="100">Housekeeping</h2>
-                <div class="row course-meta pb-3 pt-4" data-aos="fade-up"
-                     data-aos-duration="1000" data-aos-delay="200">
-                    <div class="col-auto" data-aos="fade-up"
-                         data-aos-duration="1000" data-aos-delay="250">
-                        <div class="course-price">
-                            <span class="currency">Rp.11.600.000</span>
-                        </div>
-                        <p class="fs-6 mt-2">Biaya pendidikan sudah termasuk:</p>
-                        <div class="fs-6 mt-n3">
-                            <ul>
-                                <li>Seragam teori & praktek</li>
-                                <li>Buku perkuliahan</li>
-                                <li>Kursus bahasa inggris</li>
-                                <li>Register membership victory cruise agency</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div
-                        class="col-auto d-flex justify-content-end align-items-start"
-                        data-aos="fade-up"
-                        data-aos-duration="1000" data-aos-delay="250"
-                    >
-                        <a class="vs-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdQfZLct5IEuVqStUxDvdFp1slLaXTdC7ApndBGTywTNcgMVQ/viewform">Daftar Sekarang</a>
+    <!--==============================
+      Course Area
+  ==============================-->
+    <section class="course-details space-top space-extra-bottom">
+        <div class="container">
+            <div class="mega-hover course-img">
+                <img src="/img/course/cook.jpg" alt="girl" />
+            </div>
+            <div class="row flex-row-reverse">
+                <div class="col-lg-4">
+                    <div class="course-meta-box">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th><i class="far fa-hourglass"></i>Duration:</th>
+                                <td>3 Month</td>
+                            </tr>
+                            <tr>
+                                <th><i class="far fa-clock"></i>Weekly Study:</th>
+                                <td>3x/week</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fa-solid fa-suitcase"></i>Course Type:</th>
+                                <td>Hybrid (online & offline)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <a href="https://forms.gle/F4qyodkw1TyzhRJ97" class="vs-btn"
+                        >Daftar Sekarang</a
+                        >
                     </div>
                 </div>
-                <div class="" data-aos="fade-up"
-                     data-aos-duration="1000" data-aos-delay="100">
-                    <h5 class="border-title2 mt-4">Overview</h5>
+                <div class="col-lg-8">
+                    <div class="course-category">
+                        <a href="course.html">Executive Class Hybrid</a>
+                    </div>
+                    <h2 class="course-title">Galley & Cook</h2>
+                    <h5 class="border-title2">Overview</h5>
                     <p>
-                        House Keeping Program adalah berfokus pada system pelayanan di dalam pembersihan dan penaataan kamar di suatu hotel ataupun industry perhotelan.
-                        Untuk mendukung program kami menyediakan tempat praktek ataupun lab yang standar pada hotel maupun jenis kamar di industry yaitu ALPHA SUITE.
+                        Galley & Cook adalah program pelatihan Executive yang merupakan
+                        trobosan terbaru dari LPK Rhapsody yang dirancang untuk
+                        mempersiapkan peserta dengan keterampilan dan pengetahuan yang
+                        diperlukan untuk sukses dalam keterampilan memasak profesional
+                        serta pengetahuan mendalam tentang operasional galley kapal pesiar
+                        atau restoran. peserta akan mendalami berbagai aspek teoritis
+                        dalam seni memasak, termasuk teknik memasak, penggunaan
+                        bahan-bahan, pengolahan makanan, serta kebersihan dan keselamatan
+                        makanan. Mereka juga akan mempelajari tata cara pengelolaan galley
+                        atau dapur restoran yang efisien. Pelatihan ini akan memberikan
+                        pemahaman yang kokoh agar dapat menjadi koki profesional yang
+                        terampil, dan juga pelatihan bahasa inggris industri perhotelan.
                     </p>
-                </div>
-                <div class="" data-aos="fade-up"
-                     data-aos-duration="1000" data-aos-delay="200">
-                    <h5 class="mt-4 border-title2">Special Feature</h5>
+                    <h5>Pelatihan Singkat untuk Langsung Terjun ke Dunia Kerja</h5>
+                    <p>
+                        Pelatihan Executive Class ini berlangsung selama 3 bulan, yang
+                        mencakup 2 bulan pertama untuk teori, yang dapat diikuti baik
+                        secara online maupun offline untuk memberikan fleksibilitas kepada
+                        peserta. Setelah menyelesaikan komponen teori selama 2 bulan
+                        pertama, peserta akan melanjutkan ke 1 bulan terakhir, yang akan
+                        berfokus pada praktek secara offline. Selama periode ini, peserta
+                        akan memiliki kesempatan untuk mengaplikasikan pengetahuan yang
+                        telah mereka peroleh dalam situasi dunia nyata dan disisipkan
+                        dengan pelatihan Technical Interview interview yang berisi
+                        pertanyaan terkini yang kami ambil langsung dari mitra-mitra kami
+                    </p>
+                    <h5>
+                        Keuntungan yang Kamu Dapatkan Mengikuti Program Executive Class
+                    </h5>
+                    <p>
+                        Kami akan memberikan banyak keuntungan untuk kamu yang mempunyai
+                        tekad kuat untuk ingin bekerja di luar negeri, tidak peduli dari
+                        latar belakang apa.
+                    </p>
+                    <div class="list-style1 vs-list">
+                        <ul>
+                            <li>
+                                Sistem pembelajaran yang fleksibel atau dapat diikuti dimana
+                                saja
+                            </li>
+                            <li>
+                                Durasi pembelajaran yang singkat untuk langsung terjun ke
+                                dunia kerja
+                            </li>
+                            <li>Sertifikasi profesional untuk melamar kerja</li>
+                            <li>Pembayaran tidak harus full diawal</li>
+                            <li>
+                                Pelatihan Technical Interview dengan Mitra Perhotelan dan
+                                Kapal Pesiar
+                            </li>
+                            <li>
+                                Dibimbing dan dilatih oleh instruktur berpengalaman di
+                                industri
+                            </li>
+                            <li>
+                                Mendapat peluang untuk langsung bekerja di luar negeri atau
+                                kapal pesiar
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="inner-video-box">
+                      <img
+                        src="assets/img/course/course-details-2.jpg"
+                        alt="blog video"
+                      />
+                      <a
+                        href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                        class="play-btn position-center popup-video"
+                        ><i class="fas fa-play"></i
+                      ></a>
+                    </div> -->
+                    <!-- <h5 class="border-title2">Syllabus</h5>
 
-                    <div class="list-style1 vs-list">
-                        <ul>
-                            <li>
-                                <p class="fs-6 fw-bold my-0">Self Discover Program</p>
-                                <p>
-                                    Program inovasi yang bertujuan untuk membantu mahasiswa di
-                                    dalam merancang dream plan
+                    <div class="accordion accordion-style4" id="faqVersion2">
+                      <div class="accordion-item active">
+                        <div class="accordion-header" id="headingOne">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne"
+                          >
+                            <span class="button-label">Week 1</span>
+                            Getting started with Extensive Reading
+                          </button>
+                        </div>
+                        <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#faqVersion2"
+                        >
+                          <div class="accordion-body">
+                            <div class="syllabus-list">
+                              <div class="syllabus-img">
+                                <img
+                                  src="assets/img/course/course-syllabus-1.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">Introduction</h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  proident.
                                 </p>
-                            </li>
-                            <li>
-                                <p class="fs-6 fw-bold my-0">Empower Workshop</p>
-                                <p>
-                                    Program workshop yang melibatkan para industy expert untuk berbagi pengalaman sekaligus memberi
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-img">
+                                <img
+                                  src="assets/img/course/course-syllabus-2.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">
+                                  What do you understand by Extensive Reading?
+                                </h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  proident.
                                 </p>
-                            </li>
-                            <li>
-                                <p class="fs-6 fw-bold my-0">Free Agency Membership</p>
-                                <p>
-                                    Free membership of Victory cruise agency
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">Why Extensive Reading?</h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  illum dolore eu fugiat proident.
                                 </p>
-                            </li>
-                            <li>
-                                <p class="fs-6 fw-bold my-0">Tempat Praktek & Lab</p>
-                                <p>
-                                    Untuk mendukung program ini, kami menyediakan tempat praktek ataupun lab yang sesuai dengan
-                                    standar industri pariwisata yaitu ALPHA SUITE yang dilengkapi dengan fasilitas lengkap.
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">
+                                  Incorporating Extensive Reading
+                                </h6>
+                                <p class="syllabustext">
+                                  lit esse cillum dolore eu ferit in voluptate velit
+                                  esse cillum dolore eu fugiat nulla pariatur. Ex
+                                  cepteur sint upidatat non illum dolore eu fugiat
+                                  proident.
                                 </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-4 pt-lg-2" data-aos="fade-up"
-                     data-aos-duration="1000" data-aos-delay="100">
-                    <h5 class="border-title2">Program Description</h5>
-                    <div class="list-style1 vs-list">
-                        <ul>
-                            <li>
-                                Durasi pendidikan teori selama 1 bulan dan praktek selama 3 bulan
-                            </li>
-                            <li>
-                                Metode perkuliahan blended learning
-                            </li>
-                            <li>
-                                On the job training di industri perhotelan selama 6 bulan
-                            </li>
-                            <li>
-                                Pengurusan keberangkatan ke luar negeri selama 2 bulan
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="" data-aos="fade-up"
-                     data-aos-duration="1000" data-aos-delay="100">
-                    <h5 class="border-title2">Ayo Daftarkan Dirimu Sekarang!</h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header" id="headingTwo">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                          >
+                            <span class="button-label">Week 2</span>
+                            Practical pre-reading activities with graded readers
+                          </button>
+                        </div>
+                        <div
+                          id="collapseTwo"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingTwo"
+                          data-bs-parent="#faqVersion2"
+                        >
+                          <div class="accordion-body">
+                            <div class="syllabus-list">
+                              <div class="syllabus-img">
+                                <img
+                                  src="assets/img/course/course-syllabus-1.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">Introduction</h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-img">
+                                <img
+                                  src="assets/img/course/course-syllabus-2.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">
+                                  What do you understand by Extensive Reading?
+                                </h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">Why Extensive Reading?</h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  illum dolore eu fugiat proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">
+                                  Incorporating Extensive Reading
+                                </h6>
+                                <p class="syllabustext">
+                                  lit esse cillum dolore eu ferit in voluptate velit
+                                  esse cillum dolore eu fugiat nulla pariatur. Ex
+                                  cepteur sint upidatat non illum dolore eu fugiat
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header" id="headingThree">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                          >
+                            <span class="button-label">Week 3</span>
+                            Activities with graded readers
+                          </button>
+                        </div>
+                        <div
+                          id="collapseThree"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingThree"
+                          data-bs-parent="#faqVersion2"
+                        >
+                          <div class="accordion-body">
+                            <div class="syllabus-list">
+                              <div class="syllabus-img">
+                                <img
+                                  src="assets/img/course/course-syllabus-1.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">Introduction</h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-img">
+                                <img
+                                  src="assets/img/course/course-syllabus-2.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">
+                                  What do you understand by Extensive Reading?
+                                </h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">Why Extensive Reading?</h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  illum dolore eu fugiat proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">
+                                  Incorporating Extensive Reading
+                                </h6>
+                                <p class="syllabustext">
+                                  lit esse cillum dolore eu ferit in voluptate velit
+                                  esse cillum dolore eu fugiat nulla pariatur. Ex
+                                  cepteur sint upidatat non illum dolore eu fugiat
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header" id="headingFour">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour"
+                            aria-expanded="false"
+                            aria-controls="collapseFour"
+                          >
+                            <span class="button-label">Week 4</span>
+                            Practical post-reading
+                          </button>
+                        </div>
+                        <div
+                          id="collapseFour"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingFour"
+                          data-bs-parent="#faqVersion2"
+                        >
+                          <div class="accordion-body">
+                            <div class="syllabus-list">
+                              <div class="syllabus-img">
+                                <img
+                                  src="assets/img/course/course-syllabus-1.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">Introduction</h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-img">
+                                <img
+                                  src="assets/img/course/course-syllabus-2.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">
+                                  What do you understand by Extensive Reading?
+                                </h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">Why Extensive Reading?</h6>
+                                <p class="syllabustext">
+                                  Reprehenderit in voluptate velit esse cillum dolore eu
+                                  fugiat nulla pariatur. Ex cepteur sint upidatat non
+                                  illum dolore eu fugiat proident.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="syllabus-list">
+                              <div class="syllabus-content">
+                                <h6 class="syllabustitle">
+                                  Incorporating Extensive Reading
+                                </h6>
+                                <p class="syllabustext">
+                                  lit esse cillum dolore eu ferit in voluptate velit
+                                  esse cillum dolore eu fugiat nulla pariatur. Ex
+                                  cepteur sint upidatat non illum dolore eu fugiat
+                                  proident.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <h5 class="border-title2">
+                        Kapan kamu ingin mengikuti pelatihan ini?
+                    </h5>
                     <p>
-                        Daftarkan dirimu sekarang dan raih impian untuk menggapai kesuksesan di industri perhotelan dan kapal pesiar
+                        Ayo daftarkan dirimu sekarang untuk meraih pekerjaan impianmu
+                        diluar negeri dan langsung terjun ke dunia kerja dalam waktu yang
+                        singkat
                     </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQfZLct5IEuVqStUxDvdFp1slLaXTdC7ApndBGTywTNcgMVQ/viewform" class="vs-btn">Daftar Sekarang</a>
+                    <a href="https://forms.gle/F4qyodkw1TyzhRJ97" class="vs-btn"
+                    >Daftar Sekarang</a
+                    >
+                    <span class="available-badge">Available now</span>
+                    <!-- <div class="mt-4 pt-lg-2">
+                      <h5 class="border-title2">What will you achieve?</h5>
+                      <div class="list-style1 vs-list">
+                        <ul>
+                          <li>
+                            Apply extensive reading in the classroom to help students
+                            learn English more effectively.
+                          </li>
+                          <li>
+                            Integrate extensive reading into a school learning
+                            programme.
+                          </li>
+                          <li>
+                            Identify practical pre-reading activities to get students
+                            interested in their graded readers.
+                          </li>
+                          <li>
+                            Identify practical while-reading activities to use with
+                            students.
+                          </li>
+                          <li>
+                            Identify practical post-reading activities to use with
+                            students.
+                          </li>
+                        </ul>
+                      </div>
+                    </div> -->
+                    <!-- <h5 class="border-title2">Who will you learn with?</h5>
+                    <div
+                      class="row vs-carousel gx-40"
+                      data-slide-show="2"
+                      data-lg-slide-show="2"
+                      data-md-slide-show="2"
+                      data-sm-slide-show="2"
+                      data-center-mode="true"
+                    >
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="team-style1">
+                          <div class="team-img">
+                            <img
+                              class="w-100"
+                              src="assets/img/team/team-1-1.jpg"
+                              alt="teacher"
+                            />
+                          </div>
+                          <div class="team-content">
+                            <div class="team-review">
+                              <i class="fas fa-star"></i><i class="fas fa-star"></i
+                              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                              ><i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="team-name">
+                              <a href="team-details.html">Thomas Walimes</a>
+                            </h4>
+                            <p class="team-degi">Science Tutor</p>
+                            <p class="team-text">
+                              I taught English and trained teachers for a decade then
+                              moved into workplace learning
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="team-style1">
+                          <div class="team-img">
+                            <img
+                              class="w-100"
+                              src="assets/img/team/team-1-2.jpg"
+                              alt="teacher"
+                            />
+                          </div>
+                          <div class="team-content">
+                            <div class="team-review">
+                              <i class="fas fa-star"></i><i class="fas fa-star"></i
+                              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                              ><i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="team-name">
+                              <a href="team-details.html">Nohima Homminu</a>
+                            </h4>
+                            <p class="team-degi">English Tutor</p>
+                            <p class="team-text">
+                              I taught English and trained teachers for a decade then
+                              moved into workplace learning
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="team-style1">
+                          <div class="team-img">
+                            <img
+                              class="w-100"
+                              src="assets/img/team/team-1-3.jpg"
+                              alt="teacher"
+                            />
+                          </div>
+                          <div class="team-content">
+                            <div class="team-review">
+                              <i class="fas fa-star"></i><i class="fas fa-star"></i
+                              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                              ><i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="team-name">
+                              <a href="team-details.html">Kaylin Moore</a>
+                            </h4>
+                            <p class="team-degi">Math Tutor</p>
+                            <p class="team-text">
+                              I taught English and trained teachers for a decade then
+                              moved into workplace learning
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="team-style1">
+                          <div class="team-img">
+                            <img
+                              class="w-100"
+                              src="assets/img/team/team-1-4.jpg"
+                              alt="teacher"
+                            />
+                          </div>
+                          <div class="team-content">
+                            <div class="team-review">
+                              <i class="fas fa-star"></i><i class="fas fa-star"></i
+                              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                              ><i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="team-name">
+                              <a href="team-details.html">Kaylin Moore</a>
+                            </h4>
+                            <p class="team-degi">History Tutor</p>
+                            <p class="team-text">
+                              I taught English and trained teachers for a decade then
+                              moved into workplace learning
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
                 </div>
-            </div>
-            <div class="col-lg-4 pt-4 pt-lg-0">
-                <aside>
-                    <div class="widget" data-aos="fade-up" data-aos-duration="1000">
-                        <h3 class="widget_title">Diploma 1</h3>
-                        <div class="course-list">
-                            <ul>
-                                <li>
-                                    <a href="{{ route('f&b-product') }}"
-                                    ><i class="fal fa-book"></i>Food & Baverage Product</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="{{ route('front-office') }}"
-                                    ><i class="fal fa-book"></i>Front Office</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="{{ route('f&b-service') }}"
-                                    ><i class="fal fa-book"></i>Food & Baverage Service</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="widget" data-aos="fade-up" data-aos-duration="1000">
-                        <h3 class="widget_title">Executive Class Hybrid</h3>
-                        <div class="course-list">
-                            <ul>
-                                <li>
-                                    <a href="{{ route('f&b-product') }}"
-                                    ><i class="fal fa-book"></i>Laundry & Housekeeping</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="{{ route('housekeeping') }}"
-                                    ><i class="fal fa-book"></i>Galley & Cook</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="{{ route('f&b-service') }}"
-                                    ><i class="fal fa-book"></i>Bar & Service</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row" data-aos="fade-up"
-                         data-aos-duration="1000" data-aos-delay="100">
-                        <div class="col-md-7 col-lg-12">
-                            <div
-                                class="img-box5 mega-hover wow fadeInUp"
-                                data-wow-delay="0.3s"
-                            >
-                                <div class="img-1">
-                                    <img
-                                        class="w-100"
-                                        src="/img/about/about-2-4.jpg"
-                                        alt="About Img"
-                                    />
-                                </div>
-                                <div class="box-content">
-                                    <h3 class="img-title">Registrasi Online</h3>
-                                    <p class="img-text">
-                                        Academic programs with top quality courses made by experts
-                                    </p>
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQfZLct5IEuVqStUxDvdFp1slLaXTdC7ApndBGTywTNcgMVQ/viewform" class="vs-btn">Registrasi</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-lg-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                            <div class="media-style5 wow fadeInUp" data-wow-delay="0.4s">
-                                <h5 class="media-title">Admission Process</h5>
-                                <a class="phone" href="https://wa.me/6287761360697"
-                                ><i class="fal fa-phone-alt"></i>+62877-6136-0697</a
-                                >
-                                <a class="mail" href="mailto:info@rhapsodyhospitality.com"
-                                ><i class="fal fa-envelope"></i>info@rhapsodyhospitality.com</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </aside>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection

@@ -79,7 +79,7 @@
       <div class="container">
         <div class="title-area text-center">
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
-            <img alt="" width="50" src="//img/icon/circle-icon.svg"></img>
+            <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
           </div>
           <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Why Rhapsody?</h2>
           <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">STRATEGIC DEVELOPMENT PARTNER</span>
@@ -175,7 +175,7 @@
       <div class="container">
         <div class="title-area text-center">
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
-            <img alt="" width="50" src="//img/icon/circle-icon.svg"></img>
+            <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
           </div>
           <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
           <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">What Our Goals?</h2>
@@ -252,7 +252,7 @@
       <div class="container">
         <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
-            <img alt="" width="50" src="//img/icon/circle-icon.svg"></img>
+            <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
           </div>
           <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">PLEASURES HAVE TO REPUDIATED </span>
           <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Top Companies </h2>

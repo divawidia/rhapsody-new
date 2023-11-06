@@ -40,6 +40,15 @@ Route::get('/programs/laundry-&-housekeeping', function () {
 Route::get('/programs/bar-&-service', function () {
     return view('pages.bar&service');
 })->name('bar&service');
-Route::get('/kunci-masa-depanmu-ada-disini!', function () {
+Route::get('/kunci-masa-depanmu-ada-disini', function () {
     return view('pages.landing_page_pendaftaran');
 })->name('landing_page');
+Route::get('/fasilitas', function () {
+    return view('pages.facilities');
+})->name('fasilitas');
+Route::get('/under-maintenance', function () {
+    return view('pages.under_maintenance');
+})->name('under-maintenance');
+Route::get('/contact-us', function () {
+    return view('pages.contact');
+})->name('contact');
