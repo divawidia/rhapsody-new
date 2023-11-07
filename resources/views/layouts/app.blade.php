@@ -20,7 +20,7 @@
     @stack('prepend-style')
     @include('includes.style')
     @stack('addon-style')
-    
+
   </head>
 
   <body>
@@ -29,11 +29,11 @@
 
     <!-- Page Content -->
     @yield('content')
-    
+
 
     {{-- footer --}}
     @include('includes.footer')
-    
+
     <!-- Bootstrap core JavaScript -->
     {{-- script --}}
     @stack('prepend-script')

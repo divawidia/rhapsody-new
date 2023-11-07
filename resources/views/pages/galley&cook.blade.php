@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    House Keeping | Rhapsody Hospitality Development Center
+    Galley & Cook | Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')
     <div
         class="breadcumb-wrapper"
-        data-bg-src="/img/breadcumb/breadcumb-bg.png"
+        style="background: url('/img/breadcumb/breadcumb-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;"
     >
         <div class="container z-index-common">
             <div class="breadcumb-content">
@@ -15,7 +17,7 @@
                 <p class="breadcumb-text">Executive Class Hybrid</p>
                 <div class="breadcumb-menu-wrap">
                     <ul class="breadcumb-menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li>Galley & Cook</li>
                     </ul>
                 </div>
@@ -27,12 +29,36 @@
   ==============================-->
     <section class="course-details space-top space-extra-bottom">
         <div class="container">
-            <div class="mega-hover course-img">
-                <img src="/img/course/cook.jpg" alt="girl" />
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner mega-hover course-img" data-aos="fade-up"
+                     data-aos-duration="1000">
+                    <div class="carousel-item active">
+                        <img src="/img/course/cook3.jpg" class="d-block w-100" alt="cook1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/course/cook2.jpg" class="d-block w-100" alt="cook2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/course/cook1.jpg" class="d-block w-100" alt="cook3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
             <div class="row flex-row-reverse">
                 <div class="col-lg-4">
-                    <div class="course-meta-box">
+                    <div class="course-meta-box" data-aos="fade-up" data-aos-duration="1000">
                         <table>
                             <tbody>
                             <tr>
@@ -55,12 +81,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="course-category">
-                        <a href="course.html">Executive Class Hybrid</a>
+                    <div class="course-category" data-aos="fade-right" data-aos-duration="1000">
+                        <a href="#">Executive Class Hybrid</a>
                     </div>
-                    <h2 class="course-title">Galley & Cook</h2>
-                    <h5 class="border-title2">Overview</h5>
-                    <p>
+                    <h2 class="course-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">Galley & Cook</h2>
+                    <h5 class="border-title2" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Overview</h5>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">
                         Galley & Cook adalah program pelatihan Executive yang merupakan
                         trobosan terbaru dari LPK Rhapsody yang dirancang untuk
                         mempersiapkan peserta dengan keterampilan dan pengetahuan yang
@@ -74,8 +100,8 @@
                         pemahaman yang kokoh agar dapat menjadi koki profesional yang
                         terampil, dan juga pelatihan bahasa inggris industri perhotelan.
                     </p>
-                    <h5>Pelatihan Singkat untuk Langsung Terjun ke Dunia Kerja</h5>
-                    <p>
+                    <h5 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Pelatihan Singkat untuk Langsung Terjun ke Dunia Kerja</h5>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="250">
                         Pelatihan Executive Class ini berlangsung selama 3 bulan, yang
                         mencakup 2 bulan pertama untuk teori, yang dapat diikuti baik
                         secara online maupun offline untuk memberikan fleksibilitas kepada
@@ -87,15 +113,15 @@
                         dengan pelatihan Technical Interview interview yang berisi
                         pertanyaan terkini yang kami ambil langsung dari mitra-mitra kami
                     </p>
-                    <h5>
+                    <h5 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
                         Keuntungan yang Kamu Dapatkan Mengikuti Program Executive Class
                     </h5>
-                    <p>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="350">
                         Kami akan memberikan banyak keuntungan untuk kamu yang mempunyai
                         tekad kuat untuk ingin bekerja di luar negeri, tidak peduli dari
                         latar belakang apa.
                     </p>
-                    <div class="list-style1 vs-list">
+                    <div class="list-style1 vs-list" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
                         <ul>
                             <li>
                                 Sistem pembelajaran yang fleksibel atau dapat diikuti dimana
@@ -460,18 +486,18 @@
                         </div>
                       </div>
                     </div> -->
-                    <h5 class="border-title2">
+                    <h5 class="border-title2" data-aos="fade-right" data-aos-duration="1000">
                         Kapan kamu ingin mengikuti pelatihan ini?
                     </h5>
-                    <p>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">
                         Ayo daftarkan dirimu sekarang untuk meraih pekerjaan impianmu
                         diluar negeri dan langsung terjun ke dunia kerja dalam waktu yang
                         singkat
                     </p>
-                    <a href="https://forms.gle/F4qyodkw1TyzhRJ97" class="vs-btn"
+                    <a href="https://forms.gle/F4qyodkw1TyzhRJ97" class="vs-btn" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100"
                     >Daftar Sekarang</a
                     >
-                    <span class="available-badge">Available now</span>
+                    <span class="available-badge" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">Available now</span>
                     <!-- <div class="mt-4 pt-lg-2">
                       <h5 class="border-title2">What will you achieve?</h5>
                       <div class="list-style1 vs-list">
