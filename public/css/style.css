@@ -829,7 +829,6 @@ textarea.is-invalid {
 }
 .vs-menu-wrapper .vs-menu-toggle {
     border: none;
-    font-size: 22px;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -837,7 +836,6 @@ textarea.is-invalid {
     line-height: 1;
     width: 33px;
     height: 33px;
-    line-height: 33px;
     font-size: 18px;
     z-index: 1;
     color: var(--white-color);
