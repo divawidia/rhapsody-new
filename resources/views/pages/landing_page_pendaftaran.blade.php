@@ -483,7 +483,7 @@
                                 <p class="landing-quote1">Membership <FONT COLOR="#CE5423">Victory</FONT></p>
                             </div>
                             <a
-                                href="https://forms.gle/F4qyodkw1TyzhRJ97"
+                                href="{{ route('registrasi-program-executive') }}"
                                 class="vs-btn mt-5"
                             >Daftar Yuk!</a>
                         </div>

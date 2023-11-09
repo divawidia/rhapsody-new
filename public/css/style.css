@@ -75,8 +75,8 @@ Version: 1.0.0
 @import url("https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
-    --theme-color: #17215d;
-    --theme-color2: #ce7e59;
+    --theme-color: #05263d;
+    --theme-color2: #ce5423;
     --theme-color3: #faf5f0;
     --vs-secondary-color: #17215d;
     --title-color: #000000;
