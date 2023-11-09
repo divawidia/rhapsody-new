@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Galley & Cook | Rhapsody Hospitality Development Center
+    Galley & Cook | LPK Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
     >
         <div class="container z-index-common">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title">Galley & Cook</h1>
-                <p class="breadcumb-text">Executive Class Hybrid</p>
-                <div class="breadcumb-menu-wrap">
+                <h1 class="breadcumb-title" data-aos="fade-right" data-aos-duration="1000">Galley & Cook</h1>
+                <p class="breadcumb-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">Executive Class Hybrid</p>
+                <div class="breadcumb-menu-wrap" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                     <ul class="breadcumb-menu">
-                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('home') }}">Beranda</a></li>
                         <li>Galley & Cook</li>
                     </ul>
                 </div>
@@ -62,20 +62,20 @@
                         <table>
                             <tbody>
                             <tr>
-                                <th><i class="far fa-hourglass"></i>Duration:</th>
-                                <td>3 Month</td>
+                                <th><i class="far fa-hourglass"></i>Durasi:</th>
+                                <td>3 Bulan</td>
                             </tr>
                             <tr>
-                                <th><i class="far fa-clock"></i>Weekly Study:</th>
-                                <td>3x/week</td>
+                                <th><i class="far fa-clock"></i>Waktu Kursus:</th>
+                                <td>3x/Seminggu</td>
                             </tr>
                             <tr>
-                                <th><i class="fa-solid fa-suitcase"></i>Course Type:</th>
+                                <th><i class="fa-solid fa-suitcase"></i>Tipe Kursus:</th>
                                 <td>Hybrid (online & offline)</td>
                             </tr>
                             </tbody>
                         </table>
-                        <a href="https://forms.gle/F4qyodkw1TyzhRJ97" class="vs-btn"
+                        <a href="{{ route('registrasi-program-executive') }}" class="vs-btn"
                         >Daftar Sekarang</a
                         >
                     </div>
@@ -85,7 +85,7 @@
                         <a href="#">Executive Class Hybrid</a>
                     </div>
                     <h2 class="course-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">Galley & Cook</h2>
-                    <h5 class="border-title2" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Overview</h5>
+                    <h5 class="border-title2" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Deskripsi</h5>
                     <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">
                         Galley & Cook adalah program pelatihan Executive yang merupakan
                         trobosan terbaru dari LPK Rhapsody yang dirancang untuk
@@ -494,7 +494,7 @@
                         diluar negeri dan langsung terjun ke dunia kerja dalam waktu yang
                         singkat
                     </p>
-                    <a href="https://forms.gle/F4qyodkw1TyzhRJ97" class="vs-btn" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100"
+                    <a href="{{ route('registrasi-program-executive') }}" class="vs-btn" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100"
                     >Daftar Sekarang</a
                     >
                     <span class="available-badge" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">Available now</span>
