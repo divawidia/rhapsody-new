@@ -10,7 +10,7 @@ Header Area
                         <ul>
                             <li>
                                 <i class="fa-brands fa-whatsapp" style="color: #ffffff"></i
-                                >Phone/Whatsapp :
+                                >Telepon/Whatsapp :
                                 <a href="https://wa.me/6287761360699">+62877-6136-0699</a>
                             </li>
                             <li>
@@ -50,45 +50,42 @@ Header Area
                     <div class="col-auto justify-content-end">
                         <nav class="main-menu menu-style3 d-none d-lg-block">
                             <ul>
-                                <li><a href="{{ route('about-us') }}">About Us</a></li>
+                                <li><a href="{{ route('about-us') }}">Tentang Kami</a></li>
                                 <li class="menu-item-has-children mega-menu-wrap">
-                                    <a href="#">Our Programs</a>
+                                    <a href="#">Program Kami</a>
                                     <ul class="mega-menu">
                                         <li>
                                             <a href="#">Diploma 1</a>
                                             <ul>
                                                 <li><a href="{{ route('front-office') }}">Front Office</a></li>
-                                                <li><a href="{{ route('housekeeping') }}">House Keeping</a></li>
+                                                <li><a href="{{ route('housekeeping') }}">Housekeeping</a></li>
                                                 <li>
-                                                    <a href="{{ route('f&b-service') }}">Food & Baverage Service</a>
+                                                    <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('f&b-product') }}">Food & Baverage Product</a>
+                                                    <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">Executive Class Hybrid</a>
+                                            <a href="#">Executive Hybrid</a>
                                             <ul>
                                                 <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>
                                                 <li>
                                                     <a href="{{ route('galley&cook') }}">Galley & Cook</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('bar&service') }}">Bar & Service</a>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="{{ route('fasilitas') }}">Facilities</a>
+                                    <a href="{{ route('fasilitas') }}">Fasilitas</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('under-maintenance') }}">News & Event</a>
+                                    <a href="{{ route('under-maintenance') }}">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('contact') }}">Contact Us</a>
+                                    <a href="{{ route('contact') }}">Kontak Kami</a>
                                 </li>
                             </ul>
                         </nav>
@@ -101,7 +98,7 @@ Header Area
                             <a
                                 href="https://forms.gle/F4qyodkw1TyzhRJ97"
                                 class="vs-btn style6"
-                            >Register Now</a
+                            >Daftar Sekarang</a
                             >
                         </div>
                     </div>
@@ -112,46 +109,40 @@ Header Area
         <div class="vs-menu-area text-center collapse" id="mobileNavbarCollapse">
             <div class="vs-mobile-menu">
                 <ul>
-                    <li class="menu-item-has-children">
-                        <a href="{{route('home')}}">Home</a>
-                    </li>
                     <li>
-                        <a href="{{route('about-us')}}">About Us</a>
+                        <a href="{{route('about-us')}}">Tentang Kami</a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Diploma 1</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('front-office') }}">Front Office</a></li>
-                            <li><a href="{{ route('housekeeping') }}">House Keeping</a></li>
+                            <li><a href="{{ route('housekeeping') }}">Housekeeping</a></li>
                             <li>
-                                <a href="{{ route('f&b-service') }}">Food & Baverage Service</a>
+                                <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>
                             </li>
                             <li>
-                                <a href="{{ route('f&b-product') }}">Food & Baverage Product</a>
+                                <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#">Executive Class Hybrid</a>
+                        <a href="#">Executive Hybrid</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>
                             <li>
                                 <a href="{{ route('galley&cook') }}">Galley & Cook</a>
                             </li>
-                            <li>
-                                <a href="{{ route('bar&service') }}">Bar & Service</a>
-                            </li>
                         </ul>
                     </li>
 
                     <li class="menu-item-has-children">
-                        <a href="{{ route('fasilitas') }}">Facilities</a>
+                        <a href="{{ route('fasilitas') }}">Fasilitas</a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="{{ route('under-maintenance') }}">News & Event</a>
+                        <a href="{{ route('under-maintenance') }}">Blog</a>
                     </li>
                     <li>
-                        <a href="{{ route('contact') }}">Contact Us</a>
+                        <a href="{{ route('contact') }}">Kontak Kami</a>
                     </li>
                 </ul>
             </div>

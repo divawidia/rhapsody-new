@@ -185,7 +185,7 @@
           class="row"
           data-center-mode="true"
         >
-        <h4 class="border-title2 mx-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Executive Class Hybrid</h4>
+        <h4 class="border-title2 mx-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Executive Hybrid</h4>
           <div class="col-6" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
             <div class="category-style1">
               <div class="category-img">

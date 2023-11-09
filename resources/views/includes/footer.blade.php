@@ -26,9 +26,9 @@ Footer Area
                                     <i class="fas fa-file-pdf"></i>
                                 </div>
                                 <div class="media-body">
-                                    <span class="media-title">Download Our Brochure</span>
+                                    <span class="media-title">Download Brosur Kami</span>
                                     <a
-                                    href="https://drive.google.com/drive/folders/1dL8HyS1ANmIJlxlvK7gL2eJW8jT_ryNS"
+                                    href="https://drive.google.com/file/d/1cJGZsiWahyat-w8G7xKxJu2kGkigClaC/view?usp=sharing"
                                     >Download.pdf</a
                                     >
                                 </div>
@@ -38,7 +38,7 @@ Footer Area
                 </div>
                 <div class="col-md-6 col-xl-3">
                     <div class="widget footer-widget">
-                    <h3 class="widget_title">Find Campus</h3>
+                    <h3 class="widget_title">Kampus Kami</h3>
                     <div class="footer-campus">
                         <div class="campus-img mega-hover">
                         <a href="#"
@@ -62,23 +62,20 @@ Footer Area
                 </div>
                 <div class="col-md-6 col-xl-3">
                     <div class="widget nav_menu footer-widget">
-                    <h3 class="widget_title">Our Programs</h3>
+                    <h3 class="widget_title">Program Kami</h3>
                     <div class="menu-all-pages-container footer-menu">
                         <ul class="menu">
                             <li><a href="{{ route('front-office') }}">Front Office (D1)</a></li>
-                            <li><a href="{{ route('housekeeping') }}">House Keeping (D1)</a></li>
+                            <li><a href="{{ route('housekeeping') }}">Housekeeping (D1)</a></li>
                             <li>
-                                <a href="{{ route('f&b-service') }}">Food & Baverage Service (D1)</a>
+                                <a href="{{ route('f&b-service') }}">Food & Beverage Service (D1)</a>
                             </li>
                             <li>
-                                <a href="{{ route('f&b-product') }}">Food & Baverage Product (D1)</a>
+                                <a href="{{ route('f&b-product') }}">Food & Beverage Product (D1)</a>
                             </li>
                             <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping (Executive Class)</a></li>
                             <li>
                                 <a href="{{ route('galley&cook') }}">Galley & Cook (Executive Class)</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('bar&service') }}">Bar & Service (Executive Class)</a>
                             </li>
                         </ul>
                     </div>
@@ -87,12 +84,13 @@ Footer Area
                 <div class="col-md-6 col-xl-3">
                     <div class="widget footer-widget">
                     <div class="contact-style1">
-                        <h4 class="contact-title">Looking to Study With Us?</h4>
-                        <p class="contact-text">Speak to our admin</p>
+                        <h4 class="contact-title" style="color: var(--theme-color)">Ingin Bertanya-tanya Lebih Lanjut?</h4>
+                        <p class="contact-text">Yuk tanya admin!</p>
                         <a
                         href="https://wa.me/6287761360699"
                         class="contact-number h5 fs-6"
-                        ><i class="fa-brands fa-whatsapp"></i> +62877-6136-0699</a
+                        style="color: var(--theme-color)"
+                        ><i class="fa-brands fa-whatsapp" style="color: var(--theme-color)"></i> +62877-6136-0699</a
                         >
                     </div>
                     </div>

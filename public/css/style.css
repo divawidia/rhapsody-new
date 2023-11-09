@@ -5380,13 +5380,12 @@ blockquote.vs-quote cite {
 
 .contact-style1 {
     padding: 40px 30px;
-    background-color: var(--theme-color);
+    background-color: var(--white-color);
     border-radius: 20px;
 }
 .contact-style1 .contact-text {
-    color: var(--white-color);
+    color: var(--theme-color);
     font-size: 14px;
-    text-transform: uppercase;
     margin-bottom: 10px;
 }
 .contact-style1 .contact-number {
