@@ -69,14 +69,15 @@
                             <div class="form-group">
                                 <label for="pendidikanTerakhir">Pendidikan Terakhir</label>
                                 <select id="pendidikanTerakhir" class="form-control" name="pendidikan_terakhir">
-                                    <option value="sma">SMA</option>
-                                    <option value="smk">SMK</option>
-                                    <option value="d1">D1</option>
-                                    <option value="d2">D2</option>
-                                    <option value="d3">D3</option>
-                                    <option value="d4">D4</option>
-                                    <option value="s1">S1</option>
-                                    <option value="s2">S2</option>
+                                    <option value="SMA">SMA</option>
+                                    <option value="SMK">SMK</option>
+                                    <option value="D1">D1</option>
+                                    <option value="D2">D2</option>
+                                    <option value="D3">D3</option>
+                                    <option value="D4">D4</option>
+                                    <option value="S1">S1</option>
+                                    <option value="S2">S2</option>
+                                    <option value="S3">S3</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -102,6 +103,31 @@
                                     <label class="form-check-label" for="{{ $program_executive->id }}">{{ $program_executive->nama_program }}</label>
                                 </div>
                             @endforeach
+{{--                            <p class="landing-text2 mt-3">Darimana kamu mengetahui Rhapsody :</p>--}}
+{{--                                <div class="form-check form-check-inline">--}}
+{{--                                    <input class="form-check-input" type="checkbox" name="refrensi_daftar" id="instagram" value="Instagram">--}}
+{{--                                    <label class="form-check-label" for="instagram">Instagram</label>--}}
+{{--                                </div>--}}
+{{--                            <div class="form-check form-check-inline">--}}
+{{--                                <input class="form-check-input" type="checkbox" name="refrensi_daftar" id="facebook" value="Facebook">--}}
+{{--                                <label class="form-check-label" for="facebook">Facebook</label>--}}
+{{--                            </div>--}}
+{{--                            <div class="form-check form-check-inline">--}}
+{{--                                <input class="form-check-input" type="checkbox" name="refrensi_daftar" id="tiktok" value="Tiktok">--}}
+{{--                                <label class="form-check-label" for="tiktok">Tiktok</label>--}}
+{{--                            </div>--}}
+{{--                            <div class="form-check form-check-inline">--}}
+{{--                                <input class="form-check-input" type="checkbox" name="refrensi_daftar" id="youtube" value="Youtube">--}}
+{{--                                <label class="form-check-label" for="youtube">Youtube</label>--}}
+{{--                            </div>--}}
+{{--                            <div class="form-check form-check-inline">--}}
+{{--                                <input class="form-check-input" type="checkbox" name="refrensi_daftar" id="teman" value="Teman">--}}
+{{--                                <label class="form-check-label" for="teman">Teman</label>--}}
+{{--                            </div>--}}
+{{--                            <div class="form-check form-check-inline">--}}
+{{--                                <input class="form-check-input" type="checkbox" name="refrensi_daftar" id="guru" value="Guru">--}}
+{{--                                <label class="form-check-label" for="guru">Guru</label>--}}
+{{--                            </div>--}}
                             <div class="col-12 text-center mt-4">
                                 <button type="submit" class="vs-btn">Daftar Sekarang</button>
                             </div>

@@ -11,7 +11,7 @@ class ProgramExecutive extends Model
         'nama_program'
     ];
 
-    public function calon_mahasiswas(){
-        return $this->hasMany(CalonMahasiswa::class, 'program_executive_id', 'id');
+    public function calon_peserta_executive(){
+        return $this->hasMany(CalonPesertaExecutive::class, 'program_executive_id', 'id');
     }
 }

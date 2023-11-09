@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CalonMahasiswa;
+use App\Models\CalonPesertaExecutive;
 use App\Models\ProgramExecutive;
 use Illuminate\Http\Request;
 
@@ -35,9 +35,9 @@ class CalonMahasiswaController extends Controller
     {
         $data = $request->all();
 
-        CalonMahasiswa::create($data);
+        CalonPesertaExecutive::create($data);
 
-        return redirect()->route('pages.registration_complete');
+        return redirect()->route('registrasi-berhasil');
     }
 
     /**

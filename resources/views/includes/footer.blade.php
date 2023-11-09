@@ -92,7 +92,7 @@ Footer Area
                         <a
                         href="https://wa.me/6287761360699"
                         class="contact-number h5 fs-6"
-                        ><i class="fa-brands fa-whatsapp"></i> +62877-6136-0697</a
+                        ><i class="fa-brands fa-whatsapp"></i> +62877-6136-0699</a
                         >
                     </div>
                     </div>
