@@ -503,7 +503,7 @@
                 </h1>
                 <div class="col text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     <a
-                        href="https://wa.me/6287761360697"
+                        href="https://wa.me/6287761360699"
                         class="vs-btn wa justify-content-center"
                         style="width: 152px;"
                     ><i class="fa-brands fa-whatsapp fa-2x"></i></a>

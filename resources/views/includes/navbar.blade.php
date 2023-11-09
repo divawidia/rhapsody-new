@@ -11,7 +11,7 @@ Header Area
                             <li>
                                 <i class="fa-brands fa-whatsapp" style="color: #ffffff"></i
                                 >Phone/Whatsapp :
-                                <a href="https://wa.me/6287761360697">+62877-6136-0697</a>
+                                <a href="https://wa.me/6287761360699">+62877-6136-0699</a>
                             </li>
                             <li>
                                 <i class="fas fa-envelope"></i>Email:
@@ -24,9 +24,6 @@ Header Area
                 </div>
                 <div class="col-auto">
                     <div class="header-social style2">
-                        <a href="#"
-                        ><i class="fa-brands fa-tiktok" style="color: #ffffff"></i
-                            ></a>
                         <a href="https://www.facebook.com/rhapsody.developmentcenter"
                         ><i class="fab fa-facebook-f"></i
                             ></a>
@@ -54,23 +51,6 @@ Header Area
                         <nav class="main-menu menu-style3 d-none d-lg-block">
                             <ul>
                                 <li><a href="{{ route('about-us') }}">About Us</a></li>
-                                <!-- <li class="menu-item-has-children">
-                                  <a href="training-programs.html">Training Program</a>
-                                  <ul class="sub-menu">
-                                    <li><a href="front-office.html">Front Office</a></li>
-                                    <li><a href="house-keeping.html">House Keeping</a></li>
-                                    <li>
-                                      <a href="f&b-product.html"
-                                        >Food & Baverage Product</a
-                                      >
-                                    </li>
-                                    <li>
-                                      <a href="f&b-service.html"
-                                        >Food & Baverage Service</a
-                                      >
-                                    </li>
-                                  </ul>
-                                </li> -->
                                 <li class="menu-item-has-children mega-menu-wrap">
                                     <a href="#">Our Programs</a>
                                     <ul class="mega-menu">
@@ -129,14 +109,7 @@ Header Area
             </div>
         </div>
     </div>
-{{--    <div class="vs-menu-wrapper">--}}
         <div class="vs-menu-area text-center collapse" id="mobileNavbarCollapse">
-{{--            <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>--}}
-{{--            <div class="mobile-logo">--}}
-{{--                <a href="{{ route('home') }}"--}}
-{{--                ><img src="/img/logo-2.png" alt="Rhapsody"--}}
-{{--                    /></a>--}}
-{{--            </div>--}}
             <div class="vs-mobile-menu">
                 <ul>
                     <li class="menu-item-has-children">
@@ -183,5 +156,4 @@ Header Area
                 </ul>
             </div>
         </div>
-{{--    </div>--}}
 </header>

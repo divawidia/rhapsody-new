@@ -90,7 +90,7 @@ Footer Area
                         <h4 class="contact-title">Looking to Study With Us?</h4>
                         <p class="contact-text">Speak to our admin</p>
                         <a
-                        href="https://wa.me/6287761360697"
+                        href="https://wa.me/6287761360699"
                         class="contact-number h5 fs-6"
                         ><i class="fa-brands fa-whatsapp"></i> +62877-6136-0697</a
                         >
@@ -112,7 +112,6 @@ Footer Area
             </div>
             <div class="col-auto d-none d-lg-block">
                 <div class="social-style1">
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                 <a href="https://www.facebook.com/rhapsody.developmentcenter"
                     ><i class="fab fa-facebook-f"></i
                 ></a>
