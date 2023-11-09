@@ -52,3 +52,6 @@ Route::get('/under-maintenance', function () {
 Route::get('/contact-us', function () {
     return view('pages.contact');
 })->name('contact');
+
+Route::get('/registrasi-program-executive-hybrid', [App\Http\Controllers\CalonMahasiswaController::class, 'create'])->name('registrasi-program-executive');
+Route::post('/registrasi-program-executive-hybrid', [App\Http\Controllers\CalonMahasiswaController::class, 'store'])->name('registrasi-program-executive.store');

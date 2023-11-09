@@ -354,7 +354,7 @@
                 </h1>
                 <div class="row vs-carousel">
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-                        <div class="feature-style1">
+                        <div class="text-center feature-style1">
                             <div class="feature-icon">
                                 <img src="/img/icon/fb-product.png" alt="fb-product">
                             </div>
@@ -381,7 +381,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="feature-style1">
+                        <div class="text-center feature-style1">
                             <div class="feature-icon">
                                 <img src="/img/icon/fb-service.png" alt="fb-product">
                             </div>
@@ -408,7 +408,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
                             <div class="feature-icon">
                                 <img src="/img/icon/fo.png" alt="fb-product">
                             </div>
@@ -435,7 +435,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                             <div class="feature-icon">
                                 <img src="/img/icon/hk.png" alt="fb-product">
                             </div>
@@ -462,7 +462,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <div class="feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                             <div class="feature-icon">
                                 <img src="/img/icon/executive.png" alt="fb-product">
                             </div>

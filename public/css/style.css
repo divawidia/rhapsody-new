@@ -4093,7 +4093,7 @@ a.text-theme:hover,
 }
 
 .breadcumb-text {
-    font-size: 36px;
+    font-size: 28px;
     color: var(--white-color);
     margin: 32px 0 -0.25em 0;
 }
@@ -4128,7 +4128,7 @@ a.text-theme:hover,
         margin: -0.15em 0 -0.4em 0;
     }
     .breadcumb-text {
-        font-size: 22px;
+        font-size: 18px;
     }
     .breadcumb-wrapper {
         padding-top: 80px;
@@ -7029,6 +7029,22 @@ blockquote.vs-quote cite {
     padding-right: 20px;
     padding-left: 30px;
 }
+
+.form-style4 select {
+    border-radius: 14px;
+    font-size: 16px;
+    height: 60px;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+.form-style4 textarea {
+    border-radius: 14px;
+    font-size: 16px;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
 .form-style4 a {
     color: #254389;
     text-decoration: underline;
@@ -9675,7 +9691,7 @@ blockquote.vs-quote cite {
     overflow: hidden;
     padding: 60px 60px 45px 60px;
     position: relative;
-    text-align: center;
+    /*text-align: center;*/
     transition: all ease 0.4s;
     z-index: 1;
 }
@@ -9705,6 +9721,20 @@ blockquote.vs-quote cite {
 }
 .feature-style1 .feature-title {
     text-transform: uppercase;
+}
+
+.feature-style1 .feature-title2 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.feature-style1 .feature-icon2 {
+    height: 75px;
+    width: 75px;
+    line-height: 168px;
+    margin: 0 auto 15px auto;
+    position: relative;
+    z-index: 1;
 }
 .feature-style1 .feature-icon {
     height: 168px;
