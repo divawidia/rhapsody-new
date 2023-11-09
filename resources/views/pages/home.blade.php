@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Rhapsody Hospitality Development Center
+    LPK Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')
@@ -28,7 +28,7 @@
                 </p>
                 <div class="hero-btns" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQfZLct5IEuVqStUxDvdFp1slLaXTdC7ApndBGTywTNcgMVQ/viewform" class="vs-btn style6"
-                    ><i class="fa-solid fa-angle-right"></i>Register Now</a>
+                    ><i class="fa-solid fa-angle-right"></i>Daftar Sekarang</a>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@
             <div class="about-box2">
               <div class="title-area">
                 <span class="sec-subtitle" data-aos="fade-right" data-aos-duration="1000"
-                  >Welcome to Rhapsody Hospitality Development Center</span
+                  >Selamat datang di LPK Rhapsody Hospitality Development Center</span
                 >
                 <h2 class="about-title h1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                   Create Your Success Road Map With Us!
@@ -68,12 +68,11 @@
               </div>
               <div class="about-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <p class="fs-md">
-                  Rhapsody Hospitality Development Center merupakan lembaga
+                  LPK Rhapsody Hospitality Development Center merupakan lembaga
                   pendidikan dan pelatihan vokasi bidang perhotelan dan kapal
                   pesiar. Kami hadir dengan inovasi konsep pembelajaran yang
                   menggabungkan pelatihan personal development, fundamental
-                  hospitality skill dan knowledge dan essential business skill
-                  yang dikemas dengan fun dan exploratif, yang bertujuan untuk
+                  hospitality skill dan knowledge, yang bertujuan untuk
                   mempersiapkan generasi muda dengan skill set lengkap untuk
                   sukses berkarir di dalam atau di luar negeri dan berkarya di
                   era industri 4.0.
@@ -82,17 +81,17 @@
                 <div class="call-media">
                   <div class="media-icon"><i class="fa-brands fa-whatsapp fa-lg" style="color: var(--theme-color);"></i></div>
                   <div class="media-body">
-                    <span class="media-label">Call Anytime 24/7</span>
+                    <span class="media-label">Hubungi Kami</span>
                     <p class="media-info">
-                      <a href="https://wa.me/6287761360697" class="text-inherit"
-                        >+62877-6136-0697</a
+                      <a href="https://wa.me/6287761360699" class="text-inherit"
+                        >+62877-6136-0699</a
                       >
                     </p>
                   </div>
                 </div>
 
                 <a href="{{url('/about-us')}}" class="vs-btn style3 mt-2"
-                  ><i class="fa-solid fa-angle-right"></i>Get More Info</a
+                  ><i class="fa-solid fa-angle-right"></i>Info Tentang Kami</a
                 >
               </div>
             </div>
@@ -109,8 +108,8 @@
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
             <img alt="" width="50" src="/img/icon/circle-icon.svg">
           </div>
-          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
-          <h2 class="sec-title" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Our Programs</h2>
+          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
+          <h2 class="sec-title" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Program Kami</h2>
         </div>
         <div
           class="row"
@@ -144,7 +143,7 @@
               </div>
               <div class="category-content">
                 <h5 class="category-title">
-                  <a href="{{ route('housekeeping') }}">House Keeping</a>
+                  <a href="{{ route('housekeeping') }}">Housekeeping</a>
                 </h5>
               </div>
             </div>
@@ -160,7 +159,7 @@
               </div>
               <div class="category-content">
                 <h5 class="category-title">
-                  <a href="{{ route('f&b-product') }}">Food & Baverage Product</a>
+                  <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>
                 </h5>
               </div>
             </div>
@@ -176,7 +175,7 @@
               </div>
               <div class="category-content">
                 <h5 class="category-title">
-                  <a href="{{ route('f&b-service') }}">Food & Baverage Service</a>
+                  <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>
                 </h5>
               </div>
             </div>
@@ -187,7 +186,7 @@
           data-center-mode="true"
         >
         <h4 class="border-title2 mx-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Executive Class Hybrid</h4>
-          <div class="col-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+          <div class="col-6" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
             <div class="category-style1">
               <div class="category-img">
                 <img
@@ -203,7 +202,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+          <div class="col-6" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
             <div class="category-style1">
               <div class="category-img">
                 <img
@@ -215,22 +214,6 @@
               <div class="category-content">
                 <h5 class="category-title">
                   <a href="galley&cook.html">Galley & Cook</a>
-                </h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
-            <div class="category-style1">
-              <div class="category-img">
-                <img
-                  class="w-100"
-                  src="/img/category/bar.jpg"
-                  alt="category"
-                />
-              </div>
-              <div class="category-content">
-                <h5 class="category-title">
-                  <a href="bar&service.html">Bar & Service</a>
                 </h5>
               </div>
             </div>
@@ -247,18 +230,18 @@
             <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
               <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
             </div>
-            <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
-            <h2 class="sec-title" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Our Facilities</h2>
+            <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
+            <h2 class="sec-title" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Fasilitas Kami</h2>
           </div>
           <div class="cta-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
             <div class="row align-items-center">
               <div class="col-lg-6">
                 <div class="cta-content">
                   <h2 class="cta-title h1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                    Top Quality Facilities For Learning at Affordable Price
+                      Fasilitas Belajar dan Praktek yang Berkualitas dengan Harga Terjangkau
                   </h2>
                   <a href="{{ route('fasilitas') }}" class="vs-btn style2-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"
-                    ><i class="fa-solid fa-angle-right"></i>More Info</a
+                    ><i class="fa-solid fa-angle-right"></i>Info Lebih Lengkap</a
                   >
                 </div>
               </div>
@@ -502,8 +485,8 @@
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
             <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
           </div>
-          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">PLEASURES HAVE TO REPUDIATED </span>
-          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Top Companies</h2>
+          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">KAMI TELAH DIPERCAYA OLEH</span>
+          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Top Cruiseline</h2>
         </div>
         <div class="row">
           <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
