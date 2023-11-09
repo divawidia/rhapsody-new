@@ -85,10 +85,10 @@ Footer Area
                     <div class="widget footer-widget">
                     <div class="contact-style1">
                         <h4 class="contact-title" style="color: var(--theme-color)">Ingin Bertanya-tanya Lebih Lanjut?</h4>
-                        <p class="contact-text">Yuk tanya admin!</p>
+                        <p class="contact-text fs-5">Yuk tanya admin!</p>
                         <a
                         href="https://wa.me/6287761360699"
-                        class="contact-number h5 fs-6"
+                        class="contact-number h5 fs-5"
                         style="color: var(--theme-color)"
                         ><i class="fa-brands fa-whatsapp" style="color: var(--theme-color)"></i> +62877-6136-0699</a
                         >
