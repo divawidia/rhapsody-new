@@ -37,7 +37,7 @@ class CalonMahasiswaController extends Controller
 
         CalonMahasiswa::create($data);
 
-        return redirect()->route('pages.index');
+        return redirect()->route('pages.registration_complete');
     }
 
     /**

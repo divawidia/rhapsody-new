@@ -26,9 +26,10 @@
     </div>
     <section class="space-top">
         <div class="container">
+
+        <form action="{{ route('registrasi-program-executive.store') }}" method="post" enctype="multipart/form-data">
+            @csrf
             <div class="row">
-{{--                <form action="{{ route('registrasi-program-executive.store') }}" method="post" enctype="multipart/form-data">--}}
-{{--                    @csrf--}}
                     <h1 class="form-title">Form Registrasi</h1>
                     <p class="landing-text2">*Kamu harus berusia minimal 20 tahun untuk mengikuti program executive hybrid</p>
                     <div class="col-12 col-md-6">
@@ -106,8 +107,8 @@
                             </div>
                         </div>
                     </div>
-{{--                </form>--}}
             </div>
+        </form>
         </div>
     </section>
 @endsection

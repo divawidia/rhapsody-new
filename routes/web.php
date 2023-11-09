@@ -55,3 +55,4 @@ Route::get('/contact-us', function () {
 
 Route::get('/registrasi-program-executive-hybrid', [App\Http\Controllers\CalonMahasiswaController::class, 'create'])->name('registrasi-program-executive');
 Route::post('/registrasi-program-executive-hybrid', [App\Http\Controllers\CalonMahasiswaController::class, 'store'])->name('registrasi-program-executive.store');
+Route::get('/registrasi-berhasil', function () {return view('pages.registration_complete');})->name('registrasi-berhasil');
