@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    About Us
+    Tentang Kami | LPK Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')
@@ -16,14 +16,14 @@
     >
       <div class="container z-index-common">
         <div class="breadcumb-content">
-          <h1 class="breadcumb-title"data-aos="fade-right" data-aos-duration="1000">About Us</h1>
+          <h1 class="breadcumb-title"data-aos="fade-right" data-aos-duration="1000">Tentang Kami</h1>
           <p class="breadcumb-text"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-            Unlock Your Full Potential and turn your dreams into reality.
+            LPK Rhapsody Hospitality Development Center
           </p>
           <div class="breadcumb-menu-wrap">
             <ul class="breadcumb-menu">
-              <li><a href="{{ route('home') }}">HOME</a></li>
-              <li>ABOUT US</li>
+              <li><a href="{{ route('home') }}">BERANDA</a></li>
+              <li>TENTANG KAMI</li>
             </ul>
           </div>
         </div>
@@ -38,7 +38,7 @@
           <div class="col-xl-9">
             <div class="title-area mb-3 mb-xl-5">
               <span class="sec-subtitle" data-aos="fade-right" data-aos-duration="1000"
-                >RHAPSODY HOSPITALITY DEVELOPMENT CENTER
+                >LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER
               </span>
               <h2 class="sec-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Create Your Success Story With Us!</h2>
             </div>
@@ -81,7 +81,7 @@
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
             <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
           </div>
-          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Why Rhapsody?</h2>
+          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Kenapa Rhapsody?</h2>
           <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">STRATEGIC DEVELOPMENT PARTNER</span>
         </div>
         <div class="row">
@@ -178,7 +178,7 @@
             <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
           </div>
           <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
-          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">What Our Goals?</h2>
+          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Apa Tujuan Kami?</h2>
           <p class="fs-md mt-4 px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Menciptakan sumber daya manusia yang berkarakter, propesional, berintelektual dan memiliki jiwa kewirausahaan yang mandiri, yang mana semua elemen tersebut kita jadikan dalam satu ungkapan nilai kepribadian diri berupa :
             </p>
             <p class="fs-3 h1 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">“SIGNATURE”</p>
@@ -254,8 +254,8 @@
           <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
             <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
           </div>
-          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">PLEASURES HAVE TO REPUDIATED </span>
-          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Top Companies </h2>
+          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">KAMI TELAH DIPERCAYA OLEH</span>
+          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Top Cruiseline</h2>
         </div>
         <div class="row">
           <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
