@@ -34,6 +34,7 @@ class CalonMahasiswaController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['jenis_refrensi'] = implode(", ",$request->input('jenis_refrensi'));
 
         CalonPesertaExecutive::create($data);
 

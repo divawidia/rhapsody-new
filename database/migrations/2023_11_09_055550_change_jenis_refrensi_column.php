@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('refrensi_daftar', function (Blueprint $table) {
-            $table->id();
-            $table->string('jenis_refrensi');
-            $table->timestamps();
+        Schema::table('calon_peserta_executives', function (Blueprint $table) {
+            $table->string('jenis_refrensi')->nullable()->change();
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('refrensi_daftar');
+        Schema::table('calon_peserta_executives', function (Blueprint $table) {
+            $table->dropColumn('jenis_refrensi')->nullable()->change();
+        });
     }
 };

@@ -32,7 +32,9 @@ class CalonMahasiswaRequest extends FormRequest
             'pendidikan_terakhir' => 'required',
             'asal_sekolah' => 'required',
             'jurusan' => 'required',
-            'pengalaman_kerja' => 'required'
+            'pengalaman_kerja' => 'required',
+            'program_executive_id' => 'required',
+            'jenis_refrensi' => 'required'
         ];
     }
 }
