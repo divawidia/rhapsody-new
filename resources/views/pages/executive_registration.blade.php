@@ -55,6 +55,18 @@
                                 <input type="number" autocomplete="off" name="umur" id="umur" min="20" placeholder="Isikan umurmu" required>
                             </div>
                             <div class="form-group">
+                                <label for="alamat">Alamat Tempat Tinggal</label>
+                                <textarea name="alamat" id="alamat" placeholder="Isikan alamat tempat tinggalmu"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="jenisKelamin">Jenis Kelamin</label>
+                                <select id="jenisKelamin" class="form-control" name="jenis_kelamin" required>
+                                    <option selected>Pilih jenis kelaminmu</option>
+                                    <option value="laki-laki">Laki-laki</option>
+                                    <option value="perempuan">Perempuan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="no_hp">No. HP/Whatsapp</label>
                                 <input type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. HP/Whatsapp" required>
                             </div>
@@ -62,9 +74,14 @@
                                 <label for="noHpOrtu">No. HP/Whatsapp Orang Tua/Wali</label>
                                 <input type="tel" autocomplete="off" name="no_hp_ortu" id="noHpOrtu" placeholder="Isikan No. HP/Whatsapp Orang Tua/Wali" required>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="form-group">
                                 <label for="pendidikanTerakhir">Pendidikan Terakhir</label>
                                 <select id="pendidikanTerakhir" class="form-control" name="pendidikan_terakhir" required>
+                                    <option selected>Pilih pendidikan terakhirmu</option>
                                     <option value="SMA">SMA</option>
                                     <option value="SMK">SMK</option>
                                     <option value="D1">D1</option>
@@ -76,16 +93,12 @@
                                     <option value="S3">S3</option>
                                 </select>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="form-group">
                                 <label for="namaSekolah">Nama Sekolah</label>
                                 <input type="text" autocomplete="off" name="asal_sekolah" id="namaSekolah" placeholder="Isikan nama sekolah terakhirmu" required>
                             </div>
                             <div class="form-group">
-                                <label for="namaJurusan">Jurusan</label>
+                                <label for="namaJurusan">Jurusan Sekolah</label>
                                 <input type="text" autocomplete="off" name="jurusan" id="namaJurusan" placeholder="Isikan nama jurusan di sekolah terakhirmu" required>
                             </div>
                             <div class="form-group">

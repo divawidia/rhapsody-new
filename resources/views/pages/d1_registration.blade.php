@@ -18,7 +18,7 @@
                 <div class="breadcumb-menu-wrap" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                     <ul class="breadcumb-menu">
                         <li><a href="{{ route('home') }}">Home</a></li>
-                        <li>Registrasi Program Diploma 1/li>
+                        <li>Registrasi Program Diploma 1</li>
                     </ul>
                 </div>
             </div>
@@ -62,41 +62,41 @@
                                 <label for="no_hp">No. HP/Whatsapp</label>
                                 <input type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. HP/Whatsapp" required>
                             </div>
-                            <div class="form-group">
-                                <label for="noHpOrtu">No. HP/Whatsapp Orang Tua/Wali</label>
-                                <input type="tel" autocomplete="off" name="no_hp_ortu" id="noHpOrtu" placeholder="Isikan No. HP/Whatsapp Orang Tua/Wali" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pendidikanTerakhir">Jenis Kelamin</label>
-                                <select id="pendidikanTerakhir" class="form-control" name="pendidikan_terakhir" required>
-                                    <option selected>Pilih jenis kelaminmu</option>
-                                    <option value="laki-laki">Laki-laki</option>
-                                    <option value="perempuan">Perempuan</option>
-                                </select>
-                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="form-group">
+                                <label for="noHpOrtu">No. HP/Whatsapp Orang Tua/Wali</label>
+                                <input type="tel" autocomplete="off" name="no_hp_ortu" id="noHpOrtu" placeholder="Isikan No. HP/Whatsapp Orang Tua/Wali" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jenisKelamin">Jenis Kelamin</label>
+                                <select id="jenisKelamin" class="form-control" name="jenis_kelamin" required>
+                                    <option selected>Pilih jenis kelaminmu</option>
+                                    <option value="laki-laki">Laki-laki</option>
+                                    <option value="perempuan">Perempuan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="namaSekolah">Asal Sekolah</label>
                                 <input type="text" autocomplete="off" name="asal_sekolah" id="namaSekolah" placeholder="Isikan nama sekolah terakhirmu" required>
                             </div>
                             <div class="form-group">
-                                <label for="namaJurusan">Jurusan</label>
+                                <label for="namaJurusan">Jurusan Sekolah</label>
                                 <input type="text" autocomplete="off" name="jurusan" id="namaJurusan" placeholder="Isikan nama jurusan di sekolah terakhirmu" required>
                             </div>
                             <div class="form-group">
                                 <label for="tahunLulus">Tahun Lulus</label>
                                 <input type="number" autocomplete="off" name="pengalaman_kerja" id="tahunLulus" placeholder="Isikan tahun lulus sekolah terakhirmu" min="2000" max="2023" step="1" required>
                             </div>
-                            <p class="landing-text2">Pilihan Program Diploma 1</p>
-                            @foreach($program_executives as $program_executive)
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="program_executive_id" id="{{ $program_executive->id }}" value="{{ $program_executive->id }}" required>
-                                    <label class="form-check-label" for="{{ $program_executive->id }}">{{ $program_executive->nama_program }}</label>
-                                </div>
-                            @endforeach
+                            <p class="landing-text2">Pilihan Jurusan Diploma 1</p>
+{{--                            @foreach($program_executives as $program_executive)--}}
+{{--                                <div class="form-check form-check-inline">--}}
+{{--                                    <input class="form-check-input" type="radio" name="program_executive_id" id="{{ $program_executive->id }}" value="{{ $program_executive->id }}" required>--}}
+{{--                                    <label class="form-check-label" for="{{ $program_executive->id }}">{{ $program_executive->nama_program }}</label>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
                             <p class="landing-text2 mt-3">Darimana kamu mengetahui Rhapsody? :</p>
                             <div class="row">
                                 <div class="col-4">
