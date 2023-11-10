@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('calon_mahasiswa_diploma', function (Blueprint $table) {
+        Schema::create('calon_peserta_diplomas', function (Blueprint $table) {
             $table->id();
             $table->string('nama_lengkap');
             $table->string('nama_panggilan');

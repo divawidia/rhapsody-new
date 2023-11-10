@@ -27,7 +27,7 @@
     <section class="space-top">
         <div class="container">
 
-        <form action="{{ route('registrasi-program-executive.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('registrasi-program-d1.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
                     <h1 class="form-title" data-aos="fade-up" data-aos-duration="1000">Form Registrasi</h1>
@@ -84,19 +84,19 @@
                             </div>
                             <div class="form-group">
                                 <label for="namaJurusan">Jurusan Sekolah</label>
-                                <input type="text" autocomplete="off" name="jurusan" id="namaJurusan" placeholder="Isikan nama jurusan di sekolah terakhirmu" required>
+                                <input type="text" autocomplete="off" name="jurusan_sekolah" id="namaJurusan" placeholder="Isikan nama jurusan di sekolah terakhirmu" required>
                             </div>
                             <div class="form-group">
                                 <label for="tahunLulus">Tahun Lulus</label>
-                                <input type="number" autocomplete="off" name="pengalaman_kerja" id="tahunLulus" placeholder="Isikan tahun lulus sekolah terakhirmu" min="2000" max="2023" step="1" required>
+                                <input type="number" autocomplete="off" name="tahun_lulus" id="tahunLulus" placeholder="Isikan tahun lulus sekolah terakhirmu" min="2000" max="2023" step="1" required>
                             </div>
                             <p class="landing-text2">Pilihan Jurusan Diploma 1</p>
-{{--                            @foreach($program_executives as $program_executive)--}}
-{{--                                <div class="form-check form-check-inline">--}}
-{{--                                    <input class="form-check-input" type="radio" name="program_executive_id" id="{{ $program_executive->id }}" value="{{ $program_executive->id }}" required>--}}
-{{--                                    <label class="form-check-label" for="{{ $program_executive->id }}">{{ $program_executive->nama_program }}</label>--}}
-{{--                                </div>--}}
-{{--                            @endforeach--}}
+                            @foreach($jurusan_diplomas as $jurusan_diploma)
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="jurusan_diploma_id" id="{{ $jurusan_diploma->id }}" value="{{ $jurusan_diploma->id }}" required>
+                                    <label class="form-check-label" for="{{ $jurusan_diploma->id }}">{{ $jurusan_diploma->nama_jurusan }}</label>
+                                </div>
+                            @endforeach
                             <p class="landing-text2 mt-3">Darimana kamu mengetahui Rhapsody? :</p>
                             <div class="row">
                                 <div class="col-4">
@@ -159,6 +159,6 @@
                 $("#yangLainText").toggle();
             }
         });
-        document.getElementById("tanggalLahir").max = "2003-12-31";
+        document.getElementById("tanggalLahir").max = "2005-12-31";
     </script>
 @endpush
