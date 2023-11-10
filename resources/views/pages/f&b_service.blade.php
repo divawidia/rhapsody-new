@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Food & Beverages Service | Rhapsody Hospitality Development Center
+    Food & Beverages Service | LPK Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')
@@ -22,8 +22,9 @@
           </p>
           <div class="breadcumb-menu-wrap">
             <ul class="breadcumb-menu">
-              <li><a href="{{ route('home') }}">HOME</a></li>
-              <li>FOOD & BEVERAGES SERVICE</li>
+              <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="#">Program Diploma 1</a></li>
+              <li>Food & Beverages Service</li>
             </ul>
           </div>
         </div>
@@ -96,7 +97,7 @@
                         data-aos="fade-up"
                         data-aos-duration="1000" data-aos-delay="250"
                     >
-                        <a class="vs-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdQfZLct5IEuVqStUxDvdFp1slLaXTdC7ApndBGTywTNcgMVQ/viewform">Daftar Sekarang</a>
+                        <a class="vs-btn" href="{{ route('registrasi-program-d1') }}">Daftar Sekarang</a>
                     </div>
                 </div>
                 <div class="" data-aos="fade-up"
@@ -179,7 +180,7 @@
                     <p>
                         Daftarkan dirimu sekarang dan raih impian untuk menggapai kesuksesan di industri perhotelan dan kapal pesiar
                     </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQfZLct5IEuVqStUxDvdFp1slLaXTdC7ApndBGTywTNcgMVQ/viewform" class="vs-btn">Daftar Sekarang</a>
+                    <a href="{{ route('registrasi-program-d1') }}" class="vs-btn">Daftar Sekarang</a>
                 </div>
             </div>
             <div class="col-lg-4 pt-4 pt-lg-0">
@@ -245,17 +246,17 @@
                                 <div class="box-content">
                                     <h3 class="img-title">Registrasi Online</h3>
                                     <p class="img-text">
-                                        Academic programs with top quality courses made by experts
+                                        Program akademik berkualitas yang dirancang oleh ahli di industri
                                     </p>
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQfZLct5IEuVqStUxDvdFp1slLaXTdC7ApndBGTywTNcgMVQ/viewform" class="vs-btn">Registrasi</a>
+                                    <a href="{{ route('registrasi-program-d1') }}" class="vs-btn">Registrasi</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-5 col-lg-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                             <div class="media-style5 wow fadeInUp" data-wow-delay="0.4s">
-                                <h5 class="media-title">Admission Process</h5>
-                                <a class="phone" href="https://wa.me/6287761360697"
-                                ><i class="fal fa-phone-alt"></i>+62877-6136-0697</a
+                                <h5 class="media-title">Proses Pendaftaran</h5>
+                                <a class="phone" href="https://wa.me/6287761360699"
+                                ><i class="fal fa-phone-alt"></i>+62877-6136-0699</a
                                 >
                                 <a class="mail" href="mailto:info@rhapsodyhospitality.com"
                                 ><i class="fal fa-envelope"></i>info@rhapsodyhospitality.com</a
