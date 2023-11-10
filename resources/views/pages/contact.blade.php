@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Kontak Kami | Rhapsody Hospitality Development Center
+    Kontak Kami | LPK Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')
@@ -47,28 +47,20 @@
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        Get in Touch to Learn Hospitality
+                        Hubungi kami
                     </h2>
-                    <p
-                        class="fs-md mb-4 pb-2"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="100"
-                    >
-                        become an academic partner, or discover more about our work.
-                    </p>
                     <h3
                         class="border-title2 h5"
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        OUR OFFICE
+                        Kampus Kami
                     </h3>
                     <div class="" data-aos="fade-right" data-aos-duration="1000">
                         <p class="contact-info">
                             <i class="fas fa-clock"></i>
-                            Office hours are 8am – 5pm<br />
-                            Monday-Friday
+                            Senin-Jumat : Jam kerja kantor dari 9:00 - 17:00<br />
+                            Sabtu : Jam kerja kantor dari 9:00 - 14:00
                         </p>
                         <p class="contact-info">
                             <i class="fas fa-map-marker-alt"></i>
@@ -77,14 +69,14 @@
                         </p>
                         <p class="contact-info">
                             <i class="fas fa-phone-alt"></i>
-                            <a class="text-inherit" href="https://wa.me/6287761360697"
-                            >+62877-6136-0697</a
+                            <a class="text-inherit" href="https://wa.me/6287761360699"
+                            >+62877-6136-0699</a
                             >
                         </p>
                         <p class="contact-info">
                             <i class="fas fa-envelope"></i>
-                            <a class="text-inherit" href="mailto:info@rhapsody.ac.id"
-                            >info@rhapsody.ac.id</a
+                            <a class="text-inherit" href="mailto:info@rhapsodyhospitality.com"
+                            >info@rhapsodyhospitality.com</a
                             >
                         </p>
                         <div class="mega-hover rounded-20 mt-4 mt-lg-5 mb-4"></div>
@@ -109,7 +101,7 @@
                 >
                     <form action="mail.php" class="form-style5 ajax-contact">
                         <div class="vs-circle"></div>
-                        <h3 class="form-title text-uppercase">Any Question?</h3>
+                        <h3 class="form-title text-uppercase">Ada pertanyaan?</h3>
                         <p class="form-text">
                             Jika anda punya pertanyaan silahkan hubungi kami melalui
                             telepon, email atau dengan mengisi kontak form dibawah ini.

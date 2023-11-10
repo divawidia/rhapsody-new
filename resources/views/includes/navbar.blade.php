@@ -95,56 +95,70 @@ Header Area
                     </div>
                     <div class="col-auto d-none d-xl-block">
                         <div class="header-btns style2">
-                            <a
-                                href="https://forms.gle/F4qyodkw1TyzhRJ97"
-                                class="vs-btn style6"
-                            >Daftar Sekarang</a
-                            >
+                            <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
+                                Daftar Sekarang
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <div class="vs-menu-area text-center collapse" id="mobileNavbarCollapse">
-            <div class="vs-mobile-menu">
-                <ul>
-                    <li>
-                        <a href="{{route('about-us')}}">Tentang Kami</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Diploma 1</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('front-office') }}">Front Office</a></li>
-                            <li><a href="{{ route('housekeeping') }}">Housekeeping</a></li>
-                            <li>
-                                <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Executive Hybrid</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>
-                            <li>
-                                <a href="{{ route('galley&cook') }}">Galley & Cook</a>
-                            </li>
-                        </ul>
-                    </li>
+    <div class="vs-menu-area text-center collapse" id="mobileNavbarCollapse">
+        <div class="vs-mobile-menu">
+            <ul>
+                <li>
+                    <a href="{{route('about-us')}}">Tentang Kami</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">Diploma 1</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ route('front-office') }}">Front Office</a></li>
+                        <li><a href="{{ route('housekeeping') }}">Housekeeping</a></li>
+                        <li>
+                            <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">Executive Hybrid</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>
+                        <li>
+                            <a href="{{ route('galley&cook') }}">Galley & Cook</a>
+                        </li>
+                    </ul>
+                </li>
 
-                    <li class="menu-item-has-children">
-                        <a href="{{ route('fasilitas') }}">Fasilitas</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="{{ route('under-maintenance') }}">Blog</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('contact') }}">Kontak Kami</a>
-                    </li>
-                </ul>
+                <li class="menu-item-has-children">
+                    <a href="{{ route('fasilitas') }}">Fasilitas</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="{{ route('under-maintenance') }}">Blog</a>
+                </li>
+                <li>
+                    <a href="{{ route('contact') }}">Kontak Kami</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div id="modalCenter" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mau daftar program apa?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <a href="{{ route('registrasi-program-d1') }}" class="vs-btn">Diploma 1</a>
+                    <a href="{{ route('registrasi-program-executive') }}" class="vs-btn">Executive Hybrid</a>
+                </div>
             </div>
         </div>
-</header>
+    </div>
+</div>

@@ -27,8 +27,9 @@
                   Unlock Your Full Potential and Turn Your Dreams Into Reality
                 </p>
                 <div class="hero-btns" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQfZLct5IEuVqStUxDvdFp1slLaXTdC7ApndBGTywTNcgMVQ/viewform" class="vs-btn style6"
-                    ><i class="fa-solid fa-angle-right"></i>Daftar Sekarang</a>
+                    <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
+                        <i class="fa-solid fa-angle-right"></i>Daftar Sekarang
+                    </a>
                 </div>
               </div>
             </div>
@@ -36,6 +37,7 @@
         </div>
       </div>
     </section>
+{{--    @include('includes.modal_daftar')--}}
     <!--==============================
     About Area
 ==============================-->
