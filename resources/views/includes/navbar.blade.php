@@ -162,3 +162,43 @@ Header Area
         </div>
     </div>
 </div>
+
+{{--<div--}}
+{{--    class="modal fade"--}}
+{{--    tabindex="-1"--}}
+{{--    id="modalExecutive"--}}
+{{--    role="dialog"--}}
+{{--    aria-labelledby="exampleModalCenterTitle"--}}
+{{--    aria-hidden="true"--}}
+{{--    style="border-radius: 15px;--}}
+{{--    overflow: hidden;--}}
+{{--    background-color: transparent;"--}}
+{{-->--}}
+{{--    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">--}}
+{{--        <div class="modal-content rounded-0">--}}
+{{--            <div class="modal-body py-0">--}}
+{{--                <div class="d-block main-content">--}}
+{{--                    <img--}}
+{{--                        src="/img/modal/Pamflet - Executive Hybrid.jpg"--}}
+{{--                        alt="Image"--}}
+{{--                        class="img-fluid"--}}
+{{--                    />--}}
+{{--                    <div--}}
+{{--                        class="content-text p-4"--}}
+{{--                        style="background-color: var(--theme-color3)"--}}
+{{--                    >--}}
+{{--                        <div class="d-flex">--}}
+{{--                            <div class="ml-auto">--}}
+{{--                                <a href="#" class="btn btn-link" data-dismiss="modal"--}}
+{{--                                >No thanks</a--}}
+{{--                                >--}}
+{{--                                <a href="{{ route('registrasi-program-executive') }}" class="vs-btn">Daftar Sekarang</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+

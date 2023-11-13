@@ -5,6 +5,27 @@
 @endsection
 
 @section('content')
+    <div id="modalExecutive" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-3" style="background-color: transparent; border : 0">
+
+                <div class="modal-body">
+                    <img
+                        src="/img/modal/Pamflet - Executive Hybrid.jpg"
+                        alt="Image"
+                        class="img-fluid"
+                    />
+                    <div
+                        class="p-4 text-end"
+                        style="background-color: var(--theme-color3)"
+                    >
+                                <a class="btn text-inherit fs-5" data-bs-dismiss="modal">Nanti Saja</a>
+                                <a href="{{ route('registrasi-program-executive') }}" class="vs-btn">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--==============================
   Hero Area
   ==============================-->
@@ -535,3 +556,10 @@
       </div>
     </section>
 @endsection
+@push('addon-script')
+    <script>
+        $(document).ready(function(){
+            $("#modalExecutive").modal('show');
+        });
+    </script>
+@endpush
