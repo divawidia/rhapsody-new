@@ -352,7 +352,7 @@
                 <h1 class="landing-title3 text-center" data-aos="fade-up" data-aos-duration="1000">
                     Price List
                 </h1>
-                <div class="row vs-carousel">
+                <div class="row">
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                         <div class="text-center feature-style1">
                             <div class="feature-icon">
@@ -375,7 +375,7 @@
                                 <p class="landing-quote1">Membership <FONT COLOR="#CE5423">Victory</FONT></p>
                             </div>
                             <a
-                                href="https://forms.gle/F4qyodkw1TyzhRJ97"
+                                href="{{ route('registrasi-program-d1') }}"
                                 class="vs-btn mt-5"
                             >Daftar Yuk!</a>
                         </div>
@@ -402,7 +402,7 @@
                                 <p class="landing-quote1">Membership <FONT COLOR="#CE5423">Victory</FONT></p>
                             </div>
                             <a
-                                href="https://forms.gle/F4qyodkw1TyzhRJ97"
+                                href="{{ route('registrasi-program-d1') }}"
                                 class="vs-btn mt-5"
                             >Daftar Yuk!</a>
                         </div>
@@ -429,7 +429,7 @@
                                 <p class="landing-quote1">Membership <FONT COLOR="#CE5423">Victory</FONT></p>
                             </div>
                             <a
-                                href="https://forms.gle/F4qyodkw1TyzhRJ97"
+                                href="{{ route('registrasi-program-d1') }}"
                                 class="vs-btn mt-5"
                             >Daftar Yuk!</a>
                         </div>
@@ -456,7 +456,7 @@
                                 <p class="landing-quote1">Membership <FONT COLOR="#CE5423">Victory</FONT></p>
                             </div>
                             <a
-                                href="https://forms.gle/F4qyodkw1TyzhRJ97"
+                                href="{{ route('registrasi-program-d1') }}"
                                 class="vs-btn mt-5"
                             >Daftar Yuk!</a>
                         </div>
