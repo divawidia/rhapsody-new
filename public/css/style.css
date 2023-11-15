@@ -80,7 +80,7 @@ Version: 1.0.0
     --theme-color3: #faf5f0;
     --vs-secondary-color: #17215d;
     --title-color: #000000;
-    --body-color: #444444;
+    --body-color: #a1a1a1;
     --smoke-color: #f3f3f3;
     --black-color: #000000;
     --white-color: #ffffff;
@@ -10466,4 +10466,93 @@ blockquote.vs-quote cite {
 
 #yangLainText{
     display: none;
+}
+
+/* form style */
+/* ------------------------------ */
+
+
+.de_form input[type="radio"]{
+    /* hide the inputs */
+    display:none;
+}
+
+
+/* style your lables/button */
+
+.radio-img input[type="radio"] + label{
+    position: relative;
+    height: max-content;
+    width:100%;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+    background: #e49576;
+    color: var(--theme-color3);
+    font-size: 18px;
+    padding: 15px;
+    font-weight: bold;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+.radio-img input[type="radio"]:checked + label{
+    color: var(--theme-color3);
+    background: var(--theme-color2);
+}
+.radio-img input[type="radio"] + label:before{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    border:none;
+    display: none;
+}
+.radio-img input[type="radio"] + label img{
+    max-height: max-content;
+    max-width: max-content;
+    border-radius: 5px;
+    margin-left: 15px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.radio-img input[type="radio"] + label img{
+    width: 100%;
+    float: none;
+}
+@media (max-width: 1199px) {
+    .radio-img input[type="radio"] + label {
+        font-size: 14px;
+    }
+    .radio-label{
+        text-align: left;
+    }
+    .radio-img input[type="radio"] + label img{
+        height: 45px;
+        width: 45px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 991px) {
+    .radio-img input[type="radio"] + label {
+        font-size: 14px;
+    }
+    .radio-label{
+        text-align: left;
+    }
+    .radio-img input[type="radio"] + label img{
+        height: 45px;
+        width: 45px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 575px) {
+    .radio-img input[type="radio"] + label {
+        font-size: 14px;
+    }
+    .radio-label{
+        text-align: left;
+    }
+    .radio-img input[type="radio"] + label img {
+        max-height: 50px;
+        max-width: 50px;
+    }
 }

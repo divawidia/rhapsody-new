@@ -91,6 +91,24 @@
                                 <input type="number" autocomplete="off" name="tahun_lulus" id="tahunLulus" placeholder="Isikan tahun lulus sekolah terakhirmu" min="2000" max="2023" step="1" required>
                             </div>
                             <p class="landing-text2">Pilihan Jurusan Diploma 1</p>
+                            <div class="de_form de_radio row g-3">
+                                <div class="radio-img col-lg-3 col-sm-3 col-6">
+                                    <input id="radio-1a" name="Car_Type" type="radio" value="Residential">
+                                    <label for="radio-1a"><img src="/img/icon/Cook.png" alt="">F&B Product</label>
+                                </div>
+                                <div class="radio-img col-lg-3 col-sm-3 col-6">
+                                    <input id="radio-1b" name="Car_Type" type="radio" value="Office">
+                                    <label for="radio-1b"><img src="/img/icon/Service.png" alt="">F&B Service</label>
+                                </div>
+                                <div class="radio-img col-lg-3 col-sm-3 col-6">
+                                    <input id="radio-1c" name="Car_Type" type="radio" value="Commercial">
+                                    <label for="radio-1c"><img src="/img/icon/front-office.png" alt="">Front Office</label>
+                                </div>
+                                <div class="radio-img col-lg-3 col-sm-3 col-6">
+                                    <input id="radio-1d" name="Car_Type" type="radio" value="Retail">
+                                    <label for="radio-1d"><img src="/img/icon/housekeeping.png" alt="">House Keeping</label>
+                                </div>
+                            </div>
                             @foreach($jurusan_diplomas as $jurusan_diploma)
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="jurusan_diploma_id" id="{{ $jurusan_diploma->id }}" value="{{ $jurusan_diploma->id }}" required>
