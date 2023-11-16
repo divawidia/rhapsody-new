@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    House Keeping | Rhapsody Hospitality Development Center
+    Registrasi Berhasil | Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')

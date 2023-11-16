@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Registrasi Executive Hybrid | LPK Rhapsody Hospitality Development Center
+    Registrasi Diploma 1 | LPK Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')
