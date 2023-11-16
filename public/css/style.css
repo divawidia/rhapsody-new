@@ -10551,6 +10551,9 @@ blockquote.vs-quote cite {
     .radio-label{
         text-align: left;
     }
+    .radio-label-d1{
+        text-align: center;
+    }
     .radio-img input[type="radio"] + label img {
         max-height: 50px;
         max-width: 50px;

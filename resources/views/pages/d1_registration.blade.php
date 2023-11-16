@@ -34,7 +34,25 @@
                     <p class="landing-text2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50"></p>
                     <div class="col-12 col-md-6">
                         <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000">
-                            <div class="form-group">
+                            <p class="landing-text2">Pilihan Jurusan Diploma 1</p>
+                            <div class="de_form de_radio row mh-75 g-3">
+                                @foreach($jurusan_diplomas as $jurusan_diploma)
+                                    <div class="radio-img col-6" >
+                                        <input id="{{ $jurusan_diploma->id }}" name="jurusan_diploma_id" type="radio" value="{{ $jurusan_diploma->id }}">
+                                        <label for="{{ $jurusan_diploma->id }}">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-12 col-xl-4">
+                                                    <img class="radio-icon" src="{{ Storage::url($jurusan_diploma->icon) }}" alt="">
+                                                </div>
+                                                <div class="col-12 col-xl-8 align-items-center">
+                                                    {{ $jurusan_diploma->nama_jurusan }}
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="form-group mt-4">
                                 <label for="namaLengkap">Nama Lengkap</label>
                                 <input type="text" autocomplete="off" name="nama_lengkap" id="namaLengkap" placeholder="Isikan nama lengkapmu" required>
                             </div>
@@ -58,14 +76,14 @@
                                 <label for="alamat">Alamat Tempat Tinggal</label>
                                 <textarea name="alamat" id="alamat" placeholder="Isikan alamat tempat tinggalmu"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="no_hp">No. HP/Whatsapp</label>
-                                <input type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. HP/Whatsapp" required>
-                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="form-group">
+                                <label for="no_hp">No. HP/Whatsapp</label>
+                                <input type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. HP/Whatsapp" required>
+                            </div>
                             <div class="form-group">
                                 <label for="noHpOrtu">No. HP/Whatsapp Orang Tua/Wali</label>
                                 <input type="tel" autocomplete="off" name="no_hp_ortu" id="noHpOrtu" placeholder="Isikan No. HP/Whatsapp Orang Tua/Wali" required>
@@ -90,67 +108,42 @@
                                 <label for="tahunLulus">Tahun Lulus</label>
                                 <input type="number" autocomplete="off" name="tahun_lulus" id="tahunLulus" placeholder="Isikan tahun lulus sekolah terakhirmu" min="2000" max="2023" step="1" required>
                             </div>
-                            <p class="landing-text2">Pilihan Jurusan Diploma 1</p>
-                            <div class="de_form de_radio row g-3">
-                                <div class="radio-img col-lg-3 col-sm-3 col-6">
-                                    <input id="radio-1a" name="Car_Type" type="radio" value="Residential">
-                                    <label for="radio-1a"><img src="/img/icon/Cook.png" alt="">F&B Product</label>
-                                </div>
-                                <div class="radio-img col-lg-3 col-sm-3 col-6">
-                                    <input id="radio-1b" name="Car_Type" type="radio" value="Office">
-                                    <label for="radio-1b"><img src="/img/icon/Service.png" alt="">F&B Service</label>
-                                </div>
-                                <div class="radio-img col-lg-3 col-sm-3 col-6">
-                                    <input id="radio-1c" name="Car_Type" type="radio" value="Commercial">
-                                    <label for="radio-1c"><img src="/img/icon/front-office.png" alt="">Front Office</label>
-                                </div>
-                                <div class="radio-img col-lg-3 col-sm-3 col-6">
-                                    <input id="radio-1d" name="Car_Type" type="radio" value="Retail">
-                                    <label for="radio-1d"><img src="/img/icon/housekeeping.png" alt="">House Keeping</label>
-                                </div>
-                            </div>
-                            @foreach($jurusan_diplomas as $jurusan_diploma)
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="jurusan_diploma_id" id="{{ $jurusan_diploma->id }}" value="{{ $jurusan_diploma->id }}" required>
-                                    <label class="form-check-label" for="{{ $jurusan_diploma->id }}">{{ $jurusan_diploma->nama_jurusan }}</label>
-                                </div>
-                            @endforeach
                             <p class="landing-text2 mt-3">Darimana kamu mengetahui Rhapsody? :</p>
                             <div class="row">
                                 <div class="col-4">
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check-inline">
                                         <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="instagram" value="Instagram">
                                         <label class="form-check-label" for="instagram">Instagram</label>
                                     </div>
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check-inline">
                                         <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="facebook" value="Facebook">
                                         <label class="form-check-label" for="facebook">Facebook</label>
                                     </div>
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check-inline">
                                         <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="tiktok" value="Tiktok">
                                         <label class="form-check-label" for="tiktok">Tiktok</label>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check-inline">
                                         <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="youtube" value="Youtube">
                                         <label class="form-check-label" for="youtube">Youtube</label>
                                     </div>
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check-inline">
                                         <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="teman" value="Teman">
                                         <label class="form-check-label" for="teman">Teman</label>
                                     </div>
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check-inline">
                                         <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="orangTua" value="Orang Tua">
                                         <label class="form-check-label" for="orangTua">Orang Tua</label>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check-inline">
                                         <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="guru" value="Guru">
                                         <label class="form-check-label" for="guru">Guru</label>
                                     </div>
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check-inline">
                                         <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="yangLain" value="Yang Lain">
                                         <label class="form-check-label" for="yangLain">Yang Lain</label>
                                     </div>
