@@ -492,9 +492,497 @@
                     </div>
                   </div>
                 </div> -->
-                <h5 class="border-title2" data-aos="fade-right" data-aos-duration="1000">
+                <div class="mt-4 pt-lg-2" data-aos="fade-up"
+                     data-aos-duration="1000" data-aos-delay="100">
+                    <h5>Alumni Lulusan Program Kami</h5>
+                    <div class="owl-carousel slider_carousel">
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/Foto 1_Anak Agung Istri Ratna Anggraeni.jpeg"
+                                    alt="Anak Agung Istri Ratna Anggraeni"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    Anak Agung Istri Ratna Anggraeni
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Dream - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/I Dewa Gede Adiarta Putra_Carnival Dream.jpeg"
+                                    alt="I Dewa Gede Adiarta Putra_Carnival Dream"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    I Dewa Gede Adiarta Putra
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Dream - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/I Putu Edik Gunawirawan_Carnival Pride.jpeg"
+                                    alt="I Putu Edik Gunawirawan_Carnival Pride"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    I Putu Edik Gunawirawan
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Dream - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/I Putu Yoga Maha Astra_Carnival Luminosa.jpeg"
+                                    alt="I Putu Yoga Maha Astra_Carnival Luminosa"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    I Putu Yoga Maha Astra
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Luminosa - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/Ida Bagus Putu Adiananta_Carnival Miracle1.jpeg"
+                                    alt="Ida Bagus Putu Adiananta_Carnival Miracle"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    Ida Bagus Putu Adiananta
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Miracle - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/Ni Putu Novi Sagita Handayani_Carnival Dream.jpeg"
+                                    alt="Ni Putu Novi Sagita Handayani_Carnival Dream"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    Ni Putu Novi Sagita Handayani
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Dream - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/Wayan Widi Adnyana_Carnival Conquest.jpeg"
+                                    alt="Wayan Widi Adnyana_Carnival Conquest"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    Wayan Widi Adnyana
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Conquest - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="d-flex align-items-center course-content" style="height: 611px">
+                                <h3 class="h5 course-name text-inherit text-center" style="font-size: 44px">
+                                    Dan 450+ Alumni Lainnya
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- <div class="inner-video-box">
+                  <img
+                    src="assets/img/course/course-details-2.jpg"
+                    alt="blog video"
+                  />
+                  <a
+                    href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                    class="play-btn position-center popup-video"
+                    ><i class="fas fa-play"></i
+                  ></a>
+                </div> -->
+                <!-- <h5 class="border-title2">Syllabus</h5>
+
+                <div class="accordion accordion-style4" id="faqVersion2">
+                  <div class="accordion-item active">
+                    <div class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <span class="button-label">Week 1</span>
+                        Getting started with Extensive Reading
+                      </button>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#faqVersion2"
+                    >
+                      <div class="accordion-body">
+                        <div class="syllabus-list">
+                          <div class="syllabus-img">
+                            <img
+                              src="assets/img/course/course-syllabus-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">Introduction</h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-img">
+                            <img
+                              src="assets/img/course/course-syllabus-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">
+                              What do you understand by Extensive Reading?
+                            </h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">Why Extensive Reading?</h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              illum dolore eu fugiat proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">
+                              Incorporating Extensive Reading
+                            </h6>
+                            <p class="syllabustext">
+                              lit esse cillum dolore eu ferit in voluptate velit
+                              esse cillum dolore eu fugiat nulla pariatur. Ex
+                              cepteur sint upidatat non illum dolore eu fugiat
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <span class="button-label">Week 2</span>
+                        Practical pre-reading activities with graded readers
+                      </button>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#faqVersion2"
+                    >
+                      <div class="accordion-body">
+                        <div class="syllabus-list">
+                          <div class="syllabus-img">
+                            <img
+                              src="assets/img/course/course-syllabus-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">Introduction</h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-img">
+                            <img
+                              src="assets/img/course/course-syllabus-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">
+                              What do you understand by Extensive Reading?
+                            </h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">Why Extensive Reading?</h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              illum dolore eu fugiat proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">
+                              Incorporating Extensive Reading
+                            </h6>
+                            <p class="syllabustext">
+                              lit esse cillum dolore eu ferit in voluptate velit
+                              esse cillum dolore eu fugiat nulla pariatur. Ex
+                              cepteur sint upidatat non illum dolore eu fugiat
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <span class="button-label">Week 3</span>
+                        Activities with graded readers
+                      </button>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#faqVersion2"
+                    >
+                      <div class="accordion-body">
+                        <div class="syllabus-list">
+                          <div class="syllabus-img">
+                            <img
+                              src="assets/img/course/course-syllabus-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">Introduction</h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-img">
+                            <img
+                              src="assets/img/course/course-syllabus-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">
+                              What do you understand by Extensive Reading?
+                            </h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">Why Extensive Reading?</h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              illum dolore eu fugiat proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">
+                              Incorporating Extensive Reading
+                            </h6>
+                            <p class="syllabustext">
+                              lit esse cillum dolore eu ferit in voluptate velit
+                              esse cillum dolore eu fugiat nulla pariatur. Ex
+                              cepteur sint upidatat non illum dolore eu fugiat
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingFour">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <span class="button-label">Week 4</span>
+                        Practical post-reading
+                      </button>
+                    </div>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#faqVersion2"
+                    >
+                      <div class="accordion-body">
+                        <div class="syllabus-list">
+                          <div class="syllabus-img">
+                            <img
+                              src="assets/img/course/course-syllabus-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">Introduction</h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-img">
+                            <img
+                              src="assets/img/course/course-syllabus-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">
+                              What do you understand by Extensive Reading?
+                            </h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">Why Extensive Reading?</h6>
+                            <p class="syllabustext">
+                              Reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur. Ex cepteur sint upidatat non
+                              illum dolore eu fugiat proident.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="syllabus-list">
+                          <div class="syllabus-content">
+                            <h6 class="syllabustitle">
+                              Incorporating Extensive Reading
+                            </h6>
+                            <p class="syllabustext">
+                              lit esse cillum dolore eu ferit in voluptate velit
+                              esse cillum dolore eu fugiat nulla pariatur. Ex
+                              cepteur sint upidatat non illum dolore eu fugiat
+                              proident.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <h5 class="border-title2 mt-4 pt-lg-2" data-aos="fade-right" data-aos-duration="1000">
                     Kapan kamu ingin mengikuti pelatihan ini?
                 </h5>
+
                 <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">
                     Ayo daftarkan dirimu sekarang untuk meraih pekerjaan impianmu
                     diluar negeri dan langsung terjun ke dunia kerja dalam waktu yang
@@ -650,3 +1138,28 @@
     </div>
 </section>
 @endsection
+@push('addon-script')
+    <script>
+        function slider_carouselInit() {
+            $('.owl-carousel.slider_carousel').owlCarousel({
+                dots: false,
+                rewind: true,
+                autoplay: false,
+                nav: true,
+                navText: ["<img src='/img/icon/left.png'>","<img src='/img/icon/next.png'>"],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        }
+        slider_carouselInit();
+    </script>
+@endpush

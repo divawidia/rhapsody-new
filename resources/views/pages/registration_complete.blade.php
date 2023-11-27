@@ -10,6 +10,8 @@
         style="background: url('/img/breadcumb/regis-complete-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
+            overflow: hidden;
+            background-position: center center;;
             height: max-content;
             display: block;
             margin-left: auto;
