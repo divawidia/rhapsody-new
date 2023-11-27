@@ -78,7 +78,7 @@ Version: 1.0.0
     --theme-color: #05263d;
     --theme-color2: #ce5423;
     --theme-color3: #faf5f0;
-    --vs-secondary-color: #17215d;
+    --vs-secondary-color: #05263d;
     --title-color: #000000;
     --body-color: #a1a1a1;
     --smoke-color: #f3f3f3;
@@ -3419,7 +3419,7 @@ a.text-theme:hover,
     bottom: -1px;
     width: 99999px;
     z-index: -1;
-    background-color: var(--vs-secondary-color);
+    background-color: var(--theme-color);
 }
 
 .will-sticky .sticky-active {
@@ -3773,7 +3773,7 @@ a.text-theme:hover,
 }
 
 .header-layout2 .sticky-active {
-    background-color: var(--vs-secondary-color);
+    background-color: var(--theme-color);
 }
 .header-layout2 .header-top {
     background-color: var(--black-color);

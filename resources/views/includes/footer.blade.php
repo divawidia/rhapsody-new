@@ -3,7 +3,7 @@ Footer Area
 ==============================-->
 <footer
     class="footer-wrapper footer-layout2"
-    style="background-image: url('/img/bg/footer-bg-2-1.jpg')"
+    style="background-color: var(--theme-color)"
 >
     <div class="widget-area">
         <div class="container">
