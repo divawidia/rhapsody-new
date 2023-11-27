@@ -46,7 +46,7 @@ class PostController extends Controller
                                     <a class="dropdown-item" href="' . route('posts.edit', $item->id) . '">Edit</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="' . route('posts.show', $item->id) . '">Detail</a>
+                                    <a class="dropdown-item" href="' . route('posts.show', $item->slug) . '">Detail</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="' . route('posts.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
@@ -116,9 +116,9 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Post $post)
     {
-        $artikel = Post::with((['tags', 'category']))->findOrFail($id);
+        $artikel = Post::with((['tags', 'category']))->findOrFail($post->id);
         $tags = Tag::all();
         $categories = Category::all();
 
@@ -166,9 +166,9 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Post $post)
     {
-        $post = Post::findOrFail($id);
+        $post = Post::findOrFail($post->id);
         $post->tags()->detach();
         Alert::success('Hore!','Post berhasil dihapus!');
         $post->delete();

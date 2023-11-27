@@ -18,9 +18,9 @@
                     </div>
                     <div class="col-6">
                         <div class="btn-toolbar float-end" role="toolbar">
-                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-success me-1" data-toggle="tooltip" data-placement="bottom" title="Edit Artikel"><i class="fa fa-edit"></i></a>
+                            <a href="{{ route('posts.edit', ['post' => $post]) }}" class="btn btn-success me-1" data-toggle="tooltip" data-placement="bottom" title="Edit Artikel"><i class="fa fa-edit"></i></a>
 
-                            <a href="{{ route('posts.destroy', $post->id) }}" class="btn btn-danger me-1" data-toggle="tooltip" data-placement="bottom" title="Hapus Artikel" data-confirm-delete="true"><i class="fa fa-trash"></i></a>
+                            <a href="{{ route('posts.destroy', ['post' => $post]) }}" class="btn btn-danger me-1" data-toggle="tooltip" data-placement="bottom" title="Hapus Artikel" data-confirm-delete="true"><i class="fa fa-trash"></i></a>
                         </div>
                     </div>
                 </div>
