@@ -1,12 +1,8 @@
 <!--==============================
 Footer Area
 ==============================-->
-<footer
-    class="footer-wrapper footer-layout2"
->
-    <div class="widget-area" style="
-        background-image: url('/img/bg/footer-bg.png');
-        background-repeat: no-repeat;">
+<footer class="footer-wrapper footer-layout2">
+    <div class="widget-area" style="background-image: url('/img/bg/footer-bg.png'); background-repeat: no-repeat;">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-xl-4 border-end">
@@ -14,7 +10,7 @@ Footer Area
                         <div class="vs-widget-about">
                             <div class="footer-logo text-center">
                                 <a href="{{ route('home') }}">
-                                    <img src="/img/Title-Logo.png" alt="logo"/>
+                                    <img src="/img/Title-Logo.png" alt="logo"  width="250"/>
                                 </a>
                             </div>
                             <p class="footer-text m-auto">
@@ -82,18 +78,6 @@ Footer Area
                                         <li><a href="{{ route('program-detail', $program_content->slug) }}">{{ $program->name }} {{ $program_content->name }}</a></li>
                                     @endforeach
                                 @endforeach
-{{--                                <li><a href="{{ route('front-office') }}">D1 Front Office</a></li>--}}
-{{--                                <li><a href="{{ route('housekeeping') }}">D1 Housekeeping</a></li>--}}
-{{--                                <li>--}}
-{{--                                    <a href="{{ route('f&b-service') }}">D1 Food & Beverage Service</a>--}}
-{{--                                </li>--}}
-{{--                                <li>--}}
-{{--                                    <a href="{{ route('f&b-product') }}">D1 Food & Beverage Product</a>--}}
-{{--                                </li>--}}
-{{--                                <li><a href="{{ route('laundry&housekeeping') }}">Executive Laundry & Housekeeping</a></li>--}}
-{{--                                <li>--}}
-{{--                                    <a href="{{ route('galley&cook') }}">Executive Galley & Cook</a>--}}
-{{--                                </li>--}}
                             </ul>
                         </div>
                     </div>
