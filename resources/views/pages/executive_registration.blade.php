@@ -28,7 +28,7 @@
                         {{--                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn position-center popup-video"><i class="fas fa-play"></i></a>--}}
                     </div>
                     <div class="card_wrapper">
-                        <div class="container">
+                        <div class="container text-center">
                             <div class="row" style="max-width: 700px">
                                 <div class="title-area my-4 wow fadeInUp" data-wow-delay="0.3s">
                                     <h5 class="sec-title text-center" data-aos="fade-up" data-aos-duration="1000">Beberapa Alumni Kami</h5>

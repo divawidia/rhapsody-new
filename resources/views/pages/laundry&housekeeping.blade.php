@@ -12,7 +12,9 @@
       class="breadcumb-wrapper"
       style="background: url('/img/breadcumb/breadcumb-bg.png');
             background-repeat: no-repeat;
-            background-size: cover;"
+            background-size: cover;
+            overflow: hidden;
+            background-position: center center;"
     >
       <div class="container z-index-common">
         <div class="breadcumb-content">

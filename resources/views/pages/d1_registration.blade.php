@@ -5,6 +5,200 @@
 @endsection
 
 @section('content')
+    <div class="modal fade" id="modalTesti" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content py-3 px-3" style="background-color: var(--theme-color3); border-radius: 20px !important;">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end">
+                            <button type="button" class="btn-close align-items-end" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="col-12">
+                            <h5 class="landing-title5 text-center" data-aos="fade-up" data-aos-duration="1000">
+                                Ini Beberapa Kisah Orang yang Sudah
+                                <FONT COLOR="#CE5423">Terbantu</FONT> Dengan Adanya Program Kami
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="inner-video-box text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                        <iframe class="modal-video-testi" style=" border-radius:30px" src="https://www.youtube.com/embed/1gr3YyeO8QM?si=vTr6hW-eyE_kOEDC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        {{--                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn position-center popup-video"><i class="fas fa-play"></i></a>--}}
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="container text-center">
+                            <div class="row" style="max-width: 700px">
+                                <div class="title-area my-4 wow fadeInUp" data-wow-delay="0.3s">
+                                    <h5 class="sec-title text-center" data-aos="fade-up" data-aos-duration="1000">Beberapa Alumni Kami</h5>
+                                </div>
+                                <div class="col-12">
+                                    <div class="owl-carousel modal-slider slider_carousel">
+                                        <div class="card modal-testi course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                                            <div class="testi-img">
+                                                <img
+                                                    class="w-100"
+                                                    src="/img/testi/Foto 1_Anak Agung Istri Ratna Anggraeni.jpeg"
+                                                    alt="Anak Agung Istri Ratna Anggraeni"
+                                                />
+                                            </div>
+                                            <div class="course-content text-center">
+                                                <h3 class="text-inherit fs-5 pb-3">
+                                                    Anak Agung Istri Ratna Anggraeni
+                                                </h3>
+                                                <div class="course-meta-modal">
+                                                </div>
+                                                <div class="course-footer">
+                                                    <p class="text-center mx-auto testi-text2">
+                                                        Carnival Dream - 2023
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card modal-testi course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                            <div class="testi-img">
+                                                <img
+                                                    class="w-100"
+                                                    src="/img/testi/I Dewa Gede Adiarta Putra_Carnival Dream.jpeg"
+                                                    alt="I Dewa Gede Adiarta Putra_Carnival Dream"
+                                                />
+                                            </div>
+                                            <div class="course-content text-center">
+                                                <h3 class="text-inherit fs-5 pb-3">
+                                                    I Dewa Gede Adiarta Putra
+                                                </h3>
+                                                <div class="course-meta-modal">
+                                                </div>
+                                                <div class="course-footer">
+                                                    <div class="text-center mx-auto testi-text2">
+                                                        Carnival Dream - 2023
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card modal-testi course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                                            <div class="testi-img">
+                                                <img
+                                                    class="w-100"
+                                                    src="/img/testi/I Putu Edik Gunawirawan_Carnival Pride.jpeg"
+                                                    alt="I Putu Edik Gunawirawan"
+                                                />
+                                            </div>
+                                            <div class="course-content text-center">
+                                                <h3 class="text-inherit fs-5 pb-3">
+                                                    I Putu Edik Gunawirawan
+                                                </h3>
+                                                <div class="course-meta-modal">
+                                                </div>
+                                                <div class="course-footer">
+                                                    <p class="text-center mx-auto testi-text2">
+                                                        Carnival Pride - 2023
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card modal-testi course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                            <div class="testi-img">
+                                                <img
+                                                    class="w-100"
+                                                    src="/img/testi/I Putu Yoga Maha Astra_Carnival Luminosa.jpeg"
+                                                    alt="I Putu Yoga Maha Astra_Carnival Luminosa.jpeg"
+                                                />
+                                            </div>
+                                            <div class="course-content text-center">
+                                                <h3 class="text-inherit fs-5 pb-3">
+                                                    I Putu Yoga Maha Astra
+                                                </h3>
+                                                <div class="course-meta-modal">
+                                                </div>
+                                                <div class="course-footer">
+                                                    <div class="text-center mx-auto testi-text2">
+                                                        Carnival Luminosa - 2023
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card modal-testi course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                                            <div class="testi-img">
+                                                <img
+                                                    class="w-100"
+                                                    src="/img/testi/Ida Bagus Putu Adiananta_Carnival Miracle1.jpeg"
+                                                    alt="Ida Bagus Putu Adiananta_Carnival Miracle1.jpeg"
+                                                />
+                                            </div>
+                                            <div class="course-content text-center">
+                                                <h3 class="text-inherit fs-5 pb-3">
+                                                    Ida Bagus Putu Adiananta
+                                                </h3>
+                                                <div class="course-meta-modal">
+                                                </div>
+                                                <div class="course-footer">
+                                                    <p class="text-center mx-auto testi-text2">
+                                                        Carnival Miracle - 2023
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card modal-testi course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                            <div class="testi-img">
+                                                <img
+                                                    class="w-100"
+                                                    src="/img/testi/Ni Putu Novi Sagita Handayani_Carnival Dream.jpeg"
+                                                    alt="Ni Putu Novi Sagita Handayani_Carnival Dream"
+                                                />
+                                            </div>
+                                            <div class="course-content text-center">
+                                                <h3 class="text-inherit fs-5 pb-3">
+                                                    Ni Putu Novi Sagita Handayani
+                                                </h3>
+                                                <div class="course-meta-modal">
+                                                </div>
+                                                <div class="course-footer">
+                                                    <div class="text-center mx-auto testi-text2">
+                                                        Carnival Dream - 2023
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card modal-testi course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                                            <div class="testi-img">
+                                                <img
+                                                    class="w-100"
+                                                    src="/img/testi/Wayan Widi Adnyana_Carnival Conquest.jpeg"
+                                                    alt="Wayan Widi Adnyana_Carnival Conquest"
+                                                />
+                                            </div>
+                                            <div class="course-content text-center">
+                                                <h3 class="text-inherit fs-5 pb-3">
+                                                    Wayan Widi Adnyana
+                                                </h3>
+                                                <div class="course-meta-modal">
+                                                </div>
+                                                <div class="course-footer">
+                                                    <p class="text-center mx-auto testi-text2">
+                                                        Carnival Conquest - 2023
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card modal-testi course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                            <div class="d-flex align-items-center course-content" style="height: 700px">
+                                                <h3 class="h5 course-name text-inherit text-center" style="font-size: 50px">
+                                                    Dan 450+ Alumni Lainnya
+                                                </h3>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div
         class="breadcumb-wrapper"
         style="background: url('/img/breadcumb/breadcumb-bg.png');
@@ -164,6 +358,32 @@
 @endsection
 
 @push('addon-script')
+    <script>
+        function slider_carouselInit() {
+            $('.owl-carousel.slider_carousel').owlCarousel({
+                dots: false,
+                rewind: true,
+                stagePadding: 2,
+                autoplay: false,
+                nav: true,
+                navText: ["<img src='/img/icon/left.png'>","<img src='/img/icon/next.png'>"],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2,
+                    }
+                }
+            });
+        }
+        slider_carouselInit();
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#modalTesti").modal('show');
+        });
+    </script>
     <script>
         $(".form-check-input").change(function () {
             //check if the selected option is others
