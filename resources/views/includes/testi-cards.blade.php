@@ -5,7 +5,7 @@
                 <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000">Beberapa Alumni Kami</h2>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mt-5">
                     <div class="owl-carousel slider_carousel">
                         <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="testi-img">
@@ -17,7 +17,7 @@
                             </div>
                             <div class="course-content text-center">
                                 <h3 class="h5 course-name">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit"
+                                    <a class="text-inherit"
                                     >Anak Agung Istri Ratna Anggraeni</a
                                     >
                                 </h3>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="course-content text-center">
                                 <h3 class="h5 course-name">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit"
+                                    <a class="text-inherit"
                                     >I Dewa Gede Adiarta Putra</a
                                     >
                                 </h3>
@@ -63,7 +63,7 @@
                             </div>
                             <div class="course-content text-center">
                                 <h3 class="h5 course-name">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit"
+                                    <a class="text-inherit"
                                     >I Putu Edik Gunawirawan</a
                                     >
                                 </h3>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="course-content text-center">
                                 <h3 class="h5 course-name">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit"
+                                    <a class="text-inherit"
                                     >I Putu Yoga Maha Astra</a
                                     >
                                 </h3>
@@ -109,7 +109,7 @@
                             </div>
                             <div class="course-content text-center">
                                 <h3 class="h5 course-name">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit"
+                                    <a class="text-inherit"
                                     >Ida Bagus Putu Adiananta</a
                                     >
                                 </h3>
@@ -132,7 +132,7 @@
                             </div>
                             <div class="course-content text-center">
                                 <h3 class="h5 course-name">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit"
+                                    <a class="text-inherit"
                                     >Ni Putu Novi Sagita Handayani</a
                                     >
                                 </h3>
@@ -155,7 +155,7 @@
                             </div>
                             <div class="course-content text-center">
                                 <h3 class="h5 course-name">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit"
+                                    <a class="text-inherit"
                                     >Wayan Widi Adnyana</a
                                     >
                                 </h3>
@@ -175,7 +175,6 @@
                                 </h3>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -45,13 +45,13 @@
             overflow: hidden;
             background-position: center center;"
                     ></div>
-                    <div class="container">
+                    <div class="container d-flex justify-content-center text-center">
                         <div class="hero-content">
-                            <h1 class="hero-title" data-aos="fade-right" data-aos-duration="1000">The New Direction to Grow</h1>
-                            <p class="hero-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                            <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">The New Direction to Grow</h1>
+                            <p class="hero-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                 Unlock Your Full Potential and Turn Your Dreams Into Reality
                             </p>
-                            <div class="hero-btns" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                 <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
                                     <i class="fa-solid fa-angle-right"></i>Daftar Sekarang
                                 </a>
@@ -564,8 +564,6 @@ CTA Area
             $('.owl-carousel.slider_carousel').owlCarousel({
                 dots: false,
                 rewind: true,
-                margin: 30,
-                stagePadding: 2,
                 autoplay: false,
                 nav: true,
                 navText: ["<img src='/img/icon/left.png'>","<img src='/img/icon/next.png'>"],
