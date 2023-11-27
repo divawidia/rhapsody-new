@@ -8,10 +8,13 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesdesign" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ URL::asset('build/images/favicon.ico') }}">
-
+    <link rel="shortcut icon" href="{{ URL::asset('favicon.ico') }}">
     <!-- include head css -->
-    @include('layouts.head-css')
+    @stack('prepend-style')
+    @include('layouts.admin.head-css')
+    <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.8/datatables.min.css" rel="stylesheet">
+
+    @stack('addon-style')
 </head>
 
 @yield('body')
@@ -19,11 +22,11 @@
 <!-- Begin page -->
 <div id="layout-wrapper">
     <!-- topbar -->
-    @include('layouts.topbar')
+    @include('layouts.admin.topbar')
 
     <!-- sidebar components -->
-    @include('layouts.sidebar')
-    @include('layouts.horizontal')
+    @include('layouts.admin.sidebar')
+    @include('layouts.admin.horizontal')
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -39,7 +42,7 @@
         <!-- End Page-content -->
 
         <!-- footer -->
-        @include('layouts.footer')
+        @include('layouts.admin.footer')
 
     </div>
     <!-- end main content-->
@@ -47,11 +50,13 @@
 <!-- END layout-wrapper -->
 
 <!-- customizer -->
-@include('layouts.right-sidebar')
+@include('layouts.admin.right-sidebar')
 
 <!-- vendor-scripts -->
-@include('layouts.vendor-scripts')
-
+@stack('prepend-script')
+@include('layouts.admin.vendor-scripts')
+<script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.8/datatables.min.js"></script>
+@stack('addon-script')
 </body>
 
 </html>

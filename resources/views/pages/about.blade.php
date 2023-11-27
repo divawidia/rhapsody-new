@@ -64,7 +64,7 @@
               <div class="img-1 mega-hover">
                 <img
                   class="w-100"
-                  src="/img/about/JNR00734.JPG"
+                  src="/img/about/about-2-6.jpg"
                   alt="About Img"
                 />
               </div>
@@ -245,9 +245,11 @@
             </div>
         </div>
     </section>
+
+@include('includes.testi-cards')
     <!--==============================
-  Features Area
-  ==============================-->
+      Features Area
+      ==============================-->
     <section class="space-extra-bottom space-extra-top">
       <div class="container">
         <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
@@ -302,3 +304,30 @@
       </div>
     </section>
 @endsection
+@push('addon-script')
+    <script>
+        function slider_carouselInit() {
+            $('.owl-carousel.slider_carousel').owlCarousel({
+                dots: false,
+                rewind: true,
+                margin: 30,
+                stagePadding: 2,
+                autoplay: false,
+                nav: true,
+                navText: ["<img src='/img/icon/left.png'>","<img src='/img/icon/next.png'>"],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        }
+        slider_carouselInit();
+    </script>
+@endpush

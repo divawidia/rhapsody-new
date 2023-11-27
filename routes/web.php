@@ -1,7 +1,9 @@
 <?php
 
+use \App\Http\Controllers\CalonMahasiswaController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Controllers\Admin\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,3 +66,12 @@ Route::post('/registrasi-program-d1', [App\Http\Controllers\CalonPesertaDiplomaC
 
 Route::get('/registrasi-berhasil', function () {return view('pages.registration_complete');})->name('registrasi-berhasil');
 
+
+Route::prefix('admin')
+    ->group(function() {
+        Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
+        Route::resource('calon-peserta-executive', CalonMahasiswaController::class);
+        Route::resource('calon-peserta-diploma', \App\Http\Controllers\CalonPesertaDiplomaController::class);
+    });
+
+Auth::routes();

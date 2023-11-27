@@ -260,7 +260,6 @@ h6 {
     text-transform: none;
     font-weight: 700;
     line-height: 1.2;
-    margin: 0 0 15px 0;
 }
 
 .h1,
@@ -1690,10 +1689,6 @@ textarea.is-invalid {
     margin-bottom: 10px;
 }
 
-.title-area {
-    margin-bottom: calc(var(--section-title-space) - 20px);
-}
-
 .title-area2 {
     margin-bottom: var(--section-title-space);
 }
@@ -2271,14 +2266,16 @@ textarea.is-invalid {
 .text-inherit {
     font-family: var(--title-font);
     font-weight: bold;
-    color: inherit;
+    color: var(--theme-color);
+    font-size: 28px;
 }
 .text-inherit:hover {
-    color: var(--theme-color);
+    color: var(--theme-color2);
 }
 
 .text-inherit-body {
     font-family: var(--body-font);
+    text-align: center;
     color: inherit;
 }
 .text-inherit-body:hover {
@@ -4424,8 +4421,6 @@ blockquote.vs-quote cite {
 
 .inner-video-box {
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 40px;
 }
 
 .date-box {
@@ -5063,7 +5058,7 @@ blockquote.vs-quote cite {
 
 @media (max-width: 1199px) {
     .hero-inner {
-        min-height: 500px;
+        min-height: 600px;
     }
 }
 
@@ -5204,11 +5199,6 @@ blockquote.vs-quote cite {
 }
 /* Large devices */
 @media (max-width: 1199px) {
-    .hero-inner {
-        min-height: auto;
-        padding-bottom: 80px;
-        padding-top: 80px;
-    }
     .hero-layout1 .hero-title {
         font-size: 48px;
     }
@@ -8425,6 +8415,20 @@ blockquote.vs-quote cite {
     margin-bottom: 30px;
     border-radius: 20px;
 }
+
+.modal-testi.course-style2{
+    background-color: white;
+    height: 670px;
+}
+
+@media (max-width: 575px){
+
+    .owl-item{
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .course-style2:after,
 .course-style2:before {
     content: "";
@@ -8461,6 +8465,20 @@ blockquote.vs-quote cite {
     transform: scale(1.001);
     transition: all ease 0.4s;
 }
+
+.course-style2 .testi-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+.course-style2 .testi-img img {
+    width: 200px;
+    height: 500px;
+    object-fit: cover;
+    transform: scale(1.001);
+    transition: all ease 0.4s;
+}
+
 .course-style2 .course-price {
     background-color: var(--theme-color);
     color: var(--white-color);
@@ -8486,6 +8504,10 @@ blockquote.vs-quote cite {
     margin-top: -10px;
     padding-bottom: 25px;
 }
+.course-style2 .course-meta-modal {
+    border-bottom: 1px solid #dedede;
+    margin-top: -10px;
+}
 .course-style2 .course-meta span,
 .course-style2 .course-meta a {
     color: var(--body-color);
@@ -8506,6 +8528,16 @@ blockquote.vs-quote cite {
     color: var(--theme-color);
     font-size: 12px;
     margin-right: 7px;
+}
+.testi-text{
+    color: var(--theme-color);
+    font-family: var(--body-font);
+    font-size: 20px;
+}
+.testi-text2{
+    color: var(--theme-color);
+    font-family: var(--body-font);
+    font-size: 16px;
 }
 .course-style2 .course-teacher img {
     margin-right: 10px;
@@ -8535,12 +8567,19 @@ blockquote.vs-quote cite {
 .course-style2:hover .course-img img {
     transform: scale(1.15);
 }
+
+.course-style2:hover .testi-img img {
+    transform: scale(1.15);
+}
 @media (min-width: 1199px) {
     .course-style2.layout2 {
         display: flex;
         align-items: center;
     }
     .course-style2.layout2 .course-img {
+        border-radius: 20px 0 0 20px;
+    }
+    .course-style2.layout2 .testi-img {
         border-radius: 20px 0 0 20px;
     }
     .course-style2.layout2 .course-content {
@@ -8591,7 +8630,7 @@ blockquote.vs-quote cite {
 }
 .course-style3 .course-teacher {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -8980,13 +9019,9 @@ blockquote.vs-quote cite {
 }
 .course-details .course-meta {
     border-bottom: 1px solid #dadada;
-    border-top: 1px solid #dadada;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 15px;
-    padding: 35px 0 30px 0;
-    gap: 20px 20px;
 }
 .course-details .course-meta + .row {
     margin-bottom: 30px;
@@ -9096,7 +9131,6 @@ blockquote.vs-quote cite {
         padding: 0 20px;
     }
     .course-style2 .course-meta {
-        margin-top: 10px;
         padding-bottom: 15px;
     }
     .course-style2 .course-meta span,
@@ -9144,9 +9178,6 @@ blockquote.vs-quote cite {
     }
     .course-details .course-price {
         font-size: 60px;
-    }
-    .course-details .course-meta {
-        margin-bottom: 30px;
     }
     .course-style4 .course-author {
         margin-bottom: 15px;
@@ -9230,9 +9261,6 @@ blockquote.vs-quote cite {
         margin-right: 0;
         margin-bottom: 15px;
     }
-    .course-details .course-meta .meta-item {
-        width: calc(50% - 20px);
-    }
     .course-details .course-price {
         font-size: 42px;
     }
@@ -9242,9 +9270,6 @@ blockquote.vs-quote cite {
     .course-style4.list-style {
         margin-left: 15px;
         margin-right: 15px;
-    }
-    .course-details .course-meta {
-        padding: 25px 0 20px 0;
     }
     .course-details .course-meta .meta-title {
         font-size: 14px;
@@ -10221,6 +10246,30 @@ blockquote.vs-quote cite {
     }
 }
 
+.modal-text.text-inherit{
+    font-size: 18px;
+}
+
+.testi.text-inherit{
+    font-size: 24px;
+}
+
+@media (max-width: 1199px){
+    .modal-text.text-inherit{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 991px){
+    .vs-btn {
+        font-size: 15px;
+        padding: 15px;
+    }
+    .modal-text.text-inherit{
+        font-size: 14px;
+    }
+}
+
 .landing-content {
     max-width: 1054px;
     display: block;
@@ -10281,6 +10330,30 @@ blockquote.vs-quote cite {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+}
+
+.modal-header .landing-title5 {
+    font-size: 36px;
+}
+@media (max-width: 575px){
+    .modal-header .landing-title5 {
+        font-size: 26px;
+    }
+}
+
+.modal-body .sec-title {
+    color: #006687;
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+@media (max-width: 575px){
+    .modal-body .sec-title {
+        font-size: 26px;
+    }
 }
 
 .landing-subtitle{
@@ -10388,14 +10461,20 @@ blockquote.vs-quote cite {
     color: black;
     border-bottom: 1px solid;
 }
-@media (max-width: 1999px) {
-    .video-testi {
-        height: 593px;
-    }
+.modal-video-testi, .video-testi {
+    height: 592px;
+    width: 333px;
 }
 @media (max-width: 991px) {
-    .video-testi {
-        height: 392px;
+    .modal-video-testi, .video-testi {
+        height: 592px;
+    }
+}
+
+@media (max-width: 575px) {
+    .modal-video-testi, .video-testi {
+        height: 480px;
+        width: 270px
     }
 }
 
@@ -10424,7 +10503,7 @@ blockquote.vs-quote cite {
     }
 
     .video-testi {
-        height: 253px;
+        height: 540px;
     }
 
     .landing-title2 {
@@ -10559,3 +10638,74 @@ blockquote.vs-quote cite {
         max-width: 50px;
     }
 }
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.card img {
+    max-width: 100%;
+    height: 250px;
+}
+
+.card {
+    margin: 0 0.5em;
+    border: none;
+    border-radius: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+    .card img {
+        height: 11em;
+    }
+}
+.slider_carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.slider_carousel .owl-prev, .slider_carousel .owl-next {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+.slider_carousel .owl-next {
+    right: -30px;
+}
+
+.slider_carousel .owl-prev {
+    left: -30px;
+}
+
+@media (max-width: 575px){
+    .slider_carousel .owl-next {
+        right: -20px;
+    }
+
+    .slider_carousel .owl-prev {
+        left: -20px;
+    }
+    .modal-slider.slider_carousel .owl-next {
+        right: -40px;
+    }
+
+    .modal-slider.slider_carousel .owl-prev {
+        left: -40px;
+    }
+}
+

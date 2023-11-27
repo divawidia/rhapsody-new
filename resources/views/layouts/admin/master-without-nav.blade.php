@@ -11,14 +11,16 @@
     <link rel="shortcut icon" href="{{ URL::asset('build/images/favicon.ico') }}">
 
     <!-- include head css -->
+
     @include('layouts.head-css')
 </head>
 
 <body>
-    
+
     @yield('content')
 
     <!-- vendor-scripts -->
+
     @include('layouts.vendor-scripts')
 
 </body>

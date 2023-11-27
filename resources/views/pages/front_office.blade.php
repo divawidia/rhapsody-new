@@ -132,6 +132,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="mt-4 pt-lg-2" data-aos="fade-up"
                      data-aos-duration="1000" data-aos-delay="100">
                     <h5 class="border-title2">Program Description</h5>
@@ -152,7 +153,154 @@
                         </ul>
                     </div>
                 </div>
-                <div class="" data-aos="fade-up"
+                <div class="mt-4 pt-lg-2" data-aos="fade-up"
+                     data-aos-duration="1000" data-aos-delay="100">
+                    <h5 class="border-title2">Alumni Lulusan Program Kami</h5>
+                    <div class="owl-carousel slider_carousel">
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/Foto 1_Anak Agung Istri Ratna Anggraeni.jpeg"
+                                    alt="Anak Agung Istri Ratna Anggraeni"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    Anak Agung Istri Ratna Anggraeni
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Dream - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/I Dewa Gede Adiarta Putra_Carnival Dream.jpeg"
+                                    alt="I Dewa Gede Adiarta Putra_Carnival Dream"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    I Dewa Gede Adiarta Putra
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Dream - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/I Putu Edik Gunawirawan_Carnival Pride.jpeg"
+                                    alt="I Putu Edik Gunawirawan_Carnival Pride"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    I Putu Edik Gunawirawan
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Dream - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/I Putu Yoga Maha Astra_Carnival Luminosa.jpeg"
+                                    alt="I Putu Yoga Maha Astra_Carnival Luminosa"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    I Putu Yoga Maha Astra
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Luminosa - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/Ida Bagus Putu Adiananta_Carnival Miracle1.jpeg"
+                                    alt="Ida Bagus Putu Adiananta_Carnival Miracle"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    Ida Bagus Putu Adiananta
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Miracle - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/Ni Putu Novi Sagita Handayani_Carnival Dream.jpeg"
+                                    alt="Ni Putu Novi Sagita Handayani_Carnival Dream"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    Ni Putu Novi Sagita Handayani
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Dream - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="testi-img">
+                                <img
+                                    class="w-100"
+                                    src="/img/testi/Wayan Widi Adnyana_Carnival Conquest.jpeg"
+                                    alt="Wayan Widi Adnyana_Carnival Conquest"
+                                />
+                            </div>
+                            <div class="course-content text-center">
+                                <h3 class="testi text-inherit">
+                                    Wayan Widi Adnyana
+                                </h3>
+                                <div class="course-footer">
+                                    <div class="text-center mx-auto testi-text">
+                                        Carnival Conquest - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="d-flex align-items-center course-content" style="height: 611px">
+                                <h3 class="h5 course-name text-inherit text-center" style="font-size: 44px">
+                                    Dan 450+ Alumni Lainnya
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mt-4 pt-lg-2" data-aos="fade-up"
                      data-aos-duration="1000" data-aos-delay="100">
                     <h5 class="border-title2">Ayo Daftarkan Dirimu Sekarang!</h5>
                     <p>
@@ -161,10 +309,10 @@
                     <a href="{{ route('registrasi-program-d1') }}" class="vs-btn">Daftar Sekarang</a>
                 </div>
             </div>
-            <div class="col-lg-4 pt-4 pt-lg-0">
+            <div class="col-lg-4 mt-4 pt-4 pt-lg-0">
                 <aside>
                     <div class="widget" data-aos="fade-up" data-aos-duration="1000">
-                        <h3 class="widget_title">Diploma 1</h3>
+                        <h3 class="border-title2">Diploma 1</h3>
                         <div class="course-list">
                             <ul>
                                 <li>
@@ -186,7 +334,7 @@
                         </div>
                     </div>
                     <div class="widget" data-aos="fade-up" data-aos-duration="1000">
-                        <h3 class="widget_title">Executive Class Hybrid</h3>
+                        <h3 class="border-title2">Executive Class Hybrid</h3>
                         <div class="course-list">
                             <ul>
                                 <li>
@@ -247,4 +395,30 @@
         </div>
     </div>
 </section>
+
 @endsection
+@push('addon-script')
+    <script>
+        function slider_carouselInit() {
+            $('.owl-carousel.slider_carousel').owlCarousel({
+                dots: false,
+                rewind: true,
+                autoplay: false,
+                nav: true,
+                navText: ["<img src='/img/icon/left.png'>","<img src='/img/icon/next.png'>"],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        }
+        slider_carouselInit();
+    </script>
+@endpush

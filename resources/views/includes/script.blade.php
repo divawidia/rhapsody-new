@@ -16,3 +16,5 @@
 <script>
     AOS.init();
 </script>
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+<script src="/build/libs/owl-carousel/owl.carousel.min.js"></script>

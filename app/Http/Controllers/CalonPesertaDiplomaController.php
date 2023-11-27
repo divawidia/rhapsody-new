@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\CalonPesertaDiploma;
+use App\Models\CalonPesertaExecutive;
 use App\Models\ProgramDiploma;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class CalonPesertaDiplomaController extends Controller
 {
@@ -13,7 +15,26 @@ class CalonPesertaDiplomaController extends Controller
      */
     public function index()
     {
+        if (request()->ajax()) {
+            $query = CalonPesertaDiploma::with(['jurusan_diploma']);
 
+            return Datatables::of($query)
+                ->addColumn('action', function ($item) {
+                    return '
+                            <button class="btn btn-primary mx-1 my-1"
+                                type="button" id="action' .  $item->id . '">
+                                    Edit
+                            </button>
+                            <button class="btn btn-danger mx-1 my-1"
+                                type="button" id="action' .  $item->id . '">
+                                    Delete
+                            </button>';
+                })
+                ->rawColumns(['action'])
+                ->make();
+        }
+
+        return view('pages.admin.calon-peserta-diploma');
     }
 
     /**
