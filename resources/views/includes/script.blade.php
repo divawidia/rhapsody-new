@@ -24,12 +24,14 @@
 <script src="{{ URL::asset('build/libs/metismenujs/metismenujs.min.js') }}"></script>
 <script src="{{ URL::asset('build/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ URL::asset('build/libs/eva-icons/eva.min.js') }}"></script>
-<script> var url = 'https://widget.bot.space/js/widget.js';
-    var s = document.createElement('script');
+
+<script>
+    const url = 'https://widget.bot.space/js/widget.js';
+    const s = document.createElement('script');
     s.type = 'text/javascript';
     s.async = true;
     s.src = url;
-    var options = {
+    const options = {
         "enabled": true,
         "chatButtonSetting": {
             "backgroundColor": "#13C656",
@@ -41,21 +43,21 @@
             "position": "right"
         },
         "brandSetting": {
-            "brandName": "LPK Rhapsody",
+            "brandName": "{{ getSettingData()->site_name }}",
             "brandSubTitle": "Typically replies within a day",
             "brandImg": "https://i.ibb.co/QDbqQqg/Rhapsody-new-08.png",
             "welcomeText": "Hai! \nAda yang bisa kami bantu?",
-            "messageText": "Halo, aku mau nanya dong tentang LPK Rhapsody. ",
+            "messageText": "Halo, aku mau nanya dong tentang {{ getSettingData()->site_name }}. ",
             "backgroundColor": "#085E54",
             "ctaText": "Start Chat",
             "borderRadius": "25",
             "autoShow": false,
-            "phoneNumber": "6287761360699"
+            "phoneNumber": "{{ getSettingData()->kontak_admin }}"
         }
     };
     s.onload = function () {
         CreateWhatsappChatWidget(options);
     };
-    var x = document.getElementsByTagName('script')[0];
+    const x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
 </script>

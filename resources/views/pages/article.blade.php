@@ -1,15 +1,14 @@
 @extends('layouts.app')
 
 @section('title')
-    Artikel | LPK Rhapsody Hospitality Development Center
+    Blogs, News & Events
 @endsection
 
 @section('content')
 <!--==============================
     Breadcumb
 ============================== -->
-    <div
-      class="breadcumb-wrapper d-flex align-items-center"
+    <div class="breadcumb-wrapper d-flex align-items-center"
       style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;

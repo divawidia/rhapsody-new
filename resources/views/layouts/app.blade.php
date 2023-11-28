@@ -24,7 +24,7 @@
     />
     <meta name="robots" content="INDEX,FOLLOW" />
 
-    <title>@yield('title')</title>
+    <title>@yield('title') | {{ getSettingData()->site_name }}</title>
 
     {{-- style --}}
     @stack('prepend-style')

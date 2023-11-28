@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Tentang Kami | LPK Rhapsody Hospitality Development Center
+    Tentang Kami
 @endsection
 
 @section('content')

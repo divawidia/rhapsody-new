@@ -4,18 +4,10 @@
     <div class="navbar-brand-box">
         <a href="{{ route('admin-dashboard') }}" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="{{ URL::asset('img/logo-sm.png') }}" alt="" height="30">
+                <img src="{{ Storage::url(getSettingData()->logo_sidebar_sm) }}" alt="" height="30">
             </span>
             <span class="logo-lg">
-                <img src="{{ URL::asset('img/logo-2.png') }}" alt="" height="75">
-            </span>
-        </a>
-        <a href="{{ route('admin-dashboard') }}" class="logo logo-light">
-            <span class="logo-lg">
-                <img src="{{ URL::asset('img/logo-2.png') }}" alt="" height="75">
-            </span>
-            <span class="logo-sm">
-                <img src="{{ URL::asset('img/logo-2.png') }}" alt="" height="75">
+                <img src="{{ Storage::url(getSettingData()->logo_sidebar_lg) }}" alt="" height="75">
             </span>
         </a>
     </div>

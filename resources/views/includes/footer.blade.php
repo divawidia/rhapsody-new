@@ -10,7 +10,7 @@ Footer Area
                         <div class="vs-widget-about">
                             <div class="footer-logo text-center">
                                 <a href="{{ route('home') }}">
-                                    <img src="/img/Title-Logo.png" alt="logo"  width="250"/>
+                                    <img src="{{ Storage::url(getSettingData()->logo_footer) }}" alt="logo"  width="250"/>
                                 </a>
                             </div>
                             <p class="footer-text m-auto">
@@ -27,7 +27,7 @@ Footer Area
                                         </div>
                                     </div>
                                     <div class="btn vs-btn style7">
-                                        <a href="https://wa.me/6287761360699" style="color: var(--theme-color2)">Hubungi Admin</a>
+                                        <a href="https://wa.me/{{ getSettingData()->kontak_admin }}" style="color: var(--theme-color2)">Hubungi Admin</a>
                                     </div>
                                 </div>
                                 <div class="col-6 position-relative">
@@ -39,8 +39,7 @@ Footer Area
                                         </div>
                                     </div>
                                     <div class="btn vs-btn style7">
-                                        <a
-                                            href="https://drive.google.com/file/d/1cJGZsiWahyat-w8G7xKxJu2kGkigClaC/view?usp=sharing" style="color: var(--theme-color2)">Unduh Brosur</a>
+                                        <a href="{{ getSettingData()->brosur }}" style="color: var(--theme-color2)">Unduh Brosur</a>
                                     </div>
                                 </div>
                             </div>
@@ -52,17 +51,17 @@ Footer Area
                         <h3 class="widget_title">Lokasi Kampus</h3>
                         <div class="course-style2">
                             <div class="course-img">
-                                <a href="{{ route('contact') }}"><img class="w-100" src="/img/about/about-2-6.jpg" alt="Front Office"></a>
+                                <a href="{{ route('contact') }}"><img class="w-100" src="{{ Storage::url(getSettingData()->foto_lpk) }}" alt="Lokasi Kampus"></a>
                             </div>
                             <div class="row course-tag">
                                 <div class="col-auto ms-auto category-style1 p-0">
-                                        <img src="/img/icon/Google_Map.png">
+                                    <img src="/img/icon/Google_Map.png">
                                 </div>
                             </div>
                             <div class="course-content">
-                                <h3 class="h5 course-name"><a href="https://maps.app.goo.gl/nWsK1U2HZZ9GEvMaA" class="text-inherit">Lokasi Deket dengan Bali Zoo</a></h3>
+                                <h3 class="h5 course-name"><a href="{{ getSettingData()->google_maps }}" class="text-inherit">{{ getSettingData()->location_title }}</a></h3>
                                 <div class="course-meta">
-                                    <span>Jalan Selat No. 18 B, Apuan, Singapadu, Gianyar, Bali - Indonesia</span>
+                                    <span>{{ getSettingData()->alamat }}</span>
                                 </div>
                             </div>
                         </div>
@@ -93,20 +92,41 @@ Footer Area
                     <div class="text-center col-lg-auto">
                         <p class="copyright-text">
                             Copyright <i class="fal fa-copyright"></i><script>document.write(new Date().getFullYear())</script>
-                            <a href="{{ route('home') }}">Rhapsody Hospitality Development Center</a>. All Rights Reserved
+                            <a href="{{ route('home') }}">{{ getSettingData()->site_name }}</a>. All Rights Reserved
                         </p>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <div class="social-style1">
-                            <a href="https://www.facebook.com/rhapsody.developmentcenter"
-                            ><i class="fab fa-facebook-f"></i
-                                ></a>
-                            <a href="https://www.instagram.com/rhapsodydevelopmentcenter/"
-                            ><i class="fab fa-instagram"></i
-                                ></a>
-                            <a href="https://www.linkedin.com/company/rhapsodyhospitality/"
-                            ><i class="fab fa-linkedin-in"></i
-                                ></a>
+                            @if(getSettingData()->url_facebook)
+                                <a href="{{ getSettingData()->url_facebook }}">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            @endif
+                            @if(getSettingData()->url_instagram)
+                                <a href="{{ getSettingData()->url_instagram }}">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            @endif
+                            @if(getSettingData()->url_tiktok)
+                                <a href="{{ getSettingData()->url_tiktok }}">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            @endif
+                            @if(getSettingData()->url_youtube)
+                                <a href="{{ getSettingData()->url_youtube }}">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            @endif
+                            @if(getSettingData()->url_linkedin)
+                                <a href="{{ getSettingData()->url_linkedin }}">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            @endif
+                            @if(getSettingData()->url_twitter)
+                                <a href="{{ getSettingData()->url_twitter }}">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            @endif
                         </div>
                     </div>
                 </div>
