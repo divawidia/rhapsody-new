@@ -144,7 +144,7 @@
                 <li class="menu-title">Pengaturan Website & Profile LPK</li>
 
                 <li>
-                    <a href="{{ route('users.index') }}">
+                    <a href="{{ route('setting.edit') }}">
                         <i class="bx bx-cog icon nav-icon"></i>
                         <span class="menu-item">Pengaturan</span>
                     </a>
