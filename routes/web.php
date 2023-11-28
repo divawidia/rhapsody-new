@@ -167,9 +167,9 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['au
         Route::resource('faq', FaqController::class);
     });
 
-    Route::prefix('pengaturan')->name('setting.')->group(function (){
+    Route::prefix('setting')->name('setting.')->group(function (){
         Route::get('', [SettingController::class, 'edit'])->name('edit');
-        Route::patch('', [SettingController::class, 'update'])->name('update');
+        Route::put('', [SettingController::class, 'update'])->name('update');
     });
 });
 Auth::routes();
