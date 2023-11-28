@@ -136,6 +136,11 @@
 
     imagePreview("photo_url", "preview");
     imagePreview("foto", "preview");
+    imagePreview("logo_navbar", "preview-logo_navbar");
+    imagePreview("logo_footer", "preview-logo_footer");
+    imagePreview("logo_sidebar_lg", "preview-logo_sidebar_lg");
+    imagePreview("logo_sidebar_sm", "preview-logo_sidebar_sm");
+    imagePreview("foto_lpk", "preview-foto_lpk");
 
     function initSelect2(id, placeholder = null) {
         $(id).select2({
