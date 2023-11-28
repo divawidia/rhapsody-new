@@ -7606,6 +7606,7 @@ body[data-layout-mode=dark] .gallery-box .box-content {
 
 .image-preview {
     max-height: 300px;
+    max-width: 500px;
     display: block;
     margin-left: auto;
     margin-right: auto;
