@@ -39,7 +39,7 @@
                     </a>
                 </li>
 
-                <li class="menu-title" data-key="t-articles">Blog & News Article</li>
+                <li class="menu-title" data-key="t-articles">Blog, News & Events Article</li>
 
                 <li>
                     <a href="{{ route('posts.index') }}">
@@ -50,33 +50,50 @@
                 <li>
                     <a href="{{ route('categories.index') }}">
                         <i class='bx bx-customize icon nav-icon'></i>
-                        <span class="menu-item" data-key="t-tags">Kategori</span>
+                        <span class="menu-item" data-key="t-tags">Kategori Artikel</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('tags.index') }}">
                         <i class='bx bx-purchase-tag-alt icon nav-icon'></i>
-                        <span class="menu-item" data-key="t-tags">Tags</span>
+                        <span class="menu-item" data-key="t-tags">Tags Artikel</span>
                     </a>
                 </li>
 
-                <li class="menu-title" data-key="t-applications">Page Content</li>
+                <li class="menu-title">Konten Halaman</li>
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow">
+                    <a href="{{ route('home-page-edit') }}">
                         <i class='bx bx-file-blank'></i>
-                        <span class="menu-item" data-key="t-sekolah">Pages</span>
+                        <span class="menu-item">Halaman Beranda</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('home-page-edit') }}" data-key="t-home-page">Home Page</a></li>
-                        <li><a href="{{ route('about-page-edit') }}" data-key="t-about-page">About Page</a></li>
-                        <li><a href="{{ route('facility-page-edit') }}" data-key="t-facility-page">Facility Page</a></li>
-                        <li><a href="{{ route('contact-page-edit') }}" data-key="t-contact-page">Contact Page</a></li>
-                        <li><a href="{{ route('programs.index') }}" data-key="t-program-page">Program Page</a></li>
-                    </ul>
+                </li>
+                <li>
+                    <a href="{{ route('about-page-edit') }}">
+                        <i class='bx bx-file-blank'></i>
+                        <span class="menu-item">Halaman Tentang Kami</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('facility-page-edit') }}">
+                        <i class='bx bx-file-blank'></i>
+                        <span class="menu-item">Halaman Fasilitas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('programs.index') }}">
+                        <i class='bx bx-file-blank'></i>
+                        <span class="menu-item">Halaman Program Kami</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('contact-page-edit') }}">
+                        <i class='bx bx-file-blank'></i>
+                        <span class="menu-item">Halaman Kontak Kami</span>
+                    </a>
                 </li>
 
-                <li class="menu-title" data-key="t-applications">Section Content</li>
+                <li class="menu-title" data-key="t-applications">Konten Section</li>
 
                 <li>
                     <a href="{{ route('victory-section-edit') }}">
@@ -106,21 +123,30 @@
                     </a>
                 </li>
 
-                <li class="menu-title" data-key="t-applications">Contact Forms</li>
+                <li class="menu-title" data-key="t-applications">Forms Pertanyaan</li>
 
                 <li>
                     <a href="{{ route('contact-forms.index') }}">
                         <i class='bx bx-receipt'></i>
-                        <span class="menu-item" data-key="t-sekolah">Forms</span>
+                        <span class="menu-item" data-key="t-sekolah">Pertanyaan Terkirim</span>
                     </a>
                 </li>
 
-                <li class="menu-title" data-key="t-applications">User Management</li>
+                <li class="menu-title">Manajemen Pengguna</li>
 
                 <li>
                     <a href="{{ route('users.index') }}">
                         <i class="bx bxs-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-sekolah">Users</span>
+                        <span class="menu-item">Pengguna</span>
+                    </a>
+                </li>
+
+                <li class="menu-title">Pengaturan Website & Profile LPK</li>
+
+                <li>
+                    <a href="{{ route('users.index') }}">
+                        <i class="bx bx-cog icon nav-icon"></i>
+                        <span class="menu-item">Pengaturan</span>
                     </a>
                 </li>
             </ul>
