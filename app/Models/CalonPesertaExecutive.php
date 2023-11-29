@@ -22,21 +22,14 @@ class CalonPesertaExecutive extends Model
         'asal_sekolah',
         'jurusan',
         'pengalaman_kerja',
-        'program_executive_id',
-        'jenis_refrensi'
+        'program_id'
     ];
 
-    public function setRefrensiAttribute($value)
-    {
-        $this->attributes['jenis_refrensi'] = json_encode($value);
+    public function program(){
+        return $this->belongsTo(ProgramContent::class, 'program_id', 'id');
     }
-
-    public function getRefrensiAttribute($value)
+    public function references()
     {
-        return $this->attributes['jenis_refrensi'] = json_decode($value);
-    }
-
-    public function program_executive(){
-        return $this->belongsTo(ProgramExecutive::class, 'program_executive_id', 'id');
+        return $this->belongsToMany(Reference::class, 'reference_calon_peserta_executive', 'peserta_id', 'reference_id', 'id');
     }
 }
