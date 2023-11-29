@@ -3,7 +3,8 @@
     <select class="form-select select2 @error($name) is-invalid @enderror"
             name="{{ $name }}"
             id="{{ $id }}"
-            @if($required) required @endif >
+            @if($required) required @endif
+            @if($multiple) multiple @endif>
         {{ $slot }}
     </select>
 
