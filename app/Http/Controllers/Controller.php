@@ -39,4 +39,24 @@ class Controller extends BaseController
             Storage::disk('public')->delete($image);
         }
     }
+    public function buttonTooltips($route, $btnColor, $tooltipsTitle, $btnIcon)
+    {
+        return '<a class="btn btn-sm '.$btnColor.'" href="' . $route . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'">
+                    <i class="bx '.$btnIcon.'"></i>
+                </a>';
+    }
+    public function formButtonTooltips($route, $btnColor, $tooltipsTitle, $btnIcon, $method)
+    {
+        return '<form action="' . $route . '" method="POST" >
+                    ' . method_field($method) . csrf_field() . '
+                    <button type="submit" class="btn btn-sm '.$btnColor.'" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'">
+                        <i class="bx '.$btnIcon.'"></i>
+                    </button>
+                </form>';
+    }
+    public function convertDateTime($timestamp)
+    {
+        $date = strtotime($timestamp);
+        return date('l, M d, Y - h:i A',$date);
+    }
 }
