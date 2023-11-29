@@ -92,12 +92,14 @@ Route::get('/waiting-approval', function (){ return view('auth.verify');});
 
 Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['auth', 'admin'])->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
+
     Route::resource('calon-peserta-executive', CalonMahasiswaController::class);
     Route::resource('calon-peserta-diploma', CalonPesertaDiplomaController::class);
+
     Route::resource('tags', TagController::class);
     Route::resource('posts', PostController::class);
-    Route::get('posts-dashboard', [PostController::class, 'dashboard'])->name('posts.dashboard');
     Route::resource('categories', CategoryController::class);
+    Route::get('posts-dashboard', [PostController::class, 'dashboard'])->name('posts.dashboard');
 
     Route::post('upload-blog-photo', [PostController::class, 'uploadPhoto'])->name('blog-photo-upload');
     Route::post('upload-blog-thumbnail', [PostController::class, 'uploadPhotoThumbnail'])->name('blog-thumbnail-upload');
@@ -113,11 +115,6 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['au
     Route::get('/profile-setting/change-password', [UserController::class, 'changePassword'])->name('change-password');
     Route::put('/profile-setting/change-password/update', [UserController::class, 'changePasswordUpdate'])->name('change-password.update');
 
-    Route::prefix('sosialisasi')->group(function (){
-        Route::resource('siswa-sma-smk', SiswaSmaSmkController::class);
-        Route::resource('sekolah', SekolahController::class);
-        Route::resource('jadwal', JadwalSosialisasiController::class);
-    });
     Route::prefix('pages')->group(function (){
         Route::get('home', [HomePageController::class, 'edit'])->name('home-page-edit');
         Route::patch('home', [HomePageController::class, 'update'])->name('home-page-update');
