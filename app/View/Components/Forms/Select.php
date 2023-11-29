@@ -12,13 +12,14 @@ class Select extends Component
     public $id;
     public $label;
     public $required;
-
-    public function __construct($name, $id = null, $label = null, $required = true)
+    public $multiple;
+    public function __construct($name, $id = null, $label = null, $required = true, $multiple = false)
     {
         $this->name = $name;
         $this->id = $id ?? $name; // Default ID to the name
         $this->label = $label;
         $this->required = $required;
+        $this->multiple = $multiple;
     }
     /**
      * Get the view / contents that represent the component.
