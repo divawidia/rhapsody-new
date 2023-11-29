@@ -14,10 +14,10 @@ class ContactFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama' => ['required'],
+            'nama' => ['required', 'string'],
             'email' => ['required', 'email'],
-            'no_telp' => ['required'],
-            'pesan' => ['required'],
+            'no_telp' => ['required', 'string'],
+            'pesan' => ['required', 'string'],
         ];
     }
 }
