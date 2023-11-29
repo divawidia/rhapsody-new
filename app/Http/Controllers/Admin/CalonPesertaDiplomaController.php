@@ -20,21 +20,28 @@ class CalonPesertaDiplomaController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = CalonPesertaDiploma::with(['jurusan_diploma']);
+            $query = CalonPesertaDiploma::with(['program.program', 'references'])->latest()->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
-                    return '
-                            <button class="btn btn-primary mx-1 my-1"
-                                type="button" id="action' .  $item->id . '">
-                                    Edit
-                            </button>
-                            <button class="btn btn-danger mx-1 my-1"
-                                type="button" id="action' .  $item->id . '">
-                                    Delete
-                            </button>';
+                    return $this->buttonTooltips(route('calon-peserta-diploma.edit', $item->id), 'btn-primary', 'Edit Data Calon Peserta', 'bx-edit')
+                        .' '.$this->formButtonTooltips(route('calon-peserta-diploma.destroy', $item->id), 'btn-danger', 'Hapus Data Calon Peserta', 'bx-trash', 'DELETE');
                 })
-                ->rawColumns(['action'])
+                ->addColumn('reference', function ($item) {
+                    $data = '';
+                    foreach ($item->references as $reference) {
+                        $data .= '('.$reference->jenis.')';
+                    }
+                    return $data;
+                })
+                ->editColumn('created_at', function ($item) {
+                    return $this->convertDateTime($item->created_at);
+                })
+                ->editColumn('updated_at', function ($item) {
+                    return $this->convertDateTime($item->updated_at);
+                })
+                ->rawColumns(['action', 'reference', 'created_at','updated_at'])
+                ->addIndexColumn()
                 ->make();
         }
 
@@ -70,14 +77,6 @@ class CalonPesertaDiplomaController extends Controller
         $calon_peserta->references()->sync((array)$request->input('reference_id'));
 
         return redirect()->route('registrasi-berhasil');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
     }
 
     /**
