@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateCalonPesertaDiplomaRequest;
+use App\Http\Requests\EditCalonPesertaDiplomaRequest;
 use App\Models\CalonPesertaDiploma;
-use App\Models\CalonPesertaExecutive;
-use App\Models\Program;
-use App\Models\ProgramDiploma;
+use App\Models\ProgramContent;
 use App\Models\Reference;
 use App\Models\Testimony;
-use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
 class CalonPesertaDiplomaController extends Controller
@@ -53,65 +53,69 @@ class CalonPesertaDiplomaController extends Controller
      */
     public function create()
     {
-        $jurusan_diplomas = ProgramDiploma::all();
+        $jurusan_diplomas = ProgramContent::whereRelation('program', 'name', 'Diploma 1')->get();
         $references = Reference::all();
         $testimonies = Testimony::all();
-        $programs = Program::with('program_contents')->get()->all();
 
         return view('pages.d1_registration', [
             'jurusan_diplomas' => $jurusan_diplomas,
             'references' => $references,
             'testimonies' => $testimonies,
-            'programs' => $programs
         ]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CreateCalonPesertaDiplomaRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
 
         $calon_peserta = CalonPesertaDiploma::create($data);
-        $calon_peserta->references()->sync((array)$request->input('reference_id'));
+        $calon_peserta->references()->attach($data['references']);
 
+        $message = 'Pendaftaran anda sebagai calon peserta diploma 1 berhasil!';
+        Alert::success('Hore!', $message);
         return redirect()->route('registrasi-berhasil');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(CalonPesertaDiploma $calon_peserta_diploma)
     {
-        $item = CalonPesertaDiploma::findOrFail($id);
-
         return view('pages.admin.calon-peserta-diploma.edit', [
-            'item' => $item
+            'peserta' => $calon_peserta_diploma,
+            'programs' => ProgramContent::whereRelation('program', 'name', 'Diploma 1')->get(),
+            'references' => Reference::all(),
+            'referensiPeserta' => $calon_peserta_diploma->references->pluck('id')->toArray()
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(EditCalonPesertaDiplomaRequest $request, CalonPesertaDiploma $calon_peserta_diploma)
     {
-        $data = $request->all();
+        $data = $request->validated();
 
-        $item = CalonPesertaDiploma::findOrFail($id);
-        $item->update($data);
+        $calon_peserta_diploma->update($data);
+        $calon_peserta_diploma->references()->sync($data['references']);
 
-        return redirect()->route('pages.admin.calon-peserta-diploma.index');
+        $message = 'Data Calon Peserta '.$calon_peserta_diploma->nama_lengkap.' Berhasil Diperbarui!';
+        Alert::success('Hore!', $message);
+        return redirect()->route('calon-peserta-diploma.index')->with('status', $message);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(CalonPesertaDiploma $calon_peserta_diploma)
     {
-        $item = CalonPesertaDiploma::findOrFail($id);
-        $item->delete();
+        $calon_peserta_diploma->delete();
 
-        return redirect()->route('pages.admin.calon-peserta-diploma.index');
+        $message = 'Data Calon Peserta '.$calon_peserta_diploma->nama_lengkap.' Berhasil dihapus!';
+        Alert::success('Hore!', $message);
+        return redirect()->route('calon-peserta-diploma.index')->with('status', $message);
     }
 }
