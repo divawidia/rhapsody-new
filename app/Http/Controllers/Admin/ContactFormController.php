@@ -17,12 +17,15 @@ class ContactFormController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = ContactForm::latest()->get();;
+            $query = ContactForm::latest()->get();
             return Datatables::of($query)
                 ->editColumn('created_at', function ($item){
-                    $date = strtotime($item->created_at);
-                    return date('l, M d, Y - h:i A',$date);
+                    return $this->convertDateTime($item->created_at);
                 })
+                ->editColumn('updated_at', function ($item){
+                    return $this->convertDateTime($item->updated_at);
+                })
+                ->addIndexColumn()
                 ->make();
         }
         return view('pages.admin.contact-forms.index');
@@ -32,7 +35,6 @@ class ContactFormController extends Controller
      */
     public function store(ContactFormRequest $request)
     {
-
         $data = $request->validated();
         ContactForm::create($data);
         Alert::success('Hore!', 'Pesan pertanyaan berhasil dikirim!');
