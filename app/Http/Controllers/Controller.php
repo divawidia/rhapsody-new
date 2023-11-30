@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -49,7 +50,7 @@ class Controller extends BaseController
     {
         return '<form action="' . $route . '" method="POST" >
                     ' . method_field($method) . csrf_field() . '
-                    <button type="submit" class="btn btn-sm '.$btnColor.'" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'">
+                    <button type="submit" class="btn btn-sm '.$btnColor.'" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'" data-confirm-delete="true">
                         <i class="bx '.$btnIcon.'"></i>
                     </button>
                 </form>';
@@ -63,8 +64,27 @@ class Controller extends BaseController
     {
         $data = '';
         foreach ($peserta->references as $reference) {
-            $data .= '('.$reference->jenis.')';
+            $data .= '<span class="badge bg-success">'.$reference->jenis.'</span>';
         }
         return $data;
+    }
+
+    public function postTags(Post $post)
+    {
+        $data = '';
+        foreach ($post->tags as $tag) {
+            $data .= '<span class="badge bg-success">'.$tag->tag_name.'</span>';
+        }
+        return $data;
+    }
+
+    public function status($status)
+    {
+        if ($status == 1) {
+            $badge = '<span class="badge bg-success">Published</span>';
+        }else{
+            $badge = '<span class="badge bg-danger">Private</span>';
+        }
+        return $badge;
     }
 }
