@@ -1,11 +1,10 @@
 <?php
 
-use App\Http\Controllers\Admin\CalonMahasiswaController;
+use App\Http\Controllers\Admin\CalonPesertaExecutiveController;
 use App\Http\Controllers\Admin\CalonPesertaDiplomaController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactFormController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\JadwalSosialisasiController;
 use App\Http\Controllers\Admin\PageContent\AboutPageController;
 use App\Http\Controllers\Admin\PageContent\ContactPageController;
 use App\Http\Controllers\Admin\PageContent\FacilityContentController;
@@ -20,9 +19,7 @@ use App\Http\Controllers\Admin\SectionContent\AlumnyCompanyController;
 use App\Http\Controllers\Admin\SectionContent\FaqController;
 use App\Http\Controllers\Admin\SectionContent\TestimonyController;
 use App\Http\Controllers\Admin\SectionContent\VictorySectionController;
-use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\Admin\SettingController;
-use App\Http\Controllers\Admin\SiswaSmaSmkController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -53,20 +50,20 @@ Route::get('/under-maintenance', function () {return view('pages.under_maintenan
 Route::get('/contact-us', [ContactPageController::class, 'show'])->name('contact');
 Route::post('/contact-forms', [ContactFormController::class, 'store'])->name('contact-forms.store');
 
-Route::get('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page');
-Route::post('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page.store');
+//Route::get('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page');
+//Route::post('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page.store');
+//
+//Route::get('/interview', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page-interview');
+//Route::post('/interview', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page-interview.store');
+//
+//Route::get('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_create'])->name('promo-luar-bali');
+//Route::post('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_store'])->name('promo-luar-bali-store');
 
-Route::get('/interview', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page-interview');
-Route::post('/interview', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page-interview.store');
+Route::get('/registrasi-program-executive', [CalonPesertaExecutiveController::class, 'create'])->name('registrasi-program-executive');
+Route::post('/registrasi-program-executive', [CalonPesertaExecutiveController::class, 'store'])->name('registrasi-program-executive.store');
 
-Route::get('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_create'])->name('promo-luar-bali');
-Route::post('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_store'])->name('promo-luar-bali-store');
-
-Route::get('/registrasi-program-executive-hybrid', [\App\Http\Controllers\Admin\CalonMahasiswaController::class, 'create'])->name('registrasi-program-executive');
-Route::post('/registrasi-program-executive-hybrid', [\App\Http\Controllers\Admin\CalonMahasiswaController::class, 'store'])->name('registrasi-program-executive.store');
-
-Route::get('/registrasi-program-d1', [\App\Http\Controllers\Admin\CalonPesertaDiplomaController::class, 'create'])->name('registrasi-program-d1');
-Route::post('/registrasi-program-d1', [\App\Http\Controllers\Admin\CalonPesertaDiplomaController::class, 'store'])->name('registrasi-program-d1.store');
+Route::get('/registrasi-program-d1', [CalonPesertaDiplomaController::class, 'create'])->name('registrasi-program-d1');
+Route::post('/registrasi-program-d1', [CalonPesertaDiplomaController::class, 'store'])->name('registrasi-program-d1.store');
 
 Route::get('/registrasi-berhasil', [HomePageController::class, 'registrationComplete'])->name('registrasi-berhasil');
 
@@ -93,7 +90,7 @@ Route::get('/waiting-approval', function (){ return view('auth.verify');});
 Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['auth', 'admin'])->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
 
-    Route::resource('calon-peserta-executive', CalonMahasiswaController::class);
+    Route::resource('calon-peserta-executive', CalonPesertaExecutiveController::class);
     Route::resource('calon-peserta-diploma', CalonPesertaDiplomaController::class);
 
     Route::resource('tags', TagController::class);
@@ -105,7 +102,8 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['au
     Route::post('upload-blog-thumbnail', [PostController::class, 'uploadPhotoThumbnail'])->name('blog-thumbnail-upload');
     Route::get('delete-blog-photo/{id}', [PostController::class, 'deletePhoto'])->name('blog-photo-delete');
 
-    Route::get('/contact-forms', [ContactFormController::class, 'index'])->name('contact-forms.index');
+    Route::get('pertanyaan-terkirim', [ContactFormController::class, 'index'])->name('contact-forms.index');
+    Route::delete('pertanyaan-terkirim/{contact}', [ContactFormController::class, 'destroy'])->name('contact-forms.destroy');
 
     Route::resource('users', UserController::class);
 
