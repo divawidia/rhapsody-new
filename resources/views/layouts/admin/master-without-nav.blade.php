@@ -8,11 +8,11 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesdesign" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ URL::asset('build/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}">
 
     <!-- include head css -->
 
-    @include('layouts.head-css')
+    @include('layouts.admin.head-css')
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
     <!-- vendor-scripts -->
 
-    @include('layouts.vendor-scripts')
+    @include('layouts.admin.vendor-scripts')
 
 </body>
 

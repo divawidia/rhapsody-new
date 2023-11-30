@@ -3,7 +3,7 @@
 
     <!-- LOGO -->
     <div class="navbar-brand-box">
-        <a href="index" class="logo logo-dark">
+        <a href="{{ route('admin-dashboard') }}" class="logo logo-dark">
             <span class="logo-sm">
                 <img src="{{ URL::asset('img/logo-sm.png') }}" alt="" height="30">
             </span>
@@ -12,7 +12,7 @@
             </span>
         </a>
 
-        <a href="index" class="logo logo-light">
+        <a href="{{ route('admin-dashboard') }}" class="logo logo-light">
             <span class="logo-lg">
                 <img src="{{ URL::asset('img/logo-2.png') }}" alt="" height="75">
             </span>
@@ -35,7 +35,7 @@
                 <li class="menu-title" data-key="t-menu">Dashboard</li>
 
                <li>
-                    <a href="javascript: void(0);">
+                    <a href="{{ route('admin-dashboard') }}">
                         <i class="bx bx-home-alt icon nav-icon"></i>
                         <span class="menu-item" data-key="t-dashboard">Dashboard</span>
                         <span class="badge rounded-pill bg-primary">2</span>

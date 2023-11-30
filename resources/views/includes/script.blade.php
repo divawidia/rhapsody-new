@@ -18,3 +18,7 @@
 </script>
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
 <script src="/build/libs/owl-carousel/owl.carousel.min.js"></script>
+{{--<script src="{{ URL::asset('build/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>--}}
+<script src="{{ URL::asset('build/libs/metismenujs/metismenujs.min.js') }}"></script>
+<script src="{{ URL::asset('build/libs/simplebar/simplebar.min.js') }}"></script>
+<script src="{{ URL::asset('build/libs/eva-icons/eva.min.js') }}"></script>

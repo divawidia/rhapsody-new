@@ -15,35 +15,35 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Calon Peserta Executive Class Registrasi Online</h4>
-{{--                        <p class="card-title-desc">--}}
-{{--                            Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code>--}}
-{{--                            to make them scroll horizontally on small devices (under 768px).--}}
-{{--                        </p>--}}
+                        {{--                        <p class="card-title-desc">--}}
+                        {{--                            Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code>--}}
+                        {{--                            to make them scroll horizontally on small devices (under 768px).--}}
+                        {{--                        </p>--}}
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-hover mb-0" id="crudTable">
                                 <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nama Lengkap</th>
-                                        <th>Nama Panggilan</th>
-                                        <th>Email</th>
-                                        <th>Tanggal Lahir</th>
-                                        <th>Umur</th>
-                                        <th>Alamat</th>
-                                        <th>No Hp/WA</th>
-                                        <th>No Hp/WA Ortu/Wali</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Pendidikan Terakhir</th>
-                                        <th>Asal Sekolah</th>
-                                        <th>Jurusan</th>
-                                        <th>Tahun Lulus</th>
-                                        <th>Pengalaman Kerja</th>
-                                        <th>Refrensi Daftar</th>
-                                        <th>Program Executive</th>
-                                        <th>Aksi</th>
-                                    </tr>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama Lengkap</th>
+                                    <th>Nama Panggilan</th>
+                                    <th>Email</th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>Umur</th>
+                                    <th>Alamat</th>
+                                    <th>No Hp/WA</th>
+                                    <th>No Hp/WA Ortu/Wali</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Pendidikan Terakhir</th>
+                                    <th>Asal Sekolah</th>
+                                    <th>Jurusan</th>
+                                    <th>Tahun Lulus</th>
+                                    <th>Pengalaman Kerja</th>
+                                    <th>Refrensi Daftar</th>
+                                    <th>Program Executive</th>
+                                    <th>Aksi</th>
+                                </tr>
                                 </thead>
                                 <tbody>
                                 </tbody>

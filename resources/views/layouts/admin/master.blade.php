@@ -49,9 +49,6 @@
 </div>
 <!-- END layout-wrapper -->
 
-<!-- customizer -->
-@include('layouts.admin.right-sidebar')
-
 <!-- vendor-scripts -->
 @stack('prepend-script')
 @include('layouts.admin.vendor-scripts')

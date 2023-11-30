@@ -1,9 +1,11 @@
 <?php
 
-use \App\Http\Controllers\CalonMahasiswaController;
+use App\Http\Controllers\Admin\CalonMahasiswaController;
+use App\Http\Controllers\Admin\CalonPesertaDiplomaController;
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\Admin\DashboardController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,24 +56,27 @@ Route::get('/under-maintenance', function () {
 Route::get('/contact-us', function () {
     return view('pages.contact');
 })->name('contact');
-Route::get('/modal', function () {
-    return view('pages.modal');
-})->name('modal');
 
-Route::get('/registrasi-program-executive-hybrid', [App\Http\Controllers\CalonMahasiswaController::class, 'create'])->name('registrasi-program-executive');
-Route::post('/registrasi-program-executive-hybrid', [App\Http\Controllers\CalonMahasiswaController::class, 'store'])->name('registrasi-program-executive.store');
+Route::get('/registrasi-program-executive-hybrid', [\App\Http\Controllers\Admin\CalonMahasiswaController::class, 'create'])->name('registrasi-program-executive');
+Route::post('/registrasi-program-executive-hybrid', [\App\Http\Controllers\Admin\CalonMahasiswaController::class, 'store'])->name('registrasi-program-executive.store');
 
-Route::get('/registrasi-program-d1', [App\Http\Controllers\CalonPesertaDiplomaController::class, 'create'])->name('registrasi-program-d1');
-Route::post('/registrasi-program-d1', [App\Http\Controllers\CalonPesertaDiplomaController::class, 'store'])->name('registrasi-program-d1.store');
+Route::get('/registrasi-program-d1', [\App\Http\Controllers\Admin\CalonPesertaDiplomaController::class, 'create'])->name('registrasi-program-d1');
+Route::post('/registrasi-program-d1', [\App\Http\Controllers\Admin\CalonPesertaDiplomaController::class, 'store'])->name('registrasi-program-d1.store');
 
 Route::get('/registrasi-berhasil', function () {return view('pages.registration_complete');})->name('registrasi-berhasil');
 
+Route::get('/registrasi-ulang-executive', function () {
+    return view('pages.executive_daftar_ulang');
+})->name('executive-daftar-ulang');
+
 
 Route::prefix('admin')
+    ->namespace('App\Http\Controllers\Admin')
+    ->middleware(['auth', 'admin'])
     ->group(function() {
         Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
         Route::resource('calon-peserta-executive', CalonMahasiswaController::class);
-        Route::resource('calon-peserta-diploma', \App\Http\Controllers\CalonPesertaDiplomaController::class);
+        Route::resource('calon-peserta-diploma', CalonPesertaDiplomaController::class);
     });
-
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
 Auth::routes();

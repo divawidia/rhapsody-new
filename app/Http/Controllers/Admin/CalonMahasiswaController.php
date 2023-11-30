@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\CalonPesertaDiploma;
+use App\Http\Controllers\Controller;
 use App\Models\CalonPesertaExecutive;
-use App\Models\ProgramDiploma;
+use App\Models\ProgramExecutive;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
-class CalonPesertaDiplomaController extends Controller
+class CalonMahasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class CalonPesertaDiplomaController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = CalonPesertaDiploma::with(['jurusan_diploma']);
+            $query = CalonPesertaExecutive::with(['program_executive']);
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -34,7 +34,7 @@ class CalonPesertaDiplomaController extends Controller
                 ->make();
         }
 
-        return view('pages.admin.calon-peserta-diploma');
+        return view('pages.admin.calon-peserta-executive.index');
     }
 
     /**
@@ -42,10 +42,10 @@ class CalonPesertaDiplomaController extends Controller
      */
     public function create()
     {
-        $jurusan_diplomas = ProgramDiploma::all();
+        $program_executives = ProgramExecutive::all();
 
-        return view('pages.d1_registration', [
-            'jurusan_diplomas' => $jurusan_diplomas
+        return view('pages.executive_registration', [
+            'program_executives' => $program_executives
         ]);
     }
 
@@ -57,7 +57,7 @@ class CalonPesertaDiplomaController extends Controller
         $data = $request->all();
         $data['jenis_refrensi'] = implode(", ",$request->input('jenis_refrensi'));
 
-        CalonPesertaDiploma::create($data);
+        CalonPesertaExecutive::create($data);
 
         return redirect()->route('registrasi-berhasil');
     }
@@ -75,7 +75,11 @@ class CalonPesertaDiplomaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $item = CalonPesertaExecutive::findOrFail($id);
+
+        return view('pages.admin.calon-peserta-executive.edit', [
+            'item' => $item
+        ]);
     }
 
     /**
@@ -83,7 +87,12 @@ class CalonPesertaDiplomaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+
+        $item = CalonPesertaExecutive::findOrFail($id);
+        $item->update($data);
+
+        return redirect()->route('pages.admin.calon-peserta-executive.index');
     }
 
     /**
@@ -91,6 +100,9 @@ class CalonPesertaDiplomaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $item = CalonPesertaExecutive::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('pages.admin.calon-peserta-executive.index');
     }
 }
