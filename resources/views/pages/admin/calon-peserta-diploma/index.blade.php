@@ -10,36 +10,38 @@
     <body>
     @endsection
     @section('content')
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">@yield('title')</h4>
-                    </div>
-                    <div class="card-body">
-                        <x-tables :headers="[
-                            '#',
-                            'Nama Lengkap',
-                            'Nama Panggilan',
-                            'Email',
-                            'Tanggal Lahir',
-                            'Umur',
-                            'Alamat',
-                            'No Hp/WA',
-                            'No Hp/WA Ortu/Wali',
-                            'Jenis Kelamin',
-                            'Asal Sekolah',
-                            'Jurusan Sekolah',
-                            'Tahun Lulus',
-                            'Program Dipilih',
-                            'Jurusan Dipilih',
-                            'Refrensi Daftar',
-                            'Tanggal Daftar',
-                            'Terakhir Diperbarui',
-                            'Aksi'
-                            ]"
-                        />
-                    </div>
-                </div>
+        <x-alerts/>
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">@yield('title')</h4>
+            </div>
+            <div class="card-body">
+                <x-tables :headers="[
+                    '#',
+                    'Nama Lengkap',
+                    'Nama Panggilan',
+                    'Email',
+                    'Tanggal Lahir',
+                    'Umur',
+                    'Alamat',
+                    'No Hp/WA',
+                    'No Hp/WA Ortu/Wali',
+                    'Jenis Kelamin',
+                    'Asal Sekolah',
+                    'Jurusan Sekolah',
+                    'Tahun Lulus',
+                    'Program Dipilih',
+                    'Jurusan Dipilih',
+                    'Refrensi Daftar',
+                    'Tanggal Daftar',
+                    'Terakhir Diperbarui',
+                    'Aksi'
+                    ]"
+                />
+            </div>
+        </div>
     @endsection
+
     @push('addon-script')
         <script>
             $(document).ready(function () {
@@ -64,9 +66,9 @@
                         { data: 'asal_sekolah', name: 'asal_sekolah' },
                         { data: 'jurusan_sekolah', name: 'jurusan_sekolah' },
                         { data: 'tahun_lulus', name: 'tahun_lulus' },
-                        { data: 'reference', name: 'reference' },
                         { data: 'program.program.name', name: 'program.program.name' },
                         { data: 'program.name', name: 'program.name' },
+                        { data: 'reference', name: 'reference' },
                         { data: 'created_at', name: 'created_at' },
                         { data: 'updated_at', name: 'updated_at' },
                         {
