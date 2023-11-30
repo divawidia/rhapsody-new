@@ -28,11 +28,7 @@ class CalonPesertaDiplomaController extends Controller
                         .' '.$this->formButtonTooltips(route('calon-peserta-diploma.destroy', $item->id), 'btn-danger', 'Hapus Data Calon Peserta', 'bx-trash', 'DELETE');
                 })
                 ->addColumn('reference', function ($item) {
-                    $data = '';
-                    foreach ($item->references as $reference) {
-                        $data .= '('.$reference->jenis.')';
-                    }
-                    return $data;
+                    return $this->getReference($item);
                 })
                 ->editColumn('created_at', function ($item) {
                     return $this->convertDateTime($item->created_at);
