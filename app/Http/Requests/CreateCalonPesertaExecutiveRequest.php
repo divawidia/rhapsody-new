@@ -30,7 +30,7 @@ class CreateCalonPesertaExecutiveRequest extends FormRequest
             'asal_sekolah' => ['required', 'string'],
             'jurusan' => ['required', 'string'],
             'tahun_lulus' => ['required', 'numeric'],
-            'pengalaman_kerja' => ['required', 'string'],
+            'pengalaman_kerja' => ['nullable', 'string'],
             'references' => ['required', Rule::exists('references', 'id')],
         ];
     }
