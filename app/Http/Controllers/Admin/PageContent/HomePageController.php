@@ -21,12 +21,11 @@ class HomePageController extends Controller
      */
     public function show()
     {
-        $homeData = Home::findOrFail(1);
-        $programs = Program::with('program_contents')->get()->all();
-        $fasilitas = FacilityContent::with('facility_photo')->get()->all();
-        $victory = VictorySection::findOrFail(1);
+        $homeData = Home::find(1);
+        $programs = Program::with('program_contents')->get();
+        $fasilitas = FacilityContent::with('facility_photo')->get();
+        $victory = VictorySection::find(1);
         $company = AlumnyCompany::all();
-        $testimonies = Testimony::all();
 
         return view('pages.home', [
             'homeData' => $homeData,
@@ -34,7 +33,6 @@ class HomePageController extends Controller
             'facilities' => $fasilitas,
             'victory' => $victory,
             'companies' => $company,
-            'testimonies' => $testimonies
         ]);
     }
 
