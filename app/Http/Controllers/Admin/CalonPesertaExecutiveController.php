@@ -3,15 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateCalonPesertaExecutiveRequest;
+use App\Http\Requests\EditCalonPesertaExecutiveRequest;
 use App\Models\CalonPesertaExecutive;
 use App\Models\Program;
+use App\Models\ProgramContent;
 use App\Models\ProgramExecutive;
 use App\Models\Reference;
 use App\Models\Testimony;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
-class CalonMahasiswaController extends Controller
+class CalonPesertaExecutiveController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,21 +23,27 @@ class CalonMahasiswaController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = CalonPesertaExecutive::with(['program_executive']);
+            $query = CalonPesertaExecutive::with(['program.program', 'references'])->latest()->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
-                    return '
-                            <button class="btn btn-primary mx-1 my-1"
-                                type="button" id="action' .  $item->id . '">
-                                    Edit
-                            </button>
-                            <button class="btn btn-danger mx-1 my-1"
-                                type="button" id="action' .  $item->id . '">
-                                    Delete
-                            </button>';
+                    return $this->buttonTooltips(route('calon-peserta-executive.edit', $item->id), 'btn-primary', 'Edit Data Calon Peserta', 'bx-edit')
+                        .' '.$this->formButtonTooltips(route('calon-peserta-executive.destroy', $item->id), 'btn-danger', 'Hapus Data Calon Peserta', 'bx-trash', 'DELETE');
                 })
-                ->rawColumns(['action'])
+                ->addColumn('reference', function ($item) {
+                    return $this->getReference($item);
+                })
+                ->addColumn('pengalaman_kerja', function ($item) {
+                    return html_entity_decode($item->pengalaman_kerja);
+                })
+                ->editColumn('created_at', function ($item) {
+                    return $this->convertDateTime($item->created_at);
+                })
+                ->editColumn('updated_at', function ($item) {
+                    return $this->convertDateTime($item->updated_at);
+                })
+                ->rawColumns(['action', 'reference', 'created_at','updated_at', 'pengalaman_kerja'])
+                ->addIndexColumn()
                 ->make();
         }
 
@@ -45,74 +55,69 @@ class CalonMahasiswaController extends Controller
      */
     public function create()
     {
-        $program_executives = ProgramExecutive::all();
+        $program_executives = ProgramContent::whereRelation('program', 'name', 'Executive Program')->get();
         $references = Reference::all();
         $testimonies = Testimony::all();
-        $programs = Program::with('program_contents')->get()->all();
 
 
         return view('pages.executive_registration', [
             'program_executives' => $program_executives,
             'references' => $references,
             'testimonies' => $testimonies,
-            'programs' => $programs
         ]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CreateCalonPesertaExecutiveRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
 
         $calon_peserta = CalonPesertaExecutive::create($data);
-        $calon_peserta->references()->sync((array)$request->input('reference_id'));
+        $calon_peserta->references()->attach($data['references']);
 
+        Alert::success('Hore!', 'Pendaftaran anda sebagai calon peserta executive program berhasil!');
         return redirect()->route('registrasi-berhasil');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(CalonPesertaExecutive $calon_peserta_executive)
     {
-        $item = CalonPesertaExecutive::findOrFail($id);
-
         return view('pages.admin.calon-peserta-executive.edit', [
-            'item' => $item
+            'peserta' => $calon_peserta_executive,
+            'programs' => ProgramContent::whereRelation('program', 'name', 'Executive Program')->get(),
+            'references' => Reference::all(),
+            'referensiPeserta' => $calon_peserta_executive->references->pluck('id')->toArray()
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(EditCalonPesertaExecutiveRequest $request, CalonPesertaExecutive $calon_peserta_executive)
     {
-        $data = $request->all();
+        $data = $request->validated();
 
-        $item = CalonPesertaExecutive::findOrFail($id);
-        $item->update($data);
+        $calon_peserta_executive->update($data);
+        $calon_peserta_executive->references()->sync($data['references']);
 
-        return redirect()->route('pages.admin.calon-peserta-executive.index');
+        $message = 'Data Calon Peserta : '.$calon_peserta_executive->nama_lengkap.' Berhasil Diperbarui!';
+        Alert::success('Hore!', $message);
+        return redirect()->route('calon-peserta-executive.index')->with('status', $message);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(CalonPesertaExecutive $calon_peserta_executive)
     {
-        $item = CalonPesertaExecutive::findOrFail($id);
-        $item->delete();
+        $calon_peserta_executive->delete();
 
-        return redirect()->route('pages.admin.calon-peserta-executive.index');
+        $message = 'Data Calon Peserta '.$calon_peserta_executive->nama_lengkap.' Berhasil dihapus!';
+        Alert::success('Hore!', $message);
+        return redirect()->route('calon-peserta-executive.index')->with('status', $message);
     }
 }
