@@ -19,12 +19,16 @@ class ContactFormController extends Controller
         if (request()->ajax()) {
             $query = ContactForm::latest()->get();
             return Datatables::of($query)
+                ->addColumn('action', function ($item) {
+                    return $this->formButtonTooltips(route('contact-forms.destroy', $item->id), 'btn-danger', 'Hapus Data Pertanyaan', 'bx-trash', 'DELETE');
+                })
                 ->editColumn('created_at', function ($item){
                     return $this->convertDateTime($item->created_at);
                 })
                 ->editColumn('updated_at', function ($item){
                     return $this->convertDateTime($item->updated_at);
                 })
+                ->rawColumns(['action', 'created_at','updated_at'])
                 ->addIndexColumn()
                 ->make();
         }
@@ -39,5 +43,13 @@ class ContactFormController extends Controller
         ContactForm::create($data);
         Alert::success('Hore!', 'Pesan pertanyaan berhasil dikirim!');
         return redirect()->route('contact');
+    }
+
+    public function destroy(ContactForm $contact)
+    {
+        $contact->delete();
+        $message = 'Pesan pertanyaan berhasil dihapus!';
+        Alert::success('Hore!', $message);
+        return redirect()->route('contact-forms.index')->with('status', $message);
     }
 }
