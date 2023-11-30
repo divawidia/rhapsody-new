@@ -59,4 +59,12 @@ class Controller extends BaseController
         $date = strtotime($timestamp);
         return date('l, M d, Y - h:i A',$date);
     }
+    public function getReference($peserta)
+    {
+        $data = '';
+        foreach ($peserta->references as $reference) {
+            $data .= '('.$reference->jenis.')';
+        }
+        return $data;
+    }
 }
