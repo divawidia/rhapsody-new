@@ -25,44 +25,21 @@ class ProgramContentController extends Controller
      */
     public function index()
     {
-        if (request()->ajax()) {
-            $query = ProgramContent::latest()->get();
+        $query = ProgramContent::latest()->get();
 
-            return Datatables::of($query)
-                ->addColumn('action', function ($item) {
-                    return '
-                        <div class="dropdown">
-                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bx bx-dots-horizontal-rounded"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="' . route('pelatihan.edit', $item->id) . '">Edit</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="' . route('pelatihan.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
-                                </li>
-                            </ul>
-                        </div>';
-                })
-                ->editColumn('price', function ($item){
-                    return 'Rp. ' . number_format($item->price);
-                })
-                ->editColumn('status', function ($item){
-                    if ($item->status == 1) {
-                        $badge = '<span class="badge bg-success">Publish</span>';
-                    }else{
-                        $badge = '<span class="badge bg-danger">Private</span>';
-                    }
-                    return $badge;
-                })
-                ->rawColumns(['action', 'price', 'status'])
-                ->make();
-        }
-//        $title = 'Hapus Program Pelatihan!';
-//        $text = "Apakah anda yakin ingin menghapus program pelatihan ini?";
-//        confirmDelete($title, $text);
-//        return view('pages.admin.pages.programs.index');
+        return Datatables::of($query)
+            ->addColumn('action', function ($item) {
+                return  $this->buttonTooltips(route('pelatihan.edit', $item->id), 'btn-primary', 'Edit Data Pelatihan', 'bx-edit')
+                    .' '.$this->formButtonTooltips(route('pelatihan.destroy', $item->id), 'btn-danger', 'Hapus Data Pelatihan', 'bx-trash', 'DELETE');
+            })
+            ->editColumn('price', function ($item){
+                return 'Rp. ' . number_format($item->price);
+            })
+            ->editColumn('status', function ($item){
+                return $this->status($item->status);
+            })
+            ->rawColumns(['action', 'price', 'status'])
+            ->make();
     }
 
     /**
@@ -70,9 +47,8 @@ class ProgramContentController extends Controller
      */
     public function create()
     {
-        $programs = Program::all();
         return view('pages.admin.section-content.programs.create', [
-            'programs' => $programs
+            'programs' => Program::where('status', 1)->get(),
         ]);
     }
 
@@ -83,10 +59,9 @@ class ProgramContentController extends Controller
     {
         $data = $request->all();
         $data['slug'] = Str::slug($request->name);
-        $data['program_icon'] = $request->file('program_icon')->store('assets/program-page', 'public');
-        $data['btn_icon'] = $request->file('btn_icon')->store('assets/program-page', 'public');
+        $data['program_icon'] = $this->storeFile($data, 'program_icon', 'assets/program-page', '');
+        $data['btn_icon'] = $this->storeFile($data, 'btn_icon', 'assets/program-page', '');
         $program = ProgramContent::create($data);
-//        dd($request->photo_url);
         foreach ($request->photo_url as $image) {
             ProgramPhoto::create([
                 'program_content_id' => $program->id,
@@ -108,9 +83,8 @@ class ProgramContentController extends Controller
         $start_date = date('d M, Y', strtotime($program->register_start));
         $end_date = date('d M, Y', strtotime($program->register_end));
         $faqs = Faq::all();
-        $program_pelatihan = ProgramContent::with('program')->get()->all();
-        $testimonies = Testimony::all();
-        $programs = Program::with('program_contents')->get()->all();
+        $program_pelatihan = ProgramContent::with('program')->get();
+        $programs = Program::with('program_contents')->get();
 
         return view('pages.program-detail', [
             'program' => $program,
@@ -118,7 +92,6 @@ class ProgramContentController extends Controller
             'end_date' => $end_date,
             'faqs' => $faqs,
             'program_pelatihan' => $program_pelatihan,
-            'testimonies' => $testimonies,
             'programs' => $programs
         ]);
     }
@@ -133,20 +106,8 @@ class ProgramContentController extends Controller
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
-                    return '
-                        <div class="dropdown">
-                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bx bx-dots-horizontal-rounded"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="' . route('prospek-karir.edit', ['pelatihan'=>$item->program_content_id, 'karir'=>$item->id]) . '">Edit</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="' . route('prospek-karir.destroy',  ['pelatihan'=>$item->program_content_id, 'karir'=>$item->id]) . '" data-confirm-delete="true">Hapus</a>
-                                </li>
-                            </ul>
-                        </div>';
+                    return $this->buttonTooltips(route('prospek-karir.edit', ['pelatihan'=>$item->program_content_id, 'karir'=>$item->id]), 'btn-primary', 'Edit Data prospek karir', 'bx-edit')
+                        .' '.$this->formButtonTooltips(route('prospek-karir.destroy',  ['pelatihan'=>$item->program_content_id, 'karir'=>$item->id]), 'btn-danger', 'Hapus Data rospek karir', 'bx-trash', 'DELETE');
                 })
                 ->editColumn('salary', function ($item){
                     return '$' . number_format($item->salary_start) . ' - $' . number_format($item->salary_end);
