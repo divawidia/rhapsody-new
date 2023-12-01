@@ -72,7 +72,7 @@ Footer Area
                         <h3 class="widget_title">Program Kami</h3>
                         <div class="menu-all-pages-container footer-menu">
                             <ul class="menu">
-                                @foreach($programs as $program)
+                                @foreach(getProgramData() as $program)
                                     @foreach($program->program_contents as $program_content)
                                         <li><a href="{{ route('program-detail', $program_content->slug) }}">{{ $program->name }} {{ $program_content->name }}</a></li>
                                     @endforeach
