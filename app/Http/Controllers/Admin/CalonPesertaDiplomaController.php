@@ -8,7 +8,10 @@ use App\Http\Requests\EditCalonPesertaDiplomaRequest;
 use App\Models\CalonPesertaDiploma;
 use App\Models\ProgramContent;
 use App\Models\Reference;
-use App\Models\Testimony;
+use App\Models\User;
+use App\Notifications\DaftarDiplomaBerhasil;
+use App\Notifications\PesertaDiplomaBaru;
+use Illuminate\Support\Facades\Notification;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -51,12 +54,10 @@ class CalonPesertaDiplomaController extends Controller
     {
         $jurusan_diplomas = ProgramContent::whereRelation('program', 'name', 'Diploma 1')->get();
         $references = Reference::all();
-        $testimonies = Testimony::all();
 
         return view('pages.d1_registration', [
             'jurusan_diplomas' => $jurusan_diplomas,
             'references' => $references,
-            'testimonies' => $testimonies,
         ]);
     }
 
@@ -69,6 +70,9 @@ class CalonPesertaDiplomaController extends Controller
 
         $calon_peserta = CalonPesertaDiploma::create($data);
         $calon_peserta->references()->attach($data['references']);
+
+        $calon_peserta->notify(new DaftarDiplomaBerhasil($calon_peserta));
+        Notification::send(User::all(), new PesertaDiplomaBaru($calon_peserta));
 
         $message = 'Pendaftaran anda sebagai calon peserta diploma 1 berhasil!';
         Alert::success('Hore!', $message);
