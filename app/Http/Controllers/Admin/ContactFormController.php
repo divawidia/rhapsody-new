@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactFormRequest;
 use App\Models\ContactForm;
+use App\Models\User;
+use App\Notifications\PertanyaanBaru;
+use App\Notifications\PesertaDiplomaBaru;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -40,7 +44,10 @@ class ContactFormController extends Controller
     public function store(ContactFormRequest $request)
     {
         $data = $request->validated();
-        ContactForm::create($data);
+        $contact = ContactForm::create($data);
+
+        Notification::send(User::all(), new PertanyaanBaru($contact));
+
         Alert::success('Hore!', 'Pesan pertanyaan berhasil dikirim!');
         return redirect()->route('contact');
     }
