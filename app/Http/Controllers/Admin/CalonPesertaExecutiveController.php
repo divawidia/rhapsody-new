@@ -11,7 +11,13 @@ use App\Models\ProgramContent;
 use App\Models\ProgramExecutive;
 use App\Models\Reference;
 use App\Models\Testimony;
+use App\Models\User;
+use App\Notifications\DaftarDiplomaBerhasil;
+use App\Notifications\DaftarExecutiveBerhasil;
+use App\Notifications\PesertaDiplomaBaru;
+use App\Notifications\PesertaExecutiveBaru;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -57,13 +63,11 @@ class CalonPesertaExecutiveController extends Controller
     {
         $program_executives = ProgramContent::whereRelation('program', 'name', 'Executive Program')->get();
         $references = Reference::all();
-        $testimonies = Testimony::all();
 
 
         return view('pages.executive_registration', [
             'program_executives' => $program_executives,
             'references' => $references,
-            'testimonies' => $testimonies,
         ]);
     }
 
@@ -77,7 +81,10 @@ class CalonPesertaExecutiveController extends Controller
         $calon_peserta = CalonPesertaExecutive::create($data);
         $calon_peserta->references()->attach($data['references']);
 
-        Alert::success('Hore!', 'Pendaftaran anda sebagai calon peserta executive program berhasil!');
+        $calon_peserta->notify(new DaftarExecutiveBerhasil($calon_peserta));
+        Notification::send(User::all(), new PesertaExecutiveBaru($calon_peserta));
+
+        Alert::success('Hore!', 'Pendaftaran anda sebagai calon peserta Executive Program berhasil!');
         return redirect()->route('registrasi-berhasil');
     }
 
