@@ -9,6 +9,12 @@
 @endpush
 
 @section('content')
+    @if (session('status'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session('status') }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <section style="
         background: rgb(5,38,61);
         background: linear-gradient(180deg, rgba(5,38,61,1) 0%, rgba(0,102,135,1) 39%, rgba(46,135,165,1) 58%, rgba(189,236,255,1) 100%);">
@@ -703,6 +709,59 @@
         </div>
     </section>
 
+    <section class="space-bottom">
+        <div class="container">
+            <div class="landing-content mb-5" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="landing-title5 text-center space-top">
+                    Isi Dulu Yuk Absensi Kehadiran Sosialisasi
+                    <FONT COLOR="#CE5423">LPK Rhapsody!</FONT>
+                </h1>
+            </div>
+            <form action="{{ route('landing-page.store') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="row">
+                    <div class="col-12">
+                        <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="form-group">
+                                <label for="nama_lengkap">Nama Lengkap</label>
+                                <input type="text" autocomplete="off" name="nama_lengkap" id="nama_lengkap" placeholder="Isikan nama lengkapmu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nama_panggilan">Nama Panggilan</label>
+                                <input type="text" autocomplete="off" name="nama_panggilan" id="nama_panggilan" placeholder="Isikan nama panggilan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="no_hp">No. HP/Whatsapp</label>
+                                <input type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. Hp/WA mu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="asal_sekolah">Asal Sekolah</label>
+                                <input type="text" autocomplete="off" name="asal_sekolah" id="asal_sekolah" placeholder="Isikan asal sekolahmu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jurusan">Jurusan</label>
+                                <input type="text" autocomplete="off" name="jurusan" id="jurusan" placeholder="Isikan jurusanmu sekarang" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="program_diminati">Program Kami yang Diminati</label>
+                                <select id="program_diminati" class="form-control" name="program_diminati" required>
+                                    <option class="dropdown-program-diminati" selected>Pilih program kami yang kamu minati</option>
+                                    <option class="dropdown-program-diminati" value="Food & Beverage Product">Food & Beverage Product</option>
+                                    <option class="dropdown-program-diminati" value="Food & Beverage Service">Food & Beverage Service</option>
+                                    <option class="dropdown-program-diminati" value="Front Office">Front Office</option>
+                                    <option class="dropdown-program-diminati" value="Housekeeping">Housekeeping</option>
+                                    <option class="dropdown-program-diminati" value="Tidak Berminat">Tidak Berminat :(</option>
+                                </select>
+                            </div>
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="vs-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 @endsection
 
 @push('addon-script')
@@ -733,5 +792,15 @@
         }
         slider_carouselInit();
 
+    </script>
+    <script>
+        $(".dropdown-program-diminati").change(function () {
+            //check if the selected option is others
+            if (this.value === "Executive Hybrid Galley & Cook") {
+                //toggle textbox visibility
+                $(".dropdown-pemahaman").toggle();
+            }
+        });
+        document.getElementById("tanggalLahir").max = "2003-12-31";
     </script>
 @endpush

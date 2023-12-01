@@ -42,6 +42,18 @@
                     </a>
                 </li>
 
+                <li class="menu-title" data-key="t-applications">Sosialisasi SMA/SMK</li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-email">Siswa SMA/SMK</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.index') }}" data-key="t-inbox">Absensi Siswa Sosialisasi</a></li>
+                    </ul>
+                </li>
+
                 <li class="menu-title" data-key="t-applications">Executive Hybrid</li>
 
                 <li>
