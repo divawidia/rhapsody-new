@@ -4,7 +4,7 @@
               name="{{ $name }}"
               id="{{ $id }}"
               placeholder="{{ $placeholder }}"
-              @if($required) required @endif >
+              @if($required) required @endif rows="5">
 
         {{ old($name, $value) }}
 
