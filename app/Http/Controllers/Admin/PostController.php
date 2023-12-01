@@ -9,6 +9,7 @@ use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
@@ -18,60 +19,46 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $posts = Post::with(['user', 'tags', 'category'])->latest()->get();
-        $title = 'Hapus Artikel!';
-        $text = "Apakah anda yakin ingin menghapus artikel ini?";
-        confirmDelete($title, $text);
 
-        return view('pages.admin.posts.index', [
-            'posts' => $posts
-        ]);
-    }
-
-    public function dashboard(){
+    public function index(){
         if (request()->ajax()) {
-            $query = Post::with(['user'])->latest()->get();
+            $query = Post::with(['user', 'tags', 'category'])->latest()->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
-                    return '
-                        <div class="dropdown">
-                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bx bx-dots-horizontal-rounded"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="' . route('posts.edit', $item->id) . '">Edit</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="' . route('posts.show', $item->slug) . '">Detail</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="' . route('posts.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
-                                </li>
-                            </ul>
-                        </div>';
+                    return $this->buttonTooltips(route('posts.edit', $item->id), 'btn-primary', 'Edit Data Artikel', 'bx-edit')
+                        .' '.$this->buttonTooltips(route('posts.show', $item->id), 'btn-success', 'Lihat Data Artikel', 'bx-show')
+                        .' '.$this->formButtonTooltips(route('posts.destroy', $item->id), 'btn-danger', 'Hapus Data Artikel', 'bx-trash', 'DELETE');
+                })
+                ->addColumn('thumbnail_photo', function ($item){
+                    return $item->thumbnail_photo ? '<img class="w-50" src="' . Storage::url($item->thumbnail_photo) . '"/>' : '';
+                })
+                ->addColumn('views', function ($item){
+                    return views($item)->count().'x dilihat';
                 })
                 ->editColumn('created_at', function ($item){
-                    $date = strtotime($item->created_at);
-                    return date('l, M d, Y',$date);
+                    return $this->convertDateTime($item->created_at);
+                })
+                ->editColumn('updated_at', function ($item){
+                    return $this->convertDateTime($item->updated_at);
                 })
                 ->editColumn('status', function ($item){
-                    if ($item->status == 1) {
-                        $badge = '<span class="badge bg-success">Published</span>';
-                    }else{
-                        $badge = '<span class="badge bg-danger">Private</span>';
-                    }
-                    return $badge;
+                    return $this->status($item->status);
                 })
-                ->rawColumns(['action', 'created_at', 'status'])
+                ->editColumn('tags', function ($item){
+                    return $this->postTags($item);
+                })
+                ->editColumn('body', function ($item){
+                    return htmlentities(Str::limit($item->body, 200));
+                })
+                ->rawColumns(['action', 'thumbnail_photo', 'views', 'created_at', 'status', 'updated_at', 'tags', 'body'])
+                ->addIndexColumn()
                 ->make();
         }
         $title = 'Hapus Artikel!';
         $text = "Apakah anda yakin ingin menghapus artikel ini?";
         confirmDelete($title, $text);
+        return view('pages.admin.posts.index');
     }
 
     /**
