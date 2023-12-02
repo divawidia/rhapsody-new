@@ -101,7 +101,7 @@
                             @enderror
 
                             <div class="col-12 text-center mt-4">
-                                <button type="submit" class="vs-btn">Daftar Sekarang</button>
+                                <button type="submit" id="submit-btn" class="vs-btn">Daftar Sekarang</button>
                             </div>
                         </div>
                     </div>

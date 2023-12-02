@@ -116,7 +116,7 @@ Header Area
             <div class="modal-body">
                 <div class="text-center">
                     <a href="{{ route('registrasi-program-d1') }}" class="vs-btn">Diploma 1</a>
-                    <a href="{{ route('registrasi-program-executive') }}" class="vs-btn">Executive Hybrid</a>
+                    <a href="{{ route('registrasi-program-executive') }}" class="vs-btn">Executive Program</a>
                 </div>
             </div>
         </div>

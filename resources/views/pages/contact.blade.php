@@ -73,7 +73,7 @@
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="100">
-                    <form action="{{ route('contact-forms.store') }}" method="POST" class="form-style5" enctype="multipart/form-data">
+                    <form action="{{ route('contact-forms.store') }}" method="POST" id="questionForm" class="form-style5" enctype="multipart/form-data">
                         @csrf
                         <div class="vs-circle"></div>
                         <h3 class="form-title text-uppercase">Ada pertanyaan?</h3>
@@ -106,7 +106,7 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn vs-btn">Kirim Sekarang</button>
+                        <button type="submit" id="submit-btn" class="btn vs-btn">Kirim Sekarang</button>
                     </form>
                 </div>
             </div>
