@@ -1,34 +1,6 @@
 @extends('layouts.app')
 
-@section('title')
-    LPK Rhapsody Hospitality Development Center
-@endsection
-
 @section('content')
-    {{--    <div id="modalExecutive" class="modal fade" tabindex="-1">--}}
-    {{--        <div class="modal-dialog modal-dialog-centered modal-lg">--}}
-    {{--            <div class="modal-content rounded-3" style="background-color: transparent; border : 0">--}}
-
-    {{--                <div class="modal-body">--}}
-    {{--                    <img--}}
-    {{--                        src="/img/modal/Pamflet - Executive Hybrid.jpg"--}}
-    {{--                        alt="Image"--}}
-    {{--                        class="img-fluid"--}}
-    {{--                    />--}}
-    {{--                    <div--}}
-    {{--                        class="p-4 text-end"--}}
-    {{--                        style="background-color: var(--theme-color3)"--}}
-    {{--                    >--}}
-    {{--                        <a class="btn modal-text text-inherit" data-bs-dismiss="modal">Nanti Saja</a>--}}
-    {{--                        <a href="{{ route('registrasi-program-executive') }}" class="vs-btn">Daftar Sekarang</a>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
-    <!--==============================
-  Hero Area
-  ==============================-->
     <section class="hero-section">
         <div
             class="hero-layout1 style2 jarallax"
@@ -38,7 +10,7 @@
                             <div class="row d-flex align-items-end align-items-lg-center vh-100 space-bottom p-lg-0">
                                 <div class="hero-content col-12 col-lg-6 order-2 order-lg-1 pb-5 px-5 px-lg-2">
                                     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                        @php echo $homeData->banner_title @endphp
+                                        <span class="landing-title-small-bold text-white">{{ $homeData->banner_title }}</span>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <p class="hero-text" data-aos="fade-up" data-aos-duration="1000"
