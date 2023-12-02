@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CalonPesertaDiplomaController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactFormController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\PageContent\AboutPageController;
 use App\Http\Controllers\Admin\PageContent\ContactPageController;
 use App\Http\Controllers\Admin\PageContent\FacilityContentController;
@@ -89,6 +90,10 @@ Route::get('/waiting-approval', function (){ return view('auth.verify');});
 
 Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['auth', 'admin'])->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
+
+    Route::patch('/notifications/mark-as-read/{id}', [NotificationController::class, 'markAsRead'])->name('notifications.mark-as-read');
+    Route::get('/notifications/mark-all-as-read', [NotificationController::class, 'markAllAsRead'])->name('notifications.mark-all-as-read');
+
 
     Route::resource('calon-peserta-executive', CalonPesertaExecutiveController::class);
     Route::resource('calon-peserta-diploma', CalonPesertaDiplomaController::class);
