@@ -1,56 +1,17 @@
 @extends('layouts.app')
 
 @section('title')
-    Registrasi Diploma 1 | LPK Rhapsody Hospitality Development Center
+    Registrasi Diploma 1
 @endsection
 
 @section('content')
-    <div class="modal fade" id="modalTesti" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content py-3 px-3" style="background-color: var(--theme-color3); border-radius: 20px !important;">
-                <div class="modal-header">
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-end">
-                            <button type="button" class="btn-close align-items-end" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="col-12">
-                            <h5 class="landing-title5 text-center" data-aos="fade-up" data-aos-duration="1000">
-                                Ini Beberapa Kisah Orang yang Sudah
-                                <FONT COLOR="#CE5423">Terbantu</FONT> Dengan Adanya Program Kami
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div class="inner-video-box text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-                        <iframe class="modal-video-testi" style=" border-radius:30px" src="https://www.youtube.com/embed/1gr3YyeO8QM?si=vTr6hW-eyE_kOEDC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        {{--                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn position-center popup-video"><i class="fas fa-play"></i></a>--}}
-                    </div>
-                    <div class="card_wrapper">
-                        <div class="container text-center">
-                            <div class="row" style="max-width: 700px">
-                                <div class="title-area my-4 wow fadeInUp" data-wow-delay="0.3s">
-                                    <h5 class="sec-title text-center" data-aos="fade-up" data-aos-duration="1000">Beberapa Alumni Kami</h5>
-                                </div>
-                                <div class="col-12">
-                                    @include('includes.testi-cards')
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('includes.modal_testi')
 
-    <div
-        class="breadcumb-wrapper d-flex align-items-center"
-        style="background: url('/img/bg/top-bg.jpg');
+    <div class="breadcumb-wrapper d-flex align-items-center" style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
-            background-position: center center;"
-    >
+            background-position: center center;">
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
                 <h1 class="breadcumb-title" data-aos="fade-up" data-aos-duration="1000">Registrasi Program Diploma 1<FONT COLOR="#CE5423">.</FONT></h1>
@@ -61,101 +22,72 @@
         <div class="container">
         <form action="{{ route('registrasi-program-d1.store') }}" method="post" enctype="multipart/form-data">
             @csrf
-            <h1 class="left-border form-title text-uppercase" data-aos="fade-up" data-aos-duration="1000">Form Registrasi</h1>
+            <h1 class="left-border form-title text-uppercase">Form Registrasi</h1>
             <div class="row">
-                    <p class="landing-text2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50"></p>
+                    <p class="landing-text2"></p>
                     <div class="col-12 col-md-6">
-                        <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="feature-style1 form-style4 login">
                             <p class="landing-text2">Pilihan Jurusan Diploma 1</p>
-                            <div class="de_form de_radio row mh-75 g-3">
+                            <div class="de_form de_radio row mh-75 g-3 mb-3">
                                 @foreach($jurusan_diplomas as $jurusan_diploma)
                                     <div class="radio-img col-6" >
-                                        <input id="{{ $jurusan_diploma->id }}" name="jurusan_diploma_id" type="radio" value="{{ $jurusan_diploma->id }}">
+                                        <input id="{{ $jurusan_diploma->id }}" name="program_id" type="radio" value="{{ $jurusan_diploma->id }}">
                                         <label for="{{ $jurusan_diploma->id }}">
                                             <div class="row d-flex align-items-center">
                                                 <div class="col-12 col-xl-4">
-                                                    <img class="radio-icon" src="{{ Storage::url($jurusan_diploma->icon) }}" alt="">
+                                                    <img class="radio-icon" src="{{ Storage::url($jurusan_diploma->program_icon) }}" alt="">
                                                 </div>
                                                 <div class="col-12 col-xl-8 align-items-center">
-                                                    {{ $jurusan_diploma->nama_jurusan }}
+                                                    {{ $jurusan_diploma->name }}
                                                 </div>
                                             </div>
                                         </label>
                                     </div>
                                 @endforeach
                             </div>
-                            <div class="form-group mt-4">
-                                <label for="namaLengkap">Nama Lengkap</label>
-                                <input type="text" autocomplete="off" name="nama_lengkap" id="namaLengkap" placeholder="Isikan nama lengkapmu" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="namaPanggilan">Nama Panggilan</label>
-                                <input type="text" autocomplete="off" name="nama_panggilan" id="namaPanggilan" placeholder="Isikan nama panggilan" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Alamat Email</label>
-                                <input type="email" autocomplete="off" name="email" id="email" placeholder="Isikan alamat emailmu" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="tanggalLahir">Tanggal Lahir</label>
-                                <input type="date" autocomplete="off" name="tanggal_lahir" id="tanggalLahir" placeholder="Isikan tanggal lahirmu" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="umur">Umur</label>
-                                <input type="number" autocomplete="off" name="umur" id="umur" min="18" placeholder="Isikan umurmu" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="alamat">Alamat Tempat Tinggal</label>
-                                <textarea name="alamat" id="alamat" placeholder="Isikan alamat tempat tinggalmu"></textarea>
-                            </div>
+                            @error('program_id')
+                                <div class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></div>
+                            @enderror
+
+                            <x-forms.input type="text" name="nama_lengkap" label="Nama Lengkap :" placeholder="Isikan nama lengkapmu ..."/>
+                            <x-forms.input type="text" name="nama_panggilan" label="Nama Panggilan :" placeholder="Isikan nama panggilanmu ..."/>
+                            <x-forms.input type="email" name="email" label="Alamat Email :" placeholder="Isikan alamat emailmu ..."/>
+                            <x-forms.input type="date" name="tanggal_lahir" label="Tanggal Lahir :" placeholder="Isikan tanggal lahirmu ..."/>
+                            <x-forms.input type="number" name="umur" label="Umur :" placeholder="Isikan umurmu (minimal 18 tahun) ..."/>
+                            <x-forms.input type="text" name="alamat" label="Alamat Tempat Tinggal :" placeholder="Isikan alamat tempat tinggalmu ..."/>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-                            <div class="form-group">
-                                <label for="no_hp">No. HP/Whatsapp</label>
-                                <input type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. HP/Whatsapp" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="noHpOrtu">No. HP/Whatsapp Orang Tua/Wali</label>
-                                <input type="tel" autocomplete="off" name="no_hp_ortu" id="noHpOrtu" placeholder="Isikan No. HP/Whatsapp Orang Tua/Wali" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="jenisKelamin">Jenis Kelamin</label>
-                                <select id="jenisKelamin" class="form-control" name="jenis_kelamin" required>
-                                    <option selected>Pilih jenis kelaminmu</option>
-                                    <option value="laki-laki">Laki-laki</option>
-                                    <option value="perempuan">Perempuan</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="namaSekolah">Asal Sekolah</label>
-                                <input type="text" autocomplete="off" name="asal_sekolah" id="namaSekolah" placeholder="Isikan nama sekolah terakhirmu" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="namaJurusan">Jurusan Sekolah</label>
-                                <input type="text" autocomplete="off" name="jurusan_sekolah" id="namaJurusan" placeholder="Isikan nama jurusan di sekolah terakhirmu" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="tahunLulus">Tahun Lulus</label>
-                                <input type="number" autocomplete="off" name="tahun_lulus" id="tahunLulus" placeholder="Isikan tahun lulus sekolah terakhirmu" min="2000" max="2023" step="1" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="referral_code">Kode Referral (Opsional)</label>
-                                <input type="text" autocomplete="off" name="referral_code" id="referral_code" placeholder="Isikan kode referral" required>
-                            </div>
+                        <div class="feature-style1 form-style4 login">
+                            <x-forms.input type="text" name="no_hp" label="No. HP/Whatsapp :" placeholder="Isikan No. HP/Whatsappmu (format : 628xxxxx) ..."/>
+                            <x-forms.input type="text" name="no_hp_ortu" label="No. HP/Whatsapp Orang Tua/Wali :" placeholder="Isikan No. HP/Whatsapp Orang Tua/Walimu (format : 628xxxxx) ..."/>
+
+                            <x-forms.select name="jenis_kelamin" label="Jenis Kelamin :">
+                                <option disabled selected>Pilih jenis kelaminmu</option>
+                                @foreach (['Laki-laki', 'Perempuan'] as $jk)
+                                    <option value="{{ $jk }}" @selected(old('jenis_kelamin') == $jk)>{{ $jk }}</option>
+                                @endforeach
+                            </x-forms.select>
+
+                            <x-forms.input type="text" name="asal_sekolah" label="Asal Sekolah :" placeholder="Isikan nama sekolah terakhirmu ..."/>
+                            <x-forms.input type="text" name="jurusan_sekolah" label="Jurusan Sekolah :" placeholder="Isikan jurusan di sekolah terakhirmu ..."/>
+                            <x-forms.input type="number" name="tahun_lulus" label="Tahun Lulus :" placeholder="Isikan tahun lulus sekolah terakhirmu ..."/>
+
                             <p class="landing-text2 mt-3">Darimana kamu mengetahui Rhapsody? :</p>
                             <div class="row">
                                 @foreach($references as $reference)
                                     <div class="col-4">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" name="reference_id[]" id="reference{{ $reference->id }}" value="{{ $reference->id }}">
+                                            <input class="form-check-input" type="checkbox" name="references[]" id="reference{{ $reference->id }}" value="{{ $reference->id }}">
                                             <label class="form-check-label" for="reference{{ $reference->id }}">{{ $reference->jenis }}</label>
                                         </div>
                                     </div>
                                 @endforeach
                             </div>
-                            <input type="text" autocomplete="off" name="jenis_refrensi" class="mt-3" id="yangLainText" placeholder="Isikan darimana kamu mengetahui rhapsody">
+                            @error('references')
+                                <div class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></div>
+                            @enderror
+
                             <div class="col-12 text-center mt-4">
                                 <button type="submit" class="vs-btn">Daftar Sekarang</button>
                             </div>
@@ -169,36 +101,8 @@
 
 @push('addon-script')
     <script>
-        function slider_carouselInit() {
-            $('.owl-carousel.slider_carousel').owlCarousel({
-                dots: false,
-                rewind: true,
-                autoplay: false,
-                nav: true,
-                navText: ["<img src='/img/icon/left.png'>", "<img src='/img/icon/next.png'>"],
-                responsive: {
-                    0: {
-                        items: 1
-                    }
-                }
-            });
-        }
-
-        slider_carouselInit();
-    </script>
-    <script>
         $(document).ready(function(){
             $("#modalTesti").modal('show');
         });
-    </script>
-    <script>
-        $(".form-check-input").change(function () {
-            //check if the selected option is others
-            if (this.value === '9') {
-                //toggle textbox visibility
-                $("#yangLainText").toggle();
-            }
-        });
-        document.getElementById("tanggalLahir").max = "2005-12-31";
     </script>
 @endpush
