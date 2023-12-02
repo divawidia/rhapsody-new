@@ -2805,7 +2805,7 @@ a.text-theme:hover,
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    bottom: -60px;
+    bottom: -100px;
     width: 80%;
     color: black;
 }
