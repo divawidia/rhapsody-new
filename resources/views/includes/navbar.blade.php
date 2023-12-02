@@ -20,7 +20,7 @@ Header Area
                             <li class="menu-item-has-children mega-menu-wrap">
                                 <a href="#">Program Kami</a>
                                 <ul class="mega-menu">
-                                    @foreach($programs as $program)
+                                    @foreach(getProgramData() as $program)
                                         <li>
                                             <a href="#">{{ $program->name }}</a>
                                             <ul>
@@ -68,7 +68,7 @@ Header Area
                     class="fal fa-times"></i></button>
             <div class="mobile-logo">
                 <a href="{{ route('home') }}">
-                    <img src="/img/logo.png" alt="Rhapsody"/>
+                    <img src="{{ Storage::url(getSettingData()->logo_navbar) }}" alt="Rhapsody"/>
                 </a>
             </div>
             <div class="vs-mobile-menu">
@@ -79,7 +79,7 @@ Header Area
                     <li>
                         <a href="{{route('about-us')}}">Tentang Kami</a>
                     </li>
-                    @foreach($programs as $program)
+                    @foreach(getProgramData() as $program)
                         <li class="menu-item-has-children">
                             <a href="#">{{ $program->name }}</a>
                             <ul class="sub-menu">
