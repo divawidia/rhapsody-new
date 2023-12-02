@@ -187,8 +187,8 @@
                                     <h4>Online</h4>
                                 </div>
                             </a>
-                            <div class="widget-footer2 text-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                                Program akademik kami yang dikaji oleh para ahli dengan standar Internasional
+                            <div class="widget-footer2 text-end fw-bold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                                Program pelatihan dikaji berdasarkan kebutuhan dan perkembangan Industri pariwisata terkini.
                             </div>
                         </div>
                     </aside>
