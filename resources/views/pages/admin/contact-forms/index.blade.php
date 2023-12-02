@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @section('title')
-    Pertanyaan Terkirim
+    Pertanyaan Diterima
 @endsection
 @section('page-title')
     @yield('title')
