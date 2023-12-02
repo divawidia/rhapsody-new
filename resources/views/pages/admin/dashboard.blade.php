@@ -12,17 +12,22 @@
     @section('content')
         <x-alerts/>
 
-        <div class="row">
-            <div class="col-md-4">
-                <x-cards.overview-stats title="Form Pertanyaan" value="23 Pertanyaan" icon="bx bx-calendar" :route="route('admin-dashboard')" />
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+                <x-cards.overview-stats title="Calon Peserta Diploma 1" :value="$pesertaDiploma.' Peserta'" icon="bx bx-group" :route="route('calon-peserta-diploma.index')" />
+            </div>
+            <div class="col-md-6">
+                <x-cards.overview-stats title="Calon Peserta Executive" :value="$pesertaExecutive.' Peserta'" icon="bx bx-group" :route="route('calon-peserta-executive.index')" />
+            </div>
+            <div class="col-md-5">
+                <x-cards.overview-stats title="Pertanyaan Diterima" :value="$contact.' Pertanyaan'" icon="bx bx-receipt" :route="route('contact-forms.index')" />
             </div>
 
-            <div class="col-md-4">
-                <x-cards.overview-stats title="Artikel Dibuat" value="23 Artikel" icon="bx bx-file" :route="route('admin-dashboard')" />
+            <div class="col-md-5">
+                <x-cards.overview-stats title="Artikel Dibuat" :value="$artikel.' Artikel'" icon="bx bx-file" :route="route('posts.index')" />
             </div>
-
-            <div class="col-md-4">
-                <x-cards.overview-stats title="Pendaftar Calon SIswa" value="23 Siswa" icon="bx bx-book" :route="route('admin-dashboard')" />
+                <div class="col-md-2">
+                <x-buttons.link-button size="d-flex align-items-center mb-3" color="primary" icon="chevron-right" text="Ke Google Analytics" route="https://analytics.google.com/analytics/web/#/p416458903/reports/intelligenthome"/>
             </div>
         </div>
 
@@ -32,14 +37,6 @@
             </div>
             <div class="card-body">
                 <x-tables :headers="['#', 'Nama', 'Email', 'No. Telp', 'Pesan','Tgl. Dikirim']" tableId="contactFormTable"/>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Artikel yang Telah Dibuat</h4>
-            </div>
-            <div class="card-body">
-                <x-tables :headers="['#', 'Judul', 'Dibuat oleh', 'Tgl. Dibuat', 'Status','Aksi']" tableId="artikelTable"/>
             </div>
         </div>
 
@@ -55,35 +52,14 @@
                         url: '{!! url()->route('contact-forms.index') !!}',
                     },
                     columns: [
-                        {data: 'id', name: 'id'},
+                        {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
                         {data: 'nama', name: 'nama'},
                         {data: 'email', name: 'email'},
                         {data: 'no_telp', name: 'no_telp'},
                         {data: 'pesan', name: 'pesan'},
                         {data: 'created_at', name: 'created_at'},
-                    ]
-                });
-                $('#artikelTable').DataTable({
-                    processing: true,
-                    serverSide: true,
-                    ordering: true,
-                    ajax: {
-                        url: '{!! url()->route('posts.dashboard') !!}',
-                    },
-                    columns: [
-                        {data: 'id', name: 'id'},
-                        {data: 'title', name: 'title'},
-                        {data: 'user.name', name: 'user.name'},
-                        {data: 'created_at', name: 'created_at'},
-                        {data: 'status', name: 'status'},
-                        {
-                            data: 'action',
-                            name: 'action',
-                            orderable: false,
-                            searchable: false,
-                            width: '15%'
-                        },
-                    ]
+                    ],
+                    pageLength: 5
                 });
             });
         </script>
