@@ -48,7 +48,7 @@
                 <li>
                     <a href="{{ route('contact-forms.index') }}">
                         <i class='bx bx-receipt'></i>
-                        <span class="menu-item" data-key="t-sekolah">Pertanyaan Terkirim</span>
+                        <span class="menu-item" data-key="t-sekolah">Pertanyaan Diterima</span>
                     </a>
                 </li>
 
@@ -56,7 +56,7 @@
                 <li>
                     <a href="{{ route('posts.index') }}">
                         <i class='bx bx-file icon nav-icon' ></i>
-                        <span class="menu-item" data-key="t-posts">Artikel</span>
+                        <span class="menu-item" data-key="t-posts">Postingan Artikel</span>
                     </a>
                 </li>
                 <li>
