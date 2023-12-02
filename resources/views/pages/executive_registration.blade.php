@@ -1,57 +1,17 @@
 @extends('layouts.app')
 
 @section('title')
-    Registrasi Executive Hybrid | LPK Rhapsody Hospitality Development Center
+    Registrasi Executive Program
 @endsection
 
 @section('content')
-    <!-- Modal -->
-    <div class="modal fade" id="modalTesti" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content py-3 px-3" style="background-color: var(--theme-color3); border-radius: 20px !important;">
-                <div class="modal-header">
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-end">
-                            <button type="button" class="btn-close align-items-end" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="col-12">
-                            <h5 class="landing-title5 text-center" data-aos="fade-up" data-aos-duration="1000">
-                                Ini Beberapa Kisah Orang yang Sudah
-                                <FONT COLOR="#CE5423">Terbantu</FONT> Dengan Adanya Program Kami
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div class="inner-video-box text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-                        <iframe class="modal-video-testi" style=" border-radius:30px" src="https://www.youtube.com/embed/1gr3YyeO8QM?si=vTr6hW-eyE_kOEDC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        {{--                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn position-center popup-video"><i class="fas fa-play"></i></a>--}}
-                    </div>
-                    <div class="card_wrapper">
-                        <div class="container text-center">
-                            <div class="row" style="max-width: 700px">
-                                <div class="title-area my-4 wow fadeInUp" data-wow-delay="0.3s">
-                                    <h5 class="sec-title text-center" data-aos="fade-up" data-aos-duration="1000">Beberapa Alumni Kami</h5>
-                                </div>
-                                <div class="col-12">
-                                    @include('includes.testi-cards')
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('includes.modal_testi')
 
-    <div
-        class="breadcumb-wrapper d-flex align-items-center"
-        style="background: url('/img/bg/top-bg.jpg');
+    <div class="breadcumb-wrapper d-flex align-items-center" style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
-            background-position: center center;"
-    >
+            background-position: center center;">
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
                 <h1 class="breadcumb-title" data-aos="fade-up" data-aos-duration="1000">Registrasi Program Executive<FONT COLOR="#CE5423">.</FONT></h1>
@@ -60,194 +20,111 @@
     </div>
     <section class="py-5">
         <div class="container">
-
             <form action="{{ route('registrasi-program-executive.store') }}" method="post" enctype="multipart/form-data">
-            @csrf
-                <h1 class="left-border form-title text-uppercase" data-aos="fade-up" data-aos-duration="1000">Form Registrasi</h1>
-            <div class="row">
-                <p class="landing-text2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">*Kamu harus berusia minimal 20 tahun untuk mengikuti program executive hybrid</p>
-                <div class="col-12 col-md-6">
-                    <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="form-group">
-                            <p class="landing-text2">Pilihan Program Excutive Hybrid</p>
-                            <div class="de_form de_radio row mh-75 g-3">
-                                @foreach($program_executives as $program_executive)
-                                <div class="radio-img col-12 col-sm-6 col-md-12 col-lg-6" >
-                                    <input id="{{ $program_executive->id }}" name="program_executive_id" type="radio" value="{{ $program_executive->id }}">
-                                    <label for="{{ $program_executive->id }}">
-                                        <div class="row d-flex align-items-center">
-                                            <div class="col-6 col-sm-5 col-lg-4">
-                                                <img class="radio-icon" src="{{ Storage::url($program_executive->icon) }}" alt="">
+                @csrf
+                <h1 class="left-border form-title text-uppercase">Form Registrasi</h1>
+                <div class="row">
+                    <p class="landing-text2">*Kamu harus berusia minimal 20 tahun untuk mengikuti Executive Program</p>
+                    <div class="col-12 col-md-6">
+                        <div class="feature-style1 form-style4 login">
+                            <div class="form-group">
+                                <p class="landing-text2">Pilihan Program Excutive Hybrid</p>
+                                <div class="de_form de_radio row mh-75 g-3">
+                                    @foreach($program_executives as $program_executive)
+                                    <div class="radio-img col-12 col-sm-6 col-md-12 col-lg-6" >
+                                        <input id="{{ $program_executive->id }}" name="program_id" type="radio" value="{{ $program_executive->id }}">
+                                        <label for="{{ $program_executive->id }}">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-6 col-sm-5 col-lg-4">
+                                                    <img class="radio-icon" src="{{ Storage::url($program_executive->program_icon) }}" alt="">
+                                                </div>
+                                                <div class="col-6 col-sm-7 col-lg-8 d-flex align-items-center radio-label">
+                                                    {{ $program_executive->name }}
+                                                </div>
                                             </div>
-                                            <div class="col-6 col-sm-7 col-lg-8 d-flex align-items-center radio-label">
-                                                {{ $program_executive->nama_program }}
-                                            </div>
-                                        </div>
-                                    </label>
+                                        </label>
+                                    </div>
+                                    @endforeach
                                 </div>
+                                @error('program_id')
+                                <div class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></div>
+                                @enderror
+                            </div>
+                            <x-forms.input type="text" name="nama_lengkap" label="Nama Lengkap :" placeholder="Isikan nama lengkapmu ..."/>
+                            <x-forms.input type="text" name="nama_panggilan" label="Nama Panggilan :" placeholder="Isikan nama panggilanmu ..."/>
+                            <x-forms.input type="email" name="email" label="Alamat Email :" placeholder="Isikan alamat emailmu ..."/>
+                            <x-forms.input type="date" name="tanggal_lahir" label="Tanggal Lahir :" placeholder="Isikan tanggal lahirmu ..."/>
+                            <x-forms.input type="number" name="umur" label="Umur :" placeholder="Isikan umurmu (minimal 20 tahun) ..."/>
+                            <x-forms.input type="text" name="alamat" label="Alamat Tempat Tinggal :" placeholder="Isikan alamat tempat tinggalmu ..."/>
+
+                            <x-forms.select name="jenis_kelamin" label="Jenis Kelamin :">
+                                <option disabled selected>Pilih jenis kelaminmu</option>
+                                @foreach (['Laki-laki', 'Perempuan'] as $jk)
+                                    <option value="{{ $jk }}" @selected(old('jenis_kelamin') == $jk)>{{ $jk }}</option>
+                                @endforeach
+                            </x-forms.select>
+
+
+                            <x-forms.input type="text" name="no_hp" label="No. HP/Whatsapp :" placeholder="Isikan No. HP/Whatsappmu (format : 628xxxxx) ..."/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="feature-style1 form-style4 login">
+                            <x-forms.input type="text" name="no_hp_ortu" label="No. HP/Whatsapp Orang Tua/Wali :" placeholder="Isikan No. HP/Whatsapp Orang Tua/Walimu (format : 628xxxxx) ..."/>
+
+                            <x-forms.select name="pendidikan_terakhir" label="Pendidikan Terakhir :">
+                                <option disabled selected>Pilih pendidikan terakhir calon peserta</option>
+                                @foreach (['SD', 'SMP', 'SMA', 'D1', 'D2', 'D3', 'D4', 'S1', 'S2', 'S3'] as $jk)
+                                    <option value="{{ $jk }}" @selected(old('pendidikan_terakhir') == $jk)>{{ $jk }}</option>
+                                @endforeach
+                            </x-forms.select>
+
+                            <x-forms.input type="text" name="asal_sekolah" label="Asal Sekolah :" placeholder="Isikan asal sekolah calon peserta ..."/>
+                            <x-forms.input type="text" name="jurusan" label="Jurusan Sekolah :" placeholder="Isikan jurursan sekolah calon peserta ..."/>
+                            <x-forms.input type="number" name="tahun_lulus" label="Tahun Lulus Sekolah :" placeholder="Isikan tahun lulus sekolah calon peserta ..."/>
+
+                            <x-forms.textarea name="pengalaman_kerja" label="Pengalaman Kerja (jika ada) :" placeholder="Isikan pengalaman kerja calon peserta ..." :required="false"/>
+
+                            <p class="landing-text2 mt-3">Darimana kamu mengetahui Rhapsody? :</p>
+                            <div class="row">
+                                @foreach($references as $reference)
+                                    <div class="col-4">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="references[]" id="reference{{ $reference->id }}" value="{{ $reference->id }}">
+                                            <label class="form-check-label" for="reference{{ $reference->id }}">{{ $reference->jenis }}</label>
+                                        </div>
+                                    </div>
                                 @endforeach
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="nama_lengkap">Nama Lengkap</label>
-                            <input type="text" autocomplete="off" name="nama_lengkap" id="nama_lengkap" placeholder="Isikan nama lengkapmu" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nama_panggilan">Nama Panggilan</label>
-                            <input type="text" autocomplete="off" name="nama_panggilan" id="nama_panggilan" placeholder="Isikan nama panggilan" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Alamat Email</label>
-                            <input type="email" autocomplete="off" name="email" id="email" placeholder="Isikan alamat emailmu" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tanggal_lahir">Tanggal Lahir</label>
-                            <input type="date" autocomplete="off" name="tanggal_lahir" id="tanggal_lahir" placeholder="Isikan tanggal lahirmu" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="umur">Umur</label>
-                            <input type="number" autocomplete="off" name="umur" id="umur" min="20" placeholder="Isikan umurmu" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat">Alamat Tempat Tinggal</label>
-                            <textarea name="alamat" id="alamat" placeholder="Isikan alamat tempat tinggalmu"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="jenis_kelamin">Jenis Kelamin</label>
-                            <select id="jenis_kelamin" class="form-control" name="jenis_kelamin" required>
-                                <option selected>Pilih jenis kelaminmu</option>
-                                <option value="laki-laki">Laki-laki</option>
-                                <option value="perempuan">Perempuan</option>
-                            </select>
+                            @error('references')
+                                <div class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></div>
+                            @enderror
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="vs-btn">Daftar Sekarang</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-                        <div class="form-group">
-                            <label for="no_hp">No. HP/Whatsapp</label>
-                            <input type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan dengan format (628XXXXXX). contoh : 6287761360699" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_hp_ortu">No. HP/Whatsapp Orang Tua/Wali</label>
-                            <input type="tel" autocomplete="off" name="no_hp_ortu" id="no_hp_ortu" placeholder="Isikan dengan format (628XXXXX). contoh : 6287761360699" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="pendidikanTerakhir">Pendidikan Terakhir</label>
-                            <select id="pendidikanTerakhir" class="form-control" name="pendidikan_terakhir" required>
-                                <option selected>Pilih pendidikan terakhirmu</option>
-                                <option value="SMA">SMA</option>
-                                <option value="SMK">SMK</option>
-                                <option value="D1">D1</option>
-                                <option value="D2">D2</option>
-                                <option value="D3">D3</option>
-                                <option value="D4">D4</option>
-                                <option value="S1">S1</option>
-                                <option value="S2">S2</option>
-                                <option value="S3">S3</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="asal_sekolah">Nama Sekolah</label>
-                            <input type="text" autocomplete="off" name="asal_sekolah" id="asal_sekolah" placeholder="Isikan nama sekolah terakhirmu" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="jurusan">Jurusan Sekolah</label>
-                            <input type="text" autocomplete="off" name="jurusan" id="jurusan" placeholder="Isikan nama jurusan di sekolah terakhirmu" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tahun_lulus">Tahun Lulus</label>
-                            <input type="number" autocomplete="off" name="tahun_lulus" id="tahun_lulus" placeholder="Isikan tahun lulus sekolah terakhirmu" min="1950" max="2023" step="1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="pengalaman_kerja">Pengalaman Kerja (Opsional)</label>
-                            <textarea name="pengalaman_kerja" id="pengalaman_kerja" placeholder="Isikan pengalaman kerjamu yang berisi: tahun, tempat kerja, posisi, kegiatan pekerjaan yang dilakukan (tidak perlu diisi jika belum memiliki pengalaman kerja)"></textarea>
-                        </div>
-                        <p class="landing-text2 mt-3">Darimana kamu mengetahui Rhapsody? :</p>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="instagram" value="Instagram">
-                                    <label class="form-check-label" for="instagram">Instagram</label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="facebook" value="Facebook">
-                                    <label class="form-check-label" for="facebook">Facebook</label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="tiktok" value="Tiktok">
-                                    <label class="form-check-label" for="tiktok">Tiktok</label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="youtube" value="Youtube">
-                                    <label class="form-check-label" for="youtube">Youtube</label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="teman" value="Teman">
-                                    <label class="form-check-label" for="teman">Teman</label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="orangTua" value="Orang Tua">
-                                    <label class="form-check-label" for="orangTua">Orang Tua</label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="guru" value="Guru">
-                                    <label class="form-check-label" for="guru">Guru</label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="yangLain" value="Yang Lain">
-                                    <label class="form-check-label" for="yangLain">Yang Lain</label>
-                                </div>
-                            </div>
-                        </div>
-                        <input type="text" autocomplete="off" name="jenis_refrensi[]" class="mt-3" id="yangLainText" placeholder="Isikan darimana kamu mengetahui rhapsody">
-                        <div class="col-12 text-center mt-4">
-                            <button type="submit" class="vs-btn">Daftar Sekarang</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
+            </form>
         </div>
     </section>
 @endsection
 
 @push('addon-script')
     <script>
-        function slider_carouselInit() {
-            $('.owl-carousel.slider_carousel').owlCarousel({
-                dots: false,
-                rewind: true,
-                autoplay: false,
-                nav: true,
-                navText: ["<img src='/img/icon/left.png'>", "<img src='/img/icon/next.png'>"],
-                responsive: {
-                    0: {
-                        items: 1
-                    }
-                }
-            });
-        }
-
-        slider_carouselInit();
-    </script>
-    <script>
-        $(".form-check-input").change(function () {
-            //check if the selected option is others
-            if (this.value === "Yang Lain") {
-                //toggle textbox visibility
-                $("#yangLainText").toggle();
-            }
-        });
-        document.getElementById("tanggalLahir").max = "2003-12-31";
-    </script>
-    <script>
         $(document).ready(function(){
             $("#modalTesti").modal('show');
+
+            function initCKEditor(className) {
+                ClassicEditor.create($(className).get(0), {
+                    height: 400,
+                    toolbar: ['bold', 'italic', 'link', 'bulletedList', 'numberedList'],
+                }).catch(error => {
+                    alert(error);
+                });
+            }
+            initCKEditor('.ckeditor');
         });
     </script>
 @endpush
