@@ -34,7 +34,7 @@
                     'Pengalaman Kerja',
                     'Program Dipilih',
                     'Jurusan Dipilih',
-                    'Refrensi Daftar',
+                    'Darimana Mengetahui Rhapsody?',
                     'Tanggal Daftar',
                     'Terakhir Diperbarui',
                     'Aksi'
