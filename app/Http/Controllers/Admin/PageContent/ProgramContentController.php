@@ -63,8 +63,7 @@ class ProgramContentController extends Controller
         $data['btn_icon'] = $this->storeFile($data, 'btn_icon', 'assets/program-page', '');
         $program = ProgramContent::create($data);
         foreach ($request->photo_url as $image) {
-            ProgramPhoto::create([
-                'program_content_id' => $program->id,
+            $program->program_photos()->create([
                 'photos_url' => $image,
                 'alt' => $program->name
             ]);
@@ -102,7 +101,7 @@ class ProgramContentController extends Controller
     public function edit(ProgramContent $pelatihan)
     {
         if (request()->ajax()) {
-            $query = ProgramCareerSalaries::where('program_content_id', $pelatihan->program_content_id)->latest()->get();
+            $query = $pelatihan->program_career_salaries()->latest()->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -115,7 +114,7 @@ class ProgramContentController extends Controller
                 ->rawColumns(['action', 'salary'])
                 ->make();
         }
-        $programs = Program::where('status', 1)->get();
+        $programs = Program::where('status', '1')->get();
 
         return view('pages.admin.section-content.programs.edit',[
             'programs' => $programs,
@@ -154,30 +153,20 @@ class ProgramContentController extends Controller
     public function update(ProgramContentRequest $request, ProgramContent $pelatihan)
     {
         $data = $request->validated();
-        $programContent = ProgramContent::findOrFail($pelatihan->id);
-        if ($request->btn_icon == null and $programContent->btn_icon != null){
-            $data['btn_icon'] = $programContent->btn_icon;
-        }else{
-            $data['btn_icon'] = $request->file('btn_icon')->store('assets/program-page', 'public');
-        }
-        if ($request->program_icon == null and $programContent->program_icon != null){
-            $data['program_icon'] = $programContent->program_icon;
-        }else{
-            $data['program_icon'] = $request->file('program_icon')->store('assets/program-page', 'public');
-        }
+        $data['btn_icon'] = $this->updateFile($data, 'btn_icon', 'assets/program-page', $pelatihan->btn_icon);
+        $data['program_icon'] = $this->updateFile($data, 'program_icon', 'assets/program-page', $pelatihan->program_icon);
 
         if ($request->photo_url != null) {
             foreach ($request->photo_url as $image) {
-                ProgramPhoto::create([
-                    'program_content_id' => $programContent->id,
+                $pelatihan->program_photos()->create([
                     'photos_url' => $image,
-                    'alt' => $programContent->name
+                    'alt' => $pelatihan->name
                 ]);
             }
         }
-        $programContent->update($data);
+        $pelatihan->update($data);
         Alert::success('Hore!', 'Program Pelatihan Berhasil Diedit!');
-        return redirect()->route('pelatihan.edit', $programContent->id)->with('status', 'Data program pelatihan berhasil diupdate!');
+        return redirect()->route('pelatihan.edit', $pelatihan->id)->with('status', 'Data program pelatihan berhasil diupdate!');
     }
 
     /**
