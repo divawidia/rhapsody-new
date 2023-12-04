@@ -10,7 +10,7 @@
     <body>
     @endsection
     @section('content')
-        <x-cards.form :route="route('calon-peserta-diploma.update', $peserta->id)" :editForm="true" title="Edit Data Calon Peserta : {{ $peserta->nama_lengkap }}">
+        <x-cards.form :route="route('calon-peserta-diploma.update', $peserta->id)" :editForm="true" title="Edit Data Calon Peserta : {{ $peserta->nama_lengkap }}" :backBtn="route('calon-peserta-diploma.index')">
             <div class="row">
                 <div class="col-md-6">
                     <x-forms.input type="text" name="nama_lengkap" label="Nama Lengkap :" placeholder="Isikan nama lengkap calon peserta ..." :value="$peserta->nama_lengkap"/>

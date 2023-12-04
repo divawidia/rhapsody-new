@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-    <x-cards.form :route="route('setting.update')" :editForm="true" title="Pengaturan Website & Profile LPK">
+    <x-cards.form :route="route('setting.update')" :editForm="true" title="Pengaturan Website & Profile LPK" :backBtn="route('admin-dashboard')">
         @if($setting != null)
             <x-forms.input type="text" name="site_name" label="Nama Situs :" placeholder="Isikan nama situs untuk website ..." :value="$setting->site_name"/>
 

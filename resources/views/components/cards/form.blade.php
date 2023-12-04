@@ -10,7 +10,7 @@
         </div>
         <div class="card-footer">
             <div class="float-end">
-                <x-buttons.link-button color="secondary" icon="arrow-back" text="Kembali" :route="{{ $backBtn }}"/>
+                <x-buttons.link-button color="secondary" icon="arrow-back" text="Kembali" :route="$backBtn"/>
                 <x-buttons.basic-button color="primary" icon="save" text="Simpan" type="submit"/>
             </div>
         </div>

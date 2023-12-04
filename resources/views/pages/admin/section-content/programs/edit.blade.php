@@ -13,7 +13,7 @@
         <x-alerts/>
         <x-buttons.link-button size="my-3" color="secondary" icon="arrow-back" text="Kembali" :route="route('programs.index')"/>
 
-        <x-cards.form :route="route('pelatihan.update', ['pelatihan'=>$pelatihan])" :editForm="true" title="Edit Program Pelatihan {{ $pelatihan->name }}">
+        <x-cards.form :route="route('pelatihan.update', ['pelatihan'=>$pelatihan])" :editForm="true" title="Edit Program Pelatihan {{ $pelatihan->name }}" :backBtn="route('programs.index')">
             <div class="row">
                 <div class="col-md-6">
                     <x-forms.input type="text" name="name" label="Nama Program Pelatihan :" placeholder="Isikan nama program pelatihan ..." :value="$pelatihan->name"/>
