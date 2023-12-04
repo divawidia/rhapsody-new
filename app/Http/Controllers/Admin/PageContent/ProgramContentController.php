@@ -115,12 +115,8 @@ class ProgramContentController extends Controller
                 ->rawColumns(['action', 'salary'])
                 ->make();
         }
-        $title = 'Hapus Prospek Karir!';
-        $text = "Apakah anda yakin ingin menghapus prospek karir ini?";
-        confirmDelete($title, $text);
-
         $pelatihan = ProgramContent::with((['program_career_companies', 'program_career_salaries', 'program', 'program_photos']))->findOrFail($id);
-        $programs = Program::all();
+        $programs = Program::where('status', 1)->get();
 
         return view('pages.admin.section-content.programs.edit',[
             'programs' => $programs,
@@ -193,7 +189,6 @@ class ProgramContentController extends Controller
         $program = ProgramContent::findOrFail($id);
         $program->delete();
         alert()->success('Hore!','Program pelatihan berhasil dihapus!');
-
         return redirect()->route('programs.index')->with('status', 'Data program pelatihan berhasil dihapus!');
     }
 }

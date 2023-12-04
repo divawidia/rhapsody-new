@@ -40,7 +40,7 @@ abstract class Controller extends BaseController
     }
     public function buttonTooltips($route, $btnColor, $tooltipsTitle, $btnIcon)
     {
-        return '<a class="btn btn-sm '.$btnColor.'" href="' . $route . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'" data-confirm-delete="true">
+        return '<a class="btn btn-sm '.$btnColor.'" href="' . $route . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'">
                     <i class="bx '.$btnIcon.'"></i>
                 </a>';
     }
@@ -48,7 +48,7 @@ abstract class Controller extends BaseController
     {
         return '<form action="' . $route . '" method="POST" >
                     ' . method_field($method) . csrf_field() . '
-                    <button type="submit" class="btn btn-sm '.$btnColor.'" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'" data-confirm-delete="true">
+                    <button type="submit" class="btn btn-sm '.$btnColor.'" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'">
                         <i class="bx '.$btnIcon.'"></i>
                     </button>
                 </form>';
