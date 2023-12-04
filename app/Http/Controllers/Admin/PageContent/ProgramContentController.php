@@ -57,7 +57,7 @@ class ProgramContentController extends Controller
      */
     public function store(ProgramContentRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
         $data['slug'] = Str::slug($request->name);
         $data['program_icon'] = $this->storeFile($data, 'program_icon', 'assets/program-page', '');
         $data['btn_icon'] = $this->storeFile($data, 'btn_icon', 'assets/program-page', '');
@@ -145,9 +145,10 @@ class ProgramContentController extends Controller
     {
         $item = ProgramPhoto::findOrFail($id);
         if ($item) {
+            Storage::delete($item->photos_url);
             $item->delete();
         }
-        Storage::delete($item->photo_url);
+
         Alert::success('Hore!', 'Foto Berhasil Dihapus!');
         return redirect()->route('pelatihan.edit', $item->program_content_id);
     }

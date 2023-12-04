@@ -7,6 +7,7 @@
 <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 <script src="https://kit.fontawesome.com/bec8d97be0.js" crossorigin="anonymous"></script>
 <script src="{{ URL::asset('build/libs/metismenujs/metismenujs.min.js') }}"></script>
 <script src="{{ URL::asset('build/js/app.js') }}"></script>
