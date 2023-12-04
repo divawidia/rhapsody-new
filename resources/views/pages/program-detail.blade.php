@@ -181,7 +181,7 @@
                             <div class="widget-header" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                 <img src="/img/icon/Registration.png">
                             </div>
-                            <a class="widget2" href="{{ route('registrasi-program-d1') }}" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <a class="widget2" href="@if($program->program->name == 'Diploma 1') {{ route('registrasi-program-d1') }} @else {{ route('registrasi-program-executive') }} @endif" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                 <div class="vstack">
                                     <h3>Registrasi</h3>
                                     <h4>Online</h4>
@@ -211,9 +211,6 @@
                     0: {
                         items: 1
                     },
-                    1400: {
-                        items: 2,
-                    }
                 }
             });
         }
