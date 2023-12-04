@@ -1,5 +1,5 @@
 <div class="modal fade" id="modalTesti" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
         <div class="modal-content py-3 px-3" style="background-color: var(--theme-color3); border-radius: 20px !important;">
             <div class="modal-header">
                 <div class="row">
@@ -20,8 +20,8 @@
                 </div>
                 <div class="card_wrapper">
                     <div class="container text-center">
-                        <div class="row" style="max-width: 700px">
-                            <div class="title-area my-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="title-area mt-4 wow fadeInUp" data-wow-delay="0.3s">
                                 <h5 class="sec-title text-center" data-aos="fade-up" data-aos-duration="1000">Beberapa Alumni Kami</h5>
                             </div>
                             <div class="col-12">

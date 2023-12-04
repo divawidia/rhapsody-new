@@ -1,14 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Post;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Storage;
 
-class Controller extends BaseController
+abstract class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
@@ -42,7 +40,7 @@ class Controller extends BaseController
     }
     public function buttonTooltips($route, $btnColor, $tooltipsTitle, $btnIcon)
     {
-        return '<a class="btn btn-sm '.$btnColor.'" href="' . $route . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'">
+        return '<a class="btn btn-sm '.$btnColor.'" href="' . $route . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="'.$tooltipsTitle.'" data-confirm-delete="true">
                     <i class="bx '.$btnIcon.'"></i>
                 </a>';
     }

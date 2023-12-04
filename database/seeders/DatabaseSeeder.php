@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,27 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        // User::factory(10)->create();
 
-        $data = [
-            [
-                 'jenis' => 'Instagram'
-             ],[
-                 'jenis' => 'Facebook',
-             ],[
-                'jenis' => 'Tiktok',
-             ],[
-                 'jenis' => 'Youtube',
-             ],[
-                 'jenis' => 'Teman',
-             ],[
-                 'jenis' => 'Orang Tua',
-             ],[
-                 'jenis' => 'Guru',
-             ],[
-                 'jenis' => 'Yang lain',
-             ]
-            ];
-        DB::table('references')->insert($data);
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+        ]);
     }
 }
