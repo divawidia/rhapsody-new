@@ -16,53 +16,30 @@ class ProgramCareerCompanyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(string $id)
+    public function index(ProgramContent $pelatihan)
     {
-        if (request()->ajax()) {
-            $query = ProgramCareerCompany::where('program_content_id', $id)->latest()->get();
+        $query = ProgramCareerCompany::where('program_content_id', $pelatihan->id)->latest()->get();
 
-            return Datatables::of($query)
-                ->addColumn('action', function ($item) {
-                    return '
-                        <div class="dropdown">
-                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bx bx-dots-horizontal-rounded"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="' . route('career-company.edit', ['pelatihan'=>$item->program_content_id, 'company'=>$item->id]) . '">Edit</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="' . route('career-company.destroy',  ['pelatihan'=>$item->program_content_id, 'company'=>$item->id]) . '" data-confirm-delete="true">Hapus</a>
-                                </li>
-                            </ul>
-                        </div>';
-                })
-                ->editColumn('company_logo', function ($item) {
-                    return $item->company_logo ? '<img class="w-50" src="' . Storage::url($item->company_logo) . '"/>' : '';
-                })
-                ->editColumn('status', function ($item){
-                    if ($item->status == 1) {
-                        $badge = '<span class="badge bg-success">Available</span>';
-                    }else{
-                        $badge = '<span class="badge bg-danger">Limited</span>';
-                    }
-                    return $badge;
-                })
-                ->rawColumns(['action', 'company_logo', 'status'])
-                ->make();
-        }
-        $title = 'Hapus Prospek Lowongan!';
-        $text = "Apakah anda yakin ingin menghapus prospek lowongan ini?";
-        confirmDelete($title, $text);
+        return Datatables::of($query)
+            ->addColumn('action', function ($item) {
+                return  $this->buttonTooltips(route('career-company.edit', ['pelatihan'=>$item->program_content_id, 'company'=>$item->id]), 'btn-primary', 'Edit Data perusahaan', 'bx-edit')
+                    .' '.$this->formButtonTooltips(route('career-company.destroy', ['pelatihan'=>$item->program_content_id, 'company'=>$item->id]), 'btn-danger', 'Hapus Data perusahaan', 'bx-trash', 'DELETE');
+            })
+            ->editColumn('company_logo', function ($item) {
+                return $item->company_logo ? '<img src="' . Storage::url($item->company_logo) . '" width="100"/>' : '';
+            })
+            ->editColumn('status', function ($item){
+                return $this->status($item->status);
+            })
+            ->rawColumns(['action', 'company_logo', 'status'])
+            ->make();
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(string $id)
+    public function create(ProgramContent $pelatihan)
     {
-        $pelatihan = ProgramContent::findOrFail($id);
         return view('pages.admin.section-content.program-career-company.create',[
             'pelatihan' => $pelatihan
         ]);
@@ -73,10 +50,9 @@ class ProgramCareerCompanyController extends Controller
      */
     public function store(ProgramCareerCompanyRequest $request, ProgramContent $pelatihan)
     {
-        $data = $request->all();
-        $data['program_content_id'] = $pelatihan->id;
+        $data = $request->validated();
         $data['company_logo'] = $request->file('company_logo')->store('assets/program-page', 'public');
-        ProgramCareerCompany::create($data);
+        $pelatihan->program_career_companies()->create($data);
 
         Alert::success('Hore!', 'Prospek Lowongan Perusahaan Berhasil Ditambahkan!');
         return redirect()->route('pelatihan.edit',$pelatihan->id)->with('status', 'Data prospek lowongan perusahaan berhasil ditambahkan!');
@@ -87,7 +63,6 @@ class ProgramCareerCompanyController extends Controller
      */
     public function edit(ProgramContent $pelatihan, ProgramCareerCompany $company)
     {
-        $company = ProgramCareerCompany::findOrFail($company->id);
         return view('pages.admin.section-content.program-career-company.edit',[
             'company' => $company,
         ]);
@@ -100,8 +75,7 @@ class ProgramCareerCompanyController extends Controller
     {
         $data = $request->validated();
         $data['company_logo'] = $request->file('company_logo')->store('assets/program-page', 'public');
-        $careerCompany = ProgramCareerCompany::findOrFail($company->id);
-        $careerCompany->update($data);
+        $company->update($data);
         Alert::success('Hore!', 'Prospek Lowongan Perusahaan Berhasil Diupdate!');
         return redirect()->route('pelatihan.edit', $pelatihan->id)->with('status', 'Data prospek lowongan perusahaan berhasil diupdate!');
     }
@@ -111,8 +85,7 @@ class ProgramCareerCompanyController extends Controller
      */
     public function destroy(ProgramContent $pelatihan, ProgramCareerCompany $company)
     {
-        $careerCompany = ProgramCareerCompany::findOrFail($company->id);
-        $careerCompany->delete();
+        $company->delete();
         alert()->success('Hore!','Prospek lowongan perusahaan berhasil dihapus!');
         return redirect()->route('pelatihan.edit', $pelatihan->id)->with('status', 'Data prospek lowongan perusahaan berhasil dihapus!');
     }
