@@ -11,6 +11,7 @@
     @endsection
     @section('content')
         <x-alerts/>
+        <x-buttons.link-button size="my-3" color="secondary" icon="arrow-back" text="Kembali" :route="route('programs.index')"/>
 
         <x-cards.form :route="route('pelatihan.update', ['pelatihan'=>$pelatihan])" :editForm="true" title="Edit Program Pelatihan {{ $pelatihan->name }}">
             <div class="row">

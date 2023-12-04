@@ -1,5 +1,3 @@
-<x-buttons.link-button size="my-3" color="secondary" icon="arrow-back" text="Kembali" :route="url()->previous()"/>
-
 <form action="{{ $route }}" method="POST" enctype="multipart/form-data">
     @if($editForm) @method('PUT') @endif
     @csrf
