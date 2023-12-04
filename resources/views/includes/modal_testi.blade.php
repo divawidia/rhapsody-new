@@ -1,5 +1,5 @@
 <div class="modal fade" id="modalTesti" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content py-3 px-3" style="background-color: var(--theme-color3); border-radius: 20px !important;">
             <div class="modal-header">
                 <div class="row">

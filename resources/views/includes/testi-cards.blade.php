@@ -51,9 +51,6 @@
                 responsive: {
                     0: {
                         items: 1
-                    },
-                    992: {
-                        items:2
                     }
                 }
             });
