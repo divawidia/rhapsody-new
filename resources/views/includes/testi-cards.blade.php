@@ -38,24 +38,3 @@
         </div>
     </div>
 </section>
-
-@push('addon-script')
-    <script>
-        function slider_carouselInit() {
-            $('.owl-carousel.slider_carousel').owlCarousel({
-                dots: false,
-                rewind: true,
-                autoplay: true,
-                nav: true,
-                navText: ["<img src='/img/icon/left.png'>", "<img src='/img/icon/next.png'>"],
-                responsive: {
-                    0: {
-                        items: 1
-                    }
-                }
-            });
-        }
-
-        slider_carouselInit();
-    </script>
-@endpush
