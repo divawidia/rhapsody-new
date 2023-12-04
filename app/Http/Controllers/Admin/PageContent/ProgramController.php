@@ -23,20 +23,8 @@ class ProgramController extends Controller
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
-                    return '
-                        <div class="dropdown">
-                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bx bx-dots-horizontal-rounded"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="' . route('programs.edit', $item->id) . '">Edit</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="' . route('programs.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
-                                </li>
-                            </ul>
-                        </div>';
+                    return  $this->buttonTooltips(route('programs.edit', $item->id), 'btn-primary', 'Edit Data programs', 'bx-edit')
+                        .' '.$this->formButtonTooltips(route('programs.destroy', $item->id), 'btn-danger', 'Hapus Data programs', 'bx-trash', 'DELETE');
                 })
                 ->editColumn('status', function ($item){
                     if ($item->status == 1) {
@@ -49,10 +37,6 @@ class ProgramController extends Controller
                 ->rawColumns(['action', 'status'])
                 ->make();
         }
-        $title = 'Hapus Program!';
-        $text = "Apakah anda yakin ingin menghapus program ini?";
-        confirmDelete($title, $text);
-
         return view('pages.admin.pages.programs.index');
     }
 

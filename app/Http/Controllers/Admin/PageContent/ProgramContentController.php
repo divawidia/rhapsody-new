@@ -99,10 +99,10 @@ class ProgramContentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(ProgramContent $pelatihan)
     {
         if (request()->ajax()) {
-            $query = ProgramCareerSalaries::where('program_content_id', $id)->latest()->get();
+            $query = ProgramCareerSalaries::where('program_content_id', $pelatihan->program_content_id)->latest()->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -115,7 +115,6 @@ class ProgramContentController extends Controller
                 ->rawColumns(['action', 'salary'])
                 ->make();
         }
-        $pelatihan = ProgramContent::with((['program_career_companies', 'program_career_salaries', 'program', 'program_photos']))->findOrFail($id);
         $programs = Program::where('status', 1)->get();
 
         return view('pages.admin.section-content.programs.edit',[
@@ -184,10 +183,9 @@ class ProgramContentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(ProgramContent $pelatihan)
     {
-        $program = ProgramContent::findOrFail($id);
-        $program->delete();
+        $pelatihan->delete();
         alert()->success('Hore!','Program pelatihan berhasil dihapus!');
         return redirect()->route('programs.index')->with('status', 'Data program pelatihan berhasil dihapus!');
     }
