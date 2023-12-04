@@ -23,36 +23,15 @@ class TagController extends Controller
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
-                    return '
-                        <div class="dropdown">
-                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bx bx-dots-horizontal-rounded"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="' . route('tags.edit', $item->id) . '">Edit</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="' . route('tags.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
-                                </li>
-                            </ul>
-                        </div>';
+                    return  $this->buttonTooltips(route('tags.edit', $item->id), 'btn-primary', 'Edit Data tags', 'bx-edit')
+                        .' '.$this->formButtonTooltips(route('tags.destroy', $item->id), 'btn-danger', 'Hapus Data tags', 'bx-trash', 'DELETE');
                 })
                 ->editColumn('status', function ($item){
-                    if ($item->status == 1) {
-                        $badge = '<span class="badge bg-success">Publish</span>';
-                    }else{
-                        $badge = '<span class="badge bg-danger">Private</span>';
-                    }
-                    return $badge;
+                    return $this->status($item->status);
                 })
                 ->rawColumns(['action', 'status'])
                 ->make();
         }
-        $title = 'Hapus Tag!';
-        $text = "Apakah anda yakin ingin menghapus tag ini?";
-        confirmDelete($title, $text);
-
         return view('pages.admin.tags.index');
     }
 
@@ -81,10 +60,8 @@ class TagController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Tag $tag)
     {
-        $tag = Tag::findOrFail($id);
-
         return view('pages.admin.tags.edit',[
             'tag' => $tag
         ]);
@@ -96,7 +73,6 @@ class TagController extends Controller
     public function update(TagRequest $request, Tag $tag)
     {
         $data = $request->validated();
-        $tag = Tag::findOrFail($tag->id);
         $data['slug'] = Str::slug($request->tag_name);
         $tag->update($data);
         alert()->success('Hore!','Tag berhasil diupdate!');
@@ -106,9 +82,8 @@ class TagController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Tag $tag)
     {
-        $tag = Tag::findOrFail($id);
         $tag->delete();
         alert()->success('Hore!','Tag berhasil dihapus!');
         return redirect()->route('tags.index')->with('status', 'Data tag blog berhasil dihapus!');

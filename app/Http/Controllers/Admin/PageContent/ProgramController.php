@@ -27,12 +27,7 @@ class ProgramController extends Controller
                         .' '.$this->formButtonTooltips(route('programs.destroy', $item->id), 'btn-danger', 'Hapus Data programs', 'bx-trash', 'DELETE');
                 })
                 ->editColumn('status', function ($item){
-                    if ($item->status == 1) {
-                        $badge = '<span class="badge bg-success">Publish</span>';
-                    }else{
-                        $badge = '<span class="badge bg-danger">Private</span>';
-                    }
-                    return $badge;
+                    return $this->status($item->status);
                 })
                 ->rawColumns(['action', 'status'])
                 ->make();
@@ -64,9 +59,8 @@ class ProgramController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Program $program)
     {
-        $program = Program::find($id);
         return view('pages.admin.pages.programs.edit', ['program'=>$program]);
     }
 
@@ -76,7 +70,6 @@ class ProgramController extends Controller
     public function update(ProgramRequest $request, Program $program)
     {
         $data = $request->validated();
-        $program = Program::findOrFail($program->id);
         $data['slug'] = Str::slug($request->name);
         $program->update($data);
         alert()->success('Hore!','Program berhasil diupdate!');
@@ -86,12 +79,10 @@ class ProgramController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Program $program)
     {
-        $program = Program::findOrFail($id);
         $program->delete();
         alert()->success('Hore!','Program berhasil dihapus!');
-
         return redirect()->route('programs.index')->with('status', 'Data Program berhasil dihapus!');
     }
 }
