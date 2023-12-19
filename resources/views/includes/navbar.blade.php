@@ -1,43 +1,8 @@
 <!--==============================
 Header Area
 ==============================-->
-<header class="vs-header header-layout2">
-    <div class="header-top">
-        <div class="container">
-            <div class="row justify-content-between align-items-center gx-50">
-                <div class="col d-none d-xl-block">
-                    <div class="header-links style2">
-                        <ul>
-                            <li>
-                                <i class="fa-brands fa-whatsapp" style="color: #ffffff"></i
-                                >Telepon/Whatsapp :
-                                <a href="https://wa.me/6287761360699">+62877-6136-0699</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope"></i>Email:
-                                <a href="mailto:info@rhapsodyhospitality.com"
-                                >info@rhapsodyhospitality.com</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="header-social style2">
-                        <a href="https://www.facebook.com/rhapsody.developmentcenter"
-                        ><i class="fab fa-facebook-f"></i
-                            ></a>
-                        <a href="https://www.instagram.com/rhapsodydevelopmentcenter/"
-                        ><i class="fab fa-instagram"></i
-                            ></a>
-                        <a href="https://www.linkedin.com/company/rhapsodyhospitality/"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="sticky-wrapper">
-        <div class="sticky-active">
+<header class="vs-header header-layout2 bg-transparent">
+    <div class="wrapper">
             <div class="container position-relative z-index-common">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-3 align-items-center">
@@ -102,47 +67,98 @@ Header Area
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-    <div class="vs-menu-area text-center collapse" id="mobileNavbarCollapse">
-        <div class="vs-mobile-menu">
-            <ul>
-                <li>
-                    <a href="{{route('about-us')}}">Tentang Kami</a>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Diploma 1</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{ route('front-office') }}">Front Office</a></li>
-                        <li><a href="{{ route('housekeeping') }}">Housekeeping</a></li>
-                        <li>
-                            <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Executive Hybrid</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>
-                        <li>
-                            <a href="{{ route('galley&cook') }}">Galley & Cook</a>
-                        </li>
-                    </ul>
-                </li>
+{{--    <div class="vs-menu-area text-center collapse" id="mobileNavbarCollapse">--}}
+{{--        <div class="vs-mobile-menu">--}}
+{{--            <ul>--}}
+{{--                <li>--}}
+{{--                    <a href="{{route('about-us')}}">Tentang Kami</a>--}}
+{{--                </li>--}}
+{{--                <li class="menu-item-has-children">--}}
+{{--                    <a href="#">Diploma 1</a>--}}
+{{--                    <ul class="sub-menu">--}}
+{{--                        <li><a href="{{ route('front-office') }}">Front Office</a></li>--}}
+{{--                        <li><a href="{{ route('housekeeping') }}">Housekeeping</a></li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="menu-item-has-children">--}}
+{{--                    <a href="#">Executive Hybrid</a>--}}
+{{--                    <ul class="sub-menu">--}}
+{{--                        <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ route('galley&cook') }}">Galley & Cook</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
-                <li class="menu-item-has-children">
-                    <a href="{{ route('fasilitas') }}">Fasilitas</a>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="{{ route('under-maintenance') }}">Blog</a>
-                </li>
-                <li>
-                    <a href="{{ route('contact') }}">Kontak Kami</a>
-                </li>
-            </ul>
+{{--                <li class="menu-item-has-children">--}}
+{{--                    <a href="{{ route('fasilitas') }}">Fasilitas</a>--}}
+{{--                </li>--}}
+{{--                <li class="menu-item-has-children">--}}
+{{--                    <a href="{{ route('under-maintenance') }}">Blog</a>--}}
+{{--                </li>--}}
+{{--                <li>--}}
+{{--                    <a href="{{ route('contact') }}">Kontak Kami</a>--}}
+{{--                </li>--}}
+{{--            </ul>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+    <div class="vs-menu-wrapper" data-bs-toggle="collapse" data-bs-target="#mobileNavbarCollapse" aria-expanded="false" aria-controls="mobileNavbarCollapse">
+        <div class="vs-menu-area text-center" id="mobileNavbarCollapse">
+            <button class="vs-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbarCollapse" aria-expanded="false" aria-controls="mobileNavbarCollapse"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="{{ route('home') }}"
+                ><img src="/img/logo.png" alt="Rhapsody"
+                    /></a>
+            </div>
+            <div class="vs-mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{route('about-us')}}">About Us</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Diploma 1</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{ route('front-office') }}">Front Office</a></li>
+                            <li><a href="{{ route('housekeeping') }}">House Keeping</a></li>
+                            <li>
+                                <a href="{{ route('f&b-product') }}">Food & Baverage Service</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('f&b-service') }}">Food & Baverage Product</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Executive Class Hybrid</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>
+                            <li>
+                                <a href="{{ route('galley&cook') }}">Galley & Cook</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children">
+                        <a href="{{ route('fasilitas') }}">Facilities</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="{{ route('under-maintenance') }}">News & Event</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('contact') }}">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>

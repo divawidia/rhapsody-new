@@ -99,7 +99,7 @@ Footer Area
             </div>
         </div>
         <div class="copyright-wrap">
-        <div class="container">
+            <div class="container">
             <div class="row justify-content-between align-items-center">
             <div class="text-center col-lg-auto">
                 <p class="copyright-text">
@@ -123,7 +123,8 @@ Footer Area
             </div>
             </div>
         </div>
-    </div>
+
+        </div>
 </footer>
 <!-- Scroll To Top -->
 <a href="#" class="scrollToTop scroll-btn"

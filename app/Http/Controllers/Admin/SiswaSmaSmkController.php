@@ -21,6 +21,7 @@ class SiswaSmaSmkController extends Controller
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
+                        <div class="btn-toolbar" role="toolbar">
                             <a class="btn btn-primary mx-1 my-1" href="' . route('siswa-sma-smk-sosialisasi.edit', $item->id) . '">
                                 Edit
                             </a>
@@ -29,7 +30,8 @@ class SiswaSmaSmkController extends Controller
                                 <button type="submit" class="btn btn-danger mx-1 my-1">
                                     Hapus
                                 </button>
-                            </form>';
+                            </form>
+                        </div>';
                 })
                 ->rawColumns(['action'])
                 ->make();

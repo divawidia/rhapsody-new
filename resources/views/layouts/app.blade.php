@@ -33,7 +33,6 @@
 </head>
 
 <body>
-{{-- navbar --}}
 @include('includes.navbar')
 
 <!-- Page Content -->

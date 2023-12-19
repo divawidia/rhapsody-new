@@ -5,31 +5,31 @@
 @endsection
 
 @section('content')
-    <div id="modalExecutive" class="modal fade" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content rounded-3" style="background-color: transparent; border : 0">
+{{--    <div id="modalExecutive" class="modal fade" tabindex="-1">--}}
+{{--        <div class="modal-dialog modal-dialog-centered modal-lg">--}}
+{{--            <div class="modal-content rounded-3" style="background-color: transparent; border : 0">--}}
 
-                <div class="modal-body">
-                    <img
-                        src="/img/modal/Pamflet - Executive Hybrid.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                    />
-                    <div
-                        class="p-4 text-end"
-                        style="background-color: var(--theme-color3)"
-                    >
-                        <a class="btn modal-text text-inherit" data-bs-dismiss="modal">Nanti Saja</a>
-                        <a href="{{ route('registrasi-program-executive') }}" class="vs-btn">Daftar Sekarang</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--                <div class="modal-body">--}}
+{{--                    <img--}}
+{{--                        src="/img/modal/Pamflet - Executive Hybrid.jpg"--}}
+{{--                        alt="Image"--}}
+{{--                        class="img-fluid"--}}
+{{--                    />--}}
+{{--                    <div--}}
+{{--                        class="p-4 text-end"--}}
+{{--                        style="background-color: var(--theme-color3)"--}}
+{{--                    >--}}
+{{--                        <a class="btn modal-text text-inherit" data-bs-dismiss="modal">Nanti Saja</a>--}}
+{{--                        <a href="{{ route('registrasi-program-executive') }}" class="vs-btn">Daftar Sekarang</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <!--==============================
   Hero Area
   ==============================-->
-    <section>
+    <section class="hero-section">
         <div
             class="vs-carousel hero-layout1 style2"
             data-fade="true"
@@ -39,22 +39,32 @@
                 <div class="hero-inner">
                     <div
                         class="hero-bg"
-                        style="background-image: url('/img/hero/hero-pict.jpg');
-              background-repeat: no-repeat;
-            background-size: cover;
-            overflow: hidden;
-            background-position: center center;"
+                        style="background-image: url('/img/breadcumb/home-bg.jpg');
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                overflow: hidden;
+                                background-position: center center;"
                     ></div>
-                    <div class="container d-flex justify-content-center text-center">
-                        <div class="hero-content">
-                            <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">The New Direction to Grow</h1>
-                            <p class="hero-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                Unlock Your Full Potential and Turn Your Dreams Into Reality
-                            </p>
-                            <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
-                                    <i class="fa-solid fa-angle-right"></i>Daftar Sekarang
-                                </a>
+                    <div class="container">
+                        <div class="row space-top mb-5 d-flex align-items-center">
+                            <div class="hero-content col-12 col-lg-5 order-2 order-lg-1">
+                                <div data-aos="fade-up" data-aos-duration="1000">
+                                    <span class="landing-title-small">NO </span>
+                                    <span class="landing-title-small-bold">FLIGHT </span>
+                                    <span class="landing-title-small">NO </span>
+                                    <span class="landing-title-small-bold">PAY.</span>
+                                </div>
+                                <p class="hero-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    Satu - satunya LPK perhotelan dan kapal pesiar yang berani menjamin keberangkatan.
+                                </p>
+                                <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                    <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
+                                        <i class="fa-solid fa-angle-right"></i>Daftar Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7 order-1 order-lg-2">
+                                <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" src="/img/hero/Hotel.png">
                             </div>
                         </div>
                     </div>
@@ -66,7 +76,7 @@
     <!--==============================
     About Area
 ==============================-->
-    <section class="mt-5 space-bottom">
+    <section class="mt-5 space-bottom space-top about-section">
         <div class="container">
             <div class="row align-items-center align-items-xxl-start">
                 <div class="col-lg-5">
@@ -89,7 +99,7 @@
                 <span class="sec-subtitle" data-aos="fade-right" data-aos-duration="1000"
                 >Selamat datang di LPK Rhapsody Hospitality Development Center</span
                 >
-                            <h2 class="about-title h1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                            <h2 class="about-title h1 text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                                 Create Your Success Road Map With Us!
                             </h2>
                         </div>
@@ -129,28 +139,31 @@
     <!--==============================
       Category Area
   ==============================-->
-    <section class="space-bottom">
+    <section class="space-bottom py-5" style="background-color: var(--theme-color3)">
         <div class="container">
             <div class="title-area text-center">
-                <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-                    <img alt="" width="50" src="/img/icon/circle-icon.svg">
-                </div>
+                <h2 class="sec-title text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Program Kami</h2>
                 <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
-                <h2 class="sec-title" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Program Kami</h2>
+            </div>
+            <div class="left-border row" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                <h5 class="program-subtitle mt-2" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Program</h5>
+                <h4 class="text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="150">Diploma 1</h4>
             </div>
             <div
                 class="row"
                 data-center-mode="true"
             >
-                <h4 class="border-title2 mx-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Diploma 1</h4>
                 <div class="col-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                     <div class="category-style1">
                         <div class="category-img">
                             <img
                                 class="w-100"
                                 src="/img/category/category-2-1.png"
-                                alt="category"
+                                alt="Front Office"
                             />
+                            <div class="icon">
+                                <img src="/img/icon/FO - Navy.png">
+                            </div>
                         </div>
                         <div class="category-content">
                             <h5 class="category-title">
@@ -165,8 +178,11 @@
                             <img
                                 class="w-100"
                                 src="/img/category/category-2-2.png"
-                                alt=""
+                                alt="Housekeeping"
                             />
+                            <div class="icon">
+                                <img src="/img/icon/HK - Navy.png">
+                            </div>
                         </div>
                         <div class="category-content">
                             <h5 class="category-title">
@@ -181,8 +197,11 @@
                             <img
                                 class="w-100"
                                 src="/img/category/category-2-3.png"
-                                alt="category"
+                                alt="Food & Beverage Product"
                             />
+                            <div class="icon">
+                                <img src="/img/icon/Cook - Navy.png">
+                            </div>
                         </div>
                         <div class="category-content">
                             <h5 class="category-title">
@@ -197,8 +216,11 @@
                             <img
                                 class="w-100"
                                 src="/img/category/category-2-4.png"
-                                alt="category"
+                                alt="Food & Beverage Service"
                             />
+                            <div class="icon">
+                                <img src="/img/icon/Service - Navy.png">
+                            </div>
                         </div>
                         <div class="category-content">
                             <h5 class="category-title">
@@ -208,19 +230,25 @@
                     </div>
                 </div>
             </div>
+            <div class="left-border row" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                <h5 class="program-subtitle mt-2" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Program</h5>
+                <h4 class="text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="150">Executive Hybrid</h4>
+            </div>
             <div
                 class="row"
                 data-center-mode="true"
             >
-                <h4 class="border-title2 mx-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Executive Hybrid</h4>
                 <div class="col-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
                     <div class="category-style1">
                         <div class="category-img">
                             <img
                                 class="w-100"
                                 src="/img/category/house-keeping2.jpg"
-                                alt=""
+                                alt="Laundry & Housekeeping"
                             />
+                            <div class="icon">
+                                <img src="/img/icon/HK - Navy.png">
+                            </div>
                         </div>
                         <div class="category-content">
                             <h5 class="category-title">
@@ -235,8 +263,11 @@
                             <img
                                 class="w-100"
                                 src="/img/category/cook.jpg"
-                                alt="category"
+                                alt="Galley & Cook"
                             />
+                            <div class="icon">
+                                <img src="/img/icon/Cook - Navy.png">
+                            </div>
                         </div>
                         <div class="category-content">
                             <h5 class="category-title">
@@ -251,14 +282,11 @@
     <!--==============================
 CTA Area
 ==============================-->
-    <section class="space-bottom">
+    <section class="space-bottom py-5">
         <div class="container">
             <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
-                <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-                    <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
-                </div>
+                <h2 class="sec-title text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Fasilitas Kami</h2>
                 <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
-                <h2 class="sec-title" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Fasilitas Kami</h2>
             </div>
             <div class="cta-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                 <div class="row align-items-center">
@@ -507,13 +535,10 @@ CTA Area
     <section class="space-extra-bottom">
         <div class="container">
             <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
-                <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
-                    <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
-                </div>
-                <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">KAMI TELAH DIPERCAYA OLEH</span>
-                <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Top Cruiseline</h2>
+                <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Partner Kami</h2>
+                <span class="sec-subtitle text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Kami Telah Dipercaya Oleh Beberapa Cruiseline Besar</span>
             </div>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                     <div class="brand-style1">
                         <img src="/img/brand/royal-caribean-logo.png" alt="brand" />
