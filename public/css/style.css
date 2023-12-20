@@ -7063,9 +7063,9 @@ blockquote.vs-quote cite {
 
 .form-style5 {
     position: relative;
-    background-color: var(--white-color);
+    background-color: var(--theme-color3);
     border-radius: 20px;
-    border: 5px solid #eaeaea;
+    border: 1px solid var(--theme-color);
     padding: 50px;
     margin-bottom: 30px;
 }

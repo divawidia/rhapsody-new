@@ -7,35 +7,19 @@
 @section('content')
     <div
         class="breadcumb-wrapper"
-        style="background: url('/img/breadcumb/breadcumb-bg.png');
+        style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
             background-position: center center;"
     >
         <div class="container z-index-common">
-            <div class="breadcumb-content">
-                <h1
-                    class="breadcumb-title"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                >
-                    Kontak Kami
-                </h1>
-                <p
-                    class="breadcumb-text"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                >
-                    Rhapsody Hospitality Development Center
-                </p>
-                <div class="breadcumb-menu-wrap">
-                    <ul class="breadcumb-menu">
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li>Kontak Kami</li>
-                    </ul>
-                </div>
+            <div class="breadcumb-content text-center">
+                <h1 class="breadcumb-title"data-aos="fade-up" data-aos-duration="1000">Kontak Kami</h1>
+                <ul class="breadcumb-menu" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <li><a href="{{ route('home') }}">Beranda</a></li>
+                    <li>Kontak Kami</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -52,7 +36,7 @@
                         Hubungi kami
                     </h2>
                     <h3
-                        class="border-title2 h5"
+                        class="left-border h5"
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >

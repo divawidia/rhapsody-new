@@ -7,42 +7,26 @@
 @section('content')
     <div
         class="breadcumb-wrapper"
-        style="background: url('/img/breadcumb/breadcumb-bg.png');
+        style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
             background-position: center center;"
     >
         <div class="container z-index-common">
-            <div class="breadcumb-content">
-                <h1
-                    class="breadcumb-title"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                >
-                    Facilities
-                </h1>
-                <p
-                    class="breadcumb-text"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                >
-                    Unlock Your Full Potential and turn your dreams into reality
-                </p>
-                <div class="breadcumb-menu-wrap">
-                    <ul class="breadcumb-menu">
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li>Facilities</li>
-                    </ul>
-                </div>
+            <div class="breadcumb-content text-center">
+                <h1 class="breadcumb-title"data-aos="fade-up" data-aos-duration="1000">Fasilitas</h1>
+                <ul class="breadcumb-menu" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <li><a href="{{ route('home') }}">Beranda</a></li>
+                    <li>Fasilitas</li>
+                </ul>
             </div>
         </div>
     </div>
     <!--==============================
   Contact Area
   ==============================-->
-    <section class="space-top space-bottom">
+    <section class="py-5">
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
@@ -72,7 +56,6 @@
                         </div>
                         <div
                             class="picture-3 mega-hover"
-                            class="picture-2 mega-hover"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-anchor-placement="top-bottom"
@@ -110,7 +93,7 @@
                             data-aos-duration="1000"
                             data-aos-delay="300"
                         >
-                            <p class="fs-md">
+                            <p class="fs-md pt-5">
                                 Sensory gastro lab merupakan lab restaurant dengan konsep
                                 creative fun dinning yang dikem- bangkan untuk mengasah kreat-
                                 ifitas mahasiswa yang memiliki passion dalam bidang food and
@@ -127,7 +110,7 @@
         </div>
     </section>
 
-    <section class="space-bottom">
+    <section class="py-5" style="background-color: var(--theme-color3)">
         <div class="container">
             <div class="row d-flex align-items-center flex-colomn-reverse">
                 <div
@@ -154,7 +137,7 @@
                         </div>
                         <div class="about-content">
                             <p
-                                class="fs-md te text-lg-end"
+                                class="fs-md te pt-5 text-lg-end"
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="300"
@@ -211,7 +194,7 @@
             </div>
         </div>
     </section>
-    <section class="space-bottom">
+    <section class="py-5">
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
@@ -269,7 +252,7 @@
                             data-aos-duration="1000"
                             data-aos-delay="300"
                         >
-                            <p class="fs-md">
+                            <p class="fs-md pt-5">
                                 Alpha suite merupakan mock up room dengan design modern
                                 minimalis yang menjadi tempat praktik untuk mahasiswa room
                                 division. Mahasiswa akan mempelajari konsep dasar room
