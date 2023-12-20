@@ -109,7 +109,7 @@ Header Area
 {{--            </ul>--}}
 {{--        </div>--}}
 {{--    </div>--}}
-    <div class="vs-menu-wrapper" data-bs-toggle="collapse" data-bs-target="#mobileNavbarCollapse" aria-expanded="false" aria-controls="mobileNavbarCollapse">
+    <div class="vs-menu-wrapper">
         <div class="vs-menu-area text-center" id="mobileNavbarCollapse">
             <button class="vs-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbarCollapse" aria-expanded="false" aria-controls="mobileNavbarCollapse"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
@@ -119,13 +119,13 @@ Header Area
             </div>
             <div class="vs-mobile-menu">
                 <ul>
-                    <li class="menu-item-has-children">
-                        <a href="{{ route('home') }}">Home</a>
+                    <li>
+                        <a href="{{ route('home') }}">Beranda</a>
                     </li>
                     <li>
-                        <a href="{{route('about-us')}}">About Us</a>
+                        <a href="{{route('about-us')}}">Tentang Kami</a>
                     </li>
-                    <li class="menu-item-has-children">
+                    <li>
                         <a href="#">Diploma 1</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('front-office') }}">Front Office</a></li>
@@ -149,13 +149,13 @@ Header Area
                     </li>
 
                     <li class="menu-item-has-children">
-                        <a href="{{ route('fasilitas') }}">Facilities</a>
+                        <a href="{{ route('fasilitas') }}">Fasilitas</a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="{{ route('under-maintenance') }}">News & Event</a>
+                        <a href="{{ route('under-maintenance') }}">Blog</a>
                     </li>
                     <li>
-                        <a href="{{ route('contact') }}">Contact Us</a>
+                        <a href="{{ route('contact') }}">Kontak Kami</a>
                     </li>
                 </ul>
             </div>

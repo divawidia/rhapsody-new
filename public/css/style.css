@@ -850,8 +850,7 @@ textarea.is-invalid {
 }
 .vs-menu-wrapper .vs-menu-area {
     width: 100%;
-    max-width: 310px;
-    background-color: #fff;
+    background-color: var(--theme-color3);
     border-right: 3px solid var(--theme-color);
     height: 100%;
     position: relative;
@@ -4022,7 +4021,7 @@ a.text-theme:hover,
 .breadcumb-menu {
     position: relative;
     margin: 0;
-    padding: 25px 0 25px 0;
+    padding: 35px 0 25px 0;
     list-style-type: none;
 }
 .breadcumb-menu:after {
@@ -4033,7 +4032,6 @@ a.text-theme:hover,
     bottom: 0;
     width: 99999px;
     z-index: -1;
-    background-color: var(--vs-secondary-color);
     border-radius: 0 7px 7px 0;
 }
 .breadcumb-menu span,
@@ -4073,7 +4071,8 @@ a.text-theme:hover,
 
 .breadcumb-title {
     font-size: 70px;
-    color: var(--white-color);
+    padding-top: 30px;
+    color: var(--theme-color3);
     margin: -0.21em 0 -0.4em 0;
 }
 
@@ -4085,9 +4084,10 @@ a.text-theme:hover,
 
 .breadcumb-wrapper {
     padding-top: 160px;
-    padding-bottom: 30px;
+    padding-bottom: 160px;
     background-color: var(--title-color);
     overflow: hidden;
+    margin-top: -121px;
     /* Medium devices */
 }
 @media (max-width: 991px) {
@@ -4125,7 +4125,11 @@ a.text-theme:hover,
 /* Small devices */
 @media (max-width: 767px) {
     .breadcumb-title {
+        padding-top: 50px;
         font-size: 36px;
+    }
+    .breadcumb-menu {
+        padding: 15px 0 25px 0;
     }
     .breadcumb-menu li,
     .breadcumb-menu a,

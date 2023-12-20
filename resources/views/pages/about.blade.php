@@ -10,31 +10,26 @@
 ============================== -->
     <div
       class="breadcumb-wrapper"
-      style="background: url('/img/breadcumb/breadcumb-bg.png');
+      style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
             background-position: center center;"
     >
       <div class="container z-index-common">
-        <div class="breadcumb-content">
-          <h1 class="breadcumb-title"data-aos="fade-right" data-aos-duration="1000">Tentang Kami</h1>
-          <p class="breadcumb-text"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-            LPK Rhapsody Hospitality Development Center
-          </p>
-          <div class="breadcumb-menu-wrap">
-            <ul class="breadcumb-menu">
-              <li><a href="{{ route('home') }}">BERANDA</a></li>
-              <li>TENTANG KAMI</li>
+        <div class="breadcumb-content text-center">
+            <h1 class="breadcumb-title"data-aos="fade-up" data-aos-duration="1000">Tentang Kami</h1>
+            <ul class="breadcumb-menu" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <li><a href="{{ route('home') }}">Beranda</a></li>
+              <li>Tentang Kami</li>
             </ul>
-          </div>
         </div>
       </div>
     </div>
     <!--==============================
     About Area
 ==============================-->
-    <section class="space-top">
+    <section class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-xl-9">
@@ -42,7 +37,7 @@
               <span class="sec-subtitle" data-aos="fade-right" data-aos-duration="1000"
                 >LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER
               </span>
-              <h2 class="sec-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Create Your Success Story With Us!</h2>
+              <h2 class="sec-title text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Create Your Success Story With Us!</h2>
             </div>
           </div>
           <div class="col-xl-5 col-xl-4 mb-30 mb-xl-0">
@@ -51,7 +46,7 @@
               pendidikan dan pelatihan vokasi bidang perhotelan dan kapal
               pesiar, dengan semboyan
             </p>
-            <p class="fs-4 fw-bold text-center" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="300">“The New Direction to Grow”</p>
+            <h4 class="fs-4 fw-bold text-center" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="300">“The New Direction to Grow”</h4>
             <p class="fs-md mt-n1" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="400">
               Kami hadir dengan inovasi konsep pembelajaran yang menggabungkan
               pelatihan personal development, fundamental hospitality skill dan
@@ -77,23 +72,20 @@
       </div>
     </section>
 
-    <section class="space-top">
+    <section class="py-5" style="background-color: #FAF5F0;">
       <div class="container">
         <div class="title-area text-center">
-          <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
-            <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
-          </div>
-          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Kenapa Rhapsody?</h2>
+            <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Kenapa Rhapsody?</h2>
           <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">STRATEGIC DEVELOPMENT PARTNER</span>
         </div>
-        <div class="row">
+        <div class="mt-3 row">
           <div class="col-xl-7 pt-5 pt-xl-0" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200">
             <div class="img-box3">
 
               <div class="img-1 mega-hover">
                 <img
                   class="w-100"
-                  src="/img/about/JNR00860 (1).JPG"
+                  src="/img/about/JNR00860 (1) 1.jpg"
                   alt="About Img"
                 />
               </div>
@@ -119,7 +111,7 @@
     <!--==============================
   Features Area
   ==============================-->
-    <section class="space-top space-bottom">
+    <section class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000">
@@ -151,12 +143,12 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg" data-aos="fade-up" data-aos-duration="1000">
-            <h5 class="border-title2 h1">Visi</h5>
+            <h5 class="left-border h1 px-2 pt-2">Visi</h5>
             <p>Menjadi lembaga pelatihan kerja bidang perhotelan dengan standar mutu pelayanan pendidikan yang inovatif, terkemuka, unggul dan berdaya guna serta menghasilkan lulusan (output) yang mampu berdaya saing di tarap nasional dan international.</p>
 
           </div>
           <div class="col-12 col-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-            <h5 class="border-title2 h1">Misi</h5>
+            <h5 class="left-border h1 px-2 pt-2">Misi</h5>
             <div class="list-style1 vs-list">
                 <ul>
                     <li>Melaksanakan proses pelatihan secara efektif.</li>
@@ -176,13 +168,9 @@
     <section class="space-top space-bottom" style="background-color: #FAF5F0;">
       <div class="container">
         <div class="title-area text-center">
-          <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
-            <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
-          </div>
-          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
-          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Apa Tujuan Kami?</h2>
-          <p class="fs-md mt-4 px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Menciptakan sumber daya manusia yang berkarakter, propesional, berintelektual dan memiliki jiwa kewirausahaan yang mandiri, yang mana semua elemen tersebut kita jadikan dalam satu ungkapan nilai kepribadian diri berupa :
-            </p>
+            <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Apa Tujuan Kami?</h2>
+            <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
+            <p class="fs-md mt-4 px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Menciptakan sumber daya manusia yang berkarakter, propesional, berintelektual dan memiliki jiwa kewirausahaan yang mandiri, yang mana semua elemen tersebut kita jadikan dalam satu ungkapan nilai kepribadian diri berupa :</p>
             <p class="fs-3 h1 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">“SIGNATURE”</p>
         </div>
         <div class="row">
@@ -252,16 +240,13 @@
     <!--==============================
       Features Area
       ==============================-->
-    <section class="space-extra-bottom space-extra-top">
+    <section class="space-extra-bottom">
       <div class="container">
-        <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
-          <div class="sec-icon" data-aos="fade-up" data-aos-duration="1000">
-            <img alt="" width="50" src="/img/icon/circle-icon.svg"></img>
+          <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
+              <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Partner Kami</h2>
+              <span class="sec-subtitle text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Kami Telah Dipercaya Oleh Beberapa Cruiseline Besar</span>
           </div>
-          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">KAMI TELAH DIPERCAYA OLEH</span>
-          <h2 class="sec-title h1" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Top Cruiseline</h2>
-        </div>
-        <div class="row">
+          <div class="row mt-5">
           <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
             <div class="brand-style1">
               <img src="/img/brand/royal-caribean-logo.png" alt="brand" />
