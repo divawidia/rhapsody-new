@@ -8,30 +8,25 @@
 <!--==============================
     Breadcumb
 ============================== -->
-    <div
-      class="breadcumb-wrapper"
-      style="background: url('/img/breadcumb/breadcumb-bg.png');
+<div
+    class="breadcumb-wrapper"
+    style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
             background-position: center center;"
-    >
-      <div class="container z-index-common">
-        <div class="breadcumb-content">
-          <h1 class="breadcumb-title"data-aos="fade-right" data-aos-duration="1000">Housekeeping</h1>
-          <p class="breadcumb-text"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-            Diploma 1
-          </p>
-          <div class="breadcumb-menu-wrap">
-            <ul class="breadcumb-menu">
-              <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="#">Program Diploma 1</a></li>
-              <li>Housekeeping</li>
+>
+    <div class="container z-index-common">
+        <div class="breadcumb-content text-center">
+            <h1 class="breadcumb-title"data-aos="fade-up" data-aos-duration="1000">Housekeeping</h1>
+            <ul class="breadcumb-menu" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <li><a href="{{ route('home') }}">Beranda</a></li>
+                <li>Diploma 1</li>
+                <li>Housekeeping</li>
             </ul>
-          </div>
         </div>
-      </div>
     </div>
+</div>
 <!--==============================
   Course Area
 ==============================-->
@@ -72,20 +67,23 @@
                 </div>
                 <h2 class="course-title" data-aos="fade-up"
                     data-aos-duration="1000" data-aos-delay="100">Housekeeping</h2>
-                <div class="row course-meta pb-3 pt-4" data-aos="fade-up"
+                <div class="row course-meta pb-3" data-aos="fade-up"
                      data-aos-duration="1000" data-aos-delay="200">
                     <div class="col-auto" data-aos="fade-up"
                          data-aos-duration="1000" data-aos-delay="250">
                         <div class="course-price">
-                            <span class="currency">Rp.11.600.000</span>
+                            <span class="currency fw-bold">Rp.11.600.000</span>
                         </div>
-                        <p class="fs-6 mt-2">Biaya pendidikan sudah termasuk:</p>
+                        <p class="fs-6 mt-2">Biaya pendidikan bisa diangsur 3x</p>
+                        <p class="fs-6 mt-n3">Bagi peserta dari luar Bali dikenakan biaya yang berbeda</p>
+                        <p class="fs-6 mt-n3">Biaya pendidikan sudah termasuk:</p>
                         <div class="fs-6 mt-n3">
                             <ul>
                                 <li>Seragam teori & praktek</li>
                                 <li>Buku perkuliahan</li>
-                                <li>Kursus bahasa inggris</li>
-                                <li>Register membership victory cruise agency</li>
+                                <li>Kursus bahasa inggris industri</li>
+                                <li>Untuk peserta latih dari luar Bali mendapatkan mesh tempat tinggal</li>
+                                <li>Register membership Victory International Placement Center</li>
                             </ul>
                         </div>
                     </div>
@@ -107,27 +105,20 @@
                 </div>
                 <div class="" data-aos="fade-up"
                      data-aos-duration="1000" data-aos-delay="200">
-                    <h5 class="mt-4 border-title2">Special Feature</h5>
+                    <h5 class="mt-4 left-border">Special Feature</h5>
 
                     <div class="list-style1 vs-list">
                         <ul>
                             <li>
-                                <p class="fs-6 fw-bold my-0">Self Discover Program</p>
-                                <p>
-                                    Program inovasi yang bertujuan untuk membantu mahasiswa di
-                                    dalam merancang dream plan
-                                </p>
-                            </li>
-                            <li>
                                 <p class="fs-6 fw-bold my-0">Empower Workshop</p>
                                 <p>
-                                    Program workshop yang melibatkan para industy expert untuk berbagi pengalaman sekaligus memberi
+                                    Program workshop yang melibatkan para industy expert untuk berbagi pengalaman sekaligus memberi motivasi kepada peserta latih
                                 </p>
                             </li>
                             <li>
                                 <p class="fs-6 fw-bold my-0">Free Agency Membership</p>
                                 <p>
-                                    Free membership of Victory cruise agency
+                                    Free membership of Victory International Placement Center
                                 </p>
                             </li>
                             <li>
@@ -142,7 +133,7 @@
                 </div>
                 <div class="mt-4 pt-lg-2" data-aos="fade-up"
                      data-aos-duration="1000" data-aos-delay="100">
-                    <h5 class="border-title2">Program Description</h5>
+                    <h5 class="left-border">Program Description</h5>
                     <div class="list-style1 vs-list">
                         <ul>
                             <li>
@@ -162,7 +153,7 @@
                 </div>
                 <div class="mt-4 pt-lg-2" data-aos="fade-up"
                      data-aos-duration="1000" data-aos-delay="100">
-                    <h5 class="border-title2">Alumni Lulusan Program Kami</h5>
+                    <h5 class="left-border">Alumni Lulusan Program Kami</h5>
                     <div class="owl-carousel slider_carousel">
                         <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="testi-img">
@@ -310,7 +301,7 @@
 
                 <div class="mt-4 pt-lg-2" data-aos="fade-up"
                      data-aos-duration="1000" data-aos-delay="100">
-                    <h5 class="border-title2">Ayo Daftarkan Dirimu Sekarang!</h5>
+                    <h5 class="left-border">Ayo Daftarkan Dirimu Sekarang!</h5>
                     <p>
                         Daftarkan dirimu sekarang dan raih impian untuk menggapai kesuksesan di industri perhotelan dan kapal pesiar
                     </p>
@@ -320,7 +311,7 @@
             <div class="col-lg-4 mt-4 pt-4 pt-lg-0">
                 <aside>
                     <div class="widget" data-aos="fade-up" data-aos-duration="1000">
-                        <h3 class="border-title2">Diploma 1</h3>
+                        <h3 class="left-border">Diploma 1</h3>
                         <div class="course-list">
                             <ul>
                                 <li>
@@ -329,35 +320,35 @@
                                     >
                                 </li>
                                 <li>
-                                    <a href="{{ route('front-office') }}"
-                                    ><i class="fal fa-book"></i>Front Office</a
+                                    <a href="{{ route('f&b-service') }}"
+                                    ><i class="fal fa-book"></i>Food & Baverage Service</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="{{ route('f&b-service') }}"
-                                    ><i class="fal fa-book"></i>Food & Baverage Service</a
+                                    <a href="{{ route('housekeeping') }}"
+                                    ><i class="fal fa-book"></i>Housekeeping</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="{{ route('front-office') }}"
+                                    ><i class="fal fa-book"></i>Front Office</a
                                     >
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="widget" data-aos="fade-up" data-aos-duration="1000">
-                        <h3 class="border-title2">Executive Class Hybrid</h3>
+                        <h3 class="left-border">Executive Class Hybrid</h3>
                         <div class="course-list">
                             <ul>
                                 <li>
-                                    <a href="{{ route('f&b-product') }}"
+                                    <a href="{{ route('laundry&housekeeping') }}"
                                     ><i class="fal fa-book"></i>Laundry & Housekeeping</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="{{ route('housekeeping') }}"
+                                    <a href="{{ route('galley&cook') }}"
                                     ><i class="fal fa-book"></i>Galley & Cook</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="{{ route('f&b-service') }}"
-                                    ><i class="fal fa-book"></i>Bar & Service</a
                                     >
                                 </li>
                             </ul>

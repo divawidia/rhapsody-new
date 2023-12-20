@@ -4038,9 +4038,9 @@ a.text-theme:hover,
 .breadcumb-menu li,
 .breadcumb-menu a {
     color: var(--white-color);
+    font-family: var(--subtitle-font);
     font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 500;
     word-break: break-word;
     white-space: normal;
     display: inline-block;
@@ -5992,6 +5992,8 @@ blockquote.vs-quote cite {
     align-items: center;
     border-left: 5px solid var(--theme-color2);
     margin: 30px 0 30px 0;
+    padding-left: 10px;
+    padding-top: 8px;
     max-width: 400px;
     text-align: left;
 }
@@ -9064,7 +9066,7 @@ blockquote.vs-quote cite {
 }
 .course-details .course-price {
     color: var(--title-color);
-    font-size: 44px;
+    font-size: 34px;
     font-family: var(--body-font-bold);
     line-height: 1;
 }
@@ -9188,7 +9190,7 @@ blockquote.vs-quote cite {
         font-size: 12px;
     }
     .course-details .course-price {
-        font-size: 60px;
+        font-size: 34px;
     }
     .course-style4 .course-author {
         margin-bottom: 15px;
@@ -9273,7 +9275,7 @@ blockquote.vs-quote cite {
         margin-bottom: 15px;
     }
     .course-details .course-price {
-        font-size: 42px;
+        font-size: 32px;
     }
 }
 /* Extra small devices */

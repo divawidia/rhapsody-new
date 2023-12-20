@@ -131,10 +131,10 @@ Header Area
                             <li><a href="{{ route('front-office') }}">Front Office</a></li>
                             <li><a href="{{ route('housekeeping') }}">House Keeping</a></li>
                             <li>
-                                <a href="{{ route('f&b-product') }}">Food & Baverage Service</a>
+                                <a href="{{ route('f&b-service') }}">Food & Baverage Service</a>
                             </li>
                             <li>
-                                <a href="{{ route('f&b-service') }}">Food & Baverage Product</a>
+                                <a href="{{ route('f&b-product') }}">Food & Baverage Product</a>
                             </li>
                         </ul>
                     </li>
