@@ -7,22 +7,20 @@
 @section('content')
     <div
         class="breadcumb-wrapper"
-        style="background: url('/img/breadcumb/breadcumb-bg.png');
+        style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
             background-position: center center;"
     >
         <div class="container z-index-common">
-            <div class="breadcumb-content">
-                <h1 class="breadcumb-title" data-aos="fade-right" data-aos-duration="1000">Galley & Cook</h1>
-                <p class="breadcumb-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">Executive Class Hybrid</p>
-                <div class="breadcumb-menu-wrap" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                    <ul class="breadcumb-menu">
-                        <li><a href="{{ route('home') }}">Beranda</a></li>
-                        <li>Galley & Cook</li>
-                    </ul>
-                </div>
+            <div class="breadcumb-content text-center">
+                <h1 class="breadcumb-title"data-aos="fade-up" data-aos-duration="1000">Galley & Cook</h1>
+                <ul class="breadcumb-menu" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <li><a href="{{ route('home') }}">Beranda</a></li>
+                    <li>Executive Hybrid</li>
+                    <li>Galley & Cook</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -87,7 +85,7 @@
                         <a href="#">Executive Class Hybrid</a>
                     </div>
                     <h2 class="course-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">Galley & Cook</h2>
-                    <h5 class="border-title2" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Deskripsi</h5>
+                    <h5 class="left-border" class="border-title2" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Deskripsi</h5>
                     <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">
                         Galley & Cook adalah program pelatihan Executive yang merupakan
                         trobosan terbaru dari LPK Rhapsody yang dirancang untuk
@@ -102,7 +100,7 @@
                         pemahaman yang kokoh agar dapat menjadi koki profesional yang
                         terampil, dan juga pelatihan bahasa inggris industri perhotelan.
                     </p>
-                    <h5 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Pelatihan Singkat untuk Langsung Terjun ke Dunia Kerja</h5>
+                    <h5 class="left-border" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Pelatihan Singkat untuk Langsung Terjun ke Dunia Kerja</h5>
                     <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="250">
                         Pelatihan Executive Class ini berlangsung selama 3 bulan, yang
                         mencakup 2 bulan pertama untuk teori, yang dapat diikuti baik
@@ -115,7 +113,7 @@
                         dengan pelatihan Technical Interview interview yang berisi
                         pertanyaan terkini yang kami ambil langsung dari mitra-mitra kami
                     </p>
-                    <h5 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                    <h5 class="left-border" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
                         Keuntungan yang Kamu Dapatkan Mengikuti Program Executive Class
                     </h5>
                     <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="350">
@@ -293,10 +291,53 @@
                                     </h3>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
+                    <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class="left-border" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Beberapa Alumni Rhapsody Telah Diterima Di :</h5>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                            <div class="brand-style1">
+                                <img src="/img/brand/royal-caribean-logo.png" alt="brand" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+                            <div class="brand-style1">
+                                <img src="/img/brand/msc-logo.png" alt="brand" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+                            <div class="brand-style1">
+                                <img src="/img/brand/carnival-logo.png" alt="brand" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
+                            <div class="brand-style1">
+                                <img src="/img/brand/princess-logo.png" alt="brand" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="500">
+                            <div class="brand-style1">
+                                <img src="/img/brand/celebrity-logo.png" alt="brand" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
+                            <div class="brand-style1">
+                                <img src="/img/brand/norwegian-logo.png" alt="brand" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="700">
+                            <div class="brand-style1">
+                                <img src="/img/brand/oceania-logo.png" alt="brand" />
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="800">
+                            <div class="brand-style1">
+                                <img src="/img/brand/disney-logo.png" alt="brand" />
+                            </div>
+                        </div>
+                    </div>
                     <!-- <div class="inner-video-box">
                       <img
                         src="assets/img/course/course-details-2.jpg"
@@ -636,7 +677,7 @@
                         </div>
                       </div>
                     </div> -->
-                    <h5 class="border-title2 mt-4 pt-lg-2" data-aos="fade-right" data-aos-duration="1000">
+                    <h5 class="left-border mt-4 pt-lg-2" data-aos="fade-right" data-aos-duration="1000">
                         Kapan kamu ingin mengikuti pelatihan ini?
                     </h5>
                     <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">

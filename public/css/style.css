@@ -8316,8 +8316,8 @@ blockquote.vs-quote cite {
     font-size: 14px;
 }
 .course-style1 .course-category {
-    background-color: var(--theme-color2);
-    color: var(--title-color);
+    background-color: var(--theme-color3);
+    color: var(--theme-color2);
     font-size: 13px;
     font-weight: 700;
     padding: 3px 13px;
@@ -8959,11 +8959,11 @@ blockquote.vs-quote cite {
     padding: 30px 40px 40px 40px;
     margin-bottom: 40px;
     box-shadow: 8.55px 23.49px 24px rgba(35, 31, 32, 0.09);
-    border: 2px solid var(--theme-color);
+    border: 1px solid var(--theme-color);
+    background-color: var(--theme-color3);
     border-radius: 20px;
 }
 .course-meta-box .vs-btn {
-    height: 54px;
     width: 100%;
 }
 .course-meta-box table {
@@ -8998,7 +8998,7 @@ blockquote.vs-quote cite {
     margin-bottom: 17px;
 }
 .course-details .course-category a {
-    color: var(--title-color);
+    color: var(--theme-color3);
     background-color: var(--theme-color2);
     display: inline-block;
     font-size: 13px;
@@ -10670,6 +10670,12 @@ blockquote.vs-quote cite {
     margin: 0 0.5em;
     border: none;
     border-radius: 20px;
+}
+
+@media (max-width: 575px){
+    .card {
+        width:80%;
+    }
 }
 
 .carousel-control-prev,
