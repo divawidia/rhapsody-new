@@ -201,32 +201,28 @@
 
     <div
         class="breadcumb-wrapper"
-        style="background: url('/img/breadcumb/breadcumb-bg.png');
+        style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
             background-position: center center;"
     >
         <div class="container z-index-common">
-            <div class="breadcumb-content">
-                <h1 class="breadcumb-title" data-aos="fade-right" data-aos-duration="1000">Registrasi Program Diploma 1</h1>
-                <p class="breadcumb-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">LPK Rhapsody Hospitality Development Center</p>
-                <div class="breadcumb-menu-wrap" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                    <ul class="breadcumb-menu">
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li>Registrasi Program Diploma 1</li>
-                    </ul>
-                </div>
+            <div class="breadcumb-content text-center">
+                <h1 class="breadcumb-title"data-aos="fade-up" data-aos-duration="1000">Registrasi Program Diploma 1</h1>
+                <ul class="breadcumb-menu" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <li><a href="{{ route('home') }}">Beranda</a></li>
+                    <li>Registrasi Program Diploma 1</li>
+                </ul>
             </div>
         </div>
     </div>
-    <section class="space-top">
+    <section class="py-5">
         <div class="container">
-
         <form action="{{ route('registrasi-program-d1.store') }}" method="post" enctype="multipart/form-data">
             @csrf
+            <h1 class="left-border form-title text-uppercase" data-aos="fade-up" data-aos-duration="1000">Form Registrasi</h1>
             <div class="row">
-                    <h1 class="form-title" data-aos="fade-up" data-aos-duration="1000">Form Registrasi</h1>
                     <p class="landing-text2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50"></p>
                     <div class="col-12 col-md-6">
                         <div class="feature-style1 form-style4 login" data-aos="fade-up" data-aos-duration="1000">

@@ -3183,7 +3183,8 @@ a.text-theme:hover,
     margin-top: 0;
 }
 .footer-layout2 .footer-text {
-    max-width: 256px;
+    max-width: fit-content;
+    text-align: justify;
 }
 
 @media (max-width: 767px) {
@@ -3383,7 +3384,7 @@ a.text-theme:hover,
     position: relative;
 }
 .vs-logo img {
-    max-width: 200px;
+    max-width: 260px;
     padding: 15px 0;
     /* Small devices */
 }
