@@ -162,7 +162,7 @@
                                 alt="Front Office"
                             />
                             <div class="icon">
-                                <img src="/img/icon/FO - Navy.png">
+                                <img src="/img/icon/FO - Navy.svg">
                             </div>
                         </div>
                         <div class="category-content">
@@ -181,7 +181,7 @@
                                 alt="Housekeeping"
                             />
                             <div class="icon">
-                                <img src="/img/icon/HK - Navy.png">
+                                <img src="/img/icon/HK - Navy.svg">
                             </div>
                         </div>
                         <div class="category-content">
@@ -200,7 +200,7 @@
                                 alt="Food & Beverage Product"
                             />
                             <div class="icon">
-                                <img src="/img/icon/Cook - Navy.png">
+                                <img src="/img/icon/Cook - Navy.svg">
                             </div>
                         </div>
                         <div class="category-content">
@@ -219,7 +219,7 @@
                                 alt="Food & Beverage Service"
                             />
                             <div class="icon">
-                                <img src="/img/icon/Service - Navy.png">
+                                <img src="/img/icon/Service - Navy.svg">
                             </div>
                         </div>
                         <div class="category-content">
@@ -247,7 +247,7 @@
                                 alt="Laundry & Housekeeping"
                             />
                             <div class="icon">
-                                <img src="/img/icon/HK - Navy.png">
+                                <img src="/img/icon/HK - Navy.svg">
                             </div>
                         </div>
                         <div class="category-content">
@@ -266,7 +266,7 @@
                                 alt="Galley & Cook"
                             />
                             <div class="icon">
-                                <img src="/img/icon/Cook - Navy.png">
+                                <img src="/img/icon/Cook - Navy.svg">
                             </div>
                         </div>
                         <div class="category-content">

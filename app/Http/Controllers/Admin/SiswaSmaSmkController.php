@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\CalonPesertaDiploma;
+use App\Models\CalonPesertaLuarBali;
 use App\Models\SiswaSmaSmk;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -48,6 +49,11 @@ class SiswaSmaSmkController extends Controller
         return view('pages.landing_page_pendaftaran');
     }
 
+    public function landing_page_luar_bali_create()
+    {
+        return view('pages.landing-page-promo-luar-bali');
+    }
+
     public function create()
     {
         return view('pages.admin.siswa-sma-smk.create');
@@ -62,6 +68,14 @@ class SiswaSmaSmkController extends Controller
         SiswaSmaSmk::create($data);
 
         return redirect()->route('landing-page')->with('status', 'Absensi berhasil disubmit!');
+    }
+
+    public function landing_page_luar_bali_store(Request $request)
+    {
+        $data = $request->all();
+        CalonPesertaLuarBali::create($data);
+
+        return redirect()->route('promo-luar-bali')->with('status', 'Data berhasil disubmit!');
     }
 
     public function store(Request $request)
