@@ -23,7 +23,7 @@
         >
             <div class="landing-content">
                 <img src="/img/logo-white.png" alt="Logo Rhapsody" data-aos="fade-up" data-aos-duration="1000"/>
-                <h1 class="landing-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">Surat kecil untuk dirimu</h1>
+                <h1 class="landing-title text-uppercase mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">Surat kecil untuk dirimu</h1>
                 <p class="landing-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     Wahai kamu yang mendambakan uang banyak, harta berlimpah
                     dan keluarga sejahtera…
@@ -100,7 +100,7 @@
                     </div>
                     <div class="landing-list">
                       <span class="landing-text2 align-middle">
-                          Kamu harus berani pergi jauh dari tempat nyamanmu
+                          Ga jarang kamu harus ninggalin keluargamu
                       </span>
                     </div>
                     <div class="landing-list">
@@ -416,7 +416,7 @@
                     untuk progam D1
                 </p>
                 <p class="landing-text-bold text-center mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    EITTSSS.. Semuanya gratis biaya pendaftaran kok
+                    TENANGG.. Semuanya gratis biaya pendaftaran kok
                 </p>
                 <h1 class="landing-title4 text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
                     Bonus
@@ -465,7 +465,7 @@
                             </div>
                             <h4 class="feature-title">D1 Food & Beverage Product</h4>
                             <p class="landing-price">
-                                Rp.16,000,000
+                                Rp.18,000,000
                             </p>
                             <div class="landing-price-desc mt-5">
                                 <p class="landing-text2">Seragam Teori & Praktek</p>
@@ -495,7 +495,7 @@
                             </div>
                             <h4 class="feature-title">D1 Food & Beverage Service</h4>
                             <p class="landing-price">
-                                Rp.16,000,000
+                                Rp.18,000,000
                             </p>
                             <div class="landing-price-desc mt-5">
                                 <p class="landing-text2">Seragam Teori & Praktek</p>
@@ -525,7 +525,7 @@
                             </div>
                             <h4 class="feature-title">D1 Front Office</h4>
                             <p class="landing-price">
-                                Rp.14,600,000
+                                Rp.16,600,000
                             </p>
                             <div class="landing-price-desc mt-5">
                                 <p class="landing-text2">Seragam Teori & Praktek</p>
@@ -555,7 +555,7 @@
                             </div>
                             <h4 class="feature-title">D1 Housekeeping</h4>
                             <p class="landing-price">
-                                Rp.14,600,000
+                                Rp.16,600,000
                             </p>
                             <div class="landing-price-desc mt-5">
                                 <p class="landing-text2">Seragam Teori & Praktek</p>
@@ -585,7 +585,7 @@
                             </div>
                             <h4 class="feature-title">Executive Class Hybrid</h4>
                             <p class="landing-price">
-                                Rp.15,000,000
+                                Hubungi kami untuk info harga lebih lanjut
                             </p>
                             <div class="landing-price-desc mt-5">
                                 <p class="landing-text2">Umur pendaftar minimal 20 tahun</p>
@@ -632,13 +632,8 @@
         </div>
     </section>
 
-    <section class="space-bottom">
+    <section class="space-top space-bottom">
         <div class="container">
-            <div class="landing-content mb-5" data-aos="fade-up" data-aos-duration="1000">
-                <h1 class="landing-title5 text-center space-top">
-                    Mailing list
-                </h1>
-            </div>
             <form action="{{ route('promo-luar-bali-store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
