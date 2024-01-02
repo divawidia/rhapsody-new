@@ -20,8 +20,6 @@ jobs:
         run: composer update --ignore-platform-reqs
       - name: Generate key
         run: php artisan key:generate
-      - name: Migrate Database
-        run: php artisan migrate
       - name: Directory Permissions
         run: chmod -R 775 storage
       - name: 📂 Sync Public files
