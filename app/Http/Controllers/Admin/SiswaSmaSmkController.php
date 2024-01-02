@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SiswaSmaSmkRequest;
 use App\Models\CalonPesertaDiploma;
 use App\Models\CalonPesertaLuarBali;
 use App\Models\ProgramDiploma;
@@ -74,7 +75,7 @@ class SiswaSmaSmkController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function landing_page_store(Request $request)
+    public function landing_page_store(SiswaSmaSmkRequest $request)
     {
         $data = $request->all();
         SiswaSmaSmk::create($data);
@@ -82,7 +83,7 @@ class SiswaSmaSmkController extends Controller
         return redirect()->route('landing-page')->with('status', 'Absensi berhasil disubmit!');
     }
 
-    public function landing_page_luar_bali_store(Request $request)
+    public function landing_page_luar_bali_store(SiswaSmaSmkRequest $request)
     {
         $data = $request->all();
         CalonPesertaLuarBali::create($data);
@@ -90,7 +91,7 @@ class SiswaSmaSmkController extends Controller
         return redirect()->route('promo-luar-bali')->with('status', 'Data berhasil disubmit!');
     }
 
-    public function store(Request $request)
+    public function store(SiswaSmaSmkRequest $request)
     {
         $data = $request->all();
         SiswaSmaSmk::create($data);
@@ -123,7 +124,7 @@ class SiswaSmaSmkController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(SiswaSmaSmkRequest $request, string $id)
     {
         $data = $request->all();
         $item = SiswaSmaSmk::findOrFail($id);

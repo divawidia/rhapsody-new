@@ -22,25 +22,25 @@
                             <div class="mb-3 row">
                                 <label for="example-text-input" class="col-md-2 col-form-label">Nama Lengkap</label>
                                 <div class="col-md-10">
-                                    <input class="form-control" type="text" autocomplete="off" name="nama_lengkap" id="nama_lengkap" placeholder="Isikan nama lengkap siswa">
+                                    <input class="form-control" type="text" autocomplete="off" name="nama_lengkap" id="nama_lengkap" placeholder="Isikan nama lengkap siswa" required>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-search-input" class="col-md-2 col-form-label">Nama Panggilan</label>
                                 <div class="col-md-10">
-                                    <input class="form-control" type="text" autocomplete="off" name="nama_panggilan" id="nama_panggilan" placeholder="Isikan nama panggilan siswa">
+                                    <input class="form-control" type="text" autocomplete="off" name="nama_panggilan" id="nama_panggilan" placeholder="Isikan nama panggilan siswa" required>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-email-input" class="col-md-2 col-form-label">No. HP/Whatsapp</label>
                                 <div class="col-md-10">
-                                    <input class="form-control" type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. Hp/WA siswa">
+                                    <input class="form-control" type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. Hp/WA siswa" required>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label class="col-md-2 col-form-label" for="id_sekolah">Asal Sekolah</label>
                                 <div class="col-md-10">
-                                    <select class="form-select" id="id_sekolah" name="id_sekolah">
+                                    <select class="form-select" id="id_sekolah" name="id_sekolah" required>
                                         <option selected>Pilih asal sekolah</option>
                                         @foreach($sekolahs as $sekolah)
                                             <option value="{{ $sekolah->id }}">{{ $sekolah->nama_sekolah }}</option>
