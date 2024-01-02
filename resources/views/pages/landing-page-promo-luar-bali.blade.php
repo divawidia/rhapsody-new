@@ -23,7 +23,8 @@
         >
             <div class="landing-content">
                 <img src="/img/logo-white.png" alt="Logo Rhapsody" data-aos="fade-up" data-aos-duration="1000"/>
-                <h1 class="landing-title text-uppercase mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">Surat kecil untuk dirimu</h1>
+                <h1 class="landing-title text-uppercase mt-5" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="50">Surat kecil untuk dirimu</h1>
                 <p class="landing-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     Wahai kamu yang mendambakan uang banyak, harta berlimpah
                     dan keluarga sejahtera…
@@ -172,10 +173,12 @@
             <div class="landing-content2 mt-5">
                 <div data-aos="fade-right" data-aos-delay="300">
                     <p class="landing-text2">
-                        Di <b><FONT COLOR="#006687">Rhapsody</FONT></b>, kami memahami betapa pentingnya a keluarga dan mimpimu.
+                        Di <b><FONT COLOR="#006687">Rhapsody</FONT></b>, kami memahami betapa pentingnya a keluarga dan
+                        mimpimu.
                     </p>
                     <p class="landing-text2">
-                        Biarpun kamu tidak tau menau soal bidang ini, <b><FONT COLOR="#CE5423">kami akan membimbing kamu dari 0.</FONT></b>
+                        Biarpun kamu tidak tau menau soal bidang ini, <b><FONT COLOR="#CE5423">kami akan membimbing kamu
+                                dari 0.</FONT></b>
                     </p>
                     <p class="landing-text2">
                         Perjalanan ini tidaklah mudah dan kami tidak akan sanggup mengingatkanmu
@@ -201,8 +204,13 @@
                     Ini Beberapa Kisah Orang yang Sudah
                     <FONT COLOR="#CE5423">Terbantu</FONT> Dengan Adanya Program Kami
                 </h1>
-                <div class="inner-video-box text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-                    <iframe class="video-testi" style=" border-radius:30px" src="https://www.youtube.com/embed/1gr3YyeO8QM?si=vTr6hW-eyE_kOEDC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="inner-video-box text-center" data-aos="fade-up" data-aos-duration="1000"
+                     data-aos-delay="50">
+                    <iframe class="video-testi" style=" border-radius:30px"
+                            src="https://www.youtube.com/embed/1gr3YyeO8QM?si=vTr6hW-eyE_kOEDC"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
                     {{--                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn position-center popup-video"><i class="fas fa-play"></i></a>--}}
                 </div>
             </div>
@@ -221,7 +229,8 @@
                     </div>
                     <div class="col-12">
                         <div class="owl-carousel slider_carousel">
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
+                                 data-aos-delay="50">
                                 <div class="testi-img">
                                     <img
                                         class="w-100"
@@ -244,7 +253,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
+                                 data-aos-delay="100">
                                 <div class="testi-img">
                                     <img
                                         class="w-100"
@@ -267,7 +277,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
+                                 data-aos-delay="150">
                                 <div class="testi-img">
                                     <img
                                         class="w-100"
@@ -313,7 +324,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
+                                 data-aos-delay="50">
                                 <div class="testi-img">
                                     <img
                                         class="w-100"
@@ -336,7 +348,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
+                                 data-aos-delay="100">
                                 <div class="testi-img">
                                     <img
                                         class="w-100"
@@ -359,7 +372,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
+                                 data-aos-delay="100">
                                 <div class="testi-img">
                                     <img
                                         class="w-100"
@@ -382,7 +396,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
+                                 data-aos-delay="100">
                                 <div class="d-flex align-items-center course-content" style="height: 700px">
                                     <h3 class="h5 course-name text-inherit text-center" style="font-size: 50px">
                                         Dan 450+ Alumni Lainnya
@@ -409,13 +424,15 @@
                 <h1 class="landing-title4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <FONT COLOR="#006687">CASHBACK SEBESAR</FONT>
                 </h1>
-                <h1 class="landing-title4 text-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="250">
+                <h1 class="landing-title4 text-center" data-aos="zoom-in-up" data-aos-duration="1000"
+                    data-aos-delay="250">
                     Rp.2,000,000
                 </h1>
                 <p class="landing-quote1 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
                     untuk progam D1
                 </p>
-                <p class="landing-text-bold text-center mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <p class="landing-text-bold text-center mt-5" data-aos="fade-up" data-aos-duration="1000"
+                   data-aos-delay="300">
                     TENANGG.. Semuanya gratis biaya pendaftaran kok
                 </p>
                 <h1 class="landing-title4 text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
@@ -424,7 +441,8 @@
                 <h1 class="landing-title4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                     <FONT COLOR="#006687">MEMBERSHIP VICTORY PLACEMENT CENTER SENILAI</FONT>
                 </h1>
-                <h1 class="landing-title4 text-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">
+                <h1 class="landing-title4 text-center" data-aos="zoom-in-up" data-aos-duration="1000"
+                    data-aos-delay="100">
                     Rp.2,000,000
                 </h1>
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
@@ -519,7 +537,8 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000"
+                             data-aos-delay="150">
                             <div class="feature-icon">
                                 <img src="/img/icon/fo.png" alt="fb-product">
                             </div>
@@ -549,7 +568,8 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000"
+                             data-aos-delay="200">
                             <div class="feature-icon">
                                 <img src="/img/icon/hk.png" alt="fb-product">
                             </div>
@@ -579,7 +599,8 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="text-center feature-style1" data-aos="fade-up" data-aos-duration="1000"
+                             data-aos-delay="100">
                             <div class="feature-icon">
                                 <img src="/img/icon/executive.png" alt="fb-product">
                             </div>
@@ -642,36 +663,73 @@
                             <div class="form-group">
                                 <label for="program_diminati">Kamu Tipe Orang yang Mana?</label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="tipe_orang" id="tipe_orang" value="Eksekutor">
+                                    <input class="form-check-input" type="radio" name="tipe_orang" id="tipe_orang"
+                                           value="Eksekutor">
                                     <label class="form-check-label" for="tipe_orang">Eksekutor</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="tipe_orang" id="tipe_orang" value="Pemimpi">
+                                    <input class="form-check-input" type="radio" name="tipe_orang" id="tipe_orang"
+                                           value="Pemimpi">
                                     <label class="form-check-label" for="tipe_orang">Pemimpi</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="nama_lengkap">Nama</label>
-                                <input type="text" autocomplete="off" name="nama" id="nama" placeholder="Isikan nama lengkapmu" required>
+                                <input type="text" autocomplete="off" name="nama" id="nama"
+                                       placeholder="Isikan nama lengkapmu" required>
                             </div>
                             <div class="form-group">
                                 <label for="no_hp">No. HP/Whatsapp</label>
-                                <input type="tel" autocomplete="off" name="no_hp" id="no_hp" placeholder="Isikan No. Hp/WA mu" required>
+                                <input type="tel" autocomplete="off" name="no_hp" id="no_hp"
+                                       placeholder="Isikan No. Hp/WA mu" required>
                             </div>
                             <div class="form-group">
                                 <label for="program_diminati">Program Kami yang Diminati</label>
                                 <select id="program_diminati" class="form-control" name="program_diminati" required>
-                                    <option class="dropdown-program-diminati" selected>Pilih program kami yang kamu minati</option>
-                                    <option class="dropdown-program-diminati" value="Food & Beverage Product">Food & Beverage Product</option>
-                                    <option class="dropdown-program-diminati" value="Food & Beverage Service">Food & Beverage Service</option>
+                                    <option class="dropdown-program-diminati" selected>Pilih program kami yang kamu
+                                        minati
+                                    </option>
+                                    <option class="dropdown-program-diminati" value="Food & Beverage Product">Food &
+                                        Beverage Product
+                                    </option>
+                                    <option class="dropdown-program-diminati" value="Food & Beverage Service">Food &
+                                        Beverage Service
+                                    </option>
                                     <option class="dropdown-program-diminati" value="Front Office">Front Office</option>
                                     <option class="dropdown-program-diminati" value="Housekeeping">Housekeeping</option>
-                                    <option class="dropdown-program-diminati" value="Tidak Berminat">Tidak Berminat :(</option>
+                                    <option class="dropdown-program-diminati" value="Tidak Berminat">Tidak Berminat :(
+                                    </option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="alamat">Alasanmu Ingin Bekerja di Luar Negeri</label>
                                 <textarea name="alasan" id="alasan" placeholder="Isikan alasanmu disini"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="pengalaman_peserta">Pilih pernyataan yang paling sesuai dengan kamu</label>
+                                <select id="pengalaman_peserta" class="form-control" name="pengalaman_peserta" required>
+                                    <option class="dropdown-pengalaman_peserta" selected>Pilihlah pernyataan berikut
+                                    </option>
+                                    <option class="dropdown-pengalaman_peserta"
+                                            value="Tidak paham bahasa inggris dan tidak punya pengalaman">
+                                        Tidak paham bahasa inggris dan tidak punya pengalaman
+                                    </option>
+                                    <option class="dropdown-pengalaman_peserta"
+                                            value="Tidak paham bahasa inggris tapi berpengalaman">
+                                        Tidak paham bahasa inggris tapi berpengalaman
+                                    </option>
+                                    <option class="dropdown-pengalaman_peserta"
+                                            value="Cakap berbahasa tapi tidak punya pengalaman">
+                                        Cakap berbahasa tapi tidak punya pengalaman
+                                    </option>
+                                    <option class="dropdown-pengalaman_peserta"
+                                            value="Cukup paham bahasa dan cukup pengalaman">
+                                        Cukup paham bahasa dan cukup pengalaman
+                                    </option>
+                                    <option class="dropdown-pengalaman_peserta"
+                                            value="Cakap berbahasa dan berpengalaman">Cakap berbahasa dan berpengalaman
+                                    </option>
+                                </select>
                             </div>
                             <div class="col-12 text-center mt-4">
                                 <button type="submit" class="vs-btn">Submit</button>
@@ -696,7 +754,7 @@
                 stagePadding: 2,
                 autoplay: false,
                 nav: true,
-                navText: ["<img src='/img/icon/left.png'>","<img src='/img/icon/next.png'>"],
+                navText: ["<img src='/img/icon/left.png'>", "<img src='/img/icon/next.png'>"],
                 responsive: {
                     0: {
                         items: 1
@@ -710,6 +768,7 @@
                 }
             });
         }
+
         slider_carouselInit();
 
     </script>

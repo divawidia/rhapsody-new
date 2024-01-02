@@ -11,9 +11,14 @@ class SiswaSmaSmk extends Model
         'nama_lengkap',
         'nama_panggilan',
         'no_hp',
-        'asal_sekolah',
+        'id_sekolah',
         'jurusan',
         'program_diminati'
     ];
+
+    public function sekolah(){
+        return $this->belongsTo(Sekolah::class, 'id_sekolah', 'id');
+    }
+
     use HasFactory;
 }

@@ -38,9 +38,14 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="example-url-input" class="col-md-2 col-form-label">Asal Sekolah</label>
+                                <label class="col-md-2 col-form-label" for="program_diminati">Asal Sekolah</label>
                                 <div class="col-md-10">
-                                    <input class="form-control" autocomplete="off" name="asal_sekolah" id="asal_sekolah" placeholder="Isikan asal sekolah siswa">
+                                    <select class="form-select" id="program_diminati" name="program_diminati">
+                                        <option selected>Pilih asal sekolahmu</option>
+                                        @foreach($sekolahs as $sekolah)
+                                            <option value="{{ $sekolah->id }}">{{ $sekolah->nama_sekolah }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="mb-3 row">

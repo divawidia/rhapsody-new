@@ -3,15 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\CalonPesertaDiploma;
-use App\Models\CalonPesertaLuarBali;
-use App\Models\ProgramDiploma;
 use App\Models\Sekolah;
 use App\Models\SiswaSmaSmk;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
-class SiswaSmaSmkController extends Controller
+class SekolahController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +16,7 @@ class SiswaSmaSmkController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = SiswaSmaSmk::all();
+            $query = Sekolah::all();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -28,7 +25,7 @@ class SiswaSmaSmkController extends Controller
                             <a class="btn btn-primary mx-1 my-1" href="' . route('siswa-sma-smk-sosialisasi.edit', $item->id) . '">
                                 Edit
                             </a>
-                            <form action="' . route('siswa-sma-smk-sosialisasi.destroy', $item->id) . '" method="POST">
+                            <form action="' . route('sekolah-sosialisasi.destroy', $item->id) . '" method="POST">
                                 ' . method_field('delete') . csrf_field() . '
                                 <button type="submit" class="btn btn-danger mx-1 my-1">
                                     Hapus
@@ -36,60 +33,41 @@ class SiswaSmaSmkController extends Controller
                             </form>
                         </div>';
                 })
-                ->rawColumns(['action'])
+                ->editColumn('whatsapp', function ($item){
+                    return '<a
+                        href="https://wa.me/' . $item->no_hp_wa .'"
+                        class="btn btn-success mx-1 my-1"
+                    ><i class="bx bxl-whatsapp"></i></a>';
+                })
+                ->editColumn('google_maps', function ($item){
+                    return '<a class="btn btn-primary mx-1 my-1" href="' . $item->google_maps . '">
+                                <i class="bx bx-map"></i>
+                            </a>';
+                })
+                ->rawColumns(['action', 'whatsapp', 'google_maps'])
                 ->make();
         }
 
-        return view('pages.admin.siswa-sma-smk.index');
+        return view('pages.admin.sekolah-sosialisasi.index');
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function landing_page_create()
-    {
-        return view('pages.landing_page_pendaftaran');
-    }
-
-    public function landing_page_luar_bali_create()
-    {
-        return view('pages.landing-page-promo-luar-bali');
-    }
-
     public function create()
     {
-        $sekolahs = Sekolah::all();
-
-        return view('pages.admin.siswa-sma-smk.create', [
-            'sekolahs' => $sekolahs
-        ]);
+        return view('pages.admin.sekolah-sosialisasi.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function landing_page_store(Request $request)
-    {
-        $data = $request->all();
-        SiswaSmaSmk::create($data);
-
-        return redirect()->route('landing-page')->with('status', 'Absensi berhasil disubmit!');
-    }
-
-    public function landing_page_luar_bali_store(Request $request)
-    {
-        $data = $request->all();
-        CalonPesertaLuarBali::create($data);
-
-        return redirect()->route('promo-luar-bali')->with('status', 'Data berhasil disubmit!');
-    }
-
     public function store(Request $request)
     {
         $data = $request->all();
-        SiswaSmaSmk::create($data);
+        Sekolah::create($data);
 
-        return redirect()->route('siswa-sma-smk-sosialisasi.index')->with('status', 'Data siswa berhasil ditambahkan!');
+        return redirect()->route('sekolah-sosialisasi.index')->with('status', 'Data sekolah SMA/SMK berhasil ditambahkan!');
     }
 
     /**
@@ -105,9 +83,9 @@ class SiswaSmaSmkController extends Controller
      */
     public function edit(string $id)
     {
-        $item = SiswaSmaSmk::findOrFail($id);
+        $item = Sekolah::findOrFail($id);
 
-        return view('pages.admin.siswa-sma-smk.edit',[
+        return view('pages.admin.sekolah-sosialisasi.edit',[
             'item' => $item
         ]);
     }
@@ -118,10 +96,10 @@ class SiswaSmaSmkController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        $item = SiswaSmaSmk::findOrFail($id);
+        $item = Sekolah::findOrFail($id);
         $item->update($data);
 
-        return redirect()->route('siswa-sma-smk-sosialisasi.index')->with('status', 'Data siswa berhasil diupdate!');
+        return redirect()->route('sekolah-sosialisasi.index')->with('status', 'Data sekolah berhasil diupdate!');
     }
 
     /**
@@ -129,9 +107,9 @@ class SiswaSmaSmkController extends Controller
      */
     public function destroy(string $id)
     {
-        $item = SiswaSmaSmk::findorFail($id);
+        $item = Sekolah::findorFail($id);
         $item->delete();
 
-        return redirect()->route('siswa-sma-smk-sosialisasi.index')->with('status', 'Data siswa berhasil dihapus!');
+        return redirect()->route('sekolah-sosialisasi.index')->with('status', 'Data sekolah berhasil dihapus!');
     }
 }

@@ -34,7 +34,7 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title" data-key="t-menu">Dashboard</li>
 
-               <li>
+                <li>
                     <a href="{{ route('admin-dashboard') }}">
                         <i class="bx bx-home-alt icon nav-icon"></i>
                         <span class="menu-item" data-key="t-dashboard">Dashboard</span>
@@ -46,11 +46,46 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bxs-school icon nav-icon"></i>
+                        <span class="menu-item" data-key="sekolah">Sekolah SMA/SMK</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('sekolah-sosialisasi.index') }}" data-key="sekolah">
+                                List Sekolah SMA/SMK
+                            </a></li>
+                        <li><a href="{{ route('sekolah-sosialisasi.create') }}" data-key="sekolah">
+                                Tambah Data Sekolah SMA/SMK
+                            </a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-calendar icon nav-icon"></i>
+                        <span class="menu-item" data-key="sosialisasi">Jadwal Sosialisasi</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('jadwal-sosialisasi.index') }}" data-key="sosialisasi">
+                                List Jadwal Sosialisasi
+                            </a></li>
+                        <li><a href="{{ route('jadwal-sosialisasi.create') }}" data-key="sosialisasi">
+                                Tambah Jadwal Sosialisasi
+                            </a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
                         <i class="bx bx-user icon nav-icon"></i>
                         <span class="menu-item" data-key="t-email">Siswa SMA/SMK</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.index') }}" data-key="t-inbox">Absensi Siswa Sosialisasi</a></li>
+                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.index') }}" data-key="t-inbox">
+                                List Siswa Sosialisasi
+                            </a></li>
+                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.create') }}" data-key="t-inbox">
+                                Tambah Data Siswa
+                            </a></li>
                     </ul>
                 </li>
 
@@ -62,7 +97,8 @@
                         <span class="menu-item" data-key="t-email">Peserta</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('calon-peserta-executive.index') }}" data-key="t-inbox">Calon Peserta</a></li>
+                        <li><a href="{{ route('calon-peserta-executive.index') }}" data-key="t-inbox">Calon Peserta</a>
+                        </li>
                         <li><a href="email-read" data-key="t-read-email">Peserta Daftar Ulang</a></li>
                     </ul>
                 </li>
@@ -75,13 +111,11 @@
                         <span class="menu-item" data-key="t-email">Peserta</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('calon-peserta-diploma.index') }}" data-key="t-inbox">Calon Peserta</a></li>
+                        <li><a href="{{ route('calon-peserta-diploma.index') }}" data-key="t-inbox">Calon Peserta</a>
+                        </li>
                         <li><a href="email-read" data-key="t-read-email">Peserta Daftar Ulang</a></li>
                     </ul>
                 </li>
-
-
-
             </ul>
         </div>
         <!-- Sidebar -->

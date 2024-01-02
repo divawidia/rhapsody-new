@@ -12,7 +12,8 @@ class CalonPesertaLuarBali extends Model
         'nama',
         'no_hp',
         'program_diminati',
-        'alasan'
+        'alasan',
+        'pengalaman_peserta'
     ];
     use HasFactory;
 }
