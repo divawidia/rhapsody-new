@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('siswa_sma_smks', function (Blueprint $table) {
-            //
+            $table->integer('id_sosialisasi');
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('siswa_sma_smks', function (Blueprint $table) {
-            //
+            $table->dropColumn('id_sosialisasi');
         });
     }
 };
