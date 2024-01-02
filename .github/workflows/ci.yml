@@ -20,12 +20,22 @@ jobs:
         run: composer update --ignore-platform-reqs
       - name: Generate key
         run: php artisan key:generate
+      - name: Migrate Database
+        run: php artisan migrate
       - name: Directory Permissions
         run: chmod -R 775 storage
-      - name: 📂 Sync files
+      - name: 📂 Sync Public files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public/
           server-dir: /
+      - name: 📂 Sync All files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ./rhapsody/
