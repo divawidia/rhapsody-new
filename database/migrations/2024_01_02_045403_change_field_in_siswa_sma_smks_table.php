@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('siswa_sma_smks', function (Blueprint $table) {
-            $table->integer('id_sosialisasi');
+            $table->integer('id_sosialisasi')->nullable();
+            $table->integer('id_sekolah')->nullable();
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('siswa_sma_smks', function (Blueprint $table) {
             $table->dropColumn('id_sosialisasi');
+            $table->dropColumn('id_sekolah');
         });
     }
 };
