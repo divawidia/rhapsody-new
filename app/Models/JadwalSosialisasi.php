@@ -28,7 +28,7 @@ class JadwalSosialisasi extends Model
     }
 
     public function siswa(){
-        return $this->hasMany(SiswaSmaSmk::class, 'id_sekolah', 'id');
+        return $this->hasMany(SiswaSmaSmk::class, 'id_sosialisasi', 'id');
     }
 
     use HasFactory;

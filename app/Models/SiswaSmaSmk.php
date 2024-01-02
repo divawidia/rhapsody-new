@@ -13,11 +13,16 @@ class SiswaSmaSmk extends Model
         'no_hp',
         'id_sekolah',
         'jurusan',
-        'program_diminati'
+        'program_diminati',
+        'id_sosialisasi'
     ];
 
     public function sekolah(){
         return $this->belongsTo(Sekolah::class, 'id_sekolah', 'id');
+    }
+
+    public function sosialisasi(){
+        return $this->belongsTo(JadwalSosialisasi::class, 'id_sosialisasi', 'id');
     }
 
     use HasFactory;
