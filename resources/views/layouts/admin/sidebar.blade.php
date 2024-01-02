@@ -38,7 +38,6 @@
                     <a href="{{ route('admin-dashboard') }}">
                         <i class="bx bx-home-alt icon nav-icon"></i>
                         <span class="menu-item" data-key="t-dashboard">Dashboard</span>
-                        <span class="badge rounded-pill bg-primary">2</span>
                     </a>
                 </li>
 
