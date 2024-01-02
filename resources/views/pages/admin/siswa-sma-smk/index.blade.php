@@ -33,7 +33,8 @@
                                     <th>ID</th>
                                     <th>Nama Lengkap</th>
                                     <th>Nama Panggilan</th>
-                                    <th>No Hp/WA</th>
+                                    <th>No. Hp</th>
+                                    <th>Whatsapp</th>
                                     <th>Asal Sekolah</th>
                                     <th>Jurusan</th>
                                     <th>Program yang Diminati</th>
@@ -66,7 +67,8 @@
                     { data: 'nama_lengkap', name: 'nama_lengkap' },
                     { data: 'nama_panggilan', name: 'nama_panggilan' },
                     { data: 'no_hp', name: 'no_hp' },
-                    { data: 'asal_sekolah', name: 'asal_sekolah' },
+                    { data: 'whatsapp', name: 'whatsapp'},
+                    { data: 'sekolah.nama_sekolah', name: 'sekolah.nama_sekolah' },
                     { data: 'jurusan', name: 'jurusan' },
                     { data: 'program_diminati', name: 'program_diminati' },
                     {

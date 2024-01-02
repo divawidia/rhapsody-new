@@ -1,9 +1,9 @@
 @extends('layouts.admin.master')
 @section('title')
-    Form Elements
+    Siswa SMA/SMK
 @endsection
 @section('page-title')
-    Tambah Data Calon Peserta Executive
+    Tambah Data Siswa SMA/SMK
 @endsection
 @section('body')
 
@@ -38,10 +38,10 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label class="col-md-2 col-form-label" for="program_diminati">Asal Sekolah</label>
+                                <label class="col-md-2 col-form-label" for="id_sekolah">Asal Sekolah</label>
                                 <div class="col-md-10">
-                                    <select class="form-select" id="program_diminati" name="program_diminati">
-                                        <option selected>Pilih asal sekolahmu</option>
+                                    <select class="form-select" id="id_sekolah" name="id_sekolah">
+                                        <option selected>Pilih asal sekolah</option>
                                         @foreach($sekolahs as $sekolah)
                                             <option value="{{ $sekolah->id }}">{{ $sekolah->nama_sekolah }}</option>
                                         @endforeach
@@ -80,4 +80,7 @@
     @section('scripts')
         <!-- App js -->
         <script src="{{ URL::asset('build/js/app.js') }}"></script>
+        <script>
+            $('#id_sekolah').select2();
+        </script>
 @endsection

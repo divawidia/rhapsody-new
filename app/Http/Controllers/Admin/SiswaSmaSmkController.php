@@ -19,7 +19,7 @@ class SiswaSmaSmkController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = SiswaSmaSmk::all();
+            $query = SiswaSmaSmk::with(['sekolah']);
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -36,7 +36,13 @@ class SiswaSmaSmkController extends Controller
                             </form>
                         </div>';
                 })
-                ->rawColumns(['action'])
+                ->editColumn('whatsapp', function ($item){
+                    return '<a
+                        href="https://wa.me/' . $item->no_hp .'"
+                        class="btn btn-success mx-1 my-1"
+                    ><i class="bx bxl-whatsapp"></i></a>';
+                })
+                ->rawColumns(['action', 'whatsapp'])
                 ->make();
         }
 
@@ -106,9 +112,11 @@ class SiswaSmaSmkController extends Controller
     public function edit(string $id)
     {
         $item = SiswaSmaSmk::findOrFail($id);
+        $sekolahs = Sekolah::all();
 
         return view('pages.admin.siswa-sma-smk.edit',[
-            'item' => $item
+            'item' => $item,
+            'sekolahs' => $sekolahs
         ]);
     }
 
