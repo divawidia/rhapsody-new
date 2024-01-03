@@ -1,6 +1,5 @@
 <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">
-
     <!-- LOGO -->
     <div class="navbar-brand-box">
         <a href="{{ route('admin-dashboard') }}" class="logo logo-dark">
