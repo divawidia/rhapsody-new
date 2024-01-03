@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
-          server-dir: /
+          server-dir: /public_html/
       - name: 📂 Sync All files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
@@ -38,4 +38,4 @@ jobs:
             **/public
             **/config/app.php
             **/.env
-          server-dir: ./rhapsody/
+          server-dir: /rhapsody/
