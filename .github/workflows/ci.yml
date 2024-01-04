@@ -15,7 +15,7 @@ jobs:
           php-version: '8.1.21'
       - uses: actions/checkout@v2.3.2
       - name: Copy .env
-        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+        run: php -r "file_exists('.env') ? '' : copy('.env.example', '.env');"
       - name: Install Dependencies
         run: composer update --ignore-platform-reqs
       - name: Directory Permissions
@@ -26,6 +26,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          exclude: |
+            **/public/index.php
           local-dir: ./public/
           server-dir: /public_html/
       - name: 📂 Sync All files
