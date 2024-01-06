@@ -15,12 +15,6 @@ jobs:
           php-version: '8.1.21'
       - uses: actions/checkout@v2.3.2
       - uses: actions/setup-node@master
-      - name: Copy .env if doesn't exist
-        run: php -r "if(file_exists('.env')==false) {copy('.env.example', '.env');}"
-      - name: Install Dependencies
-        run: composer update --ignore-platform-reqs
-      - name: Directory Permissions
-        run: chmod -R 775 storage
       - name: 📂 Sync Public files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
