@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SiswaSmaSmkRequest;
 use App\Models\CalonPesertaDiploma;
 use App\Models\CalonPesertaLuarBali;
+use App\Models\JadwalSosialisasi;
 use App\Models\ProgramDiploma;
 use App\Models\Sekolah;
 use App\Models\SiswaSmaSmk;
@@ -20,30 +21,33 @@ class SiswaSmaSmkController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = SiswaSmaSmk::with(['sekolah']);
+            $query = SiswaSmaSmk::with(['sekolah', 'sosialisasi']);
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-toolbar" role="toolbar">
-                            <a class="btn btn-primary mx-1 my-1" href="' . route('siswa-sma-smk-sosialisasi.edit', $item->id) . '">
-                                Edit
+                            <a class="btn btn-primary mx-1 my-1" href="' . route('siswa-sma-smk-sosialisasi.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                <i class="bx bx-edit"></i>
                             </a>
-                            <form action="' . route('siswa-sma-smk-sosialisasi.destroy', $item->id) . '" method="POST">
+                            <form action="' . route('siswa-sma-smk-sosialisasi.destroy', $item->id) . '" method="POST" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Data">
                                 ' . method_field('delete') . csrf_field() . '
                                 <button type="submit" class="btn btn-danger mx-1 my-1">
-                                    Hapus
+                                    <i class="bx bx-trash"></i>
                                 </button>
                             </form>
                         </div>';
                 })
+                ->editColumn('sosialisasi', function ($item){
+                    return $item->sosialisasi->tanggal_sosialisasi . ', ' . $item->sosialisasi->sekolah->nama_sekolah;
+                })
                 ->editColumn('whatsapp', function ($item){
                     return '<a
                         href="https://wa.me/' . $item->no_hp .'"
-                        class="btn btn-success mx-1 my-1"
+                        class="btn btn-success mx-1 my-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Whatsapp"
                     ><i class="bx bxl-whatsapp"></i></a>';
                 })
-                ->rawColumns(['action', 'whatsapp'])
+                ->rawColumns(['action', 'whatsapp', 'sosialisasi'])
                 ->make();
         }
 
@@ -66,9 +70,11 @@ class SiswaSmaSmkController extends Controller
     public function create()
     {
         $sekolahs = Sekolah::all();
+        $sosialisasis = JadwalSosialisasi::all();
 
         return view('pages.admin.siswa-sma-smk.create', [
-            'sekolahs' => $sekolahs
+            'sekolahs' => $sekolahs,
+            'sosialisasis' => $sosialisasis
         ]);
     }
 
@@ -114,10 +120,12 @@ class SiswaSmaSmkController extends Controller
     {
         $item = SiswaSmaSmk::findOrFail($id);
         $sekolahs = Sekolah::all();
+        $sosialisasis = JadwalSosialisasi::all();
 
         return view('pages.admin.siswa-sma-smk.edit',[
             'item' => $item,
-            'sekolahs' => $sekolahs
+            'sekolahs' => $sekolahs,
+            'sosialisasis' => $sosialisasis
         ]);
     }
 

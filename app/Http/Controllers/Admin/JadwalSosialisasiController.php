@@ -24,13 +24,13 @@ class JadwalSosialisasiController extends Controller
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-toolbar" role="toolbar">
-                            <a class="btn btn-primary mx-1 my-1" href="' . route('jadwal-sosialisasi.edit', $item->id) . '">
-                                Edit
+                            <a class="btn btn-primary mx-1 my-1" href="' . route('jadwal-sosialisasi.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                <i class="bx bx-edit"></i>
                             </a>
-                            <form action="' . route('jadwal-sosialisasi.destroy', $item->id) . '" method="POST">
+                            <form action="' . route('jadwal-sosialisasi.destroy', $item->id) . '" method="POST" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Data">
                                 ' . method_field('delete') . csrf_field() . '
                                 <button type="submit" class="btn btn-danger mx-1 my-1">
-                                    Hapus
+                                    <i class="bx bx-trash"></i>
                                 </button>
                             </form>
                         </div>';
@@ -49,11 +49,11 @@ class JadwalSosialisasiController extends Controller
                 ->editColumn('whatsapp', function ($item){
                     return '<a
                         href="https://wa.me/' . $item->sekolah->no_hp_wa .'"
-                        class="btn btn-success mx-1 my-1"
+                        class="btn btn-success mx-1 my-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Whatsapp"
                     ><i class="bx bxl-whatsapp"></i></a>';
                 })
                 ->editColumn('sekolah.google_maps', function ($item){
-                    return '<a class="btn btn-primary mx-1 my-1" href="' . $item->sekolah->google_maps . '">
+                    return '<a class="btn btn-primary mx-1 my-1" href="' . $item->sekolah->google_maps . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Google Maps">
                                 <i class="bx bx-map"></i>
                             </a>';
                 })

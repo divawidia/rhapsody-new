@@ -45,28 +45,32 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="bx bxs-school icon nav-icon"></i>
-                        <span class="menu-item" data-key="sekolah">Sekolah SMA/SMK</span>
+                        <span class="menu-item" data-key="t-sekolah">Sekolah SMA/SMK</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('sekolah-sosialisasi.index') }}" data-key="sekolah">
+                        <li>
+                            <a href="{{ route('sekolah-sosialisasi.index') }}" data-key="t-read-email">
                                 List Sekolah SMA/SMK
-                            </a></li>
-                        <li><a href="{{ route('sekolah-sosialisasi.create') }}" data-key="sekolah">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('sekolah-sosialisasi.create') }}" data-key="t-s">
                                 Tambah Data Sekolah SMA/SMK
-                            </a></li>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="bx bx-calendar icon nav-icon"></i>
-                        <span class="menu-item" data-key="sosialisasi">Jadwal Sosialisasi</span>
+                        <span class="menu-item" data-key="t-jadwal">Jadwal Sosialisasi</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('jadwal-sosialisasi.index') }}" data-key="sosialisasi">
+                        <li><a href="{{ route('jadwal-sosialisasi.index') }}" data-key="t-list-jadwal">
                                 List Jadwal Sosialisasi
                             </a></li>
-                        <li><a href="{{ route('jadwal-sosialisasi.create') }}" data-key="sosialisasi">
+                        <li><a href="{{ route('jadwal-sosialisasi.create') }}" data-key="t-tambah-sekolah">
                                 Tambah Jadwal Sosialisasi
                             </a></li>
                     </ul>
@@ -75,43 +79,43 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-email">Siswa SMA/SMK</span>
+                        <span class="menu-item" data-key="t-siswa">Siswa SMA/SMK</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.index') }}" data-key="t-inbox">
+                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.index') }}" data-key="t-list-siswa">
                                 List Siswa Sosialisasi
                             </a></li>
-                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.create') }}" data-key="t-inbox">
+                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.create') }}" data-key="t-tambah-siswa">
                                 Tambah Data Siswa
                             </a></li>
                     </ul>
                 </li>
 
-                <li class="menu-title" data-key="t-applications">Executive Hybrid</li>
+                <li class="menu-title" data-key="t-executive">Executive Hybrid</li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-email">Peserta</span>
+                        <span class="menu-item" data-key="t-peserta-executive">Peserta</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('calon-peserta-executive.index') }}" data-key="t-inbox">Calon Peserta</a>
+                        <li><a href="{{ route('calon-peserta-executive.index') }}" data-key="t-calon-peserta-executive">Calon Peserta</a>
                         </li>
-                        <li><a href="email-read" data-key="t-read-email">Peserta Daftar Ulang</a></li>
+                        <li><a href="#" data-key="t-peserta-daftar-ulang-executive">Peserta Daftar Ulang</a></li>
                     </ul>
                 </li>
 
-                <li class="menu-title" data-key="t-applications">Diploma 1</li>
+                <li class="menu-title" data-key="t-diploma">Diploma 1</li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-email">Peserta</span>
+                        <span class="menu-item" data-key="t-peserta-diploma">Peserta</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('calon-peserta-diploma.index') }}" data-key="t-inbox">Calon Peserta</a>
+                        <li><a href="{{ route('calon-peserta-diploma.index') }}" data-key="t-calon-peserta-diploma">Calon Peserta</a>
                         </li>
-                        <li><a href="email-read" data-key="t-read-email">Peserta Daftar Ulang</a></li>
+                        <li><a href="email-read" data-key="t-calon-peserta-daftar-ulang-diploma">Peserta Daftar Ulang</a></li>
                     </ul>
                 </li>
             </ul>

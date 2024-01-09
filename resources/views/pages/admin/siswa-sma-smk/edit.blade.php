@@ -49,6 +49,16 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
+                                <label class="col-md-2 col-form-label" for="id_sekolah">Jadwal Sosialisasi</label>
+                                <div class="col-md-10">
+                                    <select class="form-select" id="id_sosialisasi" name="id_sosialisasi" required>
+                                        @foreach($sosialisasis as $sosialisasi)
+                                            <option value="{{ $sosialisasi->id }}" {{ $sosialisasi->id == $item->id_sosialisasi ? 'selected' : '' }}>{{ $sosialisasi->tanggal_sosialisasi }}, {{ $sosialisasi->sekolah->nama_sekolah }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
                                 <label for="example-tel-input" class="col-md-2 col-form-label">Jurusan</label>
                                 <div class="col-md-10">
                                     <input class="form-control" autocomplete="off" name="jurusan" id="jurusan" value="{{ $item->jurusan }}">
@@ -65,7 +75,10 @@
 
                                 </div>
                             </div>
-                            <div class="mt-4">
+                            <div class="float-end mt-4">
+                                <a class="btn btn-secondary mx-1 my-1" href="{{ url()->previous() }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                    Kembali
+                                </a>
                                 <button type="submit" class="btn btn-primary w-md">Submit</button>
                             </div>
                         </div>
@@ -80,5 +93,6 @@
         <script src="{{ URL::asset('build/js/app.js') }}"></script>
         <script>
             $('#id_sekolah').select2();
+            $('#id_sosialisasi').select2();
         </script>
 @endsection

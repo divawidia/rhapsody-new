@@ -22,13 +22,13 @@ class SekolahController extends Controller
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-toolbar" role="toolbar">
-                            <a class="btn btn-primary mx-1 my-1" href="' . route('siswa-sma-smk-sosialisasi.edit', $item->id) . '">
-                                Edit
+                            <a class="btn btn-primary mx-1 my-1" href="' . route('sekolah-sosialisasi.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                <i class="bx bx-edit"></i>
                             </a>
                             <form action="' . route('sekolah-sosialisasi.destroy', $item->id) . '" method="POST">
                                 ' . method_field('delete') . csrf_field() . '
-                                <button type="submit" class="btn btn-danger mx-1 my-1">
-                                    Hapus
+                                <button type="submit" class="btn btn-danger mx-1 my-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Data">
+                                    <i class="bx bx-trash"></i>
                                 </button>
                             </form>
                         </div>';
@@ -36,11 +36,11 @@ class SekolahController extends Controller
                 ->editColumn('whatsapp', function ($item){
                     return '<a
                         href="https://wa.me/' . $item->no_hp_wa .'"
-                        class="btn btn-success mx-1 my-1"
+                        class="btn btn-success mx-1 my-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Whatsapp"
                     ><i class="bx bxl-whatsapp"></i></a>';
                 })
                 ->editColumn('google_maps', function ($item){
-                    return '<a class="btn btn-primary mx-1 my-1" href="' . $item->google_maps . '">
+                    return '<a class="btn btn-primary mx-1 my-1" href="' . $item->google_maps . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Google Maps">
                                 <i class="bx bx-map"></i>
                             </a>';
                 })

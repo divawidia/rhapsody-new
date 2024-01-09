@@ -63,7 +63,10 @@
                                 </div>
                             </div>
 
-                            <div class="mt-4">
+                            <div class="float-end mt-4">
+                                <a class="btn btn-secondary mx-1 my-1" href="{{ url()->previous() }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                                    Kembali
+                                </a>
                                 <button type="submit" class="btn btn-primary w-md">Submit</button>
                             </div>
                         </div>

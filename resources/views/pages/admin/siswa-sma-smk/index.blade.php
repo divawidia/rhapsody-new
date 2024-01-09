@@ -36,6 +36,7 @@
                                     <th>No. Hp</th>
                                     <th>Whatsapp</th>
                                     <th>Asal Sekolah</th>
+                                    <th>Jadwal Sosialisasi</th>
                                     <th>Jurusan</th>
                                     <th>Program yang Diminati</th>
                                     <th>Aksi</th>
@@ -69,6 +70,7 @@
                     { data: 'no_hp', name: 'no_hp' },
                     { data: 'whatsapp', name: 'whatsapp'},
                     { data: 'sekolah.nama_sekolah', name: 'sekolah.nama_sekolah' },
+                    { data: 'sosialisasi', name: 'sosialisasi' },
                     { data: 'jurusan', name: 'jurusan' },
                     { data: 'program_diminati', name: 'program_diminati' },
                     {
