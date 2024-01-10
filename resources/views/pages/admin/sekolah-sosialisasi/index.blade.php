@@ -23,7 +23,7 @@
                         <h4 class="card-title">Sekolah Sosialisasi SMA/SMK</h4>
                     </div>
                     <div class="card-body">
-                        <a href="{{  route('sekolah-sosialisasi.create') }}" class="btn btn-primary mb-3">
+                        <a href="{{  route('sekolah.create') }}" class="btn btn-primary mb-3">
                             + Tambah Sekolah Baru
                         </a>
                         <div class="table-responsive">

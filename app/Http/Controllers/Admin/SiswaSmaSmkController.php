@@ -27,10 +27,10 @@ class SiswaSmaSmkController extends Controller
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-toolbar" role="toolbar">
-                            <a class="btn btn-primary mx-1 my-1" href="' . route('siswa-sma-smk-sosialisasi.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                            <a class="btn btn-primary mx-1 my-1" href="' . route('siswa-sma-smk.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
                                 <i class="bx bx-edit"></i>
                             </a>
-                            <form action="' . route('siswa-sma-smk-sosialisasi.destroy', $item->id) . '" method="POST" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Data">
+                            <form action="' . route('siswa-sma-smk.destroy', $item->id) . '" method="POST" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Data">
                                 ' . method_field('delete') . csrf_field() . '
                                 <button type="submit" class="btn btn-danger mx-1 my-1">
                                     <i class="bx bx-trash"></i>
@@ -102,7 +102,7 @@ class SiswaSmaSmkController extends Controller
         $data = $request->all();
         SiswaSmaSmk::create($data);
 
-        return redirect()->route('siswa-sma-smk-sosialisasi.index')->with('status', 'Data siswa berhasil ditambahkan!');
+        return redirect()->route('siswa-sma-smk.index')->with('status', 'Data siswa berhasil ditambahkan!');
     }
 
     /**
@@ -138,7 +138,7 @@ class SiswaSmaSmkController extends Controller
         $item = SiswaSmaSmk::findOrFail($id);
         $item->update($data);
 
-        return redirect()->route('siswa-sma-smk-sosialisasi.index')->with('status', 'Data siswa berhasil diupdate!');
+        return redirect()->route('siswa-sma-smk.index')->with('status', 'Data siswa berhasil diupdate!');
     }
 
     /**
@@ -149,6 +149,6 @@ class SiswaSmaSmkController extends Controller
         $item = SiswaSmaSmk::findorFail($id);
         $item->delete();
 
-        return redirect()->route('siswa-sma-smk-sosialisasi.index')->with('status', 'Data siswa berhasil dihapus!');
+        return redirect()->route('siswa-sma-smk.index')->with('status', 'Data siswa berhasil dihapus!');
     }
 }

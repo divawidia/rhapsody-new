@@ -12,7 +12,7 @@
     @section('content')
         <div class="row">
             <div class="col-12">
-                <form action="{{ route('siswa-sma-smk-sosialisasi.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('siswa-sma-smk.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card">
                         <div class="card-header">

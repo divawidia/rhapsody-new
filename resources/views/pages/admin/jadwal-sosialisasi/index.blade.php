@@ -23,7 +23,7 @@
                         <h4 class="card-title">Jadwal Sosialisasi SMA/SMK</h4>
                     </div>
                     <div class="card-body">
-                        <a href="{{  route('jadwal-sosialisasi.create') }}" class="btn btn-primary mb-3">
+                        <a href="{{  route('jadwal.create') }}" class="btn btn-primary mb-3">
                             + Tambah Jadwal Sosialisasi Baru
                         </a>
                         <div class="table-responsive">

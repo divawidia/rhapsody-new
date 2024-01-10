@@ -60,14 +60,14 @@ Route::get('/contact-us', function () {
     return view('pages.contact');
 })->name('contact');
 
-Route::get('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page');
-Route::post('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page.store');
-
-Route::get('/interview', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page');
-Route::post('/interview', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page.store');
-
-Route::get('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_create'])->name('promo-luar-bali');
-Route::post('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_store'])->name('promo-luar-bali-store');
+//Route::get('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page');
+//Route::post('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page.store');
+//
+//Route::get('/interview', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page-interview');
+//Route::post('/interview', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page-interview.store');
+//
+//Route::get('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_create'])->name('promo-luar-bali');
+//Route::post('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_store'])->name('promo-luar-bali-store');
 
 
 Route::get('/registrasi-program-executive-hybrid', [\App\Http\Controllers\Admin\CalonMahasiswaController::class, 'create'])->name('registrasi-program-executive');
@@ -90,9 +90,12 @@ Route::prefix('admin')
         Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
         Route::resource('calon-peserta-executive', CalonMahasiswaController::class);
         Route::resource('calon-peserta-diploma', CalonPesertaDiplomaController::class);
-        Route::resource('siswa-sma-smk-sosialisasi', SiswaSmaSmkController::class);
-        Route::resource('sekolah-sosialisasi', SekolahController::class);
-        Route::resource('jadwal-sosialisasi', JadwalSosialisasiController::class);
+        Route::prefix('sosialisasi')
+            ->group(function (){
+                Route::resource('siswa-sma-smk', SiswaSmaSmkController::class);
+                Route::resource('sekolah', SekolahController::class);
+                Route::resource('jadwal', JadwalSosialisasiController::class);
+            });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
 Auth::routes();

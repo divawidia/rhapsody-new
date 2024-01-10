@@ -24,10 +24,10 @@ class JadwalSosialisasiController extends Controller
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-toolbar" role="toolbar">
-                            <a class="btn btn-primary mx-1 my-1" href="' . route('jadwal-sosialisasi.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                            <a class="btn btn-primary mx-1 my-1" href="' . route('jadwal.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
                                 <i class="bx bx-edit"></i>
                             </a>
-                            <form action="' . route('jadwal-sosialisasi.destroy', $item->id) . '" method="POST" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Data">
+                            <form action="' . route('jadwal.destroy', $item->id) . '" method="POST" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Data">
                                 ' . method_field('delete') . csrf_field() . '
                                 <button type="submit" class="btn btn-danger mx-1 my-1">
                                     <i class="bx bx-trash"></i>

@@ -22,10 +22,10 @@ class SekolahController extends Controller
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-toolbar" role="toolbar">
-                            <a class="btn btn-primary mx-1 my-1" href="' . route('sekolah-sosialisasi.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
+                            <a class="btn btn-primary mx-1 my-1" href="' . route('sekolah.edit', $item->id) . '" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Data">
                                 <i class="bx bx-edit"></i>
                             </a>
-                            <form action="' . route('sekolah-sosialisasi.destroy', $item->id) . '" method="POST">
+                            <form action="' . route('sekolah.destroy', $item->id) . '" method="POST">
                                 ' . method_field('delete') . csrf_field() . '
                                 <button type="submit" class="btn btn-danger mx-1 my-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Data">
                                     <i class="bx bx-trash"></i>

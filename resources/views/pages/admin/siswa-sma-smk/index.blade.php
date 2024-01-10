@@ -23,7 +23,7 @@
                         <h4 class="card-title">Absensi Sosialisasi Siswa SMA SMK</h4>
                     </div>
                     <div class="card-body">
-                        <a href="{{  route('siswa-sma-smk-sosialisasi.create') }}" class="btn btn-primary mb-3">
+                        <a href="{{  route('siswa-sma-smk.create') }}" class="btn btn-primary mb-3">
                             + Tambah Siswa SMA/SMK Baru
                         </a>
                         <div class="table-responsive">

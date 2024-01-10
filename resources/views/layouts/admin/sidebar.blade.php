@@ -49,12 +49,12 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li>
-                            <a href="{{ route('sekolah-sosialisasi.index') }}" data-key="t-read-email">
+                            <a href="{{ route('sekolah.index') }}" data-key="t-read-email">
                                 List Sekolah SMA/SMK
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('sekolah-sosialisasi.create') }}" data-key="t-s">
+                            <a href="{{ route('sekolah.create') }}" data-key="t-s">
                                 Tambah Data Sekolah SMA/SMK
                             </a>
                         </li>
@@ -67,10 +67,10 @@
                         <span class="menu-item" data-key="t-jadwal">Jadwal Sosialisasi</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('jadwal-sosialisasi.index') }}" data-key="t-list-jadwal">
+                        <li><a href="{{ route('jadwal.index') }}" data-key="t-list-jadwal">
                                 List Jadwal Sosialisasi
                             </a></li>
-                        <li><a href="{{ route('jadwal-sosialisasi.create') }}" data-key="t-tambah-sekolah">
+                        <li><a href="{{ route('jadwal.create') }}" data-key="t-tambah-sekolah">
                                 Tambah Jadwal Sosialisasi
                             </a></li>
                     </ul>
@@ -82,10 +82,10 @@
                         <span class="menu-item" data-key="t-siswa">Siswa SMA/SMK</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.index') }}" data-key="t-list-siswa">
+                        <li><a href="{{ route('siswa-sma-smk.index') }}" data-key="t-list-siswa">
                                 List Siswa Sosialisasi
                             </a></li>
-                        <li><a href="{{ route('siswa-sma-smk-sosialisasi.create') }}" data-key="t-tambah-siswa">
+                        <li><a href="{{ route('siswa-sma-smk.create') }}" data-key="t-tambah-siswa">
                                 Tambah Data Siswa
                             </a></li>
                     </ul>
