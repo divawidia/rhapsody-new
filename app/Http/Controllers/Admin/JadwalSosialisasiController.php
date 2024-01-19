@@ -122,7 +122,7 @@ class JadwalSosialisasiController extends Controller
         $data = $request->all();
         JadwalSosialisasi::create($data);
 
-        return redirect()->route('jadwal-sosialisasi.index')->with('status', 'Data jadwal sosialisasi berhasil ditambahkan!');
+        return redirect()->route('jadwal.index')->with('status', 'Data jadwal sosialisasi berhasil ditambahkan!');
     }
 
     /**
@@ -170,7 +170,7 @@ class JadwalSosialisasiController extends Controller
         $item = JadwalSosialisasi::findOrFail($id);
         $item->update($data);
 
-        return redirect()->route('jadwal-sosialisasi.index')->with('status', 'Data jadwal sosialisasi berhasil diupdate!');
+        return redirect()->route('jadwal.index')->with('status', 'Data jadwal sosialisasi berhasil diupdate!');
     }
 
     /**
@@ -181,6 +181,6 @@ class JadwalSosialisasiController extends Controller
         $item = JadwalSosialisasi::findorFail($id);
         $item->delete();
 
-        return redirect()->route('jadwal-sosialisasi.index')->with('status', 'Data jadwal sosialisasi berhasil dihapus!');
+        return redirect()->route('jadwal.index')->with('status', 'Data jadwal sosialisasi berhasil dihapus!');
     }
 }
