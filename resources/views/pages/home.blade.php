@@ -252,7 +252,7 @@
                         </div>
                         <div class="category-content">
                             <h5 class="category-title">
-                                <a href="laundry&hk.html">Laundry & Housekeeping</a>
+                                <a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a>
                             </h5>
                         </div>
                     </div>
@@ -271,7 +271,7 @@
                         </div>
                         <div class="category-content">
                             <h5 class="category-title">
-                                <a href="galley&cook.html">Galley & Cook</a>
+                                <a href="{{ route('galley&cook') }}">Galley & Cook</a>
                             </h5>
                         </div>
                     </div>

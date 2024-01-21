@@ -38,7 +38,6 @@
 <!-- Page Content -->
 @yield('content')
 
-
 {{-- footer --}}
 @include('includes.footer')
 
