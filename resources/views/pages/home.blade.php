@@ -32,8 +32,6 @@
     <section class="hero-section">
         <div
             class="vs-carousel hero-layout1 style2"
-            data-fade="true"
-            data-dots="true"
         >
             <div>
                 <div class="hero-inner">
@@ -535,8 +533,8 @@ CTA Area
     <section class="space-extra-bottom">
         <div class="container">
             <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
-                <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Partner Kami</h2>
-                <span class="sec-subtitle text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Kami Telah Dipercaya Oleh Beberapa Cruiseline Besar</span>
+                <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Alumni Kami Telah Bekerja Di:</h2>
+{{--                <span class="sec-subtitle text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Kami Telah Dipercaya Oleh Beberapa Cruiseline Besar</span>--}}
             </div>
             <div class="row mt-5">
                 <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
