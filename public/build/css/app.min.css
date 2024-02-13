@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap";
 
 body[data-layout-mode=dark] {
-    background-color: #1f2224 !important;
+    background-color: #faf5f0 !important;
     color: #b0b6bc
 }
 
@@ -5846,15 +5846,6 @@ body[data-layout-mode=dark] .apexcharts-pie line {
 .auth-logo .auth-logo-light {
     display: none;
     margin: 0 auto
-}
-
-.authentication-bg {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(/build/icons/login-img.png);
-    display: flex;
-    align-items: center;
-    justify-content: center
 }
 
 .authentication-bg .auth-logo .logo {

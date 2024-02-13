@@ -60,6 +60,18 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Kalender Jadwal Sosialisasi SMA/SMK</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id='calendar'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- end row -->
     @endsection
 
@@ -100,6 +112,41 @@
                         width: '15%'
                     },
                 ]
+            });
+        </script>
+        <script src="{{ URL::asset('build/libs/fullcalendar/main.min.js') }}"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+                function getInitialView() {
+                    if (window.innerWidth >= 768 && window.innerWidth < 1200) {
+                        return 'timeGridWeek';
+                    } else if (window.innerWidth <= 768) {
+                        return 'listMonth';
+                    } else {
+                        return 'dayGridMonth';
+                    }
+                }
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    timeZone: 'local',
+                    editable: true,
+                    droppable: true,
+                    selectable: true,
+                    initialView: getInitialView(),
+                    themeSystem: 'bootstrap',
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                    },
+                    // responsive
+                    windowResize: function (view) {
+                        var newView = getInitialView();
+                        calendar.changeView(newView);
+                    },
+                    events: @json($events)
+                });
+                calendar.render();
             });
         </script>
     @endpush

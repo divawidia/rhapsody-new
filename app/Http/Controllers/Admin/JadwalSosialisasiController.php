@@ -99,8 +99,21 @@ class JadwalSosialisasiController extends Controller
                 ->rawColumns(['action', 'tanggal_sosialisasi', 'whatsapp', 'sekolah.google_maps', 'proyektor', 'speaker', 'status_sosialisasi', 'status_follup'])
                 ->make();
         }
+        $events = [];
 
-        return view('pages.admin.jadwal-sosialisasi.index');
+        $jadwalSosialisasi = JadwalSosialisasi::with(['sekolah'])->get();
+
+        foreach ($jadwalSosialisasi as $sosialisasi) {
+            $time = strtotime($sosialisasi->jam_sosialisasi);
+            $timeFormat = date("H:i", $time);
+            $events[] = [
+                'title' => $timeFormat.' - '.$sosialisasi->sekolah->nama_sekolah,
+                'start' => $sosialisasi->tanggal_sosialisasi,
+                'end' => $sosialisasi->tanggal_selesai,
+            ];
+        }
+
+        return view('pages.admin.jadwal-sosialisasi.index', compact('events'));
     }
 
     /**

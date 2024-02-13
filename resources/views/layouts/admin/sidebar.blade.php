@@ -43,80 +43,96 @@
                 <li class="menu-title" data-key="t-applications">Sosialisasi SMA/SMK</li>
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow">
+                    <a href="javascript: void(0);">
+                        <i class="bx bxs-school icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-sekolah">Dashboard Sosialisasi</span>
+                    </a>
+                    <a href="{{ route('sekolah.index') }}">
                         <i class="bx bxs-school icon nav-icon"></i>
                         <span class="menu-item" data-key="t-sekolah">Sekolah SMA/SMK</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li>
-                            <a href="{{ route('sekolah.index') }}" data-key="t-read-email">
-                                List Sekolah SMA/SMK
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('sekolah.create') }}" data-key="t-s">
-                                Tambah Data Sekolah SMA/SMK
-                            </a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow">
+                    <a href="{{ route('jadwal.index') }}">
                         <i class="bx bx-calendar icon nav-icon"></i>
                         <span class="menu-item" data-key="t-jadwal">Jadwal Sosialisasi</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('jadwal.index') }}" data-key="t-list-jadwal">
-                                List Jadwal Sosialisasi
-                            </a></li>
-                        <li><a href="{{ route('jadwal.create') }}" data-key="t-tambah-sekolah">
-                                Tambah Jadwal Sosialisasi
-                            </a></li>
-                    </ul>
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow">
+                    <a href="{{ route('siswa-sma-smk.index') }}">
                         <i class="bx bx-user icon nav-icon"></i>
                         <span class="menu-item" data-key="t-siswa">Siswa SMA/SMK</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('siswa-sma-smk.index') }}" data-key="t-list-siswa">
-                                List Siswa Sosialisasi
-                            </a></li>
-                        <li><a href="{{ route('siswa-sma-smk.create') }}" data-key="t-tambah-siswa">
-                                Tambah Data Siswa
-                            </a></li>
-                    </ul>
-                </li>
-
-                <li class="menu-title" data-key="t-executive">Executive Hybrid</li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-executive">Peserta</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('calon-peserta-executive.index') }}" data-key="t-calon-peserta-executive">Calon Peserta</a>
-                        </li>
-                        <li><a href="#" data-key="t-peserta-daftar-ulang-executive">Peserta Daftar Ulang</a></li>
-                    </ul>
                 </li>
 
                 <li class="menu-title" data-key="t-diploma">Diploma 1</li>
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow">
+                    <a href="{{ route('calon-peserta-diploma.index') }}">
                         <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-diploma">Peserta</span>
+                        <span class="menu-item" data-key="t-peserta-diploma">Peserta Latih</span>
+                    </a>
+                    <a href="#" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-diploma">Program Pelatihan</span>
+                    </a>
+                    <a href="#" >
+                        <i class="bx bx-calendar icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-diploma">Kalender Akademik</span>
+                    </a>
+                    <a href="#" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-diploma">Matakuliah</span>
+                    </a>
+                    <a href="#" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-diploma">Jadwal Pembelajaran</span>
+                    </a>
+                    <a href="#" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-diploma">Kelas</span>
+                    </a>
+                    <a href="#" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-diploma">Instruktur</span>
+                    </a>
+                </li>
+
+                <li class="menu-title" data-key="t-executive">Executive Hybrid</li>
+
+                <li>
+                    <a href="{{ route('calon-peserta-executive.index') }}" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-executive">Peserta</span>
+                    </a>
+                    <a href="#" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-executive">Program Pelatihan</span>
+                    </a>
+                    <a href="#" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-executive">Instruktur</span>
+                    </a>
+                </li>
+
+                <li class="menu-title" data-key="t-executive">Website Content Management System</li>
+
+                <li>
+                    <a href="{{ route('calon-peserta-executive.index') }}" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-executive">Blog</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('calon-peserta-diploma.index') }}" data-key="t-calon-peserta-diploma">Calon Peserta</a>
+                        <li><a href="{{ route('jadwal.index') }}" data-key="t-calon-peserta-executive">Tag Artikel</a>
                         </li>
-                        <li><a href="email-read" data-key="t-calon-peserta-daftar-ulang-diploma">Peserta Daftar Ulang</a></li>
+                        <li><a href="#" data-key="t-peserta-daftar-ulang-executive">Artikel Blog</a></li>
                     </ul>
+                    <a href="#" >
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-peserta-executive"><Program></Program> Page</span>
+                    </a>
                 </li>
             </ul>
         </div>

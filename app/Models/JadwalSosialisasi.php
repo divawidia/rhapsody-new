@@ -20,7 +20,9 @@ class JadwalSosialisasi extends Model
         'speaker',
         'status_sosialisasi',
         'status_follup',
-        'note'
+        'note',
+        'tanggal_selesai',
+        'jam_selesai'
     ];
 
     public function sekolah(){
