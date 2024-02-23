@@ -300,48 +300,22 @@
                                 <label for="tahunLulus">Tahun Lulus</label>
                                 <input type="number" autocomplete="off" name="tahun_lulus" id="tahunLulus" placeholder="Isikan tahun lulus sekolah terakhirmu" min="2000" max="2023" step="1" required>
                             </div>
+                            <div class="form-group">
+                                <label for="referral_code">Kode Referral (Opsional)</label>
+                                <input type="text" autocomplete="off" name="referral_code" id="referral_code" placeholder="Isikan kode referral" required>
+                            </div>
                             <p class="landing-text2 mt-3">Darimana kamu mengetahui Rhapsody? :</p>
                             <div class="row">
-                                <div class="col-4">
-                                    <div class="form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="instagram" value="Instagram">
-                                        <label class="form-check-label" for="instagram">Instagram</label>
+                                @foreach($references as $reference)
+                                    <div class="col-4">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="reference_id[]" id="reference{{ $reference->id }}" value="{{ $reference->id }}">
+                                            <label class="form-check-label" for="reference{{ $reference->id }}">{{ $reference->jenis }}</label>
+                                        </div>
                                     </div>
-                                    <div class="form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="facebook" value="Facebook">
-                                        <label class="form-check-label" for="facebook">Facebook</label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="tiktok" value="Tiktok">
-                                        <label class="form-check-label" for="tiktok">Tiktok</label>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="youtube" value="Youtube">
-                                        <label class="form-check-label" for="youtube">Youtube</label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="teman" value="Teman">
-                                        <label class="form-check-label" for="teman">Teman</label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="orangTua" value="Orang Tua">
-                                        <label class="form-check-label" for="orangTua">Orang Tua</label>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="guru" value="Guru">
-                                        <label class="form-check-label" for="guru">Guru</label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="jenis_refrensi[]" id="yangLain" value="Yang Lain">
-                                        <label class="form-check-label" for="yangLain">Yang Lain</label>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
-                            <input type="text" autocomplete="off" name="jenis_refrensi[]" class="mt-3" id="yangLainText" placeholder="Isikan darimana kamu mengetahui rhapsody">
+                            <input type="text" autocomplete="off" name="jenis_refrensi" class="mt-3" id="yangLainText" placeholder="Isikan darimana kamu mengetahui rhapsody">
                             <div class="col-12 text-center mt-4">
                                 <button type="submit" class="vs-btn">Daftar Sekarang</button>
                             </div>
@@ -383,7 +357,7 @@
     <script>
         $(".form-check-input").change(function () {
             //check if the selected option is others
-            if (this.value === "Yang Lain") {
+            if (this.value === '9') {
                 //toggle textbox visibility
                 $("#yangLainText").toggle();
             }

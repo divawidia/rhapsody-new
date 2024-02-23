@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\CalonPesertaDiploma;
 use App\Models\CalonPesertaExecutive;
 use App\Models\ProgramDiploma;
+use App\Models\Reference;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -44,9 +45,11 @@ class CalonPesertaDiplomaController extends Controller
     public function create()
     {
         $jurusan_diplomas = ProgramDiploma::all();
+        $references = Reference::all();
 
         return view('pages.d1_registration', [
-            'jurusan_diplomas' => $jurusan_diplomas
+            'jurusan_diplomas' => $jurusan_diplomas,
+            'references' => $references
         ]);
     }
 
@@ -56,9 +59,9 @@ class CalonPesertaDiplomaController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['jenis_refrensi'] = implode(", ",$request->input('jenis_refrensi'));
 
-        CalonPesertaDiploma::create($data);
+        $calon_peserta = CalonPesertaDiploma::create($data);
+        $calon_peserta->references()->sync((array)$request->input('reference_id'));
 
         return redirect()->route('registrasi-berhasil');
     }

@@ -184,7 +184,7 @@ a {
     transition: all ease 0.4s;
 }
 a:hover {
-    color: var(--theme-color2);
+    color: var(--smoke-color);
 }
 a:active,
 a:focus,
@@ -225,7 +225,7 @@ p:empty {
 
 p {
     margin: 0 0 18px 0;
-    color: var(--body-color);
+    color: var(--theme-color);
     line-height: 1.75;
 }
 
@@ -256,7 +256,7 @@ h5,
 .h6,
 h6 {
     font-family: var(--title-font);
-    color: var(--theme-color);
+    color: #006687;
     text-transform: none;
     font-weight: 800;
     line-height: 1.2;
@@ -264,7 +264,7 @@ h6 {
 
 .h1,
 h1 {
-    font-size: 48px;
+    font-size: 65px;
 }
 
 .h2,
@@ -1101,7 +1101,7 @@ textarea.is-invalid {
     font-size: 18px;
     line-height: normal;
     padding: 21.5px 40px;
-    border-radius: 9999px;
+    border-radius: 30px;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -1114,7 +1114,7 @@ textarea.is-invalid {
     right: var(--shape-gap, 3px);
     bottom: var(--shape-gap, 3px);
     left: var(--shape-gap, 3px);
-    background-color: var(--theme-color2);
+    background-color: var(--body-color);
     transform: scale(0);
     z-index: -1;
     border-radius: inherit;
@@ -1260,7 +1260,7 @@ textarea.is-invalid {
     color: var(--title-color);
 }
 .vs-btn.style6 {
-    padding: 19px 33px;
+    padding: 15px;
     font-weight: bolder;
     border: 2px solid var(--white-color);
     background-color: var(--white-color);
@@ -1660,9 +1660,8 @@ textarea.is-invalid {
     display: block;
     color: var(--theme-color2);
     font-family: var(--subtitle-font);
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-size: 24px;
+    line-height: 45px;
     margin: -0.2em 0 15px 0;
     text-transform: uppercase;
 }
@@ -5101,7 +5100,7 @@ blockquote.vs-quote cite {
 }
 .hero-layout1 .hero-text {
     color: #edecec;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 400;
     font-family: var(--subtitle-font);
     line-height: 34px;
@@ -5441,8 +5440,8 @@ blockquote.vs-quote cite {
     position: relative;
 }
 .picture-box2 [class*="picture-"] {
-    max-width: 320px;
-    width: -moz-max-content;
+    /*max-width: 144px;*/
+    /*max-height: 644px;*/
     width: max-content;
     overflow: hidden;
     position: relative;
@@ -5450,10 +5449,7 @@ blockquote.vs-quote cite {
     border-radius: 20px;
 }
 .picture-box2 .picture-1 {
-    max-width: 320px;
-    margin-left: 50%;
-    margin-bottom: -120px;
-    z-index: 3;
+    margin-right: 10px;
 }
 .picture-box2 .picture-3 {
     margin-right: -170px;
@@ -5694,8 +5690,7 @@ blockquote.vs-quote cite {
 }
 
 .about-box2 {
-    padding: 60px;
-    padding-left: 198px;
+    /*padding: 60px*/
 }
 .about-box2 .about-content {
     /* padding-left: 165px; */
@@ -5828,7 +5823,7 @@ blockquote.vs-quote cite {
     align-items: center;
     border-radius: 20px;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 10px;
     background-color: var(--smoke-color);
     transition: all ease 0.4s;
 }

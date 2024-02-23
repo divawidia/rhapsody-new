@@ -21,10 +21,16 @@ class CalonPesertaDiploma extends Model
         'jurusan_sekolah',
         'tahun_lulus',
         'jenis_refrensi',
-        'jurusan_diploma_id'
+        'jurusan_diploma_id',
+        'referral_code'
     ];
 
     public function jurusan_diploma(){
         return $this->belongsTo(ProgramDiploma::class, 'jurusan_diploma_id', 'id');
+    }
+
+    public function references()
+    {
+        return $this->belongsToMany(Reference::class, 'reference_calon_peserta_diploma', 'calon_peserta_diploma_id', 'reference_id', 'id');
     }
 }

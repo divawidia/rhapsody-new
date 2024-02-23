@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\CalonPesertaExecutive;
 use App\Models\ProgramExecutive;
+use App\Models\Reference;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -43,9 +44,11 @@ class CalonMahasiswaController extends Controller
     public function create()
     {
         $program_executives = ProgramExecutive::all();
+        $references = Reference::all();
 
         return view('pages.executive_registration', [
-            'program_executives' => $program_executives
+            'program_executives' => $program_executives,
+            'references' => $references
         ]);
     }
 
@@ -55,9 +58,9 @@ class CalonMahasiswaController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['jenis_refrensi'] = implode(", ",$request->input('jenis_refrensi'));
 
-        CalonPesertaExecutive::create($data);
+        $calon_peserta = CalonPesertaExecutive::create($data);
+        $calon_peserta->references()->sync((array)$request->input('reference_id'));
 
         return redirect()->route('registrasi-berhasil');
     }

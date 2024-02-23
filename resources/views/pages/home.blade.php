@@ -44,25 +44,27 @@
                                 background-position: center center;"
                     ></div>
                     <div class="container">
-                        <div class="row space-top mb-5 d-flex align-items-center">
-                            <div class="hero-content col-12 col-lg-5 order-2 order-lg-1">
+                        <div class="row space-top mb-5 d-flex align-items-end">
+                            <div class="hero-content col-12 col-lg-4 order-2 order-lg-1 pb-5">
                                 <div data-aos="fade-up" data-aos-duration="1000">
                                     <span class="landing-title-small">NO </span>
                                     <span class="landing-title-small-bold">FLIGHT </span>
                                     <span class="landing-title-small">NO </span>
                                     <span class="landing-title-small-bold">PAY.</span>
                                 </div>
-                                <p class="hero-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                    Satu - satunya LPK perhotelan dan kapal pesiar yang berani menjamin keberangkatan.
-                                </p>
+                                <div class="d-flex align-items-center">
+                                    <p class="hero-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                        Satu - satunya LPK perhotelan dan kapal pesiar yang berani menjamin keberangkatan.
+                                    </p>
+                                </div>
                                 <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                     <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
-                                        <i class="fa-solid fa-angle-right"></i>Daftar Sekarang
+                                        <img src="/img/icon/info.png">  Daftar Sekarang
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-7 order-1 order-lg-2">
-                                <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" src="/img/hero/Hotel.png">
+                            <div class="col-12 col-lg-8 order-1 order-lg-2">
+                                <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" width="1024" src="/img/hero/Pesawat.png">
                             </div>
                         </div>
                     </div>
@@ -77,57 +79,41 @@
     <section class="mt-5 space-bottom space-top about-section">
         <div class="container">
             <div class="row align-items-center align-items-xxl-start">
-                <div class="col-lg-5">
+                <div class="col-lg-7">
                     <div class="picture-box2">
-                        <div class="picture-1 mega-hover" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-                            <img src="/img/about/about-2-1.jpg" alt="About Img" />
+                        <div class="d-flex flex-row mx-2">
+                            <div class="picture-1 mega-hover" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                                <img src="/img/about/about-2-1.jpg" alt="About Img" />
+                            </div>
+                            <div class="picture-1 mega-hover" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                                <img src="/img/about/about-2-2.jpg" alt="About Img" />
+                            </div>
+                            <div class="picture-1 mega-hover" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+                                <img src="/img/about/about-2-3.jpg" alt="About Img" />
+                            </div>
+                            <div class="picture-1 mega-hover" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+                                <img src="/img/about/about-2-4.jpg" alt="About Img" />
+                            </div>
                         </div>
-                        <div class="picture-2 mega-hover" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-                            <img src="/img/about/about-2-2.jpg" alt="About Img" />
-                        </div>
-                        <div class="picture-3 mega-hover" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
-                            <img src="/img/about/about-2-3.jpg" alt="About Img" />
-                        </div>
-                        <div class="vs-circle"></div>
                     </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-5">
                     <div class="about-box2">
                         <div class="title-area">
-                <span class="sec-subtitle" data-aos="fade-right" data-aos-duration="1000"
-                >Selamat datang di LPK Rhapsody Hospitality Development Center</span
-                >
                             <h2 class="about-title h1 text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                                Create Your Success Road Map With Us!
+                                MENGAPA RHAPSODY?
                             </h2>
+                            <span class="sec-subtitle" data-aos="fade-right" data-aos-duration="1000">
+                                <FONT COLOR="#006687">Kamu mungkin dapat program belajar yang menarik di tempat lain, tapi apa mereka mempedulikan</FONT>
+                                masa depanmu?
+                            </span>
                         </div>
                         <div class="about-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                             <p class="fs-md">
-                                LPK Rhapsody Hospitality Development Center merupakan lembaga
-                                pendidikan dan pelatihan vokasi bidang perhotelan dan kapal
-                                pesiar. Kami hadir dengan inovasi konsep pembelajaran yang
-                                menggabungkan pelatihan personal development, fundamental
-                                hospitality skill dan knowledge, yang bertujuan untuk
-                                mempersiapkan generasi muda dengan skill set lengkap untuk
-                                sukses berkarir di dalam atau di luar negeri dan berkarya di
-                                era industri 4.0.
+                                Kami bukan hanya tentang memberikan program belajar yang menarik; kami juga memprioritaskan masa depan karir setiap peserta. Kami mengakui bahwa pendidikan bukanlah hanya tentang memperoleh pengetahuan, tetapi juga tentang mempersiapkan para peserta untuk sukses  di industri. Itulah mengapa kami menawarkan kesempatan praktik yang luas, penempatan kerja, dan dukungan karir yang berkelanjutan.
+
+                                Jadi, sementara program belajar lain mungkin menarik, pertimbangkan apakah mereka peduli dengan masa depanmu seperti yang kami lakukan.
                             </p>
-
-                            <div class="call-media">
-                                <div class="media-icon"><i class="fa-brands fa-whatsapp fa-lg" style="color: var(--theme-color);"></i></div>
-                                <div class="media-body">
-                                    <span class="media-label">Hubungi Kami</span>
-                                    <p class="media-info">
-                                        <a href="https://wa.me/6287761360699" class="text-inherit"
-                                        >+62877-6136-0699</a
-                                        >
-                                    </p>
-                                </div>
-                            </div>
-
-                            <a href="{{url('/about-us')}}" class="vs-btn style3 mt-2"
-                            ><i class="fa-solid fa-angle-right"></i>Info Tentang Kami</a
-                            >
                         </div>
                     </div>
                 </div>
