@@ -327,7 +327,7 @@ h6 {
     }
     .h4,
     h4 {
-        font-size: 22px;
+        font-size: 24px;
     }
 }
 /*------------------- 1.6. Extend -------------------*/
@@ -451,7 +451,6 @@ input {
     color: #555555;
     background-color: var(--white-color);
     border-radius: 9999px;
-    border-radius: 0;
     font-size: 14px;
     width: 100%;
 }
@@ -528,7 +527,6 @@ input[type="checkbox"] {
     vertical-align: middle;
     width: 0;
     height: 0;
-    display: none;
 }
 input[type="checkbox"]:checked ~ label:before {
     content: "\f00c";
@@ -565,7 +563,6 @@ input[type="radio"] {
     vertical-align: middle;
     width: 0;
     height: 0;
-    display: none;
 }
 input[type="radio"] ~ label {
     position: relative;
@@ -695,7 +692,6 @@ textarea.is-invalid {
     margin: 20px 0 30px 0;
     line-height: 0;
     text-align: center;
-    height: -moz-max-content;
     height: max-content;
 }
 .slick-dots li {
@@ -1101,7 +1097,7 @@ textarea.is-invalid {
     font-size: 18px;
     line-height: normal;
     padding: 21.5px 40px;
-    border-radius: 30px;
+    border-radius: 20px;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -1260,7 +1256,7 @@ textarea.is-invalid {
     color: var(--title-color);
 }
 .vs-btn.style6 {
-    padding: 15px;
+    padding: 5px 15px;
     font-weight: bolder;
     border: 2px solid var(--white-color);
     background-color: var(--white-color);
@@ -1656,14 +1652,47 @@ textarea.is-invalid {
     margin: -0.2em 0 5px 0;
 }
 
+.facility-title {
+    font-size: 38px;
+    font-family: var(--title-font);
+    color: var(--theme-color);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.facility-title-with-bg {
+    font-size: 38px;
+    font-family: var(--title-font);
+    color: var(--white-color);
+    font-weight: 400;
+    margin-bottom: 0;
+    background-color: var(--theme-color);
+    display: inline-block;
+    width: 300px;
+}
+
+.facility-title2 {
+    font-size: 38px;
+    font-family: var(--subtitle-font);
+    color: var(--theme-color);
+    font-weight: 800;
+    text-shadow: -7px 7px 5px #cdcdcd;
+}
+
+.facility-text {
+    font-size: 20px;
+    font-family: var(--body-font);
+    color: var(--theme-color);
+    line-height: 1;
+}
+
 .sec-subtitle {
     display: block;
     color: var(--theme-color2);
     font-family: var(--subtitle-font);
     font-size: 24px;
-    line-height: 45px;
+    line-height: 40px;
+    font-weight: 500;
     margin: -0.2em 0 15px 0;
-    text-transform: uppercase;
 }
 
 .sec-subtitle2 {
@@ -1771,11 +1800,12 @@ textarea.is-invalid {
 @media (max-width: 767px) {
     .sec-title2,
     .sec-title {
-        font-size: 30px;
+        font-size: 38px;
     }
     .sec-subtitle {
         letter-spacing: 0;
         font-size: 14px;
+        line-height: 2;
     }
     .border-title2 {
         margin: 0 0 30px 0;
@@ -2265,7 +2295,7 @@ textarea.is-invalid {
     font-family: var(--title-font);
     font-weight: bold;
     color: var(--theme-color);
-    font-size: 28px;
+    font-size: 22px;
 }
 .text-inherit:hover {
     color: var(--theme-color2);
@@ -5084,6 +5114,7 @@ blockquote.vs-quote cite {
     }
 }
 .hero-layout1 .hero-content {
+    position: absolute;
 }
 .hero-layout1 .hero-title {
     font-size: 60px;
@@ -5104,7 +5135,7 @@ blockquote.vs-quote cite {
     font-weight: 400;
     font-family: var(--subtitle-font);
     line-height: 34px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     animation-delay: 0.4s;
 }
 .hero-layout1 .hero-btns {
@@ -5232,6 +5263,7 @@ blockquote.vs-quote cite {
     .hero-layout1 .hero-content {
         max-width: 100%;
         text-align: center;
+        position: relative;
     }
     .hero-layout1 .vs-circle {
         display: none;
@@ -5990,7 +6022,7 @@ blockquote.vs-quote cite {
     margin: 30px 0 30px 0;
     padding-left: 10px;
     padding-top: 8px;
-    max-width: 400px;
+    /*max-width: 400px;*/
     text-align: left;
 }
 
@@ -6371,11 +6403,11 @@ blockquote.vs-quote cite {
     }
     .picture-box2 {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        /*grid-template-columns: repeat(2, 1fr);*/
         gap: 10px 10px;
     }
     .picture-box2 [class*="picture-"] {
-        margin: 0;
+        margin: 5px;
         width: auto;
     }
     .picture-box2 [class*="picture-"] img {
@@ -8468,10 +8500,10 @@ blockquote.vs-quote cite {
 .course-style2 .course-img {
     position: relative;
     overflow: hidden;
+    height: 190px;
     border-radius: 20px 20px 0 0;
 }
 .course-style2 .course-img img {
-    width: 100%;
     transform: scale(1.001);
     transition: all ease 0.4s;
 }
@@ -8482,37 +8514,56 @@ blockquote.vs-quote cite {
     border-radius: 20px 20px 0 0;
 }
 .course-style2 .testi-img img {
-    width: 200px;
-    height: 500px;
+    width: 220px;
+    height: 258px;
     object-fit: cover;
     transform: scale(1.001);
     transition: all ease 0.4s;
 }
 
+.quotation-img {
+    left: 93%;
+}
+
 .course-style2 .course-price {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color2);
     color: var(--white-color);
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-weight: bold;
+    /*position: absolute;*/
+    /*bottom: 100px;*/
+    /*margin-left: 15px;*/
     text-align: center;
-    height: 44px;
-    line-height: 44px;
-    font-size: 20px;
-    padding: 0 25px;
+    font-size: 12px;
+    padding: 0 10px;
     border-radius: 20px;
 }
+
+
 .course-style2 .course-content {
-    padding: 25px 40px 0 40px;
+    padding: 25px 20px 22px 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--theme-color3);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 3px 15px #242323;
+}
+.course-style2 .course-content2 {
+    padding: 30px 20px 0px 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #E49576;
+    position: absolute;
+    z-index: 1;
+    bottom: -35px;
+    width: 100%;
 }
 .course-style2 .course-name {
     margin-bottom: 9px;
 }
 .course-style2 .course-meta {
-    border-bottom: 1px solid #dedede;
+    /*border-bottom: 1px solid #dedede;*/
     margin-top: -10px;
-    padding-bottom: 25px;
+    /*padding-bottom: 15px;*/
 }
 .course-style2 .course-meta-modal {
     border-bottom: 1px solid #dedede;
@@ -8520,11 +8571,11 @@ blockquote.vs-quote cite {
 }
 .course-style2 .course-meta span,
 .course-style2 .course-meta a {
-    color: var(--body-color);
+    color: var(--theme-color);
     font-size: 14px;
+    line-height: 120%;
     display: inline-block;
-    margin-right: 12px;
-    font-weight: 500;
+    margin-top: 12px;
 }
 .course-style2 .course-meta span:hover,
 .course-style2 .course-meta a:hover {
@@ -8539,10 +8590,16 @@ blockquote.vs-quote cite {
     font-size: 12px;
     margin-right: 7px;
 }
+.testi-subtitle{
+    color: var(--theme-color);
+    font-family: var(--subtitle-font);
+    font-size: 20px;
+    font-weight: 500;
+}
 .testi-text{
     color: var(--theme-color);
     font-family: var(--body-font);
-    font-size: 20px;
+    font-size: 16px;
 }
 .testi-text2{
     color: var(--theme-color);
@@ -9131,16 +9188,22 @@ blockquote.vs-quote cite {
         font-size: 12px;
     }
     .course-style2 .course-content {
-        padding: 15px 20px 5px 20px;
+        padding: 30px 20px 5px 20px;
     }
     .course-style2 .course-price {
-        height: 35px;
-        line-height: 35px;
-        font-size: 15px;
+        /*height: 35px;*/
+        /*line-height: 35px;*/
+        font-size: 14px;
         padding: 0 20px;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: stretch;
     }
     .course-style2 .course-meta {
         padding-bottom: 15px;
+        padding-right: 30px;
     }
     .course-style2 .course-meta span,
     .course-style2 .course-meta a {
@@ -9927,7 +9990,7 @@ blockquote.vs-quote cite {
 }
 /*------------------- 4.25. Category -------------------*/
 .category-style1 {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     position: relative;
 }
 .category-style1 .category-img {
@@ -9958,21 +10021,191 @@ blockquote.vs-quote cite {
         transparent 70%
     );
 }
+.course-icon {
+    width: 20px;
+}
+
+.interest-percentage{
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #e6e6e6;
+    color: var(--theme-color);
+    font-size: 14px;
+    line-height: 100%;
+    font-family: var(--subtitle-font);
+    text-align: center;
+    padding: 5px 20px;
+    bottom: 0;
+    right: 0;
+}
+
+.course-tag{
+    left: 53%;
+    width: 100%;
+    z-index: 3;
+    padding-inline: 20px;
+    position: absolute;
+    transform: translate(-50%,-50%)!important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.facility-bg1 {
+    position: absolute;
+    z-index: 3;
+}
+
+.facility-bg2 {
+    position: absolute;
+    z-index: 2;
+    margin-left: 530px;
+}
+
+.facility-bg3 {
+    position: absolute;
+    z-index: 1;
+    margin-left: 590px;
+}
+
+@media (max-width: 1299px) {
+    .facility-bg2 {
+        margin-left: 350px;
+    }
+
+    .facility-bg3 {
+        margin-left: 410px;
+    }
+    .facility-title {
+        font-size: 32px;
+    }
+    .facility-title-with-bg {
+        font-size: 32px;
+    }
+    .facility-title2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .facility-bg2 {
+        margin-left: 170px;
+    }
+
+    .facility-bg3 {
+        margin-left: 230px;
+    }
+    .facility-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .facility-bg1 {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .facility-bg2 {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 170px;
+    }
+
+    .facility-bg3 {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 260px;
+    }
+}
+
+@media (max-width: 767px) {
+    .facility-bg1 {
+        max-width: 570px !important;
+    }
+    .facility-bg2 {
+        margin-top: 300px;
+        max-width: 570px !important;
+    }
+
+    .facility-bg3 {
+        margin-top: 350px;
+        max-width: 570px !important;
+    }
+}
+@media (max-width: 575px) {
+    .facility-text-col{
+        padding: 30px !important;
+    }
+    .facility-bg1 {
+        max-width: 90% !important;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .facility-bg2 {
+        max-width: 90% !important;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 240px;
+    }
+
+    .facility-bg3 {
+        max-width: 90% !important;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 280px;
+    }
+
+    .facility-title {
+        font-size: 28px;
+    }
+    .facility-title-with-bg {
+        font-size: 28px;
+    }
+    .facility-title2 {
+        font-size: 28px;
+    }
+    .facility-text {
+        font-size: 14px;
+    }
+}
+/* Medium Large devices */
+@media (max-width: 1399px) {
+    .feature-style1 {
+        padding: 50px 30px 32px 30px;
+    }
+}
+
 .category-style1 .icon {
-    background-color: var(--theme-color3);
+    background-color: var(--theme-color);
+    box-shadow: 2px 5px 6px #888888;
     border-radius: 50px;
     font-size: 40px;
-    height: 68px;
-    left: 20px;
+    height: 58px;
+    /*right: 30px;*/
     line-height: 68px;
-    position: absolute;
+    /*position: absolute;*/
     text-align: center;
-    top: 20px;
-    width: 68px;
+    /*top: -30px;*/
+    width: 58px;
     transition: all ease 0.4s;
+    display: flex;
+    justify-content: center;
 }
 .category-style1 .icon img{
-    width: 50px;
+    width: 40px;
+    margin: auto;
 }
 .category-style1 .category-content {
     bottom: 20px;
@@ -10052,8 +10285,8 @@ blockquote.vs-quote cite {
 /* Extra small devices */
 @media (max-width: 575px) {
     .category-style1 .icon {
-        height: 45px;
-        width: 45px;
+        height: 55px;
+        width: 55px;
         line-height: 45px;
         font-size: 16px;
         left: 10px;
@@ -10061,7 +10294,7 @@ blockquote.vs-quote cite {
         border-radius: 50px;
     }
     .category-style1 .icon img{
-        width: 35px;
+        width: 35px !important;
     }
     .category-style1 .category-content {
         bottom: 20px;
