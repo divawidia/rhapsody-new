@@ -153,7 +153,7 @@
                                             <span class="col-auto course-price"><img src="/img/icon/discount.svg" style="width: 20px; margin-bottom: 2px">  Promo tersedia</span>
                                             <div class="col-auto ms-auto category-style1 p-0">
                                                 <div class="icon">
-                                                    <img src="/img/icon/Cook.png">
+                                                    <img src="/img/icon/Cook.svg">
                                                 </div>
                                             </div>
                                         </div>
@@ -175,7 +175,7 @@
                                             <span class="col-auto course-price"><img src="/img/icon/discount.svg" style="width: 20px; margin-bottom: 2px">  Promo tersedia</span>
                                             <div class="col-auto ms-auto category-style1 p-0">
                                                 <div class="icon">
-                                                    <img src="/img/icon/Service.png">
+                                                    <img src="/img/icon/Service.svg">
                                                 </div>
                                             </div>
                                         </div>
@@ -197,7 +197,7 @@
                                             <span class="col-auto course-price"><img src="/img/icon/discount.svg" style="width: 20px; margin-bottom: 2px">  Promo tersedia</span>
                                             <div class="col-auto ms-auto category-style1 p-0">
                                                 <div class="icon">
-                                                    <img src="/img/icon/front-office.png">
+                                                    <img src="/img/icon/FO.svg">
                                                 </div>
                                             </div>
                                         </div>
@@ -219,7 +219,7 @@
                                             <span class="col-auto course-price"><img src="/img/icon/discount.svg" style="width: 20px; margin-bottom: 2px">  Promo tersedia</span>
                                             <div class="col-auto ms-auto category-style1 p-0">
                                                 <div class="icon">
-                                                    <img src="/img/icon/housekeeping.png">
+                                                    <img src="/img/icon/HK.svg">
                                                 </div>
                                             </div>
                                         </div>
@@ -256,7 +256,7 @@
                             <span class="col-auto course-price"><img src="/img/icon/Speed.svg" style="width: 20px; margin-bottom: 2px">  3 bulan lulus</span>
                             <div class="col-auto category-style1 ms-auto p-0">
                                 <div class="icon">
-                                    <img src="/img/icon/Cook.png">
+                                    <img src="/img/icon/Cook.svg">
                                 </div>
                             </div>
                         </div>
@@ -281,7 +281,7 @@
                             <span class="col-auto course-price"><img src="/img/icon/Speed.svg" style="width: 20px; margin-bottom: 2px">  3 bulan lulus</span>
                             <div class="col-auto category-style1 ms-auto p-0">
                                 <div class="icon">
-                                    <img src="/img/icon/housekeeping.png">
+                                    <img src="/img/icon/HK.svg">
                                 </div>
                             </div>
                         </div>
@@ -359,7 +359,7 @@ CTA Area
             >
                 <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                     <div class="course-style2">
-                        <div class="course-img">
+                        <div class="course-img2">
                             <a href="{{ route('fasilitas') }}"
                             ><img
                                     class="w-100"
@@ -367,20 +367,16 @@ CTA Area
                                     alt="Course Img"
                                 /></a>
                         </div>
-                        <div class="course-content">
-                            <h3 class="h5 course-name">
-                                <a href="{{ route('fasilitas') }}" class="text-inherit"
-                                >Sensory Gastro Lab</a
-                                >
-                            </h3>
-                            <div class="course-meta"></div>
-                            <div class="course-footer">
-                                <div class="course-teacher">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit-body"
-                                    >Lab restaurant dengan konsep creative fun dinning
-                                        yang dikembangkan untuk mengasah kretifitas mahasiswa
-                                        dalam bidang food & baverages</a
-                                    >
+                        <div class="course-content3">
+                            <div class="row">
+                                <span class="col-auto facility-tag-bg">Sensory Gastro Lab</span>
+                                <span class="col-auto facility-tag-bg2">Sensory Gastro Lab</span>
+                                <img src="/img/course/Restaurant.png" class="facility-tag-img ms-auto">
+                            </div>
+                            <div class="course-content">
+                                <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">F&B Service, Mixology, Barista</a></h3>
+                                <div class="course-meta">
+                                    <span>Teaching factory dengan nuansa dan fasilitas standar industri yang mendukung pembelajaran fundamental dunia kuliner.</span>
                                 </div>
                             </div>
                         </div>
@@ -388,7 +384,7 @@ CTA Area
                 </div>
                 <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                     <div class="course-style2">
-                        <div class="course-img">
+                        <div class="course-img2">
                             <a href="{{ route('fasilitas') }}"
                             ><img
                                     class="w-100"
@@ -396,20 +392,16 @@ CTA Area
                                     alt="Course Img"
                                 /></a>
                         </div>
-                        <div class="course-content">
-                            <h3 class="h5 course-name">
-                                <a href="{{ route('fasilitas') }}" class="text-inherit"
-                                >Alenia Kitchen</a
-                                >
-                            </h3>
-                            <div class="course-meta">
+                        <div class="course-content3">
+                            <div class="row">
+                                <span class="col-auto facility-tag-bg">Alenia Kitchen</span>
+                                <span class="col-auto facility-tag-bg2">Alenia Kitchen</span>
+                                <img src="/img/course/Kitchen.png" class="facility-tag-img ms-auto">
                             </div>
-                            <div class="course-footer">
-                                <div class="course-teacher">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit-body"
-                                    >Food production lab yang dikembangkan untuk mahasiswa
-                                        yang memiliki passion di bidang food production</a
-                                    >
+                            <div class="course-content">
+                                <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">F&B Product, Hot Kitchen, Bakery</a></h3>
+                                <div class="course-meta">
+                                    <span>Teaching factory dengan nuansa dan fasilitas standar industri yang mendukung pembelajaran fundamental dunia kuliner.</span>
                                 </div>
                             </div>
                         </div>
@@ -417,28 +409,24 @@ CTA Area
                 </div>
                 <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
                     <div class="course-style2">
-                        <div class="course-img">
+                        <div class="course-img2">
                             <a href="{{ route('fasilitas') }}"
                             ><img
                                     class="w-100"
-                                    src="/img/course/hk3.jpg"
+                                    src="/img/course/alphasuite.jpg"
                                     alt="Course Img"
                                 /></a>
                         </div>
-                        <div class="course-content">
-                            <h3 class="h5 course-name">
-                                <a href="{{ route('fasilitas') }}" class="text-inherit"
-                                >Alpha Suite</a
-                                >
-                            </h3>
-                            <div class="course-meta">
+                        <div class="course-content3">
+                            <div class="row">
+                                <span class="col-auto facility-tag-bg">Alpha Suite</span>
+                                <span class="col-auto facility-tag-bg2">Alpha Suite</span>
+                                <img src="/img/course/Room.png" class="facility-tag-img ms-auto">
                             </div>
-                            <div class="course-footer">
-                                <div class="course-teacher">
-                                    <a href="{{ route('fasilitas') }}" class="text-inherit-body"
-                                    >Mockup room dengan design modern minimalis untuk
-                                        tempat praktik mahasiswa bidang room division</a
-                                    >
+                            <div class="course-content">
+                                <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Housekeeping, Public Area</a></h3>
+                                <div class="course-meta">
+                                    <span>Ruangan simulasi dengan desain modern dan minimalis yang digunakan sebagai lingkungan praktek untuk menjelajahi konsep dasar operasional kamar.</span>
                                 </div>
                             </div>
                         </div>
@@ -554,15 +542,20 @@ CTA Area
         background-attachment: fixed;
         background-size: cover;">
         <div class="container">
-            <div class="row align-items-center text-center text-lg-start">
+            <div class="row align-items-center text-center text-lg-start" style="padding-bottom: 150px">
                 <div class="col-lg-5 col-xl-6 space-extra">
-                    <img class="mb-5" src="/img/logo-victory.png" alt="" width="150" data-aos="fade-right" data-aos-duration="1000">
-                    <h2 class="sec-title text-white mb-3" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Victory Placement Center</h2>
-                    <p class="fs-md text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Victory International Placement Center merupakan
-                        salah satu divisi sebagai pusat pendampingan mahasiswa ke luar negeri baik
-                        di kapal pesiar ataupun di darat.</p>
+                    <img class="mb-5" src="/img/logo-victory.png" alt="logo-victory" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="sec-title3" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Victory Placement Center</h2>
+                    <p class="fs-md" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                        <b>Karirmu di luar negeri sepenuhnya menjadi tanggungjawab kami.</b><br>
+                        Tim kecil kami membuka pintu perubahan dan membangun
+                        kisah sukses bagi orang-orang yang berani bermimpi besar.</p>
 
-                    <a href="https://www.instagram.com/victoryinternationalplacement/" class="vs-btn style2-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"><i class="fa-solid fa-angle-right"></i>More nfo</a>
+                    <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <a href="https://www.instagram.com/victoryinternationalplacement/" class="btn vs-btn style6" style="background-color: var(--theme-color); color: white; border: 0; padding: 10px 30px;">
+                            <img src="/img/icon/cruise-ship.svg">  Info Lebih Lanjut
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -570,7 +563,7 @@ CTA Area
     <!--==============================
       Brand Area
   ==============================-->
-    <section class="space-extra-bottom">
+    <section class="space-extra-top space-extra-bottom">
         <div class="container">
             <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Alumni Kami Telah Bekerja Di:</h2>
@@ -618,6 +611,7 @@ CTA Area
                     </div>
                 </div>
             </div>
+            <span class="sec-subtitle text-center mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">... dan masih banyak lagi</span>
         </div>
     </section>
 @endsection
