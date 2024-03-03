@@ -22,8 +22,8 @@ Footer Area
                                 Ini dia.. Saatnya memilih..
                                 Kalian tidak akan menemukan yang sama seperti kami.
                             </p>
-                            <div class="footer-media d-flex justify-content-center mt-5">
-                                <div class="row">
+                            <div class="row footer-media d-flex justify-content-center mt-5 px-3">
+{{--                                <div class="row">--}}
                                     <div class="col-6 position-relative">
                                         <div class="course-tag">
                                             <div class="position-absolute top-0 start-50 translate-middle category-style1 p-0">
@@ -50,7 +50,7 @@ Footer Area
                                             style="color: var(--theme-color)">Unduh Brosur</a>
                                         </div>
                                     </div>
-                                </div>
+{{--                                </div>--}}
 {{--                                <div class="media-icon">--}}
 {{--                                    <i class="fas fa-file-pdf"></i>--}}
 {{--                                </div>--}}

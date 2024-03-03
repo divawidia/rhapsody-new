@@ -4122,7 +4122,7 @@ a.text-theme:hover,
 }
 
 .breadcumb-title {
-    font-size: 70px;
+    font-size: 98px;
     padding-top: 30px;
     color: var(--theme-color3);
     margin: -0.21em 0 -0.4em 0;
@@ -4140,6 +4140,7 @@ a.text-theme:hover,
     background-color: var(--title-color);
     overflow: hidden;
     margin-top: -121px;
+    height: 720px;
     /* Medium devices */
 }
 @media (max-width: 991px) {
@@ -4151,17 +4152,22 @@ a.text-theme:hover,
 
 /* Large devices */
 @media (max-width: 1199px) {
-    .breadcumb-title {
-        font-size: 48px;
-    }
+    /*.breadcumb-title {*/
+    /*    font-size: 48px;*/
+    /*}*/
     .breadcumb-text {
         font-size: 26px;
+    }
+    .sec-subtitle{
+        font-size: 18px;
+        line-height: 30px;
+        width: 75%;
     }
 }
 /* Medium devices */
 @media (max-width: 991px) {
     .breadcumb-title {
-        font-size: 40px;
+        /*font-size: 40px;*/
         margin: -0.15em 0 -0.4em 0;
     }
     .breadcumb-text {
@@ -4176,9 +4182,12 @@ a.text-theme:hover,
 }
 /* Small devices */
 @media (max-width: 767px) {
+    .sec-subtitle, .about-text {
+        width: 100% !important;
+    }
     .breadcumb-title {
         padding-top: 50px;
-        font-size: 36px;
+        font-size: 66px;
     }
     .breadcumb-menu {
         padding: 15px 0 25px 0;
@@ -10235,7 +10244,7 @@ blockquote.vs-quote cite {
         margin: auto;
     }
     .facility-bg2 {
-        max-width: 90% !important;
+        max-width: 91% !important;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -10371,8 +10380,8 @@ blockquote.vs-quote cite {
 /* Extra small devices */
 @media (max-width: 575px) {
     .category-style1 .icon {
-        height: 55px;
-        width: 55px;
+        height: 48px;
+        width: 48px;
         line-height: 45px;
         font-size: 16px;
         left: 10px;
@@ -10392,6 +10401,9 @@ blockquote.vs-quote cite {
     }
     .category-style1 .subtitle {
         font-size: 14px;
+    }
+    .course-style2 .course-price{
+        font-size: 10px;
     }
 }
 /*------------------- 4.00. Shop  -------------------*/

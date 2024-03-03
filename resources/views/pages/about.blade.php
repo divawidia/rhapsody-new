@@ -9,7 +9,7 @@
     Breadcumb
 ============================== -->
     <div
-      class="breadcumb-wrapper"
+      class="breadcumb-wrapper d-flex align-items-center"
       style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -18,11 +18,7 @@
     >
       <div class="container z-index-common">
         <div class="breadcumb-content text-center">
-            <h1 class="breadcumb-title"data-aos="fade-up" data-aos-duration="1000">Tentang Kami</h1>
-            <ul class="breadcumb-menu" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-              <li><a href="{{ route('home') }}">Beranda</a></li>
-              <li>Tentang Kami</li>
-            </ul>
+            <h1 class="breadcumb-title" data-aos="fade-up" data-aos-duration="1000">Tentang Kami<FONT COLOR="#CE5423">.</FONT></h1>
         </div>
       </div>
     </div>
@@ -31,43 +27,29 @@
 ==============================-->
     <section class="py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-9">
-            <div class="title-area mb-3 mb-xl-5">
-              <span class="sec-subtitle" data-aos="fade-right" data-aos-duration="1000"
-                >LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER
-              </span>
-              <h2 class="sec-title text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Create Your Success Story With Us!</h2>
-            </div>
-          </div>
-          <div class="col-xl-5 col-xl-4 mb-30 mb-xl-0">
-            <p class="fs-md mt-n1" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200">
-              Rhapsody Hospitality Development Center merupakan lembaga
-              pendidikan dan pelatihan vokasi bidang perhotelan dan kapal
-              pesiar, dengan semboyan
-            </p>
-            <h4 class="fs-4 fw-bold text-center" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="300">“The New Direction to Grow”</h4>
-            <p class="fs-md mt-n1" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="400">
-              Kami hadir dengan inovasi konsep pembelajaran yang menggabungkan
-              pelatihan personal development, fundamental hospitality skill dan
-              knowledge dan essential business skill yang dikemas dengan fun dan
-              exploratif, yang bertujuan untuk mempersiapkan generasi muda
-              dengan skill set lengkap untuk sukses berkarir di dalam atau di
-              luar negeri dan berkarya di era industri 4.0.
-            </p>
-          </div>
-          <div class="col-xl-7 mt-n5 pt-5 pt-xl-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <div class="img-box3">
-              <div class="img-1 mega-hover">
-                <img
-                  class="w-100"
-                  src="/img/about/about-2-6.jpg"
-                  alt="About Img"
-                />
+        <div class="row px-4">
+              <div class="col-lg-7 col-xl-8 mb-30 mb-xl-0">
+                  <div class="title-area mb-3 mb-xl-5">
+                      <h2 class="sec-title text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">RHAPSODY HOSPITALITY DEVELOPMENT CENTER<FONT COLOR="#CE5423">.</FONT></h2>
+                      <span class="sec-subtitle fw-light" data-aos="fade-right" data-aos-duration="1000">
+                                <FONT COLOR="#006687">adalah
+                                lembaga pendidikan dan pelatihan vokasi khusus
+                                di bidang perhotelan dan kapal pesiar,
+                                yang berkomitmen pada moto
+                                </FONT><br>
+                                The New Direction to Grow
+                            </span>
+                  </div>
+                <p class="about-text fs-md mt-n1 w-75" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200">
+                    Kami mempersembahkan konsep pembelajaran inovatif yang mengintegrasikan pelatihan pengembangan diri dan keterampilan dasar perhotelan, semuanya disajikan dengan pendekatan yang menyenangkan, penuh eksplorasi dan dilengkapi dengan tips-tips yang dikaji berdasarkan pengalaman puluhan tahun di lapangan.
+                </p>
+                <p class="about-text fs-md mt-n1 w-75" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="400">
+                    Tujuan kami adalah membekali generasi z dengan keterampilan komprehensif agar sukses dalam karir, baik di dalam maupun di luar negeri, serta mampu berkontribusi di era industri 4.0.
+                </p>
               </div>
-              <div class="shape-dotted jump"></div>
+            <div class="col-lg-5 col-xl-4 p-0 order-1 order-lg-2 ms-auto py-5 py-lg-0">
+                <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" width="1024" src="/img/hero/about.png">
             </div>
-          </div>
         </div>
       </div>
     </section>
@@ -75,11 +57,11 @@
     <section class="py-5" style="background-color: #FAF5F0;">
       <div class="container">
         <div class="title-area text-center">
-            <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Kenapa Rhapsody?</h2>
-          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">STRATEGIC DEVELOPMENT PARTNER</span>
+            <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">KARIR LUAR NEGERI? PASTI RHAPSODY</h2>
+          <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Mengabulkan lebih dari 500 mimpi dan terus bertambah.</span>
         </div>
-        <div class="mt-3 row">
-          <div class="col-xl-7 pt-5 pt-xl-0" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200">
+        <div class="mt-5 row">
+          <div class="col-xl-7 px-4" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200">
             <div class="img-box3">
 
               <div class="img-1 mega-hover">
@@ -93,15 +75,16 @@
             </div>
 
           </div>
-          <div class="col-xl-5 col-xl-4 mb-30 mb-xl-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="p-5 col-xl-5 col-xl-4 mb-30 mb-xl-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 
-            <p class="fs-md mt-n1">
-              Perkembangan industri pariwisata saat ini dan kedepan telah menuntut dunia pendidikan untuk berubah dan beradaptasi agar tidak menjadi usang dan tertinggal. Saat ini terjadi kesenjangan antara mutu pendidikan yang tawarkan sekolah dengan kebutuhan di industri masih cukup besar.
-
+            <p class="fs-md mt-n1 fw-bold fst-italic">
+                “Siapapun itu, tidak peduli latar belakangnya, asal dia punya tekad..Pasti berhasil kita bawa ke luar negeri.”
             </p>
+              <p class="fs-md mt-n1 fw-bold fst-italic">
+                  Wayan Parwita (Founder)
+              </p>
             <p class="fs-md mt-n1">
-              Rhapsody berkomitmen untuk berkolaborasi dengan SMK sebagai upaya meningkatkan mutu pendidikan dan profesionalitas tenaga pengajar melalui berbagai aktifitas strategis yang bertujuan untuk mempersiapkan generasi muda di dalam menghadapi persaingan global di dunia industri.
-
+                Kami menerima peserta dari berbagai latar belakang dan menjadikan mereka sumber daya manusia yang unggul. Ketahuilah bahwa sinergi yang kuat ini ada berkat tekadmu untuk bekerja di luar negeri dan <b>kami sangat menghargainya.</b>
             </p>
           </div>
 
@@ -111,8 +94,88 @@
     <!--==============================
   Features Area
   ==============================-->
+    <section class="space-top space-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg" data-aos="fade-up" data-aos-duration="1000">
+            <h5 class="left-border h1 px-2 pt-2">Visi</h5>
+            <p>
+                Menjadikan Indonesia sebagai pionir dalam pengembangan sumber daya manusia di bidang hospitality.
+            </p>
+          </div>
+          <div class="col-12 col-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h5 class="left-border h1 px-2 pt-2">Misi</h5>
+            <div class="list-style1 vs-list">
+                <ul>
+                    <li>Mengembangkan program pelatihan yang inovatif.</li>
+                    <li>Menjadikan keramahtamahan sebagai karakter dasar setiap lulusan.</li>
+                    <li>Mengasah keterampilan sesuai dengan terobosan baru di industri.</li>
+                    <li>Berkolaborasi dengan pemangku kepentingan di industri.</li>
+                    <li>Memperluas akses terhadap pendidikan berkualitas di seluruh Indonesia.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--==============================
+      Team Area
+  ==============================-->
+    <section class="py-5 text-center" style="background-color: #FAF5F0;">
+        <img src="/img/hero/sdm.png">
+      <div class="container">
+        <div class="title-area text-center">
+            <p class="fs-md mt-2 mt-lg-n5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                Kamu juga bisa berkontribusi mengharumkan nama bangsa di kancah internasional.<br>
+                <b>Satu langkah, satu mimpi, satu perubahan bersama Rhapsody.</b>
+            </p>
+        </div>
+{{--        <div class="row">--}}
+{{--          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">--}}
+{{--            <h1 class="goal-text text-center">S.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Strong leadership</p>--}}
+{{--          </div>--}}
+{{--          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">--}}
+{{--            <h1 class="goal-text text-center">I.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Integrity</p>--}}
+{{--          </div>--}}
+{{--          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">--}}
+{{--            <h1 class="goal-text text-center">G.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Gentlemanly</p>--}}
+{{--          </div>--}}
+{{--          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">--}}
+{{--            <h1 class="goal-text text-center">N.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Nice looking</p>--}}
+{{--          </div>--}}
+{{--          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">--}}
+{{--            <h1 class="goal-text text-center">A.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Adeptness</p>--}}
+{{--          </div>--}}
+{{--          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">--}}
+{{--            <h1 class="goal-text text-center">T.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Team work</p>--}}
+{{--          </div>--}}
+{{--          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">--}}
+{{--            <h1 class="goal-text text-center">U.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Unpretentious</p>--}}
+{{--          </div>--}}
+{{--          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300">--}}
+{{--            <h1 class="goal-text text-center">R.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Responsible in every action</p>--}}
+{{--          </div>--}}
+{{--          <div class="col-12 col-sm border-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400">--}}
+{{--            <h1 class="goal-text text-center">E.</h1>--}}
+{{--            <p class="goal-desc fw-bold text-center">Empathy</p>--}}
+{{--          </div>--}}
+{{--        </div>--}}
+      </div>
+    </section>
     <section class="py-5">
       <div class="container">
+          <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
+              <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">KENAPA RHAPSODY?  </h2>
+              <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Dari sekian banyaknya kampus di Indonesia, ini yang menjadi perbedaan utama.</span>
+          </div>
         <div class="row">
           <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000">
               <div class="media-style9">
@@ -138,84 +201,6 @@
         </div>
       </div>
     </section>
-
-    <section class="space-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg" data-aos="fade-up" data-aos-duration="1000">
-            <h5 class="left-border h1 px-2 pt-2">Visi</h5>
-            <p>Menjadi lembaga pelatihan kerja bidang perhotelan dengan standar mutu pelayanan pendidikan yang inovatif, terkemuka, unggul dan berdaya guna serta menghasilkan lulusan (output) yang mampu berdaya saing di tarap nasional dan international.</p>
-
-          </div>
-          <div class="col-12 col-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-            <h5 class="left-border h1 px-2 pt-2">Misi</h5>
-            <div class="list-style1 vs-list">
-                <ul>
-                    <li>Melaksanakan proses pelatihan secara efektif.</li>
-                    <li>Meningkatkan dan pelatihan profesionalitas pelayanan pendidikan</li>
-                    <li>Membangun karakter mandiri dan daya saing peserta latih / mahasiswa.</li>
-                    <li>Menyiapkan generasi muda yang kritis, kreatif, inovatif dan tanggap terhadap tuntutan perkembangan zaman</li>
-                    <li>Membantu dunia industri pariwisata serta perhotelan dalam pengadaan tenaga kerja</li>
-                </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--==============================
-      Team Area
-  ==============================-->
-    <section class="space-top space-bottom" style="background-color: #FAF5F0;">
-      <div class="container">
-        <div class="title-area text-center">
-            <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Apa Tujuan Kami?</h2>
-            <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>
-            <p class="fs-md mt-4 px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Menciptakan sumber daya manusia yang berkarakter, propesional, berintelektual dan memiliki jiwa kewirausahaan yang mandiri, yang mana semua elemen tersebut kita jadikan dalam satu ungkapan nilai kepribadian diri berupa :</p>
-            <p class="fs-3 h1 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">“SIGNATURE”</p>
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-            <h1 class="goal-text text-center">S.</h1>
-            <p class="goal-desc fw-bold text-center">Strong leadership</p>
-          </div>
-          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <h1 class="goal-text text-center">I.</h1>
-            <p class="goal-desc fw-bold text-center">Integrity</p>
-          </div>
-          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-            <h1 class="goal-text text-center">G.</h1>
-            <p class="goal-desc fw-bold text-center">Gentlemanly</p>
-          </div>
-          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-            <h1 class="goal-text text-center">N.</h1>
-            <p class="goal-desc fw-bold text-center">Nice looking</p>
-          </div>
-          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
-            <h1 class="goal-text text-center">A.</h1>
-            <p class="goal-desc fw-bold text-center">Adeptness</p>
-          </div>
-          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-            <h1 class="goal-text text-center">T.</h1>
-            <p class="goal-desc fw-bold text-center">Team work</p>
-          </div>
-          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-            <h1 class="goal-text text-center">U.</h1>
-            <p class="goal-desc fw-bold text-center">Unpretentious</p>
-          </div>
-          <div class="col-12 col-sm border-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300">
-            <h1 class="goal-text text-center">R.</h1>
-            <p class="goal-desc fw-bold text-center">Responsible in every action</p>
-          </div>
-          <div class="col-12 col-sm border-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400">
-            <h1 class="goal-text text-center">E.</h1>
-            <p class="goal-desc fw-bold text-center">Empathy</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--==============================
-  Call To Action
-  ==============================-->
     <section style="
             background-image: url('/img/bg/divider-bg-1-1.jpg');
             background-repeat: no-repeat;
@@ -236,7 +221,7 @@
         </div>
     </section>
 
-@include('includes.testi-cards')
+{{--@include('includes.testi-cards')--}}
     <!--==============================
       Features Area
       ==============================-->
