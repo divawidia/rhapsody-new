@@ -30,7 +30,7 @@
         <div class="row px-4">
               <div class="col-lg-7 col-xl-8 mb-30 mb-xl-0">
                   <div class="title-area mb-3 mb-xl-5">
-                      <h2 class="sec-title text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">RHAPSODY HOSPITALITY DEVELOPMENT CENTER<FONT COLOR="#CE5423">.</FONT></h2>
+                      <h2 class="sec-title text-uppercase" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100"><FONT COLOR="#006687">RHAPSODY HOSPITALITY DEVELOPMENT CENTER</FONT><FONT COLOR="#CE5423">.</FONT></h2>
                       <span class="sec-subtitle fw-light" data-aos="fade-right" data-aos-duration="1000">
                                 <FONT COLOR="#006687">adalah
                                 lembaga pendidikan dan pelatihan vokasi khusus
@@ -95,7 +95,7 @@
   Features Area
   ==============================-->
     <section class="space-top space-bottom">
-      <div class="container">
+      <div class="container px-3">
         <div class="row">
           <div class="col-12 col-lg" data-aos="fade-up" data-aos-duration="1000">
             <h5 class="left-border h1 px-2 pt-2">Visi</h5>
@@ -122,10 +122,10 @@
       Team Area
   ==============================-->
     <section class="py-5 text-center" style="background-color: #FAF5F0;">
-        <img src="/img/hero/sdm.png">
+        <img src="/img/hero/sdm.png"  data-aos="fade-up" data-aos-duration="1000">
       <div class="container">
         <div class="title-area text-center">
-            <p class="fs-md mt-2 mt-lg-n5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <p class="fs-md mt-2 mt-lg-n5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 Kamu juga bisa berkontribusi mengharumkan nama bangsa di kancah internasional.<br>
                 <b>Satu langkah, satu mimpi, satu perubahan bersama Rhapsody.</b>
             </p>
@@ -172,30 +172,30 @@
     </section>
     <section class="py-5">
       <div class="container">
-          <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
-              <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">KENAPA RHAPSODY?  </h2>
-              <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Dari sekian banyaknya kampus di Indonesia, ini yang menjadi perbedaan utama.</span>
+          <div class="title-area text-center py-5">
+              <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">KENAPA RHAPSODY?  </h2>
+              <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Dari sekian banyaknya kampus di Indonesia, ini yang menjadi perbedaan utama.</span>
           </div>
         <div class="row">
           <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000">
               <div class="media-style9">
-                  <div class="media-icon"><img src="/img/icon/book.svg" alt="icon"></div>
-                  <h5 class="media-title">Pengembangan Materi Pembelajaran</h5>
-                  <p>Supporting pembaharuan materi ajar yang mengacu pada trend dan kebutuhan industry saat ini</p>
+                  <div class="media-icon"><img src="/img/icon/cruise-ship-navy.svg" alt="icon"></div>
+                  <h5 class="media-title">AGENT INTERNAL</h5>
+                  <p><b>Kami memprioritaskan masa depanmu.</b> Setiap bukaan lowongan dari berbagai negara akan kami umumkan dan kalian hanya tinggal melangkah.</p>
               </div>
           </div>
           <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
               <div class="media-style9">
-                  <div class="media-icon"><img src="/img/icon/teach.svg" alt="icon"></div>
-                  <h5 class="media-title mt-5">Kolaborasi Instruktur dan Guru</h5>
-                  <p>Free akses bagi guru SMK untuk berkolaborasi dengan team teaching Rhapsody yang bertujuan meningkatkan kualitas tenaga pengajar SMK</p>
+                  <div class="media-icon"><img src="/img/icon/overseas-navy.svg" alt="icon"></div>
+                  <h5 class="media-title">PROGRAM MAGANG LUAR NEGERI</h5>
+                  <p>Sembari menunggu umur sebagai syarat, kamu bisa mendaftarkan diri untuk magang di beberapa negara pilihan.</p>
               </div>
           </div>
           <div class="col-sm-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
               <div class="media-style9">
-                  <div class="media-icon"><img src="/img/icon/supervision.svg" alt="icon"></div>
-                  <h5 class="media-title">Supervisi Program</h5>
-                  <p>Program supervisi di SMK bagi mahasiswa Rhapsody yang telah menuntaskan OJT selama 6 bulan</p>
+                  <div class="media-icon"><img src="/img/icon/interview-navy.svg" alt="icon"></div>
+                  <h5 class="media-title">TECHNICAL INTERVIEW</h5>
+                  <p>Diantara kamu dan mimpimu ada Interview. Kami punya cara ajaib agar kamu bisa menjadi yang paling lihai di ruangan.</p>
               </div>
           </div>
         </div>
@@ -207,15 +207,20 @@
             background-attachment: fixed;
             background-size: cover;">
         <div class="container">
-            <div class="row align-items-center text-center text-lg-start">
+            <div class="row align-items-center text-center text-lg-start" style="padding-bottom: 150px">
                 <div class="col-lg-5 col-xl-6 space-extra">
-                    <img class="mb-5" src="/img/logo-victory.png" alt="" width="150" data-aos="fade-right" data-aos-duration="1000">
-                    <h2 class="sec-title text-white mb-3" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Victory Placement Center</h2>
-                    <p class="fs-md text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Victory International Placement Center merupakan
-                        salah satu divisi sebagai pusat pendampingan mahasiswa ke luar negeri baik
-                        di kapal pesiar ataupun di darat.</p>
+                    <img class="mb-5" src="/img/logo-victory.png" alt="logo-victory" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="sec-title3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Victory Placement Center</h2>
+                    <p class="fs-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <b>Karirmu di luar negeri sepenuhnya menjadi tanggungjawab kami.</b><br>
+                        Tim kecil kami membuka pintu perubahan dan membangun
+                        kisah sukses bagi orang-orang yang berani bermimpi besar.</p>
 
-                    <a href="https://www.instagram.com/victoryinternationalplacement/" class="vs-btn style2-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"><i class="fa-solid fa-angle-right"></i>More nfo</a>
+                    <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <a href="https://www.instagram.com/victoryinternationalplacement/" class="btn vs-btn style6" style="background-color: var(--theme-color); color: white; border: 0; padding: 10px 30px;">
+                            <img src="/img/icon/cruise-ship.svg">  Info Lebih Lanjut
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,55 +230,56 @@
     <!--==============================
       Features Area
       ==============================-->
-    <section class="space-extra-bottom">
-      <div class="container">
-          <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
-              <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Partner Kami</h2>
-              <span class="sec-subtitle text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Kami Telah Dipercaya Oleh Beberapa Cruiseline Besar</span>
-          </div>
-          <div class="row mt-5">
-          <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-            <div class="brand-style1">
-              <img src="/img/brand/royal-caribean-logo.png" alt="brand" />
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
-            <div class="brand-style1">
-              <img src="/img/brand/msc-logo.png" alt="brand" />
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
-            <div class="brand-style1">
-              <img src="/img/brand/carnival-logo.png" alt="brand" />
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
-            <div class="brand-style1">
-              <img src="/img/brand/princess-logo.png" alt="brand" />
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="500">
-            <div class="brand-style1">
-              <img src="/img/brand/celebrity-logo.png" alt="brand" />
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
-            <div class="brand-style1">
-              <img src="/img/brand/norwegian-logo.png" alt="brand" />
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="700">
-            <div class="brand-style1">
-              <img src="/img/brand/oceania-logo.png" alt="brand" />
-            </div>
-          </div>
-          <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="800">
-            <div class="brand-style1">
-              <img src="/img/brand/disney-logo.png" alt="brand" />
-            </div>
-          </div>
+    <section class="space-extra-top space-extra-bottom">
+        <div class="container">
+        <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
+            <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">Alumni Kami Telah Bekerja Di:</h2>
+            {{--                <span class="sec-subtitle text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Kami Telah Dipercaya Oleh Beberapa Cruiseline Besar</span>--}}
         </div>
-      </div>
+        <div class="row mt-5">
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                <div class="brand-style1">
+                    <img src="/img/brand/royal-caribean-logo.png" alt="brand" />
+                </div>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+                <div class="brand-style1">
+                    <img src="/img/brand/msc-logo.png" alt="brand" />
+                </div>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+                <div class="brand-style1">
+                    <img src="/img/brand/carnival-logo.png" alt="brand" />
+                </div>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
+                <div class="brand-style1">
+                    <img src="/img/brand/princess-logo.png" alt="brand" />
+                </div>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="500">
+                <div class="brand-style1">
+                    <img src="/img/brand/celebrity-logo.png" alt="brand" />
+                </div>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
+                <div class="brand-style1">
+                    <img src="/img/brand/norwegian-logo.png" alt="brand" />
+                </div>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="700">
+                <div class="brand-style1">
+                    <img src="/img/brand/oceania-logo.png" alt="brand" />
+                </div>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="800">
+                <div class="brand-style1">
+                    <img src="/img/brand/disney-logo.png" alt="brand" />
+                </div>
+            </div>
+        </div>
+            <span class="sec-subtitle text-center mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="900">... dan masih banyak lagi</span>
+        </div>
     </section>
 @endsection
 @push('addon-script')

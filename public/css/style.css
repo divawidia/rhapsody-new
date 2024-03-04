@@ -256,7 +256,7 @@ h5,
 .h6,
 h6 {
     font-family: var(--title-font);
-    color: #006687;
+    color: var(--theme-color);
     text-transform: none;
     font-weight: 800;
     line-height: 1.2;
