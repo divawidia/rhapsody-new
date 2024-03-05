@@ -1,4 +1,4 @@
-<section class="space-bottom">
+<section>
     <div class="card_wrapper">
         <div class="container">
             <div class="row">

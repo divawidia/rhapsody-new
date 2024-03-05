@@ -125,7 +125,7 @@
     <!--==============================
       Category Area
   ==============================-->
-    <section class="space-bottom py-5"
+    <section class="space-top space-bottom py-5"
              style="background: url('/img/bg/mid-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -232,11 +232,7 @@
                                         </div>
                                     </div>
                                 </div>
-{{--                            </div>--}}
-{{--                        </div>--}}
                     </div>
-{{--                </div>--}}
-{{--            </div>--}}
             <div class="left-border row" data-aos="fade-up" data-aos-duration="1000">
                 <h5 class="program-subtitle mt-2 text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Program</h5>
                 <h4 class="text-uppercase mb-0 text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">Executive Hybrid</h4>
@@ -363,7 +359,7 @@ CTA Area
                             <a href="{{ route('fasilitas') }}"
                             ><img
                                     class="w-100"
-                                    src="/img/course/fb-service1.jpg"
+                                    src="/img/course/fb-service.jpg"
                                     alt="Course Img"
                                 /></a>
                         </div>

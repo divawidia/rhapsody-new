@@ -78,7 +78,7 @@ Footer Area
                                 </div>
                             </div>
                             <div class="course-content">
-                                <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Deket sama Bali Zoo</a></h3>
+                                <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Lokasi Deket dengan Bali Zoo</a></h3>
                                 <div class="course-meta">
                                     <span>Jalan Selat No. 18 B, Apuan, Singapadu, Gianyar, Bali - Indonesia</span>
                                 </div>
