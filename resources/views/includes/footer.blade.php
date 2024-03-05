@@ -65,7 +65,7 @@ Footer Area
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-4 px-5">
                     <div class="widget footer-widget">
                         <h3 class="widget_title">Lokasi Kampus</h3>
                         <div class="course-style2">
@@ -86,7 +86,7 @@ Footer Area
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-4 px-5">
                     <div class="widget nav_menu footer-widget">
                         <h3 class="widget_title">Program Kami</h3>
                         <div class="menu-all-pages-container footer-menu">
