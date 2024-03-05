@@ -12,7 +12,7 @@
                             <div class="col-6 position-relative">
                                 <img
                                     class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/Foto 1_Anak Agung Istri Ratna Anggraeni.jpeg"
+                                    src="/img/testi/Foto Nanda Arya Nata.jpeg"
                                     alt="Anak Agung Istri Ratna Anggraeni"
                                 />
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
@@ -20,7 +20,8 @@
                             <div class="course-content col-6 align-self-end">
                                 <h3 class="h5 pb-3 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Rhapsody memberi saya pondasi yang solid untuk meraih sukses di kapal pesiar."
+                                    </a
                                     >
                                 </h3>
                                 <div class="course-footer">
@@ -28,10 +29,10 @@
                                         Anak Agung Istri Ratna Anggraeni
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Dream
+                                        Carnival Breeze
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
                                     </div>
                                 </div>
                             </div>
@@ -48,18 +49,18 @@
                             <div class="course-content col-6 align-self-end">
                                 <h3 class="h5 pb-3 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Saya sangat berterima kasih kepada Rhapsody atas kesempatan luar biasa ini."</a
                                     >
                                 </h3>
                                 <div class="course-footer">
                                     <div class="mx-auto testi-subtitle">
-                                        I Dewa Gede Adiarta Putra
+                                        I Gede Panji Permana Putra
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Dream
+                                        Carnival Celebration
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
                                     </div>
                                 </div>
                             </div>

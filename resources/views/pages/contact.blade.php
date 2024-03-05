@@ -46,7 +46,6 @@
                         <p class="contact-info">
                             <i class="fas fa-clock"></i>
                             Senin-Jumat : Jam kerja kantor dari 9:00 - 17:00<br />
-                            Sabtu : Jam kerja kantor dari 9:00 - 14:00
                         </p>
                         <p class="contact-info">
                             <i class="fas fa-map-marker-alt"></i>
