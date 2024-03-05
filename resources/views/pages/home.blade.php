@@ -125,7 +125,7 @@
     <!--==============================
       Category Area
   ==============================-->
-    <section class="space-top space-bottom py-5"
+    <section class="space-top space-bottom py-5 mt-5"
              style="background: url('/img/bg/mid-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
