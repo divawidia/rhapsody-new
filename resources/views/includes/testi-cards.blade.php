@@ -10,26 +10,28 @@
                     <div class="owl-carousel slider_carousel">
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/Foto Nanda Arya Nata.jpeg"
-                                    alt="Anak Agung Istri Ratna Anggraeni"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto Nanda Arya Nata.jpeg"
+                                        alt="Anak Agung Istri Ratna Anggraeni"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Rhapsody memberi saya pondasi yang solid untuk meraih sukses di kapal pesiar."
                                     </a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
-                                        Anak Agung Istri Ratna Anggraeni
+                                        Nanda Arya Nata
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Breeze
+                                        Carnival Breeze - Galley Attendant
                                     </div>
                                     <div class="mx-auto testi-text">
                                         2024
@@ -39,25 +41,27 @@
                         </div>
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/I Dewa Gede Adiarta Putra_Carnival Dream.jpeg"
-                                    alt="Anak Agung Istri Ratna Anggraeni"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto Bandara_I Gede Panji Permana.jpeg"
+                                        alt="Anak Agung Istri Ratna Anggraeni"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Saya sangat berterima kasih kepada Rhapsody atas kesempatan luar biasa ini."</a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         I Gede Panji Permana Putra
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Celebration
+                                        Carnival Celebration - Galley Attendant
                                     </div>
                                     <div class="mx-auto testi-text">
                                         2024
@@ -67,196 +71,330 @@
                         </div>
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/I Putu Edik Gunawirawan_Carnival Pride.jpeg"
-                                    alt="Anak Agung Istri Ratna Anggraeni"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto_I Kadek Dwi Prayana.jpeg"
+                                        alt="Anak Agung Istri Ratna Anggraeni"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Dengan bantuan Rhapsody, saya berhasil meniti karir yang gemilang di industri perhotelan."</a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
-                                        I Putu Edik Gunawirawan
+                                        I Kadek Dwi Prayana
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Dream
+                                        Carnival Glory - Assistant Cook-2
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/I Putu Yoga Maha Astra_Carnival Luminosa.jpeg"
-                                    alt="Anak Agung Istri Ratna Anggraeni"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto Crew Flight_ I Nyoman Tri Ardana & Ni Wayan Sri Noviyanti.jpg"
+                                        alt="Anak Agung Istri Ratna Anggraeni"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Rhapsody adalah kunci kesuksesan saya di kapal pesiar."</a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
-                                        I Putu Yoga Maha Astra
+                                        I Nyoman Tri Ardana
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Luminosa
+                                        Carnival Sunshine -  Assistant Cook
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/Ida Bagus Putu Adiananta_Carnival Miracle1.jpeg"
-                                    alt="Anak Agung Istri Ratna Anggraeni"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/WhatsApp Image 2024-01-29 at 11.40.33.jpeg"
+                                        alt="Anak Agung Istri Ratna Anggraeni"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Saya meraih impian saya berlayar di lautan lepas berkat pelatihan luar biasa dari Rhapsody."</a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
-                                        Ida Bagus Putu Adiananta
+                                        I Putu Yuda Pratama
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Miracle
+                                        Royal Caribean Anthem of the Seas - Restaurant Attendant
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/Ida Bagus Putu Adiananta_Carnival Miracle1.jpeg"
-                                    alt="Anak Agung Istri Ratna Anggraeni"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto_I Wayan Aditya Bandara.jpeg"
+                                        alt="Anak Agung Istri Ratna Anggraeni"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Rhapsody bukan hanya sekadar pendidikan, tetapi juga perjalanan menuju kesuksesan."</a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
-                                        Ida Bagus Putu Adiananta
+                                        I Wayan Aditya
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Miracle
+                                        Carnival Radiance - Galley Attendant
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/Ni Putu Novi Sagita Handayani_Carnival Dream.jpeg"
-                                    alt="Ni Putu Novi Sagita Handayani_Carnival Dream"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto_Foto with mister panji furqon hidayat.jpg"
+                                        alt="Ni Putu Novi Sagita Handayani_Carnival Dream"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Pendidikan dari Rhapsody membuka pintu peluang tanpa batas di dunia perhotelan."</a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
-                                        Ni Putu Novi Sagita Handayani
+                                        Muhammad Forqon Hidayat
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Dream
+                                        Carnival Paradise - Galley Attendant
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/Wayan Widi Adnyana_Carnival Conquest.jpeg"
-                                    alt="Ni Putu Novi Sagita Handayani_Carnival Dream"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto Bandara_Ni Komang Juliani.jpg"
+                                        alt="Ni Putu Novi Sagita Handayani_Carnival Dream"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Dengan program pendidikan yang unggul, Rhapsody mewujudkan impian saya untuk bekerja di kapal pesiar."</a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
-                                        Ni Putu Novi Sagita Handayani
+                                        Ni Komang Juliani
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Dream
+                                        Carnival Breeze - Housekeeping Attendant
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                             <div class="col-6 position-relative">
-                                <img
-                                    class="w-100 rounded-3 mt-3"
-                                    src="/img/testi/Wayan Widi Adnyana_Carnival Conquest.jpeg"
-                                    alt="Wayan Widi Adnyana_Carnival Conquest"
-                                />
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/WhatsApp Image 2024-01-05 at 16.26.41.jpeg"
+                                        alt="Wayan Widi Adnyana_Carnival Conquest"
+                                    />
+                                </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6 align-self-end">
-                                <h3 class="h5 pb-3 course-name">
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
-                                    >Lorem ipsum qwertyui</a
+                                    >"Saya bangga menjadi bagian dari komunitas alumni Rhapsody yang sukses di industri perhotelan."</a
                                     >
                                 </h3>
-                                <div class="course-footer">
+                                <div class="course-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
-                                        Wayan Widi Adnyana
+                                        Ni Wayan Noviani
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        Carnival Conquest
+                                        Carnival Dream - Housekeeping Attendant
                                     </div>
                                     <div class="mx-auto testi-text">
-                                        2023
+                                        2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="col-6 position-relative">
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto Rizal di Bandara.jpg"
+                                        alt="Rizal Nur Sofyan"
+                                    />
+                                </div>
+                                <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
+                            </div>
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
+                                    <a class="text-inherit"
+                                    >"Saya mencapai prestasi yang luar biasa di kapal pesiar berkat dukungan penuh dari Rhapsody."</a
+                                    >
+                                </h3>
+                                <div class="course-footer bottom-0 position-fixed">
+                                    <div class="mx-auto testi-subtitle">
+                                        Rizal Nur Sofyan
+                                    </div>
+                                    <div class="mx-auto testi-text">
+                                        Carnival Paradise - Galley Attendant
+                                    </div>
+                                    <div class="mx-auto testi-text">
+                                        2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="col-6 position-relative">
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto Bandara_Anak Agung Gede Juliarta.jpg"
+                                        alt="Rizal Nur Sofyan"
+                                    />
+                                </div>
+                                <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
+                            </div>
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
+                                    <a class="text-inherit"
+                                    >"Rhapsody memberi saya alat dan keterampilan yang diperlukan untuk meraih kesuksesan di kapal pesiar."</a
+                                    >
+                                </h3>
+                                <div class="course-footer bottom-0 position-fixed">
+                                    <div class="mx-auto testi-subtitle">
+                                        Anak Agung Gede Juliarta
+                                    </div>
+                                    <div class="mx-auto testi-text">
+                                        Carnival Panorama - Galley Attendant
+                                    </div>
+                                    <div class="mx-auto testi-text">
+                                        2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="col-6 position-relative">
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto Office 1_I Gede Febrianta.jpg"
+                                        alt="Rizal Nur Sofyan"
+                                    />
+                                </div>
+                                <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
+                            </div>
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
+                                    <a class="text-inherit">
+                                        "Saya tidak akan mencapai titik ini tanpa bimbingan dan pembimbingan Rhapsody."
+                                    </a>
+                                </h3>
+                                <div class="course-footer bottom-0 position-fixed">
+                                    <div class="mx-auto testi-subtitle">
+                                        I Gede Febrianta
+                                    </div>
+                                    <div class="mx-auto testi-text">
+                                        Carnival Vista - Galley Attendant
+                                    </div>
+                                    <div class="mx-auto testi-text">
+                                        2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="col-6 position-relative">
+                                <div class="testi-img mt-3">
+                                    <img
+                                        class="w-100"
+                                        src="/img/testi/Foto Bandara_Putu Ari Setiawan.jpg"
+                                        alt="Rizal Nur Sofyan"
+                                    />
+                                </div>
+                                <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
+                            </div>
+                            <div class="course-content col-6">
+                                <h3 class="h5 pt-5 course-name">
+                                    <a class="text-inherit">
+                                        "Rhapsody mengubah impian menjadi kenyataan dan membantu saya meniti karir yang fantastis di kapal pesiar."
+                                    </a>
+                                </h3>
+                                <div class="course-footer bottom-0 position-fixed">
+                                    <div class="mx-auto testi-subtitle">
+                                        Putu Ari Setiawan
+                                    </div>
+                                    <div class="mx-auto testi-text">
+                                        Carnival Mardi Gras - Galley Attendant
+                                    </div>
+                                    <div class="mx-auto testi-text">
+                                        2024
                                     </div>
                                 </div>
                             </div>
