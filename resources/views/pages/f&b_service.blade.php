@@ -10,15 +10,16 @@
 ============================== -->
     <div
         class="breadcumb-wrapper"
-        style="background: url('/img/bg/top-bg.jpg');
+        style="background: url('/img/bg/top-bg2.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
-            background-position: center center;"
+            background-position: center center;
+            height: fit-content;"
     >
         <div class="container z-index-common">
-            <div class="row d-flex align-items-center">
-                <div class="col-lg-6">
+            <div class="row d-flex align-items-center space-top pt-lg-5">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -34,24 +35,24 @@
                         </div>
                         <div class="carousel-inner mega-hover course-img" data-aos="fade-up"
                              data-aos-duration="1000">
-                            <div class="carousel-item active">
-                                <img src="/img/course/fb-service1.jpg" class="d-block mh-75 w-100 rounded-5"
+                            <div class="carousel-item course-image-carousel active">
+                                <img src="/img/course/fb-service1.jpg" class=""
                                      alt="fb-service1">
                             </div>
-                            <div class="carousel-item">
-                                <img src="/img/course/fb-service2.jpg" class="d-block mh-75 w-100 rounded-5"
+                            <div class="carousel-item course-image-carousel">
+                                <img src="/img/course/fb-service2.jpg" class=""
                                      alt="fb-service2">
                             </div>
-                            <div class="carousel-item">
-                                <img src="/img/course/fb-service3.jpg" class="d-block mh-75 w-100 rounded-5"
+                            <div class="carousel-item course-image-carousel">
+                                <img src="/img/course/fb-service3.jpg" class=""
                                      alt="fb-service3">
                             </div>
-                            <div class="carousel-item">
-                                <img src="/img/course/fb-service4.jpg" class="d-block mh-75 w-100 rounded-5"
+                            <div class="carousel-item course-image-carousel">
+                                <img src="/img/course/fb-service4.jpg" class=""
                                      alt="fb-service4">
                             </div>
-                            <div class="carousel-item">
-                                <img src="/img/course/fb-service5.jpg" class="d-block mh-75 w-100 rounded-5"
+                            <div class="carousel-item course-image-carousel">
+                                <img src="/img/course/fb-service5.jpg" class=""
                                      alt="fb-service5">
                             </div>
                         </div>
@@ -67,12 +68,12 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 pt-4 pt-md-0">
                     <h3 class="program-subtitle2 mt-2 text-uppercase" data-aos="fade-right" data-aos-duration="1000">
                         Diploma 1</h3>
                     <h2 class="course-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Food &
                         Beverages Service</h2>
-                    <div class="widget_price" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="widget_price" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
 
                         <div class="px-3 pt-3">
                             <p class="title-section mb-0"><b>Batch</b> 24 - 25</p>
@@ -87,9 +88,11 @@
                             <p class="m-0 p-0">30 Nov 2023 - 31 Mei 2024</p>
                         </div>
                     </div>
-                    <a class="vs-btn py-2 mt-5" href="{{ route('registrasi-program-d1') }}"><img
-                            src="/img/icon/flight-white.svg"> Daftar Sekarang</a>
-                    <p>Ajak temanmu dan raih peluang mendapatkan beasiswa!</p>
+                    <a class="vs-btn py-2 mt-5" href="{{ route('registrasi-program-d1') }}" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                        <img src="/img/icon/flight-white.svg">
+                        Daftar Sekarang
+                    </a>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">Ajak temanmu dan raih peluang mendapatkan beasiswa!</p>
                 </div>
             </div>
         </div>
@@ -120,19 +123,29 @@
                             dijalani saat memiliki ilmu dari Rhapsody:
                         </p>
                         <div class="list-style1 vs-list">
-                            <p class="fs-6 my-0"><img src="/img/icon/cash.png" alt="cash-icon"> Waiter atau Waitress :</p>
-                            <p class="fs-6 my-0"><img src="/img/icon/cash.png" alt="cash-icon"> Bartender (Setelah 2 atau 3x Berangkat) :</p>
-                            <p class="fs-6 my-0"><img src="/img/icon/cash.png" alt="cash-icon"> Ast. Waiter atau Waitress (Setelah 2 atau 3x Berangkat) :</p>
+                            <p class="fs-6 my-0"><img src="/img/icon/cash.png" alt="cash-icon"> Waiter atau Waitress : <FONT COLOR="#CE5423">$800 - $900/bulan</FONT></p>
+                            <p class="fs-6 my-0"><img src="/img/icon/cash.png" alt="cash-icon"> Bartender (Setelah 2 atau 3x Berangkat) : <FONT COLOR="#CE5423">$1000 - $1200/bulan</FONT></p>
+                            <p class="fs-6 my-0"><img src="/img/icon/cash.png" alt="cash-icon"> Ast. Waiter atau Waitress (Setelah 2 atau 3x Berangkat) : <FONT COLOR="#CE5423">$1000 - $1200/bulan</FONT></p>
                         </div>
                         <div class="row mt-5">
-                            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-                                <div class="brand-style1">
-                                    <img src="/img/brand/royal-caribean-logo.png" alt="brand" />
+                            <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                                <div class="widget_brand" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                    <div class="px-3 pt-3 ">
+                                        <img src="/img/brand/carnival-logo.png" alt="carnival-cruise-line" />
+                                    </div>
+                                    <div class="widget_brand_footer">
+                                        <p class="m-0 p-0 text-center text-success">Available Now</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
-                                <div class="brand-style1">
-                                    <img src="/img/brand/msc-logo.png" alt="brand" />
+                            <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+                                <div class="widget_brand" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                    <div class="px-3 pt-3">
+                                        <img src="/img/brand/royal-caribean.png" alt="royal-caribean-cruise-line" />
+                                    </div>
+                                    <div class="widget_brand_footer">
+                                        <p class="m-0 p-0 text-center text-danger">Limited</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -148,180 +161,62 @@
                                 <li>Pelatihan bahasa inggris industri.</li>
                                 <li>Pelatihan Technical Interview.</li>
                                 <li>Untuk peserta dari luar Bali mendapatkan mesh atau tempat tinggal.</li>
-                                <li>Membership Victory International Placement Center. (selama promo)</li>
+                                <li>Membership <FONT COLOR="#CE5423">Victory International Placement Center.</FONT> (selama promo)</li>
                             </ul>
                         </div>
                         <p class="note-text m-0 fst-italic">*Biaya pendidikan bisa dicicil 3x</p>
                         <p class="note-text m-0 fst-italic">*Bagi peserta dari luar Bali dikenakan biaya yang berbeda</p>
                     </div>
-                    <div class="mt-4 pt-lg-2" data-aos="fade-up" data-aos-duration="1000">
-                        <h3 class="title-section fs-3 mt-4"><i class="fa-solid fa-angle-right"></i>   FAQ</h3>
-                        <div class="owl-carousel slider_carousel">
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
-                                 data-aos-delay="50">
-                                <div class="testi-img">
-                                    <img
-                                        class="w-100"
-                                        src="/img/testi/Foto 1_Anak Agung Istri Ratna Anggraeni.jpeg"
-                                        alt="Anak Agung Istri Ratna Anggraeni"
-                                    />
-                                </div>
-                                <div class="course-content text-center">
-                                    <h3 class="testi text-inherit">
-                                        Anak Agung Istri Ratna Anggraeni
-                                    </h3>
-                                    <div class="course-footer">
-                                        <div class="text-center mx-auto testi-text">
-                                            Carnival Dream - 2023
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
-                                 data-aos-delay="100">
-                                <div class="testi-img">
-                                    <img
-                                        class="w-100"
-                                        src="/img/testi/I Dewa Gede Adiarta Putra_Carnival Dream.jpeg"
-                                        alt="I Dewa Gede Adiarta Putra_Carnival Dream"
-                                    />
-                                </div>
-                                <div class="course-content text-center">
-                                    <h3 class="testi text-inherit">
-                                        I Dewa Gede Adiarta Putra
-                                    </h3>
-                                    <div class="course-footer">
-                                        <div class="text-center mx-auto testi-text">
-                                            Carnival Dream - 2023
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
-                                 data-aos-delay="150">
-                                <div class="testi-img">
-                                    <img
-                                        class="w-100"
-                                        src="/img/testi/I Putu Edik Gunawirawan_Carnival Pride.jpeg"
-                                        alt="I Putu Edik Gunawirawan_Carnival Pride"
-                                    />
-                                </div>
-                                <div class="course-content text-center">
-                                    <h3 class="testi text-inherit">
-                                        I Putu Edik Gunawirawan
-                                    </h3>
-                                    <div class="course-footer">
-                                        <div class="text-center mx-auto testi-text">
-                                            Carnival Dream - 2023
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000">
-                                <div class="testi-img">
-                                    <img
-                                        class="w-100"
-                                        src="/img/testi/I Putu Yoga Maha Astra_Carnival Luminosa.jpeg"
-                                        alt="I Putu Yoga Maha Astra_Carnival Luminosa"
-                                    />
-                                </div>
-                                <div class="course-content text-center">
-                                    <h3 class="testi text-inherit">
-                                        I Putu Yoga Maha Astra
-                                    </h3>
-                                    <div class="course-footer">
-                                        <div class="text-center mx-auto testi-text">
-                                            Carnival Luminosa - 2023
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
-                                 data-aos-delay="50">
-                                <div class="testi-img">
-                                    <img
-                                        class="w-100"
-                                        src="/img/testi/Ida Bagus Putu Adiananta_Carnival Miracle1.jpeg"
-                                        alt="Ida Bagus Putu Adiananta_Carnival Miracle"
-                                    />
-                                </div>
-                                <div class="course-content text-center">
-                                    <h3 class="testi text-inherit">
-                                        Ida Bagus Putu Adiananta
-                                    </h3>
-                                    <div class="course-footer">
-                                        <div class="text-center mx-auto testi-text">
-                                            Carnival Miracle - 2023
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
-                                 data-aos-delay="100">
-                                <div class="testi-img">
-                                    <img
-                                        class="w-100"
-                                        src="/img/testi/Ni Putu Novi Sagita Handayani_Carnival Dream.jpeg"
-                                        alt="Ni Putu Novi Sagita Handayani_Carnival Dream"
-                                    />
-                                </div>
-                                <div class="course-content text-center">
-                                    <h3 class="testi text-inherit">
-                                        Ni Putu Novi Sagita Handayani
-                                    </h3>
-                                    <div class="course-footer">
-                                        <div class="text-center mx-auto testi-text">
-                                            Carnival Dream - 2023
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
-                                 data-aos-delay="100">
-                                <div class="testi-img">
-                                    <img
-                                        class="w-100"
-                                        src="/img/testi/Wayan Widi Adnyana_Carnival Conquest.jpeg"
-                                        alt="Wayan Widi Adnyana_Carnival Conquest"
-                                    />
-                                </div>
-                                <div class="course-content text-center">
-                                    <h3 class="testi text-inherit">
-                                        Wayan Widi Adnyana
-                                    </h3>
-                                    <div class="course-footer">
-                                        <div class="text-center mx-auto testi-text">
-                                            Carnival Conquest - 2023
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card course-style2" data-aos="fade-up" data-aos-duration="1000"
-                                 data-aos-delay="100">
-                                <div class="d-flex align-items-center course-content" style="height: 611px">
-                                    <h3 class="h5 course-name text-inherit text-center" style="font-size: 44px">
-                                        Dan 450+ Alumni Lainnya
-                                    </h3>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                     <div class="mt-4 pt-lg-2" data-aos="fade-up"
                          data-aos-duration="1000" data-aos-delay="100">
-                        <h5 class="left-border">Ayo Daftarkan Dirimu Sekarang!</h5>
-                        <p>
-                            Daftarkan dirimu sekarang dan raih impian untuk menggapai kesuksesan di industri perhotelan
-                            dan kapal pesiar
-                        </p>
-                        <a href="{{ route('registrasi-program-d1') }}" class="vs-btn">Daftar Sekarang</a>
+                        <h3 class="title-section fs-3 mt-4"><i class="fa-solid fa-angle-right"></i>   FAQ</h3>
+                        <div class="accordion-style3 wow fadeInUp mt-3 pt-lg-2" data-wow-delay="0.2s">
+                            <div class="accordion" id="faqVersion1">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Nanti dapetnya ijazah atau sertifikat?</button>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqVersion1">
+                                        <div class="accordion-body">
+                                            <p>Setelah kalian menyelesaikan program D1, kalian akan mendapatkan Ijazah dan Sertifikat Kompetensi sesuai dengan bidang yang dipilih.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Rhapsody punya program beasiswa?</button>
+                                    </div>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqVersion1">
+                                        <div class="accordion-body">
+                                            <p>Setiap 20 mahasiswa dalam program yang sama akan ada 1 mahasiswa yang didanai penuh perkuliahannya, tentunya dengan seleksi intensif dari pihak kampus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="headingThree">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Bisa magang ke luar negeri ga?</button>
+                                    </div>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqVersion1">
+                                        <div class="accordion-body">
+                                            <p>Bisa banget! Sambil kamu nunggu umur, kamu bisa magang dan digaji loh. Beberapa negara di Eropa juga Taiwan jadi pilihannya untuk saat ini, tidak menutup kemungkinan akan tersedia opsi negara lain nantinya.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="support-link">Have more questions? Check our <a href="contact.html">Help center</a> or contact our <a href="contact.html">support team</a></span>
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4 pt-4 pt-lg-0">
                     <aside>
                         <div class="widget" data-aos="fade-up" data-aos-duration="1000">
-                            <h3 class="left-border">Diploma 1</h3>
+                            <div class="left-border row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <h5 class="program-subtitle mt-2" data-aos="fade-right" data-aos-duration="1000"
+                                    data-aos-delay="300">Program</h5>
+                                <h4 class="text-uppercase mb-0" data-aos="fade-right" data-aos-duration="1000"
+                                    data-aos-delay="400">AKADEMIK</h4>
+                            </div>
                             <div class="course-list">
                                 <ul>
                                     <li>
@@ -422,9 +317,6 @@
                     },
                     768: {
                         items: 2,
-                    },
-                    992: {
-                        items: 3
                     }
                 }
             });

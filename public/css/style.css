@@ -152,6 +152,7 @@ video {
 
 ul {
     list-style-type: disc;
+    color: var(--theme-color);
 }
 
 ol {
@@ -2783,6 +2784,7 @@ a.text-theme:hover,
     width: 250px;
     z-index: 1;
 }
+
 .widget_price_footer{
     position: relative;
     background-color: #D9D9D9;
@@ -2790,6 +2792,25 @@ a.text-theme:hover,
     border-bottom-left-radius: 20px;
     width: 100%;
     z-index: 2;
+}
+
+.widget_brand{
+    position: relative;
+    background-color: var(--theme-color3);
+    border-radius: 20px;
+    width: 250px;
+    z-index: 1;
+    box-shadow: 0 0 6px 4px rgb(58 58 58 / 10%);
+}
+
+.widget_brand_footer{
+    position: relative;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    z-index: 2;
+    padding: 10px;
 }
 
 .widget_price_tag{
@@ -7575,6 +7596,12 @@ blockquote.vs-quote cite {
     border: 4px solid transparent;
     transition: all ease 0.4s;
 }
+.testi-content{
+    padding-right: 25px;
+}
+.testi-footer{
+    padding-right: 20px;
+}
 .testi-style1 .testi-content {
     padding: 40px 40px 60px;
 }
@@ -7873,35 +7900,33 @@ blockquote.vs-quote cite {
     overflow: hidden;
     outline: 2px solid transparent;
     outline-offset: -2px;
-    background-color: var(--white-color);
+    background-color: #BDECFF;
     border-radius: 20px;
     margin-bottom: 20px;
     transition: all 0.4s ease 0s;
 }
-.accordion-style3 .accordion-item:hover,
-.accordion-style3 .accordion-item.active {
-    outline-color: var(--theme-color);
-}
+
 .accordion-style3 .accordion-body {
     padding: 40px;
     position: relative;
 }
 .accordion-style3 .accordion-body p {
-    color: var(--title-color);
+    color: var(--theme-color);
+    font-size: 18px;
 }
 .accordion-style3 .accordion-button {
-    background-color: #f6f6f6;
-    color: var(--title-color);
+    background-color: var(--theme-color3);
+    color: var(--theme-color);
     font-size: 20px;
-    padding: 25px 27px 25px 95px;
+    padding: 25px 27px 25px 25px;
     border-radius: 20px;
     transition: all 0.4s ease 0s;
 }
 .accordion-style3 .accordion-button:before {
-    content: "\f067";
+    content: "\f077";
     font-family: var(--icon-font);
     position: absolute;
-    left: 10px;
+    right: 10px;
     width: 60px;
     height: 60px;
     font-size: 24px;
@@ -7909,17 +7934,17 @@ blockquote.vs-quote cite {
     line-height: 60px;
     border-radius: 20px;
     color: var(--title-color);
-    background-color: var(--white-color);
+    background-color: var(--theme-color3);
     text-align: center;
     transition: all 0.4s ease 0s;
 }
 .accordion-style3 .accordion-button:hover,
 .accordion-style3 .accordion-button:not(.collapsed) {
-    background-color: var(--theme-color);
-    color: var(--white-color);
+    background-color: var(--theme-color3);
+    color: var(--theme-color);
 }
 .accordion-style3 .accordion-button:not(.collapsed):before {
-    content: "\f068";
+    content: "\f078";
 }
 
 .accordion-style4 .accordion-item {
@@ -8606,6 +8631,24 @@ blockquote.vs-quote cite {
     object-position: center;
     border-radius: 20px;
 }
+.course-image-carousel{
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.course-image-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 767px) {
+    .course-image-carousel{
+        height: 250px;
+    }
+}
+
 .course-style2 .testi-img {
     position: relative;
     overflow: hidden;

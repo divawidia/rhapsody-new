@@ -19,14 +19,14 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
-                                <h3 class="h5 pt-5 course-name">
+                            <div class="col-6">
+                                <h3 class="h5 pt-5 testi-content">
                                     <a class="text-inherit"
                                     >"Rhapsody memberi saya pondasi yang solid untuk meraih sukses di kapal pesiar."
                                     </a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="bottom-0 position-fixed testi-footer">
                                     <div class="mx-auto testi-subtitle">
                                         Nanda Arya Nata
                                     </div>
@@ -50,13 +50,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Saya sangat berterima kasih kepada Rhapsody atas kesempatan luar biasa ini."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         I Gede Panji Permana Putra
                                     </div>
@@ -80,13 +80,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Dengan bantuan Rhapsody, saya berhasil meniti karir yang gemilang di industri perhotelan."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         I Kadek Dwi Prayana
                                     </div>
@@ -110,7 +110,7 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-footer col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Rhapsody adalah kunci kesuksesan saya di kapal pesiar."</a
@@ -140,13 +140,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Saya meraih impian saya berlayar di lautan lepas berkat pelatihan luar biasa dari Rhapsody."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         I Putu Yuda Pratama
                                     </div>
@@ -170,13 +170,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Rhapsody bukan hanya sekadar pendidikan, tetapi juga perjalanan menuju kesuksesan."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         I Wayan Aditya
                                     </div>
@@ -200,13 +200,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Pendidikan dari Rhapsody membuka pintu peluang tanpa batas di dunia perhotelan."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         Muhammad Forqon Hidayat
                                     </div>
@@ -230,13 +230,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Dengan program pendidikan yang unggul, Rhapsody mewujudkan impian saya untuk bekerja di kapal pesiar."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         Ni Komang Juliani
                                     </div>
@@ -260,13 +260,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Saya bangga menjadi bagian dari komunitas alumni Rhapsody yang sukses di industri perhotelan."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         Ni Wayan Noviani
                                     </div>
@@ -290,13 +290,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Saya mencapai prestasi yang luar biasa di kapal pesiar berkat dukungan penuh dari Rhapsody."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         Rizal Nur Sofyan
                                     </div>
@@ -320,13 +320,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit"
                                     >"Rhapsody memberi saya alat dan keterampilan yang diperlukan untuk meraih kesuksesan di kapal pesiar."</a
                                     >
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         Anak Agung Gede Juliarta
                                     </div>
@@ -350,13 +350,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit">
                                         "Saya tidak akan mencapai titik ini tanpa bimbingan dan pembimbingan Rhapsody."
                                     </a>
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         I Gede Febrianta
                                     </div>
@@ -380,13 +380,13 @@
                                 </div>
                                 <img src="/img/icon/quotation.png" alt="quotation" class="w-25 position-absolute top-0 quotation-img translate-middle pt-5">
                             </div>
-                            <div class="course-content col-6">
+                            <div class="testi-content col-6">
                                 <h3 class="h5 pt-5 course-name">
                                     <a class="text-inherit">
                                         "Rhapsody mengubah impian menjadi kenyataan dan membantu saya meniti karir yang fantastis di kapal pesiar."
                                     </a>
                                 </h3>
-                                <div class="course-footer bottom-0 position-fixed">
+                                <div class="testi-footer bottom-0 position-fixed">
                                     <div class="mx-auto testi-subtitle">
                                         Putu Ari Setiawan
                                     </div>
