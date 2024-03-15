@@ -269,12 +269,11 @@
                 </div>
             </div>
             <div class="left-border row" data-aos="fade-up" data-aos-duration="1000">
-                <h5 class="program-subtitle mt-2 text-white" data-aos="fade-right" data-aos-duration="1000"
-                    data-aos-delay="100">Program</h5>
-                <h4 class="text-uppercase mb-0 text-white" data-aos="fade-right" data-aos-duration="1000"
-                    data-aos-delay="150">Executive Hybrid</h4>
-                <p class="text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">*Umur minimal
-                    21 tahun</p>
+                <h5 class="program-subtitle mt-2 text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Program</h5>
+                <h4 class="text-uppercase mb-0 text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">Executive Hybrid</h4>
+                <p class="text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    *Umur minimal 21 tahun
+                </p>
             </div>
             <div
                 class="row"

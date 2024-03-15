@@ -220,80 +220,74 @@
                             <div class="course-list">
                                 <ul>
                                     <li>
-                                        <a href="{{ route('f&b-product') }}"
-                                        ><i class="fal fa-book"></i>Food & Baverage Product</a
-                                        >
+                                        <a href="{{ route('f&b-product') }}">
+                                            <img class="icon" src="/img/icon/Cook - Navy.svg">
+                                            <p>D1 Food & Baverage Product</p>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('f&b-service') }}"
-                                        ><i class="fal fa-book"></i>Food & Baverage Service</a
-                                        >
+                                        <a href="{{ route('f&b-service') }}">
+                                            <img class="icon" src="/img/icon/Service - Navy.svg">
+                                            <p>D1 Food & Baverage Service</p>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('housekeeping') }}"
-                                        ><i class="fal fa-book"></i>Housekeeping</a
-                                        >
+                                        <a href="{{ route('housekeeping') }}">
+                                            <img class="icon" src="/img/icon/HK - Navy.svg">
+                                            <p>D1 Housekeeping</p>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('front-office') }}"
-                                        ><i class="fal fa-book"></i>Front Office</a
-                                        >
+                                        <a href="{{ route('front-office') }}">
+                                            <img class="icon" src="/img/icon/FO - Navy.svg">
+                                            <p>D1 Front Office</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('laundry&housekeeping') }}">
+                                            <img class="icon" src="/img/icon/HK - Navy.svg">
+                                            <p>Executive Laundry & HK</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('galley&cook') }}">
+                                            <img class="icon" src="/img/icon/Cook - Navy.svg">
+                                            <p>Executive Galley & Cook</p>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="widget" data-aos="fade-up" data-aos-duration="1000">
-                            <h3 class="left-border">Executive Class Hybrid</h3>
-                            <div class="course-list">
-                                <ul>
-                                    <li>
-                                        <a href="{{ route('laundry&housekeeping') }}"
-                                        ><i class="fal fa-book"></i>Laundry & Housekeeping</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('galley&cook') }}"
-                                        ><i class="fal fa-book"></i>Galley & Cook</a
-                                        >
-                                    </li>
-                                </ul>
+                        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="widget2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                <div class="vstack">
+                                    <h3>Proses</h3>
+                                    <h4>Pendaftaran</h4>
+                                </div>
+                                <div class="category-style1 align-self-center">
+                                    <div class="icon">
+                                        <img src="/img/icon/call-center.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-footer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <img src="/img/icon/ic_baseline-whatsapp.svg" style="width: 30px; margin-bottom: 2px">
+                                (+62)877-6136-0699
                             </div>
                         </div>
-                        <div class="row" data-aos="fade-up"
-                             data-aos-duration="1000" data-aos-delay="100">
-                            <div class="col-md-7 col-lg-12">
-                                <div
-                                    class="img-box5 mega-hover wow fadeInUp"
-                                    data-wow-delay="0.3s"
-                                >
-                                    <div class="img-1">
-                                        <img
-                                            class="w-100"
-                                            src="/img/about/about-2-4.jpg"
-                                            alt="About Img"
-                                        />
-                                    </div>
-                                    <div class="box-content">
-                                        <h3 class="img-title">Registrasi Online</h3>
-                                        <p class="img-text">
-                                            Program akademik berkualitas yang dirancang oleh ahli di industri
-                                        </p>
-                                        <a href="{{ route('registrasi-program-d1') }}" class="vs-btn">Registrasi</a>
+                        <div class="row d-flex justify-content-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" style="width: 86%">
+                                <div class="widget-header" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <img src="/img/icon/Registration.png">
+                                </div>
+                                <div class="widget2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                    <div class="vstack">
+                                        <h3>Registrasi</h3>
+                                        <h4>Online</h4>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-5 col-lg-12" data-aos="fade-up" data-aos-duration="1000"
-                                 data-aos-delay="100">
-                                <div class="media-style5 wow fadeInUp" data-wow-delay="0.4s">
-                                    <h5 class="media-title">Proses Pendaftaran</h5>
-                                    <a class="phone" href="https://wa.me/6287761360699"
-                                    ><i class="fal fa-phone-alt"></i>+62877-6136-0699</a
-                                    >
-                                    <a class="mail" href="mailto:info@rhapsodyhospitality.com"
-                                    ><i class="fal fa-envelope"></i>info@rhapsodyhospitality.com</a
-                                    >
+                                <div class="widget-footer2 text-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                                    Program akademik kami yang dikaji oleh para ahli dengan standar Internasional
                                 </div>
-                            </div>
                         </div>
                     </aside>
                 </div>
