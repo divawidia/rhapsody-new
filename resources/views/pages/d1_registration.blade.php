@@ -200,7 +200,7 @@
     </div>
 
     <div
-        class="breadcumb-wrapper"
+        class="breadcumb-wrapper d-flex align-items-center"
         style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -209,11 +209,7 @@
     >
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title"data-aos="fade-up" data-aos-duration="1000">Registrasi Program Diploma 1</h1>
-                <ul class="breadcumb-menu" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <li><a href="{{ route('home') }}">Beranda</a></li>
-                    <li>Registrasi Program Diploma 1</li>
-                </ul>
+                <h1 class="breadcumb-title" data-aos="fade-up" data-aos-duration="1000">Registrasi Program Diploma 1<FONT COLOR="#CE5423">.</FONT></h1>
             </div>
         </div>
     </div>
