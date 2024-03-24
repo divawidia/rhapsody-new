@@ -62,7 +62,7 @@
                                 <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                                     <a href="#modalCenter" role="button" class="btn vs-btn style6"
                                        data-bs-toggle="modal">
-                                        <img src="/img/icon/info.png"> Daftar Sekarang
+                                        <i class="fa-solid fa-circle-info"></i> Daftar Sekarang
                                     </a>
                                 </div>
                             </div>

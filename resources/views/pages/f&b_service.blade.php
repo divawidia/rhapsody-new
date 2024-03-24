@@ -88,10 +88,12 @@
                             <p class="m-0 p-0">30 Nov 2023 - 31 Mei 2024</p>
                         </div>
                     </div>
-                    <a class="vs-btn py-2 mt-5" href="{{ route('registrasi-program-d1') }}" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-                        <img src="/img/icon/flight-white.svg">
-                        Daftar Sekarang
-                    </a>
+{{--                    <div class="style6">--}}
+                        <a class="vs-btn style8 py-2 mt-3" href="{{ route('registrasi-program-d1') }}" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                            <img src="/img/icon/flight-white.svg">
+                            Daftar Sekarang
+                        </a>
+{{--                    </div>--}}
                     <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">Ajak temanmu dan raih peluang mendapatkan beasiswa!</p>
                 </div>
             </div>
@@ -128,7 +130,7 @@
                             <p class="fs-6 my-0"><img src="/img/icon/cash.png" alt="cash-icon"> Ast. Waiter atau Waitress (Setelah 2 atau 3x Berangkat) : <FONT COLOR="#CE5423">$1000 - $1200/bulan</FONT></p>
                         </div>
                         <div class="row mt-5">
-                            <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                            <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                                 <div class="widget_brand" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                     <div class="px-3 pt-3 ">
                                         <img src="/img/brand/carnival-logo.png" alt="carnival-cruise-line" />
@@ -138,7 +140,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+                            <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
                                 <div class="widget_brand" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                     <div class="px-3 pt-3">
                                         <img src="/img/brand/royal-caribean.png" alt="royal-caribean-cruise-line" />
@@ -258,8 +260,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                            <div class="widget2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="row mb-5 px-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <a class="widget2" href="https://wa.me/6287761360699" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                 <div class="vstack">
                                     <h3>Proses</h3>
                                     <h4>Pendaftaran</h4>
@@ -269,22 +271,22 @@
                                         <img src="/img/icon/call-center.svg">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                             <div class="widget-footer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                 <img src="/img/icon/ic_baseline-whatsapp.svg" style="width: 30px; margin-bottom: 2px">
                                 (+62)877-6136-0699
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" style="width: 86%">
+                        <div class="row d-flex justify-content-end px-3 mb-5 w-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" style="width: 86%">
                                 <div class="widget-header" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                     <img src="/img/icon/Registration.png">
                                 </div>
-                                <div class="widget2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <a class="widget2" href="{{ route('registrasi-program-d1') }}" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                     <div class="vstack">
                                         <h3>Registrasi</h3>
                                         <h4>Online</h4>
                                     </div>
-                                </div>
+                                </a>
                                 <div class="widget-footer2 text-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                                     Program akademik kami yang dikaji oleh para ahli dengan standar Internasional
                                 </div>
@@ -309,7 +311,7 @@
                     0: {
                         items: 1
                     },
-                    768: {
+                    1400: {
                         items: 2,
                     }
                 }
