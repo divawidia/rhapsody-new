@@ -10,13 +10,8 @@
 ============================== -->
     <div
         class="breadcumb-wrapper"
-        style="background: url('/img/bg/top-bg2.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            overflow: hidden;
-            background-position: center center;
-            height: fit-content;"
-    >
+        style="background: rgb(2,104,136);
+                background: linear-gradient(119deg, rgba(2,104,136,1) 26%, rgba(189,236,255,1) 100%);">
         <div class="container z-index-common">
             <div class="row d-flex align-items-center space-top pt-lg-5">
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">

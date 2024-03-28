@@ -10,11 +10,8 @@
 ============================== -->
     <div
       class="breadcumb-wrapper"
-      style="background: url('/img/breadcumb/breadcumb-bg.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            overflow: hidden;
-            background-position: center center;"
+      style="background: rgb(2,104,136);
+            background: linear-gradient(119deg, rgba(2,104,136,1) 26%, rgba(189,236,255,1) 100%);"
     >
       <div class="container z-index-common">
         <div class="breadcumb-content">

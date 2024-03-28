@@ -37,11 +37,8 @@
                 <div class="hero-inner">
                     <div
                         class="hero-bg"
-                        style="background-image: url('/img/breadcumb/home-bg.jpg');
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                overflow: hidden;
-                                background-position: center center;"
+                        style="background: rgb(2,104,136);
+                                background: linear-gradient(297deg, rgba(2,104,136,1) 26%, rgba(47,136,165,1) 52%, rgba(189,236,255,1) 100%);"
                     ></div>
                     <div class="container">
                         <div class="row space-top mb-5 d-flex align-items-end">
