@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    D1 Food & Beverages Product | LPK Rhapsody Hospitality Development Center
+    D1 Housekeeping | LPK Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')
