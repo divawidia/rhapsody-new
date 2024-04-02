@@ -40,98 +40,51 @@
                     </a>
                 </li>
 
-                <li class="menu-title" data-key="t-applications">Sosialisasi SMA/SMK</li>
+                <li class="menu-title" data-key="t-applications">Blog & News Article</li>
+
+                <li>
+                    <a href="javascript: void(0);">
+                        <i class='bx bx-file' ></i>
+                        <span class="menu-item" data-key="t-sekolah">Posts</span>
+                    </a>
+                    <a href="{{ route('sekolah.index') }}">
+                        <i class='bx bx-filter'></i>
+                        <span class="menu-item" data-key="t-sekolah">Categories</span>
+                    </a>
+                </li>
+
+                <li class="menu-title" data-key="t-applications">Page Content</li>
 
                 <li>
                     <a href="javascript: void(0);">
                         <i class="bx bxs-school icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-sekolah">Dashboard Sosialisasi</span>
+                        <span class="menu-item" data-key="t-sekolah">Pages</span>
                     </a>
                     <a href="{{ route('sekolah.index') }}">
                         <i class="bx bxs-school icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-sekolah">Sekolah SMA/SMK</span>
+                        <span class="menu-item" data-key="t-sekolah">Program Pelatihan</span>
+                    </a>
+                    <a href="{{ route('sekolah.index') }}">
+                        <i class="bx bxs-school icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-sekolah">Navigation</span>
                     </a>
                 </li>
 
+                <li class="menu-title" data-key="t-applications">Contact Forms</li>
+
                 <li>
-                    <a href="{{ route('jadwal.index') }}">
-                        <i class="bx bx-calendar icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-jadwal">Jadwal Sosialisasi</span>
+                    <a href="javascript: void(0);">
+                        <i class='bx bx-receipt'></i>
+                        <span class="menu-item" data-key="t-sekolah">Forms</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="{{ route('siswa-sma-smk.index') }}">
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-siswa">Siswa SMA/SMK</span>
-                    </a>
-                </li>
-
-                <li class="menu-title" data-key="t-diploma">Diploma 1</li>
+                <li class="menu-title" data-key="t-applications">User Management</li>
 
                 <li>
-                    <a href="{{ route('calon-peserta-diploma.index') }}">
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-diploma">Peserta Latih</span>
-                    </a>
-                    <a href="#" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-diploma">Program Pelatihan</span>
-                    </a>
-                    <a href="#" >
-                        <i class="bx bx-calendar icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-diploma">Kalender Akademik</span>
-                    </a>
-                    <a href="#" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-diploma">Matakuliah</span>
-                    </a>
-                    <a href="#" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-diploma">Jadwal Pembelajaran</span>
-                    </a>
-                    <a href="#" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-diploma">Kelas</span>
-                    </a>
-                    <a href="#" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-diploma">Instruktur</span>
-                    </a>
-                </li>
-
-                <li class="menu-title" data-key="t-executive">Executive Hybrid</li>
-
-                <li>
-                    <a href="{{ route('calon-peserta-executive.index') }}" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-executive">Peserta</span>
-                    </a>
-                    <a href="#" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-executive">Program Pelatihan</span>
-                    </a>
-                    <a href="#" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-executive">Instruktur</span>
-                    </a>
-                </li>
-
-                <li class="menu-title" data-key="t-executive">Website Content Management System</li>
-
-                <li>
-                    <a href="{{ route('calon-peserta-executive.index') }}" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-executive">Blog</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('jadwal.index') }}" data-key="t-calon-peserta-executive">Tag Artikel</a>
-                        </li>
-                        <li><a href="#" data-key="t-peserta-daftar-ulang-executive">Artikel Blog</a></li>
-                    </ul>
-                    <a href="#" >
-                        <i class="bx bx-user icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-peserta-executive"><Program></Program> Page</span>
+                    <a href="javascript: void(0);">
+                        <i class="bx bxs-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-sekolah">Users</span>
                     </a>
                 </li>
             </ul>

@@ -57,15 +57,13 @@
                                     </p>
                                 </div>
                                 <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                                    <a href="#modalCenter" role="button" class="btn vs-btn style6"
-                                       data-bs-toggle="modal">
+                                    <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
                                         <i class="fa-solid fa-circle-info"></i> Daftar Sekarang
                                     </a>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-9 p-0 order-1 order-lg-2 ms-auto py-5 py-lg-0">
-                                <img data-aos="fade-up" data-aos-duration="1000" width="1024"
-                                     src="/img/hero/Pesawat.png">
+                                <img data-aos="fade-up" data-aos-duration="1000" width="1024" src="/img/hero/Pesawat.png">
                             </div>
                         </div>
                     </div>
