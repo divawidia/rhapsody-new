@@ -43,13 +43,13 @@
                 <li class="menu-title" data-key="t-applications">Blog & News Article</li>
 
                 <li>
-                    <a href="javascript: void(0);">
-                        <i class='bx bx-file' ></i>
+                    <a href="#">
+                        <i class='bx bx-file icon nav-icon' ></i>
                         <span class="menu-item" data-key="t-sekolah">Posts</span>
                     </a>
-                    <a href="{{ route('sekolah.index') }}">
-                        <i class='bx bx-filter'></i>
-                        <span class="menu-item" data-key="t-sekolah">Categories</span>
+                    <a href="{{ route('tags.index') }}">
+                        <i class='bx bx-filter icon nav-icon'></i>
+                        <span class="menu-item" data-key="t-tags">Tags</span>
                     </a>
                 </li>
 

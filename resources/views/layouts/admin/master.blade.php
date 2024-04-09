@@ -51,6 +51,7 @@
 
 <!-- vendor-scripts -->
     @stack('prepend-script')
+    @include('sweetalert::alert')
     @include('layouts.admin.vendor-scripts')
     <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.8/datatables.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>

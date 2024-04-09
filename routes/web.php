@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JadwalSosialisasiController;
 use App\Http\Controllers\Admin\SiswaSmaSmkController;
 use App\Http\Controllers\Admin\SekolahController;
+use App\Http\Controllers\Admin\TagController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -90,6 +91,7 @@ Route::prefix('admin')
         Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
         Route::resource('calon-peserta-executive', CalonMahasiswaController::class);
         Route::resource('calon-peserta-diploma', CalonPesertaDiplomaController::class);
+        Route::resource('tags', TagController::class);
         Route::prefix('sosialisasi')
             ->group(function (){
                 Route::resource('siswa-sma-smk', SiswaSmaSmkController::class);
