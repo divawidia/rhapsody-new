@@ -4273,7 +4273,9 @@ a.text-theme:hover,
     background-color: var(--title-color);
     overflow: hidden;
     margin-top: -121px;
-    /*height: 720px;*/
+    height: 100vh;
+    display: flex;
+    align-items: center;
     /* Medium devices */
 }
 @media (max-width: 991px) {
@@ -5269,14 +5271,14 @@ blockquote.vs-quote cite {
 }
 
 .hero-layout1 {
-    /*max-height: 700px;*/
+    height: 100vh;
     position: relative;
 }
-@media (max-width: 1199px) {
-    .hero-layout1 {
-        min-height: 500px;
-    }
-}
+/*@media (max-width: 1199px) {*/
+/*    .hero-layout1 {*/
+/*        min-height: 500px;*/
+/*    }*/
+/*}*/
 /*.hero-layout1 .hero-content {*/
 /*    position: absolute;*/
 /*}*/

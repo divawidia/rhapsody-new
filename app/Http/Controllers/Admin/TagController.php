@@ -33,12 +33,7 @@ class TagController extends Controller
                                     <a class="dropdown-item" href="' . route('tags.edit', $item->id) . '">Edit</a>
                                 </li>
                                 <li>
-                                <form action="' . route('tags.destroy', $item->id) . '" method="POST">
-                                    ' . method_field('delete') . csrf_field() . '
-                                    <button type="submit" class="dropdown-item" data-confirm-delete="true">
-                                        Hapus
-                                    </button>
-                                </form>
+                                    <a class="dropdown-item" href="' . route('tags.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
                                 </li>
                             </ul>
                         </div>';
