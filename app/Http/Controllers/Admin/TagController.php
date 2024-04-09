@@ -19,7 +19,7 @@ class TagController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Tag::with(['user']);
+            $query = Tag::with(['user'])->latest()->get();;
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -46,8 +46,8 @@ class TagController extends Controller
                 ->rawColumns(['action'])
                 ->make();
         }
-        $title = 'Hapus Data!';
-        $text = "Apakah anda yakin ingin menghapus data ini?";
+        $title = 'Hapus Tag!';
+        $text = "Apakah anda yakin ingin menghapus tag ini?";
         confirmDelete($title, $text);
 
         return view('pages.admin.tags.index');

@@ -40,13 +40,15 @@
                     </a>
                 </li>
 
-                <li class="menu-title" data-key="t-applications">Blog & News Article</li>
+                <li class="menu-title" data-key="t-articles">Blog & News Article</li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('posts.index') }}">
                         <i class='bx bx-file icon nav-icon' ></i>
-                        <span class="menu-item" data-key="t-sekolah">Posts</span>
+                        <span class="menu-item" data-key="t-posts">Posts</span>
                     </a>
+                </li>
+                <li>
                     <a href="{{ route('tags.index') }}">
                         <i class='bx bx-filter icon nav-icon'></i>
                         <span class="menu-item" data-key="t-tags">Tags</span>

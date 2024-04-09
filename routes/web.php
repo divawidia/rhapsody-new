@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CalonMahasiswaController;
 use App\Http\Controllers\Admin\CalonPesertaDiplomaController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JadwalSosialisasiController;
+use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SiswaSmaSmkController;
 use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\Admin\TagController;
@@ -92,6 +93,10 @@ Route::prefix('admin')
         Route::resource('calon-peserta-executive', CalonMahasiswaController::class);
         Route::resource('calon-peserta-diploma', CalonPesertaDiplomaController::class);
         Route::resource('tags', TagController::class);
+        Route::resource('posts', PostController::class);
+        Route::post('upload-blog-photo', [PostController::class, 'uploadPhoto'])->name('blog-photo-upload');
+        Route::post('upload-blog-thumbnail', [PostController::class, 'uploadPhotoThumbnail'])->name('blog-thumbnail-upload');
+        Route::get('delete-blog-photo/{id}', [PostController::class, 'deletePhoto'])->name('blog-photo-delete');
         Route::prefix('sosialisasi')
             ->group(function (){
                 Route::resource('siswa-sma-smk', SiswaSmaSmkController::class);
