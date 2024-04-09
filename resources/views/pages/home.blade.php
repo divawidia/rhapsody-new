@@ -31,42 +31,35 @@
   ==============================-->
     <section class="hero-section">
         <div
-            class="vs-carousel hero-layout1 style2"
+            class="hero-layout1 style2 jarallax"
         >
-            <div>
-                <div class="hero-inner">
-                    <div
-                        class="hero-bg"
-                        style="background: rgb(2,104,136);
-                                background: linear-gradient(297deg, rgba(2,104,136,1) 26%, rgba(47,136,165,1) 52%, rgba(189,236,255,1) 100%);"
-                    ></div>
-                    <div class="container">
-                        <div class="row space-top mb-5 d-flex align-items-end">
-                            <div class="hero-content col-12 col-lg-4 order-2 order-lg-1 pb-5 px-5 px-lg-2">
-                                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                    <span class="landing-title-small">NO </span>
-                                    <span class="landing-title-small-bold">FLIGHT </span>
-                                    <span class="landing-title-small">NO </span>
-                                    <span class="landing-title-small-bold">PAY.</span>
+                <div class="hero-inner overlay-bg">
+{{--                    <div class="overlay-bg">--}}
+                        <div class="container">
+                            <div class="row space-top mb-5 d-flex align-items-end">
+                                <div class="hero-content col-12 col-lg-6 order-2 order-lg-1 pb-5 px-5 px-lg-2">
+                                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                        <span class="landing-title-small">NO </span>
+                                        <span class="landing-title-small-bold">FLIGHT </span>
+                                        <span class="landing-title-small">NO </span>
+                                        <span class="landing-title-small-bold">PAY.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <p class="hero-text" data-aos="fade-up" data-aos-duration="1000"
+                                           data-aos-delay="200">
+                                            Satu - satunya LPK perhotelan dan kapal pesiar yang berani
+                                            menjamin keberangkatan.
+                                        </p>
+                                    </div>
+                                    <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                                        <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info"></i> Daftar Sekarang
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center">
-                                    <p class="hero-text" data-aos="fade-up" data-aos-duration="1000"
-                                       data-aos-delay="200">
-                                        Satu - satunya LPK perhotelan dan kapal pesiar yang berani
-                                        menjamin keberangkatan.
-                                    </p>
-                                </div>
-                                <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                                    <a href="#modalCenter" role="button" class="btn vs-btn style6" data-bs-toggle="modal">
-                                        <i class="fa-solid fa-circle-info"></i> Daftar Sekarang
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-9 p-0 order-1 order-lg-2 ms-auto py-5 py-lg-0">
-                                <img data-aos="fade-up" data-aos-duration="1000" width="1024" src="/img/hero/Pesawat.png">
                             </div>
                         </div>
-                    </div>
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -437,8 +430,7 @@ CTA Area
                      data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                     <div class="course-style2">
                         <div class="course-img2">
-                            <a href="{{ route('fasilitas') }}"
-                            ><img
+                            <a href="{{ route('fasilitas') }}"><img
                                     class="w-100"
                                     src="/img/course/alenia-kitchen.jpg"
                                     alt="Course Img"
@@ -711,6 +703,16 @@ CTA Area
     <script>
         $(document).ready(function () {
             $("#modalExecutive").modal('show');
+        });
+    </script>
+    <script type="module">
+        import { jarallax, jarallaxVideo } from "https://cdn.jsdelivr.net/npm/jarallax@2/+esm";
+
+        jarallaxVideo();
+
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.2,
+            videoSrc: 'https://youtu.be/PrNQ-AXWI7U?si=4pqtofbH7BuEQyio'
         });
     </script>
 @endpush

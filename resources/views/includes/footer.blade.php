@@ -33,7 +33,8 @@ Footer Area
                                             </div>
                                         </div>
                                         <div class="btn vs-btn style7">
-                                            Hubungi Admin
+                                            <a
+                                                    href="https://wa.me/6287761360699" style="color: var(--theme-color2)">Hubungi Admin</a>
                                         </div>
                                     </div>
                                     <div class="col-6 position-relative">
@@ -46,8 +47,7 @@ Footer Area
                                         </div>
                                         <div class="btn vs-btn style7">
                                             <a
-                                                href="https://drive.google.com/file/d/1cJGZsiWahyat-w8G7xKxJu2kGkigClaC/view?usp=sharing"
-                                            style="color: var(--theme-color)">Unduh Brosur</a>
+                                                href="https://drive.google.com/file/d/1cJGZsiWahyat-w8G7xKxJu2kGkigClaC/view?usp=sharing" style="color: var(--theme-color2)">Unduh Brosur</a>
                                         </div>
                                     </div>
 {{--                                </div>--}}
@@ -78,7 +78,7 @@ Footer Area
                                 </div>
                             </div>
                             <div class="course-content">
-                                <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Lokasi Deket dengan Bali Zoo</a></h3>
+                                <h3 class="h5 course-name"><a href="https://maps.app.goo.gl/nWsK1U2HZZ9GEvMaA" class="text-inherit">Lokasi Deket dengan Bali Zoo</a></h3>
                                 <div class="course-meta">
                                     <span>Jalan Selat No. 18 B, Apuan, Singapadu, Gianyar, Bali - Indonesia</span>
                                 </div>
