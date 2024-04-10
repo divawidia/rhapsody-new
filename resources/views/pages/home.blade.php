@@ -36,7 +36,7 @@
                 <div class="hero-inner overlay-bg">
 {{--                    <div class="overlay-bg">--}}
                         <div class="container">
-                            <div class="row space-top mb-5 d-flex align-items-end">
+                            <div class="row d-flex align-items-end align-items-lg-center vh-100 space-bottom">
                                 <div class="hero-content col-12 col-lg-6 order-2 order-lg-1 pb-5 px-5 px-lg-2">
                                     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                         <span class="landing-title-small">NO </span>
