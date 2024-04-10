@@ -1,9 +1,9 @@
 @extends('layouts.admin.master')
 @section('title')
-    Tags Artikel
+    Kategori Artikel
 @endsection
 @section('page-title')
-    Tags Artikel
+    Kategori Artikel
 @endsection
 @section('body')
 
@@ -20,18 +20,18 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Tags Artikel</h4>
+                        <h4 class="card-title">Kategori Artikel</h4>
                     </div>
                     <div class="card-body">
-                        <a href="{{  route('tags.create') }}" class="btn btn-primary mb-3">
-                            + Tambah Tag Baru
+                        <a href="{{  route('categories.create') }}" class="btn btn-primary mb-3">
+                            + Tambah Kategori Baru
                         </a>
                         <div class="table-responsive">
-                            <table class="table table-hover mb-0" id="tagTable">
+                            <table class="table table-hover mb-0" id="categoryTable">
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Nama Tag</th>
+                                    <th>Nama Kategori</th>
                                     <th>Slug</th>
                                     <th>Dibuat Oleh</th>
                                     <th>Status</th>
@@ -52,7 +52,7 @@
         <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.8/datatables.min.js"></script>
         <script>
             // AJAX DataTable
-            var datatable = $('#tagTable').DataTable({
+            var datatable = $('#categoryTable').DataTable({
                 processing: true,
                 serverSide: true,
                 ordering: true,
@@ -61,7 +61,7 @@
                 },
                 columns: [
                     { data: 'id', name: 'id' },
-                    { data: 'tag_name', name: 'tag_name' },
+                    { data: 'category_name', name: 'category_name' },
                     { data: 'slug', name: 'slug' },
                     { data: 'user.name', name: 'user.name' },
                     { data: 'status', name: 'status' },
@@ -76,7 +76,3 @@
             });
         </script>
     @endpush
-    @section('scripts')
-        <!-- App js -->
-        <script src="{{ URL::asset('build/js/app.js') }}"></script>
-@endsection

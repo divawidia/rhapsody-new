@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostRequest;
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with(['user', 'tags'])->latest()->get();
+        $posts = Post::with(['user', 'tags', 'category'])->latest()->get();
         $title = 'Hapus Artikel!';
         $text = "Apakah anda yakin ingin menghapus artikel ini?";
         confirmDelete($title, $text);
@@ -34,9 +35,11 @@ class PostController extends Controller
     public function create()
     {
         $tags = Tag::all();
+        $categories = Category::all();
 
         return view('pages.admin.posts.create',[
-            'tags' => $tags
+            'tags' => $tags,
+            'categories' => $categories
         ]);
     }
 
@@ -46,7 +49,6 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         $data = $request->validated();
-
         $data['slug'] = Str::slug($request->title);
         $data['user_id'] = Auth::user()->id;
         $data['thumbnail_photo'] = $request->file('thumbnail_photo')->store('assets/post-thumbnail', 'public');
@@ -71,12 +73,14 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        $artikel = Post::with((['tags']))->findOrFail($id);
+        $artikel = Post::with((['tags', 'category']))->findOrFail($id);
         $tags = Tag::all();
+        $categories = Category::all();
 
         return view('pages.admin.posts.edit',[
             'artikel' => $artikel,
-            'tags' => $tags
+            'tags' => $tags,
+            'categories' => $categories
         ]);
     }
 
@@ -92,7 +96,6 @@ class PostController extends Controller
 
             $url = asset('assets/post-photo/' . $fileName);
             return response()->json(['fileName' => $fileName, 'uploaded' => 1, 'url' => $url]);
-
         }
     }
 

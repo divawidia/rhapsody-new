@@ -10,7 +10,6 @@
                 <img src="{{ URL::asset('img/logo-2.png') }}" alt="" height="75">
             </span>
         </a>
-
         <a href="{{ route('admin-dashboard') }}" class="logo logo-light">
             <span class="logo-lg">
                 <img src="{{ URL::asset('img/logo-2.png') }}" alt="" height="75">
@@ -49,8 +48,14 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('categories.index') }}">
+                        <i class='bx bx-customize icon nav-icon'></i>
+                        <span class="menu-item" data-key="t-tags">Kategori</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('tags.index') }}">
-                        <i class='bx bx-filter icon nav-icon'></i>
+                        <i class='bx bx-purchase-tag-alt icon nav-icon'></i>
                         <span class="menu-item" data-key="t-tags">Tags</span>
                     </a>
                 </li>

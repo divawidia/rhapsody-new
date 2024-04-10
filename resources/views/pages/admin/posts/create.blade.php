@@ -52,9 +52,22 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
+                                <label class="col-md-2 col-form-label" for="category">Kategori Artikel</label>
+                                <div class="col-md-10">
+                                    <select class="form-select" name="category_id" id="category" required>
+                                        @foreach($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('category')
+                                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
                                 <label class="col-md-2 col-form-label" for="tag">Tag Artikel</label>
                                 <div class="col-md-10">
-                                    <select class="form-select" name="tag_id[]" multiple="multiple" data-placeholder="Pilih Tag Artikel Blog" id="tag" required>
+                                    <select class="form-select" name="tag_id[]" multiple="multiple" id="tag" required>
                                         @foreach($tags as $tag)
                                             <option value="{{ $tag->id }}">{{ $tag->tag_name }}</option>
                                         @endforeach
@@ -67,8 +80,7 @@
                             <div class="mb-3 row">
                                 <label class="col-md-2 col-form-label" for="status_artikel">Status Publish Artikel</label>
                                 <div class="col-md-10">
-                                    <select class="form-select" name="status" id="status_artikel" data-placeholder="Pilih Status Artikel Blog" required>
-                                        <option value="" selected disabled>Pilih Status Artikel Blog</option>
+                                    <select class="form-select" name="status" id="status_artikel" required>
                                         @foreach([1 => "Publish", 0 => "Private"] AS $status => $status_label)
                                             <option value="{{ $status }}">{{ $status_label }}</option>
                                         @endforeach
@@ -89,9 +101,8 @@
         <!-- end row -->
     @endsection
 
-    @section('scripts')
+    @push('addon-script')
         <!-- App js -->
-        <script src="{{ URL::asset('build/js/app.js') }}"></script>
         <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
         <script>
             ClassicEditor.create( document.querySelector( '#body' ),{
@@ -103,15 +114,24 @@
                     console.error( error );
                 } );
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $('#tag').select2({
+                $('#category').select2({
+                    placeholder: "Pilih Kategori Artikel",
                     width:'100%',
                     theme: 'bootstrap-5'
                 });
+                $('#tag').select2({
+                    width:'100%',
+                    tags: true,
+                    theme: 'bootstrap-5',
+                    placeholder: "Pilih Tag Artikel"
+                });
                 $('#status_artikel').select2({
                     width:'100%',
-                    theme: 'bootstrap-5'
+                    theme: 'bootstrap-5',
+                    placeholder: "Pilih Status Artikel"
                 });
             });
         </script>
@@ -125,4 +145,4 @@
                 }
             }
         </script>
-@endsection
+    @endpush

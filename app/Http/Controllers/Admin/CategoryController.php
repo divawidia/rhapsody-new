@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryRequest;
 use App\Http\Requests\TagRequest;
+use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +13,7 @@ use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
-class TagController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +21,7 @@ class TagController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Tag::with(['user'])->latest()->get();;
+            $query = Category::with(['user'])->latest()->get();;
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -30,10 +32,10 @@ class TagController extends Controller
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
-                                    <a class="dropdown-item" href="' . route('tags.edit', $item->id) . '">Edit</a>
+                                    <a class="dropdown-item" href="' . route('categories.edit', $item->id) . '">Edit</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="' . route('tags.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
+                                    <a class="dropdown-item" href="' . route('categories.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
                                 </li>
                             </ul>
                         </div>';
@@ -49,11 +51,11 @@ class TagController extends Controller
                 ->rawColumns(['action', 'status'])
                 ->make();
         }
-        $title = 'Hapus Tag!';
-        $text = "Apakah anda yakin ingin menghapus tag ini?";
+        $title = 'Hapus Kategori!';
+        $text = "Apakah anda yakin ingin menghapus kategori ini?";
         confirmDelete($title, $text);
 
-        return view('pages.admin.tags.index');
+        return view('pages.admin.categories.index');
     }
 
     /**
@@ -61,21 +63,21 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.tags.create');
+        return view('pages.admin.categories.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(TagRequest $request)
+    public function store(CategoryRequest $request)
     {
         $data = $request->validated();
         $data['user_id'] = Auth::user()->id;
-        $data['slug'] = Str::slug($request->tag_name);
+        $data['slug'] = Str::slug($request->category_name);
 
-        Tag::create($data);
-        Alert::success('Hore!', 'Tag berhasil dibuat!');
-        return redirect()->route('tags.index')->with('status', 'Data tag berhasil dibuat!');
+        Category::create($data);
+        Alert::success('Hore!', 'Kategori berhasil dibuat!');
+        return redirect()->route('categories.index')->with('status', 'Data kategori berhasil dibuat!');
     }
 
     /**
@@ -91,27 +93,24 @@ class TagController extends Controller
      */
     public function edit(string $id)
     {
-        $tag = Tag::findOrFail($id);
+        $category = Category::findOrFail($id);
 
-        return view('pages.admin.tag.edit',[
-            'tag' => $tag
+        return view('pages.admin.categories.edit',[
+            'category' => $category
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(TagRequest $request, Tag $tag)
+    public function update(CategoryRequest $request, Tag $tag)
     {
         $data = $request->validated();
-
-        $tag = Tag::findOrFail($tag->id);
-
-        $data['slug'] = Str::slug($request->tag_name);
-
+        $tag = Category::findOrFail($tag->id);
+        $data['slug'] = Str::slug($request->category_name);
         $tag->update($data);
 
-        return redirect()->route('tags.index')->with('status', 'Data tag blog berhasil diedit!');
+        return redirect()->route('categories.index')->with('status', 'Data kategori berhasil diedit!');
     }
 
     /**
@@ -119,10 +118,10 @@ class TagController extends Controller
      */
     public function destroy(string $id)
     {
-        $tag = Tag::findOrFail($id);
-        alert()->success('Hore!','Tag berhasil dihapus!');
+        $tag = Category::findOrFail($id);
+        alert()->success('Hore!','Kategori berhasil dihapus!');
         $tag->delete();
 
-        return redirect()->route('tags.index')->with('status', 'Data tag blog berhasil dihapus!');
+        return redirect()->route('categories.index')->with('status', 'Data kategori berhasil dihapus!');
     }
 }

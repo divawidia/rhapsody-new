@@ -11,7 +11,7 @@ class Category extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'user_id', 'post_id','category_name', 'slug', 'status'
+        'user_id','category_name', 'slug', 'status'
     ];
 
     protected $hidden = [
@@ -24,6 +24,6 @@ class Category extends Model
 
     public function posts()
     {
-        return $this->belongsTo(Post::class, 'post_id', 'id');
+        return $this->hasMany(Post::class, 'post_id', 'id');
     }
 }
