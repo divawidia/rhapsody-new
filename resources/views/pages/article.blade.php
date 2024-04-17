@@ -57,14 +57,15 @@
                         </div>
                     @endif
                     <div class="vs-pagination">
-                        <ul>
-                            <li class="prev"><a href="#">Sebelumnya</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">.....</a></li>
-                            <li><a href="#">10</a></li>
-                            <li class="next"><a href="#">Selenjutnya</a></li>
-                        </ul>
+                        {{ $posts->links() }}
+{{--                        <ul>--}}
+{{--                            <li class="prev"><a href="#">Sebelumnya</a></li>--}}
+{{--                            <li><a href="#">1</a></li>--}}
+{{--                            <li><a href="#">2</a></li>--}}
+{{--                            <li><a href="#">.....</a></li>--}}
+{{--                            <li><a href="#">10</a></li>--}}
+{{--                            <li class="next"><a href="#">Selenjutnya</a></li>--}}
+{{--                        </ul>--}}
                     </div>
                 </div>
                 <div class="col-lg-4">

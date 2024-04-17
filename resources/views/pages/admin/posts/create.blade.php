@@ -24,8 +24,8 @@
                         </div>
                         <div class="card-body">
                             <div class="mb-3 row">
-                                <label class="col-md-2 col-form-label">Thumbnail Artikel</label>
-                                <div class="col-md-10">
+                                <label>Thumbnail Artikel<span class="text-danger">*</span></label>
+                                <div>
                                     <input type="file" id="thumbnail_photo" name="thumbnail_photo" class="form-control" accept="image/*" required value="{{ old('thumbnail_photo') }}"/>
                                     <img id="preview" class="rounded img-thumbnail mt-3" src="{{ old('thumbnail_photo') }}" alt="image thumbnail" style="display:none;"/>
                                     @error('thumbnail_photo')
@@ -34,17 +34,32 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="title" class="col-md-2 col-form-label">Judul Artikel</label>
-                                <div class="col-md-10">
-                                    <input class="form-control" type="text" autocomplete="off" name="title" id="title" value="{{ old('title') }}">
-                                    @error('title')
-                                    <div class="alert alert-danger mt-2">{{ $message }}</div>
-                                    @enderror
+                                <div class="col-md-6">
+                                    <label for="title">Judul Artikel<span class="text-danger">*</span></label>
+                                    <div>
+                                        <input class="form-control" type="text" autocomplete="off" name="title" id="title" value="{{ old('title') }}">
+                                        @error('title')
+                                        <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="category">Kategori Artikel<span class="text-danger">*</span></label>
+                                    <div>
+                                        <select class="form-select" name="category_id" id="category" required>
+                                            @foreach($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('category')
+                                        <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                        @enderror
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="body" class="col-md-2 col-form-label">Isi Konten Artikel</label>
-                                <div class="col-md-10">
+                                <label for="body">Isi Konten Artikel<span class="text-danger">*</span></label>
+                                <div>
                                     <textarea class="form-control" id="body" name="body">{{ old('body') }}</textarea>
                                     @error('body')
                                     <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -52,46 +67,36 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label class="col-md-2 col-form-label" for="category">Kategori Artikel</label>
-                                <div class="col-md-10">
-                                    <select class="form-select" name="category_id" id="category" required>
-                                        @foreach($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('category')
-                                    <div class="alert alert-danger mt-2">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label class="col-md-2 col-form-label" for="tag">Tag Artikel</label>
-                                <div class="col-md-10">
-                                    <select class="form-select" name="tag_id[]" multiple="multiple" id="tag" required>
-                                        @foreach($tags as $tag)
-                                            <option value="{{ $tag->id }}">{{ $tag->tag_name }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('tags')
-                                    <div class="alert alert-danger mt-2">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label class="col-md-2 col-form-label" for="status_artikel">Status Publish Artikel</label>
-                                <div class="col-md-10">
-                                    <select class="form-select" name="status" id="status_artikel" required>
-                                        @foreach([1 => "Publish", 0 => "Private"] AS $status => $status_label)
-                                            <option value="{{ $status }}">{{ $status_label }}</option>
-                                        @endforeach
-                                        @error('status')
+                                <div class="col-md-6">
+                                    <label for="tag">Tag Artikel<span class="text-danger">*</span></label>
+                                    <div>
+                                        <select class="form-select" name="tag_id[]" multiple="multiple" id="tag" required>
+                                            @foreach($tags as $tag)
+                                                <option value="{{ $tag->id }}">{{ $tag->tag_name }}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('tags')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
                                         @enderror
-                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="status_artikel">Status Publish Artikel<span class="text-danger">*</span></label>
+                                    <div>
+                                        <select class="form-select" name="status" id="status_artikel" required>
+                                            @foreach([1 => "Publish", 0 => "Private"] AS $status => $status_label)
+                                                <option value="{{ $status }}">{{ $status_label }}</option>
+                                            @endforeach
+                                            @error('status')
+                                            <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                            @enderror
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button type="submit" class="btn btn-primary w-md">Submit</button>
+                                <button type="submit" class="btn btn-primary w-md">Simpan</button>
+                                <a href="{{ route('posts.index') }}" class="btn btn-outline-secondary w-md">Batal</a>
                             </div>
                         </div>
                     </div>

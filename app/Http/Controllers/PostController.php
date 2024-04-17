@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        $posts = Post::with(['user', 'tags', 'category'])->latest()->get();
+        $posts = Post::with(['user', 'tags', 'category'])->latest()->paginate(10);
         $categories = Category::all();
         $tags = Tag::all();
         $recent_posts = Post::with(['user', 'tags', 'category'])->latest()->take(5)->get();
