@@ -16,12 +16,6 @@
             <div class="row d-flex align-items-center space-top pt-lg-5">
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <div id="carouselExampleIndicators" class="carousel slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                        </div>
                         <div class="carousel-inner mega-hover course-img" data-aos="fade-up"
                              data-aos-duration="1000">
                             <div class="carousel-item course-image-carousel active">
@@ -30,6 +24,14 @@
                             </div>
                             <div class="carousel-item course-image-carousel">
                                 <img src="/img/course/fo2.jpg" class=""
+                                     alt="front-office1">
+                            </div>
+                            <div class="carousel-item course-image-carousel">
+                                <img src="/img/course/fo3.jpg" class=""
+                                     alt="front-office1">
+                            </div>
+                            <div class="carousel-item course-image-carousel">
+                                <img src="/img/course/fo4.jpg" class=""
                                      alt="front-office1">
                             </div>
                         </div>

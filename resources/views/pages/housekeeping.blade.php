@@ -17,15 +17,9 @@
             <div class="row d-flex align-items-center space-top pt-lg-5">
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <div id="carouselExampleIndicators" class="carousel slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        </div>
                         <div class="carousel-inner mega-hover course-img" data-aos="fade-up" data-aos-duration="1000">
                             <div class="carousel-item course-image-carousel active">
-                                <img src="/img/course/hk1.jpg" class="d-block w-100" alt="housekeeping1">
+                                <img src="/img/course/hk5.jpg" class="d-block w-100" alt="housekeeping1">
                             </div>
                             <div class="carousel-item course-image-carousel">
                                 <img src="/img/course/hk2.jpg" class="d-block w-100" alt="housekeeping2">
@@ -35,6 +29,9 @@
                             </div>
                             <div class="carousel-item course-image-carousel">
                                 <img src="/img/course/hk4.jpg" class="d-block w-100" alt="housekeeping4">
+                            </div>
+                            <div class="carousel-item course-image-carousel">
+                                <img src="/img/course/hk1.jpg" class="d-block w-100" alt="housekeeping5">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

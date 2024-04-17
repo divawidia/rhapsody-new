@@ -47,7 +47,7 @@ Header Area
                                     <a href="{{ route('fasilitas') }}">Fasilitas</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('under-maintenance') }}">Blog</a>
+                                    <a href="{{ route('blogs-news-events') }}">Blogs, News & Events</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('contact') }}">Kontak Kami</a>

@@ -48,6 +48,7 @@ body {
 iframe {
     border: none;
     width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .slick-slide:focus,
@@ -1170,7 +1171,7 @@ textarea.is-invalid {
     margin: 0 15px 0 0;
     color: var(--white-color);
     background-color: var(--theme-color);
-    border-radius: 50%;
+    border-radius: 20px;
     position: relative;
     z-index: 2;
 }
@@ -2607,7 +2608,7 @@ a.text-theme:hover,
 .widget_pages li:hover > a,
 .widget_archive li:hover > a,
 .widget_categories li:hover > a {
-    background-color: var(--theme-color3);
+    background-color: var(--theme-color2);
     color: var(--white-color);
 }
 .widget_nav_menu .children,
@@ -2936,7 +2937,7 @@ a.text-theme:hover,
     font-size: 20px;
     height: 62px;
     width: 62px;
-    background-color: var(--theme-color3);
+    background-color: var(--theme-color2);
     color: var(--white-color);
     border-radius: 15px;
 }
@@ -2979,6 +2980,9 @@ a.text-theme:hover,
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
 }
 .recent-post:last-child {
     margin-bottom: 0;
@@ -3001,7 +3005,7 @@ a.text-theme:hover,
     margin: 0 0 5px 0;
 }
 .recent-post .post-title a:hover {
-    color: var(--theme-color);
+    color: var(--theme-color2);
 }
 .recent-post .recent-post-meta a {
     color: var(--body-color);
@@ -4256,11 +4260,19 @@ a.text-theme:hover,
 
 .breadcumb-title {
     font-size: 98px;
-    padding-top: 30px;
+    padding-top: 40px;
     color: var(--theme-color3);
     margin: -0.21em 0 -0.4em 0;
 }
+.breadcumb-title.style2 {
+    font-size: 58px;
+}
 
+@media (max-width: 567px) {
+    .breadcumb-title.style2 {
+        font-size: 28px;
+    }
+}
 .breadcumb-text {
     font-size: 28px;
     color: var(--white-color);
@@ -4277,6 +4289,9 @@ a.text-theme:hover,
     display: flex;
     align-items: center;
     /* Medium devices */
+}
+.breadcumb-wrapper.style2 {
+    height: 40vh;
 }
 @media (max-width: 991px) {
     .breadcumb-wrapper {
@@ -4395,7 +4410,7 @@ a.text-theme:hover,
     font-size: 16px;
     font-weight: 700;
     padding: 0 30px;
-    background-color: var(--theme-color3);
+    background-color: var(--theme-color);
     color: var(--white-color);
     border-radius: 28px;
 }
@@ -4540,7 +4555,7 @@ blockquote.vs-quote cite {
     color: inherit;
 }
 .blog-title a:hover {
-    color: var(--theme-color);
+    color: var(--theme-color2);
 }
 
 .vs-blog {
@@ -8679,7 +8694,7 @@ blockquote.vs-quote cite {
 .course-style2 .course-img2 {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 20px 20px 20px 0;
     display: block;
 }
 .course-style2 .course-img img {

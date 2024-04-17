@@ -85,6 +85,14 @@ Route::get('/registrasi-ulang-executive', function () {
     return view('pages.executive_daftar_ulang');
 })->name('executive-daftar-ulang');
 
+Route::prefix('blogs-news-events')
+    ->group(function () {
+        Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('blogs-news-events');
+        Route::get('/{slug}', [\App\Http\Controllers\PostController::class, 'show'])->name('blogs-news-events-detail');
+        Route::get('/category/{slug}', [\App\Http\Controllers\PostController::class, 'index_by_category'])->name('blogs-news-events-category');
+        Route::get('/tag/{slug}', [\App\Http\Controllers\PostController::class, 'index_by_tag'])->name('blogs-news-events-tag');
+        Route::get('/user/{name}', [\App\Http\Controllers\PostController::class, 'index_by_user'])->name('blogs-news-events-user');
+    });
 
 Route::prefix('admin')
     ->namespace('App\Http\Controllers\Admin')

@@ -112,7 +112,7 @@ Footer Area
     </div>
     <div class="copyright-wrap">
         <div class="copyright-container">
-            <img src="/img/icon/Kapal.png" class="position-absolute d-none d-xl-inline">
+            <img src="/img/icon/Kapal.png" class="position-absolute d-none d-xl-inline w-auto">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="text-center col-lg-auto">

@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use CyrildeWit\EloquentViewable\Contracts\Viewable;
+use CyrildeWit\EloquentViewable\InteractsWithViews;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Post extends Model
+class Post extends Model implements Viewable
 {
     use SoftDeletes;
+    use InteractsWithViews;
 
     protected $fillable = [
         'user_id', 'category_id','title', 'slug', 'body', 'thumbnail_photo', 'status'

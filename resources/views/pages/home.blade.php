@@ -34,15 +34,14 @@
             class="hero-layout1 style2 jarallax"
         >
                 <div class="hero-inner overlay-bg">
-{{--                    <div class="overlay-bg">--}}
                         <div class="container">
-                            <div class="row d-flex align-items-end align-items-lg-center vh-100 space-bottom">
+                            <div class="row d-flex align-items-end align-items-lg-center vh-100 space-bottom p-lg-0">
                                 <div class="hero-content col-12 col-lg-6 order-2 order-lg-1 pb-5 px-5 px-lg-2">
                                     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                        <span class="landing-title-small">NO </span>
-                                        <span class="landing-title-small-bold">FLIGHT </span>
-                                        <span class="landing-title-small">NO </span>
-                                        <span class="landing-title-small-bold">PAY.</span>
+                                        <span class="landing-title-small text-white">NO </span>
+                                        <span class="landing-title-small-bold text-white">FLIGHT </span>
+                                        <span class="landing-title-small text-white">NO </span>
+                                        <span class="landing-title-small-bold text-white">PAY.</span>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <p class="hero-text" data-aos="fade-up" data-aos-duration="1000"
@@ -59,7 +58,6 @@
                                 </div>
                             </div>
                         </div>
-{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -68,7 +66,7 @@
     <!--==============================
     About Area
 ==============================-->
-    <section class="mt-5 space-top about-section">
+    <section class="mt-5 space-top space-bottom about-section">
         <div class="container">
             <div class="row align-items-center align-items-xxl-start">
                 <div class="col-lg-7">
@@ -126,10 +124,11 @@
             @include('includes.testi-cards')
         </div>
     </section>
+    @include('includes.company-profile')
     <!--==============================
       Category Area
   ==============================-->
-    <section class="space-top space-bottom py-5 mt-5"
+    <section class="space-top space-bottom"
              style="background: url('/img/bg/mid-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -151,13 +150,11 @@
                     dan raih peluang mendapatkan beasiswa</p>
             </div>
             <div class="row">
-                {{--                        <div class="col-12 mt-5">--}}
-                {{--                            <div class="owl-carousel slider_carousel">--}}
                 <div class="col-lg-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000">
                     <div class="course-style2">
                         <div class="course-img">
                             <a href="{{ route('f&b-product') }}"><img class="w-100" src="/img/category/category-2-3.png"
-                                                                      alt="Front Office"></a>
+                                                                      alt="fnb-product"></a>
                         </div>
                         <div class="row course-tag">
                             <span class="col-auto course-price"><img src="/img/icon/discount.svg"
@@ -373,24 +370,6 @@ CTA Area
             </div>
         </div>
     </section>
-    {{--                    <div class="col-lg-6">--}}
-    {{--                        <div class="cta-content">--}}
-    {{--                            <h2 class="cta-title h1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">--}}
-    {{--                                Fasilitas Belajar dan Praktek yang Berkualitas dengan Harga Terjangkau--}}
-    {{--                            </h2>--}}
-    {{--                            <a href="{{ route('fasilitas') }}" class="vs-btn style2-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"--}}
-    {{--                            ><i class="fa-solid fa-angle-right"></i>Info Lebih Lengkap</a--}}
-    {{--                            >--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="200">--}}
-    {{--                        <div class="cta-img mega-hover">--}}
-    {{--                            <img src="/img/about/about-2-6.jpg" alt="About Img" />--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-
-    {{--        </div>--}}
-    {{--    </section>--}}
     <!--==============================
     Course Area
 ==============================-->
@@ -482,198 +461,11 @@ CTA Area
             </div>
         </div>
     </section>
-    <!-- <section class="space-extra-bottom">
-        <div class="shape-mockup jump d-none d-xxl-block" data-right="10%" data-bottom="12%">
-            <div class="shape-dotted"></div>
-        </div>
-        <div class="shape-mockup rotate d-none d-xxl-block" data-right="48%" data-top="17%">
-            <div class="vs-polygon1"></div>
-        </div>
-        <div class="shape-mockup jump-reverse d-none d-xxl-block" data-right="51%" data-top="21%">
-            <div class="vs-rounded1"></div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-xl-5 col-xxl-5">
-                    <div class="title-area wow fadeInUp" data-wow-delay="0.3s">
-                        <span class="sec-subtitle">WHAT PEOPLE SAY</span>
-                        <h2 class="sec-title h1">HEAR OUR STUDENTS WORDS</h2>
-                    </div>
-                    <div class="testi-slide1 wow fadeInUp row" data-wow-delay="0.4s">
-                        <div class="col-auto">
-                            <div class="media-style6">
-                                <div class="media-img"><img src="/img/testimonial/testimonial-3-1.png" alt=""></div>
-                                <div class="media-content">
-                                    <h5 class="media-name">Marcella Moniq</h5>
-                                    <p class="media-degi">Web Technology</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="media-style6">
-                                <div class="media-img"><img src="/img/testimonial/testimonial-3-2.png" alt=""></div>
-                                <div class="media-content">
-                                    <h5 class="media-name">Jessica Mmoniqa</h5>
-                                    <p class="media-degi">Art Professor</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="media-style6">
-                                <div class="media-img"><img src="/img/testimonial/testimonial-3-3.png" alt=""></div>
-                                <div class="media-content">
-                                    <h5 class="media-name">Victor M. Walkar</h5>
-                                    <p class="media-degi">Academic English</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="media-style6">
-                                <div class="media-img"><img src="/img/testimonial/testimonial-3-3.png" alt=""></div>
-                                <div class="media-content">
-                                    <h5 class="media-name">William Smith</h5>
-                                    <p class="media-degi">Science Professor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-7 col-xxl-auto align-self-end">
-                    <div class="testi-style2">
-                        <div class="testi-shape1"></div>
-                        <div class="testi-slide2">
-                            <div>
-                                <div class="testi-content">
-                                    <span class="testi-icon"><img src="/img/icon/quote.svg" alt="Testimonial Icon"></span>
-                                    <p class="testi-text">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups adipiscing</p>
-                                    <h4 class="testi-name">Marcella Moniq</h4>
-                                    <p class="testi-degi">Web Technology</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="testi-content">
-                                    <span class="testi-icon"><img src="/img/icon/quote.svg" alt="Testimonial Icon"></span>
-                                    <p class="testi-text">From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage known, is dummy text used</p>
-                                    <h4 class="testi-name">Jessica Moniqa</h4>
-                                    <p class="testi-degi">Art Professor</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="testi-content">
-                                    <span class="testi-icon"><img src="/img/icon/quote.svg" alt="Testimonial Icon"></span>
-                                    <p class="testi-text">Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler piqued by consectetur</p>
-                                    <h4 class="testi-name">Victor M. Walkar</h4>
-                                    <p class="testi-degi">Academic English</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="testi-content">
-                                    <span class="testi-icon"><img src="/img/icon/quote.svg" alt="Testimonial Icon"></span>
-                                    <p class="testi-text">I had the opportunity to meet with the dynamic & distinguishe faculties, who are highly qualified & friendly patients. With their assist & guidance I…</p>
-                                    <h4 class="testi-name">William Smith</h4>
-                                    <p class="testi-degi">Science Professor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <!--==============================
   Features Area
   ==============================-->
-    <section style="
-        background-image: url('/img/bg/divider-bg-1-1.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;">
-        <div class="container">
-            <div class="row align-items-center text-center text-lg-start" style="padding-bottom: 150px">
-                <div class="col-lg-5 col-xl-6 space-extra">
-                    <img class="mb-5" src="/img/logo-victory.png" alt="logo-victory" data-aos="fade-up"
-                         data-aos-duration="1000">
-                    <h2 class="sec-title3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Victory
-                        Placement Center</h2>
-                    <p class="fs-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <b>Karirmu di luar negeri sepenuhnya menjadi tanggungjawab kami.</b><br>
-                        Tim kecil kami membuka pintu perubahan dan membangun
-                        kisah sukses bagi orang-orang yang berani bermimpi besar.</p>
-
-                    <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <a href="https://www.instagram.com/victoryinternationalplacement/" class="btn vs-btn style6"
-                           style="background-color: var(--theme-color); color: white; border: 0; padding: 10px 30px;">
-                            <img src="/img/icon/cruise-ship.svg"> Info Lebih Lanjut
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--==============================
-      Brand Area
-  ==============================-->
-    <section class="space-extra-top space-extra-bottom">
-        <div class="container">
-            <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">
-                <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-anchor-placement="top-bottom" data-aos-delay="200">Alumni Kami Telah Bekerja Di:</h2>
-                {{--                <span class="sec-subtitle text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Kami Telah Dipercaya Oleh Beberapa Cruiseline Besar</span>--}}
-            </div>
-            <div class="row mt-5">
-                <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-                    <div class="brand-style1">
-                        <img src="/img/brand/royal-caribean-logo.png" alt="brand"/>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom" data-aos-delay="200">
-                    <div class="brand-style1">
-                        <img src="/img/brand/msc-logo.png" alt="brand"/>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom" data-aos-delay="300">
-                    <div class="brand-style1">
-                        <img src="/img/brand/carnival-logo.png" alt="brand"/>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom" data-aos-delay="400">
-                    <div class="brand-style1">
-                        <img src="/img/brand/princess-logo.png" alt="brand"/>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom" data-aos-delay="500">
-                    <div class="brand-style1">
-                        <img src="/img/brand/celebrity-logo.png" alt="brand"/>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom" data-aos-delay="600">
-                    <div class="brand-style1">
-                        <img src="/img/brand/norwegian-logo.png" alt="brand"/>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom" data-aos-delay="700">
-                    <div class="brand-style1">
-                        <img src="/img/brand/oceania-logo.png" alt="brand"/>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom" data-aos-delay="800">
-                    <div class="brand-style1">
-                        <img src="/img/brand/disney-logo.png" alt="brand"/>
-                    </div>
-                </div>
-            </div>
-            <span class="sec-subtitle text-center mt-3" data-aos="fade-up" data-aos-duration="1000"
-                  data-aos-anchor-placement="top-bottom" data-aos-delay="900">... dan masih banyak lagi</span>
-        </div>
-    </section>
+    @include('includes.victory')
+    @include('includes.brand')
 @endsection
 @push('addon-script')
     <script>
@@ -712,7 +504,7 @@ CTA Area
 
         jarallax(document.querySelectorAll('.jarallax'), {
             speed: 0.2,
-            videoSrc: 'https://youtu.be/PrNQ-AXWI7U?si=4pqtofbH7BuEQyio'
+            videoSrc: 'https://youtu.be/bdsMutCeq2U'
         });
     </script>
 @endpush
