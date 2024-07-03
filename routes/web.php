@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\CalonPesertaDiplomaController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JadwalSosialisasiController;
+use App\Http\Controllers\Admin\PageContent\AboutPageController;
+use App\Http\Controllers\Admin\PageContent\HomePageController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\Admin\SiswaSmaSmkController;
@@ -23,10 +25,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Admin\PageContent\HomePageController::class, 'show'])->name('home');
-Route::get('/about-us', function () {
-    return view('pages.about');
-})->name('about-us');
+Route::get('/', [HomePageController::class, 'show'])->name('home');
+Route::get('/about-us', [AboutPageController::class, 'show'])->name('about');
 Route::get('/programs/front-office', function () {
     return view('pages.front_office');
 })->name('front-office');
@@ -113,8 +113,10 @@ Route::prefix('admin')
             });
         Route::prefix('pages')
             ->group(function (){
-                Route::get('home', [\App\Http\Controllers\Admin\PageContent\HomePageController::class, 'edit'])->name('home-page-edit');
-                Route::patch('home', [\App\Http\Controllers\Admin\PageContent\HomePageController::class, 'update'])->name('home-page-update');
+                Route::get('home', [HomePageController::class, 'edit'])->name('home-page-edit');
+                Route::patch('home', [HomePageController::class, 'update'])->name('home-page-update');
+                Route::get('about', [AboutPageController::class, 'edit'])->name('about-page-edit');
+                Route::patch('about', [AboutPageController::class, 'update'])->name('about-page-update');
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
