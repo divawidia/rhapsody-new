@@ -11,30 +11,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 class HomePageController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      */
     public function show()
@@ -101,13 +77,5 @@ class HomePageController extends Controller
         $homeData->update($data);
         Alert::success('Hore!', 'Post berhasil diedit!');
         return redirect()->route('home-page-edit')->with('status', 'Data home page berhasil diupdate!');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }
