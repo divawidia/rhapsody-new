@@ -23,7 +23,8 @@ class TagRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'tag_name' => ['required', 'max:100', Rule::unique('tags', 'tag_name')->ignore($this->tag)]
+            'tag_name' => ['required', 'max:100', Rule::unique('tags', 'tag_name')->ignore($this->tag)],
+            'status' => ['required', 'in:1,0'],
         ];
     }
 }

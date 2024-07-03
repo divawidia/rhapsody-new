@@ -16,6 +16,50 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
+        <div id="addModal" class="modal fade" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-confirm modal-dialog-centered">
+                <div class="modal-content d-flex justify-content-center">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100">Tambah Kategori Artikel</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="{{ route('categories.store') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                            <div class="modal-body">
+                                    <div class="mb-3 row">
+                                        <div class="col-md-6">
+                                            <label for="category_name">Nama Kategori</label>
+                                            <div>
+                                                <input class="form-control" type="text" autocomplete="off" name="category_name" id="category_name" placeholder="Isikan nama kategori artikel" value="{{ old('category_name') }}">
+                                                @error('category_name')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="status">Status Publish Kategori</label>
+                                            <div>
+                                                <select class="form-select" name="status" id="status" data-placeholder="Pilih Status Kategori" required>
+                                                    <option value="" selected disabled>Pilih Status Artikel</option>
+                                                    @foreach([1 => "Publish", 0 => "Private"] AS $status => $status_label)
+                                                        <option value="{{ $status }}">{{ $status_label }}</option>
+                                                    @endforeach
+                                                    @error('status')
+                                                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                                    @enderror
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="submit" class="btn btn-primary w-md">Submit</button>
+                                <button type="button" class="btn btn-outline-secondary w-md" data-bs-dismiss="modal" aria-label="Close">Batal</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
@@ -23,9 +67,9 @@
                         <h4 class="card-title">Kategori Artikel</h4>
                     </div>
                     <div class="card-body">
-                        <a href="{{  route('categories.create') }}" class="btn btn-primary mb-3">
+                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addModal">
                             + Tambah Kategori Baru
-                        </a>
+                        </button>
                         <div class="table-responsive">
                             <table class="table table-hover mb-0" id="categoryTable">
                                 <thead>
@@ -73,6 +117,16 @@
                         width: '15%'
                     },
                 ]
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#status').select2({
+                    placeholder: "Pilih Status Publikasi",
+                    width:'100%',
+                    theme: 'bootstrap-5'
+                });
             });
         </script>
     @endpush

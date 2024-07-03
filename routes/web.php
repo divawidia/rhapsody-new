@@ -23,9 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+Route::get('/', [\App\Http\Controllers\HomePageController::class, 'show'])->name('home');
 Route::get('/about-us', function () {
     return view('pages.about');
 })->name('about-us');
@@ -112,6 +110,11 @@ Route::prefix('admin')
                 Route::resource('siswa-sma-smk', SiswaSmaSmkController::class);
                 Route::resource('sekolah', SekolahController::class);
                 Route::resource('jadwal', JadwalSosialisasiController::class);
+            });
+        Route::prefix('pages')
+            ->group(function (){
+                Route::get('home', [\App\Http\Controllers\HomePageController::class, 'edit'])->name('home-page-edit');
+                Route::patch('home', [\App\Http\Controllers\HomePageController::class, 'update'])->name('home-page-update');
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');

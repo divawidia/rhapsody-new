@@ -21,12 +21,26 @@
                         </div>
                         <div class="card-body">
                             <div class="mb-3 row">
-                                <label for="example-text-input" class="col-md-2 col-form-label">Nama Tag</label>
-                                <div class="col-md-10">
+                                <div class="col-md-6">
+                                    <label for="tag_name">Nama Tag</label>
                                     <input class="form-control" type="text" autocomplete="off" name="tag_name" id="tag_name" value="{{ $tag->tag_name }}">
                                     @error('tag_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="status">Status Publish Tag</label>
+                                    <div>
+                                        <select class="form-select" name="status" id="status" data-placeholder="Pilih Status Kategori" required>
+                                            <option value="" selected disabled>Pilih Status Artikel</option>
+                                            @foreach([1 => "Publish", 0 => "Private"] AS $status => $status_label)
+                                                <option value="{{ $status }}" {{ old("status", $tag->status) == $status ? "selected" : "" }}>{{ $status_label }}</option>
+                                            @endforeach
+                                            @error('status')
+                                            <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                            @enderror
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mt-4">
@@ -39,7 +53,15 @@
         </div>
         <!-- end row -->
     @endsection
-    @section('scripts')
-        <!-- App js -->
-        <script src="{{ URL::asset('build/js/app.js') }}"></script>
-@endsection
+    @push('addon-script')
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#status').select2({
+                    placeholder: "Pilih Status Publish",
+                    width:'100%',
+                    theme: 'bootstrap-5'
+                });
+            });
+        </script>
+    @endpush

@@ -44,7 +44,7 @@
                 <li>
                     <a href="{{ route('posts.index') }}">
                         <i class='bx bx-file icon nav-icon' ></i>
-                        <span class="menu-item" data-key="t-posts">Posts</span>
+                        <span class="menu-item" data-key="t-posts">Artikel</span>
                     </a>
                 </li>
                 <li>
@@ -63,14 +63,24 @@
                 <li class="menu-title" data-key="t-applications">Page Content</li>
 
                 <li>
-                    <a href="javascript: void(0);">
+                    <a href="javascript: void(0);" class="has-arrow">
                         <i class="bx bxs-school icon nav-icon"></i>
                         <span class="menu-item" data-key="t-sekolah">Pages</span>
                     </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('home-page-edit') }}" data-key="t-starter-page">Home Page</a></li>
+                        <li><a href="pages-maintenance" data-key="t-maintenance">About Page</a></li>
+                        <li><a href="pages-comingsoon" data-key="t-coming-soon">Facility Page</a></li>
+                        <li><a href="pages-timeline" data-key="t-timeline">Contact Page</a></li>
+                    </ul>
+                </li>
+                <li>
                     <a href="{{ route('sekolah.index') }}">
                         <i class="bx bxs-school icon nav-icon"></i>
                         <span class="menu-item" data-key="t-sekolah">Program Pelatihan</span>
                     </a>
+                </li>
+                <li>
                     <a href="{{ route('sekolah.index') }}">
                         <i class="bx bxs-school icon nav-icon"></i>
                         <span class="menu-item" data-key="t-sekolah">Navigation</span>

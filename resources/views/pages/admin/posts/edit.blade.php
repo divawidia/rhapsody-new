@@ -19,7 +19,7 @@
                         <h4 class="card-title">Edit artikel {{ $artikel->title }}</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('posts.update', ['artikel'=>$artikel]) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('posts.update', ['post'=>$artikel]) }}" method="post" enctype="multipart/form-data">
                             @method('PUT')
                             @csrf
                             <div class="mb-3 row">

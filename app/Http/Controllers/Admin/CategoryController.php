@@ -81,35 +81,24 @@ class CategoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        $category = Category::findOrFail($id);
-
-        return view('pages.admin.categories.edit',[
-            'category' => $category
-        ]);
+        $category = Category::find($id);
+        return view('pages.admin.categories.edit', ['category'=>$category]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(CategoryRequest $request, Tag $tag)
+    public function update(CategoryRequest $request, Category $category)
     {
         $data = $request->validated();
-        $tag = Category::findOrFail($tag->id);
+        $category = Category::findOrFail($category->id);
         $data['slug'] = Str::slug($request->category_name);
-        $tag->update($data);
-
+        $category->update($data);
+        alert()->success('Hore!','Kategori berhasil diupdate!');
         return redirect()->route('categories.index')->with('status', 'Data kategori berhasil diedit!');
     }
 

@@ -79,21 +79,13 @@ class TagController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
         $tag = Tag::findOrFail($id);
 
-        return view('pages.admin.tag.edit',[
+        return view('pages.admin.tags.edit',[
             'tag' => $tag
         ]);
     }
@@ -104,14 +96,11 @@ class TagController extends Controller
     public function update(TagRequest $request, Tag $tag)
     {
         $data = $request->validated();
-
         $tag = Tag::findOrFail($tag->id);
-
         $data['slug'] = Str::slug($request->tag_name);
-
         $tag->update($data);
-
-        return redirect()->route('tags.index')->with('status', 'Data tag blog berhasil diedit!');
+        alert()->success('Hore!','Tag berhasil diupdate!');
+        return redirect()->route('tags.index')->with('status', 'Tag artikel berhasil diupdate!');
     }
 
     /**
@@ -120,9 +109,8 @@ class TagController extends Controller
     public function destroy(string $id)
     {
         $tag = Tag::findOrFail($id);
-        alert()->success('Hore!','Tag berhasil dihapus!');
         $tag->delete();
-
+        alert()->success('Hore!','Tag berhasil dihapus!');
         return redirect()->route('tags.index')->with('status', 'Data tag blog berhasil dihapus!');
     }
 }

@@ -24,7 +24,6 @@
 
         <!-- sidebar components -->
         @include('layouts.admin.sidebar')
-        @include('layouts.admin.horizontal')
 
         <!-- ============================================================== -->
         <!-- Start right Content here -->
