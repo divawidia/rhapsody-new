@@ -6,8 +6,8 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JadwalSosialisasiController;
 use App\Http\Controllers\Admin\PostController;
-use App\Http\Controllers\Admin\SiswaSmaSmkController;
 use App\Http\Controllers\Admin\SekolahController;
+use App\Http\Controllers\Admin\SiswaSmaSmkController;
 use App\Http\Controllers\Admin\TagController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\HomePageController::class, 'show'])->name('home');
+Route::get('/', [\App\Http\Controllers\Admin\PageContent\HomePageController::class, 'show'])->name('home');
 Route::get('/about-us', function () {
     return view('pages.about');
 })->name('about-us');
@@ -113,8 +113,8 @@ Route::prefix('admin')
             });
         Route::prefix('pages')
             ->group(function (){
-                Route::get('home', [\App\Http\Controllers\HomePageController::class, 'edit'])->name('home-page-edit');
-                Route::patch('home', [\App\Http\Controllers\HomePageController::class, 'update'])->name('home-page-update');
+                Route::get('home', [\App\Http\Controllers\Admin\PageContent\HomePageController::class, 'edit'])->name('home-page-edit');
+                Route::patch('home', [\App\Http\Controllers\Admin\PageContent\HomePageController::class, 'update'])->name('home-page-update');
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');

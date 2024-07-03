@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\PageContent;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\HomePageRequest;
-use App\Http\Requests\PostRequest;
 use App\Models\Home;
-use App\Models\Post;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
