@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin\PageContent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AboutPageRequest;
 use App\Models\AboutPage;
-use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AboutPageController extends Controller

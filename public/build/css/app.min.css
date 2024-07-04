@@ -7596,3 +7596,14 @@ body[data-layout-mode=dark] .categories-filter .list-inline-item a.active {
 body[data-layout-mode=dark] .gallery-box .box-content {
     background-color: #1f2224
 }
+
+.image-preview {
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding: .25rem;
+    border: 1px solid #dcdcdc;
+    box-shadow: whitesmoke;
+}

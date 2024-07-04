@@ -1,10 +1,6 @@
 @yield('css')
 <!-- Favicons - Place favicon.ico in the root directory -->
-<link
-    rel="shortcut icon"
-    href="/img/favicon.ico"
-    type="image/x-icon"
-/>
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
 <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
 <!-- Bootstrap Css -->
 <link href="{{ URL::asset('build/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />

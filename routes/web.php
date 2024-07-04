@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomePageController::class, 'show'])->name('home');
-Route::get('/about-us', [AboutPageController::class, 'show'])->name('about');
+Route::get('/about-us', [AboutPageController::class, 'show'])->name('about-us');
 Route::get('/programs/front-office', function () {
     return view('pages.front_office');
 })->name('front-office');
@@ -115,6 +115,7 @@ Route::prefix('admin')
             ->group(function (){
                 Route::get('home', [HomePageController::class, 'edit'])->name('home-page-edit');
                 Route::patch('home', [HomePageController::class, 'update'])->name('home-page-update');
+
                 Route::get('about', [AboutPageController::class, 'edit'])->name('about-page-edit');
                 Route::patch('about', [AboutPageController::class, 'update'])->name('about-page-update');
             });
