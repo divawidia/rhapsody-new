@@ -28,4 +28,7 @@ class FacilityContent extends Model
     public function home_page(){
         return $this->belongsTo(Home::class, 'home_page_id', 'id');
     }
+    public function facility_photo(){
+        return $this->hasMany(FacilityPhoto::class, 'facility_id', 'id');
+    }
 }
