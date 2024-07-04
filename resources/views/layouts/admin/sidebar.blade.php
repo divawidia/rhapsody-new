@@ -70,8 +70,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('home-page-edit') }}" data-key="t-home-page">Home Page</a></li>
                         <li><a href="{{ route('about-page-edit') }}" data-key="t-about-page">About Page</a></li>
-                        <li><a href="pages-comingsoon" data-key="t-coming-soon">Facility Page</a></li>
-                        <li><a href="pages-timeline" data-key="t-timeline">Contact Page</a></li>
+                        <li><a href="{{ route('contact-page-edit') }}" data-key="t-coming-soon">Contact Page</a></li>
                     </ul>
                 </li>
                 <li>

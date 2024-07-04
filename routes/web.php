@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JadwalSosialisasiController;
 use App\Http\Controllers\Admin\PageContent\AboutPageController;
+use App\Http\Controllers\Admin\PageContent\ContactPageController;
 use App\Http\Controllers\Admin\PageContent\HomePageController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SekolahController;
@@ -48,9 +49,6 @@ Route::get('/programs/laundry-&-housekeeping', function () {
 Route::get('/programs/bar-&-service', function () {
     return view('pages.bar&service');
 })->name('bar&service');
-//Route::get('/kunci-masa-depanmu-ada-disini', function () {
-//    return view('pages.landing_page_pendaftaran');
-//})->name('landing_page');
 Route::get('/fasilitas', function () {
     return view('pages.facilities');
 })->name('fasilitas');
@@ -118,6 +116,9 @@ Route::prefix('admin')
 
                 Route::get('about', [AboutPageController::class, 'edit'])->name('about-page-edit');
                 Route::patch('about', [AboutPageController::class, 'update'])->name('about-page-update');
+
+                Route::get('contact', [ContactPageController::class, 'edit'])->name('contact-page-edit');
+                Route::patch('contact', [ContactPageController::class, 'update'])->name('contact-page-update');
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');

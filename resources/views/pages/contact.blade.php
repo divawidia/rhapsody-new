@@ -5,14 +5,12 @@
 @endsection
 
 @section('content')
-    <div
-        class="breadcumb-wrapper d-flex align-items-center"
+    <div class="breadcumb-wrapper d-flex align-items-center"
         style="background: url('/img/bg/top-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
-            background-position: center center;"
-    >
+            background-position: center center;">
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
                 <h1 class="breadcumb-title" data-aos="fade-up" data-aos-duration="1000">Kontak Kami<FONT COLOR="#CE5423">.</FONT></h1>
