@@ -55,9 +55,7 @@ Route::get('/fasilitas', function () {
 Route::get('/under-maintenance', function () {
     return view('pages.under_maintenance');
 })->name('under-maintenance');
-Route::get('/contact-us', function () {
-    return view('pages.contact');
-})->name('contact');
+Route::get('/contact-us', [ContactPageController::class, 'show'])->name('contact');
 
 Route::get('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_create'])->name('landing-page');
 Route::post('/kunci-masa-depanmu-ada-disini', [SiswaSmaSmkController::class, 'landing_page_store'])->name('landing-page.store');

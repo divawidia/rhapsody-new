@@ -13,7 +13,9 @@
             background-position: center center;">
         <div class="container z-index-common">
             <div class="breadcumb-content text-center">
-                <h1 class="breadcumb-title" data-aos="fade-up" data-aos-duration="1000">@php echo $contactData->header_title @endphp</h1>
+                <h1 class="breadcumb-title" data-aos="fade-up" data-aos-duration="1000">
+                    @php echo $contactData->header_title @endphp
+                </h1>
             </div>
         </div>
     </div>
@@ -30,7 +32,7 @@
                     <h3 class="left-border h5"
                         data-aos="fade-right"
                         data-aos-duration="1000">
-                        {{ $contactData->header2_subtitle }}
+                        @php echo $contactData->header2_subtitle @endphp
                     </h3>
                     <div class="" data-aos="fade-right" data-aos-duration="1000">
                         <p class="contact-info">
