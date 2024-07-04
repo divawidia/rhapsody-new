@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\PageContent;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactPageRequest;
 use App\Models\ContactPage;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -30,7 +31,7 @@ class ContactPageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
+    public function update(ContactPageRequest $request)
     {
         $data = $request->validated();
         $contactData = ContactPage::findOrFail(1);

@@ -27,7 +27,7 @@ class ContactPageRequest extends FormRequest
             'header2_title' => ['required'],
             'header2_subtitle' => ['required'],
             'jam_kerja' => ['required'],
-            'alamat' => ['image'],
+            'alamat' => ['required'],
             'no_telp' => [ 'required'],
             'email' => ['required', 'email'],
             'google_maps' => ['required'],
