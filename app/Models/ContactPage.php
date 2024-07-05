@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class ContactPage extends Model
 {
     use HasFactory;
-    use InteractsWithViews;
 
     protected $fillable = [
         'id',

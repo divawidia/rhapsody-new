@@ -2,20 +2,18 @@
 
 namespace App\Models;
 
-use CyrildeWit\EloquentViewable\InteractsWithViews;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class FacilityPhoto extends Model
 {
     use HasFactory;
-    use InteractsWithViews;
 
     protected $fillable = [
         'id',
         'facility_id',
         'photo_url',
-        'photo_alt'
     ];
     protected $table = 'facility_photo';
     public function facility_content(){

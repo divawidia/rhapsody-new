@@ -19,7 +19,7 @@ class TagController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Tag::with(['user'])->latest()->get();;
+            $query = Tag::with(['user'])->latest()->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {

@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin\PageContent;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FacilityPageRequest;
+use App\Models\FacilityContent;
 use App\Models\FacilityPage;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Yajra\DataTables\Facades\DataTables;
 
 class FacilityPageController extends Controller
 {
@@ -59,6 +61,11 @@ class FacilityPageController extends Controller
     {
         $data = $request->validated();
         $facilityPageData = FacilityPage::findOrFail(1);
+        if ($request->header_bg == null and $facilityPageData->header_bg != null){
+            $data['header_bg'] = $facilityPageData->header_bg;
+        }else{
+            $data['header_bg'] = $request->file('header_bg')->store('assets/facility-page', 'public');
+        }
         $facilityPageData->update($data);
         Alert::success('Hore!', 'Facility Page Berhasil Diedit!');
         return redirect()->route('facility-page-edit')->with('status', 'Data facility page berhasil diupdate!');

@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class FacilityContent extends Model
 {
-    use InteractsWithViews;
-
     protected $fillable = [
         'id',
         'facility_page_id',

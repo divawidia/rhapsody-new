@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JadwalSosialisasiController;
 use App\Http\Controllers\Admin\PageContent\AboutPageController;
 use App\Http\Controllers\Admin\PageContent\ContactPageController;
+use App\Http\Controllers\Admin\PageContent\FacilityContentController;
+use App\Http\Controllers\Admin\PageContent\FacilityPageController;
 use App\Http\Controllers\Admin\PageContent\HomePageController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SekolahController;
@@ -117,6 +119,15 @@ Route::prefix('admin')
 
                 Route::get('contact', [ContactPageController::class, 'edit'])->name('contact-page-edit');
                 Route::patch('contact', [ContactPageController::class, 'update'])->name('contact-page-update');
+
+                Route::prefix('facility')
+                    ->group(function (){
+                        Route::get('/', [FacilityPageController::class, 'edit'])->name('facility-page-edit');
+                        Route::patch('/', [FacilityPageController::class, 'update'])->name('facility-page-update');
+                        Route::post('upload-image-via-ajax', [FacilityContentController::class, 'uploadPhoto'])->name('uploadImageViaAjax');
+                        Route::resource('content', FacilityContentController::class);
+                        Route::get('content/photo/delete/{id}', [FacilityContentController::class, 'deletePhoto'])->name('delete-facility-photo');
+                    });
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
