@@ -27,9 +27,13 @@ class ProgramContent extends Model
         'program_icon',
         'slug',
         'status',
+        'program_id'
     ];
     protected $table = 'program_contents';
     public function program(){
         return $this->belongsTo(Program::class, 'program_id', 'id');
+    }
+    public function program_career_companies(){
+        return $this->hasMany(ProgramCareerCompany::class, 'program_content_id', 'id');
     }
 }
