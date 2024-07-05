@@ -155,6 +155,10 @@ class FacilityContentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $facility = FacilityContent::findOrFail($id);
+        $facility->delete();
+        alert()->success('Hore!','Content Facility berhasil dihapus!');
+
+        return redirect()->route('programs.index')->with('status', 'Data Content Facility berhasil dihapus!');
     }
 }

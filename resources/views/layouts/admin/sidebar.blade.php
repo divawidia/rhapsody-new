@@ -72,6 +72,7 @@
                         <li><a href="{{ route('about-page-edit') }}" data-key="t-about-page">About Page</a></li>
                         <li><a href="{{ route('facility-page-edit') }}" data-key="t-facility-page">Facility Page</a></li>
                         <li><a href="{{ route('contact-page-edit') }}" data-key="t-contact-page">Contact Page</a></li>
+                        <li><a href="{{ route('programs.index') }}" data-key="t-program-page">Program Page</a></li>
                     </ul>
                 </li>
                 <li>

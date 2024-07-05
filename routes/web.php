@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PageContent\ContactPageController;
 use App\Http\Controllers\Admin\PageContent\FacilityContentController;
 use App\Http\Controllers\Admin\PageContent\FacilityPageController;
 use App\Http\Controllers\Admin\PageContent\HomePageController;
+use App\Http\Controllers\Admin\PageContent\ProgramController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\Admin\SiswaSmaSmkController;
@@ -128,6 +129,11 @@ Route::prefix('admin')
                         Route::resource('content', FacilityContentController::class);
                         Route::get('content/photo/delete/{id}', [FacilityContentController::class, 'deletePhoto'])->name('delete-facility-photo');
                     });
+                Route::resource('programs', ProgramController::class);
+//                Route::prefix('program')
+//                    ->group(function (){
+//                        Route::resource('/', ProgramController::class);
+//                    });
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
