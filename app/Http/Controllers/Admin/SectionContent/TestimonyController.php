@@ -65,8 +65,8 @@ class TestimonyController extends Controller
         $data = $request->validated();
         $data['photo_url'] = $request->file('photo_url')->store('assets/testimony-section', 'public');
         Testimony::create($data);
-        Alert::success('Hore!', 'Testimony berhasil dibuat!');
-        return redirect()->route('testimoni.index')->with('status', 'Data testimony berhasil dibuat!');
+        Alert::success('Hore!', 'Testimony berhasil ditambahkan!');
+        return redirect()->route('testimoni.index')->with('status', 'Data testimony berhasil ditambahkan!');
     }
 
     /**

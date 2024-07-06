@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\PageContent\ProgramContentController;
 use App\Http\Controllers\Admin\PageContent\ProgramController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SectionContent\AlumnyCompanyController;
+use App\Http\Controllers\Admin\SectionContent\FaqController;
 use App\Http\Controllers\Admin\SectionContent\TestimonyController;
 use App\Http\Controllers\Admin\SectionContent\VictorySectionController;
 use App\Http\Controllers\Admin\SekolahController;
@@ -167,6 +168,7 @@ Route::prefix('admin')
 
                 Route::resource('testimoni', TestimonyController::class);
                 Route::resource('company', AlumnyCompanyController::class);
+                Route::resource('faq', FaqController::class);
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
