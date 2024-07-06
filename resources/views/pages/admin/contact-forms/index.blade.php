@@ -1,9 +1,9 @@
 @extends('layouts.admin.master')
 @section('title')
-    Alumny Company Section
+    Contact Forms
 @endsection
 @section('page-title')
-    Alumny Company Section
+    Contact Forms
 @endsection
 @section('body')
 
@@ -20,21 +20,19 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Alumny Company Section</h4>
+                        <h4 class="card-title">Pertanyaan Form Kontak</h4>
                     </div>
                     <div class="card-body">
-                        <a href="{{  route('company.create') }}" class="btn btn-primary mb-3">
-                            + Tambah Perusahaan Lulusan Alumni
-                        </a>
                         <div class="table-responsive">
-                            <table class="table table-hover mb-0" id="companyTable">
+                            <table class="table table-hover mb-0" id="contactFormTable">
                                 <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th>Nama</th>
-                                    <th>URL</th>
-                                    <th>Logo</th>
-                                    <th>Aksi</th>
+                                    <th>Email</th>
+                                    <th>No. Telp</th>
+                                    <th>Tgl. Dikirim</th>
+                                    <th>Pesan</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -51,7 +49,7 @@
         <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.8/datatables.min.js"></script>
         <script>
             // AJAX DataTable
-            var datatable = $('#companyTable').DataTable({
+            var datatable = $('#contactFormTable').DataTable({
                 processing: true,
                 serverSide: true,
                 ordering: true,
@@ -60,16 +58,11 @@
                 },
                 columns: [
                     { data: 'id', name: 'id' },
-                    { data: 'name', name: 'name' },
-                    { data: 'url', name: 'url' },
-                    { data: 'company_logo_url', name: 'company_logo_url' },
-                    {
-                        data: 'action',
-                        name: 'action',
-                        orderable: false,
-                        searchable: false,
-                        width: '15%'
-                    },
+                    { data: 'nama', name: 'nama' },
+                    { data: 'email', name: 'email' },
+                    { data: 'no_telp', name: 'no_telp' },
+                    { data: 'pesan', name: 'pesan' },
+                    { data: 'created_at', name: 'created_at' },
                 ]
             });
         </script>

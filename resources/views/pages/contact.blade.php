@@ -69,13 +69,12 @@
                         ></iframe>
                     </div>
                 </div>
-                <div
-                    class="col-lg-6 col-xl-6"
+                <div class="col-lg-6 col-xl-6"
                     data-aos="fade-up"
                     data-aos-duration="1000"
-                    data-aos-delay="100"
-                >
-                    <form action="mail.php" class="form-style5 ajax-contact">
+                    data-aos-delay="100">
+                    <form action="{{ route('contact-forms.store') }}" method="POST" class="form-style5" enctype="multipart/form-data">
+                        @csrf
                         <div class="vs-circle"></div>
                         <h3 class="form-title text-uppercase">Ada pertanyaan?</h3>
                         <p class="form-text">
@@ -83,43 +82,31 @@
                             telepon, email atau dengan mengisi kontak form dibawah ini.
                         </p>
                         <div class="form-group">
-                            <input type="text" name="name" id="name" placeholder="Nama" />
+                            <input value="{{ old('nama') }}" type="text" name="nama" id="nama" placeholder="Nama" required/>
+                            @error('nama')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="email"
-                                id="email"
-                                placeholder="Email"
+                            <input value="{{ old('email') }}" type="text" name="email" id="email" placeholder="Email" required
+                            @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             />
                         </div>
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="number"
-                                id="number"
-                                placeholder="No Telepon/Whatsapp"
-                            />
+                            <input value="{{ old('no_telp') }}" type="text" name="no_telp" id="no_telp" placeholder="No Telepon/Whatsapp" required/>
+                            @error('no_telp')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="form-group">
-                <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Tulis Pesan Anda"
-                ></textarea>
+                            <textarea name="pesan" id="pesan" placeholder="Tulis Pesan Pertanyaan Anda" required>{{ old('pesan') }}</textarea>
+                            @error('pesan')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                            />
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Subscribe to our newsletter
-                            </label>
-                        </div>
-                        <button type="submit" class="vs-btn">SEND NOW</button>
+                        <button type="submit" class="btn vs-btn">Kirim Sekarang</button>
                     </form>
                 </div>
             </div>

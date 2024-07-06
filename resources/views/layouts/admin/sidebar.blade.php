@@ -115,7 +115,7 @@
                 <li class="menu-title" data-key="t-applications">Contact Forms</li>
 
                 <li>
-                    <a href="javascript: void(0);">
+                    <a href="{{ route('contact-forms.index') }}">
                         <i class='bx bx-receipt'></i>
                         <span class="menu-item" data-key="t-sekolah">Forms</span>
                     </a>

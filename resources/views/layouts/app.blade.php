@@ -43,6 +43,7 @@
 
 <!-- Bootstrap core JavaScript -->
 {{-- script --}}
+@include('sweetalert::alert')
 @stack('prepend-script')
 @include('includes.script')
 @stack('addon-script')
