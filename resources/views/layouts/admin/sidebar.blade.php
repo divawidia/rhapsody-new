@@ -75,6 +75,16 @@
                         <li><a href="{{ route('programs.index') }}" data-key="t-program-page">Program Page</a></li>
                     </ul>
                 </li>
+
+                <li class="menu-title" data-key="t-applications">Section Content</li>
+
+                <li>
+                    <a href="{{ route('victory-section-edit') }}">
+                        <i class="bx bxs-school icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-sekolah">Victory Section</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="{{ route('sekolah.index') }}">
                         <i class="bx bxs-school icon nav-icon"></i>

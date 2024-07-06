@@ -158,7 +158,7 @@ Route::prefix('admin')
         Route::prefix('section')
             ->group(function (){
                 Route::get('victory', [VictorySectionController::class, 'edit'])->name('victory-section-edit');
-                Route::patch('victory', [VictorySectionController::class, 'update'])->name('victory-sectio-update');
+                Route::patch('victory', [VictorySectionController::class, 'update'])->name('victory-section-update');
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');

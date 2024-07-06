@@ -30,61 +30,61 @@
                             <h4 class="card-title">Edit Victory Section</h4>
                         </div>
                         <div class="card-body">
+                            <div class="mb-3">
+                                <label for="victory_section_title" class="col-form-label">Section Title</label>
+                                <input class="form-control" type="text" name="victory_section_title" id="victory_section_title" value="{{ $victory->victory_section_title }}" required>
+                                @error('victory_section_title')
+                                <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label for="victory_section_body" class="col-form-label">Section Body</label>
+                                <textarea class="form-control" id="victory_section_body" name="victory_section_body">@php echo $victory->victory_section_body @endphp</textarea>
+                                @error('victory_section_body')
+                                <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
                                     <div class="mb-3">
-                                        <label for="victory_section_title" class="col-form-label">Section Title</label>
-                                        <input class="form-control" type="text" name="victory_section_title" id="victory_section_title" value="{{ $victory->victory_section_title }}" required>
-                                        @error('victory_section_title')
+                                        <label for="victory_section_btn_text" class="col-form-label">Button Text</label>
+                                        <input class="form-control" type="text" name="victory_section_btn_text" id="victory_section_btn_text" value="{{ $victory->victory_section_btn_text }}" required>
+                                        @error('victory_section_btn_text')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
                                         @enderror
                                     </div>
+                                </div>
+                                <div class="col-lg-4">
                                     <div class="mb-3">
-                                        <label for="victory_section_body" class="col-form-label">Section Body</label>
-                                        <textarea class="form-control" id="victory_section_body" name="victory_section_body">@php echo $victory->victory_section_body @endphp</textarea>
-                                        @error('victory_section_body')
+                                        <label class="col-form-label" for="victory_section_btn_url">Button URL</label>
+                                        <input type="text" id="victory_section_btn_url" name="victory_section_btn_url" class="form-control" required value="{{ $victory->victory_section_btn_url }}"/>
+                                        @error('victory_section_btn_url')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="mb-3">
-                                                <label for="victory_section_btn_text" class="col-form-label">Button Text</label>
-                                                <input class="form-control" type="text" name="victory_section_btn_text" id="victory_section_btn_text" value="{{ $victory->victory_section_btn_text }}" required>
-                                                @error('victory_section_btn_text')
-                                                <div class="alert alert-danger mt-2">{{ $message }}</div>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="mb-3">
-                                                <label class="col-form-label" for="victory_section_btn_url">Button URL</label>
-                                                <input type="text" id="victory_section_btn_url" name="victory_section_btn_url" class="form-control" required value="{{ $victory->victory_section_btn_url }}"/>
-                                                @error('victory_section_btn_url')
-                                                <div class="alert alert-danger mt-2">{{ $message }}</div>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="mb-3">
-                                                <label class="col-form-label" for="victory_section_btn_icon">Button Icon</label>
-                                                <input type="file" id="victory_section_btn_icon" name="victory_section_btn_icon" class="form-control"/>
-                                                <img id="preview_btn_icon" class="rounded img-thumbnail mt-3" src="{{ Storage::url($victory->victory_section_btn_icon ?? '') }}" alt="image thumbnail"/>
-                                                @error('victory_section_btn_icon')
-                                                <div class="alert alert-danger mt-2">{{ $message }}</div>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="col-lg-4">
                                     <div class="mb-3">
-                                        <label class="col-form-label" for="victory_section_bg">Button Icon</label>
-                                        <input type="file" id="victory_section_bg" name="victory_section_bg" class="form-control"/>
-                                        <img id="preview_section_bg" class="rounded img-thumbnail mt-3" src="{{ Storage::url($victory->victory_section_bg ?? '') }}" alt="image thumbnail"/>
-                                        @error('victory_section_bg')
+                                        <label class="col-form-label" for="victory_section_btn_icon">Button Icon</label>
+                                        <input type="file" id="victory_section_btn_icon" name="victory_section_btn_icon" class="form-control"/>
+                                        <img id="preview_btn_icon" class="rounded img-thumbnail mt-3" src="{{ Storage::url($victory->victory_section_btn_icon ?? '') }}" alt="image thumbnail"/>
+                                        @error('victory_section_btn_icon')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <div class="mt-5">
-                                        <button type="submit" class="btn btn-primary w-md float-end">Save & Update</button>
-                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="col-form-label" for="victory_section_bg">Button Icon</label>
+                                <input type="file" id="victory_section_bg" name="victory_section_bg" class="form-control"/>
+                                <img id="preview_section_bg" class="rounded img-thumbnail mt-3" src="{{ Storage::url($victory->victory_section_bg ?? '') }}" alt="image thumbnail"/>
+                                @error('victory_section_bg')
+                                <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="mt-5">
+                                <button type="submit" class="btn btn-primary w-md float-end">Save & Update</button>
+                            </div>
                         </div>
                     </div>
                 </div>

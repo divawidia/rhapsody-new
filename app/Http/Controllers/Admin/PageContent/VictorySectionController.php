@@ -73,6 +73,6 @@ class VictorySectionController extends Controller
 
         $victory->update($data);
         Alert::success('Hore!', 'Victory section berhasil diedit!');
-        return redirect()->route('home-page-edit')->with('status', 'Data victory section berhasil diupdate!');
+        return redirect()->route('victory-section-edit')->with('status', 'Data victory section berhasil diupdate!');
     }
 }
