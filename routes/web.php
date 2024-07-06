@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\PageContent\ProgramCareerCompanyController;
 use App\Http\Controllers\Admin\PageContent\ProgramCareerSalaryController;
 use App\Http\Controllers\Admin\PageContent\ProgramContentController;
 use App\Http\Controllers\Admin\PageContent\ProgramController;
+use App\Http\Controllers\Admin\PageContent\VictorySectionController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\Admin\SiswaSmaSmkController;
@@ -153,6 +154,11 @@ Route::prefix('admin')
                         Route::put('/{pelatihan}/career-company/{company}', [ProgramCareerCompanyController::class, 'update'])->name('career-company.update');
                         Route::delete('/{pelatihan}/career-company/{company}', [ProgramCareerCompanyController::class, 'destroy'])->name('career-company.destroy');
                     });
+            });
+        Route::prefix('section')
+            ->group(function (){
+                Route::get('victory', [VictorySectionController::class, 'edit'])->name('victory-section-edit');
+                Route::patch('victory', [VictorySectionController::class, 'update'])->name('victory-sectio-update');
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
