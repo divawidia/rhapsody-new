@@ -93,6 +93,13 @@
                 </li>
 
                 <li>
+                    <a href="{{ route('company.index') }}">
+                        <i class="bx bxs-school icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-company">Alumny Company Section</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="{{ route('sekolah.index') }}">
                         <i class="bx bxs-school icon nav-icon"></i>
                         <span class="menu-item" data-key="t-sekolah">Program Pelatihan</span>

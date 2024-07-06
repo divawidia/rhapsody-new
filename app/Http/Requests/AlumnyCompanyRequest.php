@@ -25,7 +25,6 @@ class AlumnyCompanyRequest extends FormRequest
             'name' => ['required'],
             'url' => ['required'],
             'company_logo_url' => ['image'],
-            'company_logo_alt' => ['required'],
         ];
     }
 }

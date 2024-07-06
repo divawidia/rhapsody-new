@@ -64,7 +64,7 @@ class AlumnyCompanyController extends Controller
     public function store(AlumnyCompanyRequest $request)
     {
         $data = $request->validated();
-        $data['company_logo_alt'] = $data->name;
+        $data['company_logo_alt'] = $data['name'];
         $data['company_logo_url'] = $request->file('company_logo_url')->store('assets/company-section', 'public');
         AlumnyCompany::create($data);
         Alert::success('Hore!', 'Perusahaan berhasil ditambahkan!');
@@ -89,7 +89,7 @@ class AlumnyCompanyController extends Controller
     {
         $data = $request->validated();
         $company = AlumnyCompany::findOrFail($id);
-        $data['company_logo_alt'] = $data->name;
+        $data['company_logo_alt'] = $data['name'];
         if ($request->company_logo_url == null and $company->company_logo_url != null){
             $data['company_logo_url'] = $company->company_logo_url;
         }else{
