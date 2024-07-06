@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\PageContent;
+namespace App\Http\Controllers\Admin\SectionContent;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\VictorySectionRequest;

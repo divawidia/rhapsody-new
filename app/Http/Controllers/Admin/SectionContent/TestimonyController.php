@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin\PageContent;
+namespace App\Http\Controllers\Admin\SectionContent;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TestimonyRequest;
 use App\Models\Testimony;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
