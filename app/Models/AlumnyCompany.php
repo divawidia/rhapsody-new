@@ -10,6 +10,8 @@ class AlumnyCompany extends Model
     use HasFactory;
     protected $fillable = [
         'id',
+        'name',
+        'url',
         'company_logo_url',
         'company_logo_alt',
     ];

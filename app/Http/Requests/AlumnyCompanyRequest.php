@@ -22,6 +22,8 @@ class AlumnyCompanyRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name' => ['required'],
+            'url' => ['required'],
             'company_logo_url' => ['image'],
             'company_logo_alt' => ['required'],
         ];
