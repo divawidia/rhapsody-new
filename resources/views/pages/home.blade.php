@@ -145,12 +145,19 @@
                     <div class="col-lg-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000">
                         <div class="course-style2">
                             <div class="course-img">
-                                <a href="{{ route('f&b-product') }}"><img class="w-100" src="/img/category/category-2-3.png"
-                                                                          alt="fnb-product"></a>
+                                <a href="{{ route('f&b-product') }}">
+                                    <img class="w-100"
+                                         src="/img/category/category-2-3.png"
+                                         alt="fnb-product">
+                                </a>
                             </div>
                             <div class="row course-tag">
-                                <span class="col-auto course-price"><img src="/img/icon/discount.svg"
-                                                                         style="width: 20px; margin-bottom: 2px">  Promo tersedia</span>
+                                <span class="col-auto course-price">
+                                    <img src="/img/icon/discount.svg"
+                                         style="width: 20px;
+                                         margin-bottom: 2px">
+                                    Promo tersedia
+                                </span>
                                 <div class="col-auto ms-auto category-style1 p-0">
                                     <div class="icon">
                                         <img src="/img/icon/Cook.svg">
@@ -158,8 +165,12 @@
                                 </div>
                             </div>
                             <div class="course-content">
-                                <h3 class="h5 course-name"><a href="{{ route('f&b-product') }}" class="text-inherit">F&B
-                                        Product</a></h3>
+                                <h3 class="h5 course-name">
+                                    <a href="{{ route('f&b-product') }}"
+                                       class="text-inherit">
+                                        F&B Product
+                                    </a>
+                                </h3>
                                 <div class="course-meta">
                                     <span>Keterampilan fundamental memasak beserta sanitasi & hygiene</span>
                                 </div>

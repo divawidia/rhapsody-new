@@ -33,7 +33,13 @@ class ProgramContent extends Model
     public function program(){
         return $this->belongsTo(Program::class, 'program_id', 'id');
     }
+    public function program_photos(){
+        return $this->hasMany(ProgramPhoto::class, 'program_content_id', 'id');
+    }
     public function program_career_companies(){
         return $this->hasMany(ProgramCareerCompany::class, 'program_content_id', 'id');
+    }
+    public function program_career_salaries(){
+        return $this->hasMany(ProgramCareerSalaries::class, 'program_content_id', 'id');
     }
 }

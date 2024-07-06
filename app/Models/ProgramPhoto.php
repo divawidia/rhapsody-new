@@ -14,7 +14,7 @@ class ProgramPhoto extends Model
         'alt',
         'program_content_id',
     ];
-    protected $table = 'program_career_salaries';
+    protected $table = 'program_photos';
     public function program_content(){
         return $this->belongsTo(ProgramContent::class, 'program_content_id', 'id');
     }

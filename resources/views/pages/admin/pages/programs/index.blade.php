@@ -20,7 +20,7 @@
             <div class="modal-dialog modal-confirm modal-dialog-centered">
                 <div class="modal-content d-flex justify-content-center">
                     <div class="modal-header">
-                        <h4 class="modal-title w-100">Tambah Kategori Program Pendidikan</h4>
+                        <h4 class="modal-title w-100">Tambah Jenis Program Pelatihan</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form action="{{ route('programs.store') }}" method="post" enctype="multipart/form-data">
@@ -28,9 +28,9 @@
                             <div class="modal-body">
                                     <div class="mb-3 row">
                                         <div class="col-md-6">
-                                            <label for="category_name">Nama Kategori</label>
+                                            <label for="category_name">Nama Jenis</label>
                                             <div>
-                                                <input class="form-control" type="text" autocomplete="off" name="name" id="name" placeholder="Isikan nama kategori program pendidikan" value="{{ old('name') }}">
+                                                <input class="form-control" type="text" autocomplete="off" name="name" id="name" placeholder="Isikan nama jenis program pelatihan" value="{{ old('name') }}">
                                                 @error('name')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
@@ -64,19 +64,50 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Kategori Program Pendidikan</h4>
+                        <h4 class="card-title">Kategori Program Pelatihan</h4>
                     </div>
                     <div class="card-body">
                         <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addModal">
-                            + Tambah Kategori Program Pendidikan
+                            + Tambah Kategori Program Pelatihan
                         </button>
                         <div class="table-responsive">
                             <table class="table table-hover mb-0" id="programsTable">
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Nama Program Pendidikan</th>
+                                    <th>Nama Program Pelatihan</th>
                                     <th>Slug</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Program Pelatihan</h4>
+                    </div>
+                    <div class="card-body">
+                        <a href="{{  route('pelatihan.create') }}" class="btn btn-primary mb-3">
+                            + Tambah Program Pelatihan
+                        </a>
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0" id="programContentsTable">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama Program Pelatihan</th>
+                                    <th>Harga</th>
+                                    <th>Batch</th>
                                     <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -106,6 +137,31 @@
                     { data: 'id', name: 'id' },
                     { data: 'name', name: 'name' },
                     { data: 'slug', name: 'slug' },
+                    { data: 'status', name: 'status' },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false,
+                        width: '15%'
+                    },
+                ]
+            });
+        </script>
+        <script>
+            // AJAX DataTable
+            var datatable = $('#programContentsTable').DataTable({
+                processing: true,
+                serverSide: true,
+                ordering: true,
+                ajax: {
+                    url: '{!! url()->route('pelatihan.index') !!}',
+                },
+                columns: [
+                    { data: 'id', name: 'id' },
+                    { data: 'name', name: 'name' },
+                    { data: 'price', name: 'price' },
+                    { data: 'batch', name: 'batch' },
                     { data: 'status', name: 'status' },
                     {
                         data: 'action',

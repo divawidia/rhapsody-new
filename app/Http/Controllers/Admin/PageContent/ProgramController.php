@@ -19,7 +19,7 @@ class ProgramController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Program::latest()->get();;
+            $query = Program::latest()->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {

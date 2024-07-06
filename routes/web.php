@@ -10,6 +10,9 @@ use App\Http\Controllers\Admin\PageContent\ContactPageController;
 use App\Http\Controllers\Admin\PageContent\FacilityContentController;
 use App\Http\Controllers\Admin\PageContent\FacilityPageController;
 use App\Http\Controllers\Admin\PageContent\HomePageController;
+use App\Http\Controllers\Admin\PageContent\ProgramCareerCompanyController;
+use App\Http\Controllers\Admin\PageContent\ProgramCareerSalaryController;
+use App\Http\Controllers\Admin\PageContent\ProgramContentController;
 use App\Http\Controllers\Admin\PageContent\ProgramController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SekolahController;
@@ -125,15 +128,31 @@ Route::prefix('admin')
                     ->group(function (){
                         Route::get('/', [FacilityPageController::class, 'edit'])->name('facility-page-edit');
                         Route::patch('/', [FacilityPageController::class, 'update'])->name('facility-page-update');
-                        Route::post('upload-image-via-ajax', [FacilityContentController::class, 'uploadPhoto'])->name('uploadImageViaAjax');
+                        Route::post('upload-image', [FacilityContentController::class, 'uploadPhoto'])->name('uploadImageViaAjax');
                         Route::resource('content', FacilityContentController::class);
                         Route::get('content/photo/delete/{id}', [FacilityContentController::class, 'deletePhoto'])->name('delete-facility-photo');
                     });
                 Route::resource('programs', ProgramController::class);
-//                Route::prefix('program')
-//                    ->group(function (){
-//                        Route::resource('/', ProgramController::class);
-//                    });
+
+                Route::resource('pelatihan', ProgramContentController::class);
+                Route::prefix('pelatihan')
+                    ->group(function (){
+                        Route::post('upload-image', [ProgramContentController::class, 'uploadPhoto'])->name('upload-programs-photo');
+                        Route::get('delete-photo/{id}', [ProgramContentController::class, 'deletePhoto'])->name('delete-programs-photo');
+
+                        Route::get('/{pelatihan}/prospek-karir/create', [ProgramCareerSalaryController::class, 'create'])->name('prospek-karir.create');
+                        Route::post('/{pelatihan}/prospek-karir', [ProgramCareerSalaryController::class, 'store'])->name('prospek-karir.store');
+                        Route::get('/{pelatihan}/prospek-karir/{karir}/edit', [ProgramCareerSalaryController::class, 'edit'])->name('prospek-karir.edit');
+                        Route::put('/{pelatihan}/prospek-karir/{karir}', [ProgramCareerSalaryController::class, 'update'])->name('prospek-karir.update');
+                        Route::delete('/{pelatihan}/prospek-karir/{karir}', [ProgramCareerSalaryController::class, 'destroy'])->name('prospek-karir.destroy');
+
+                        Route::get('/{pelatihan}/career-company', [ProgramCareerCompanyController::class, 'index'])->name('career-company.index');
+                        Route::get('/{pelatihan}/career-company/create', [ProgramCareerCompanyController::class, 'create'])->name('career-company.create');
+                        Route::post('/{pelatihan}/career-company', [ProgramCareerCompanyController::class, 'store'])->name('career-company.store');
+                        Route::get('/{pelatihan}/career-company/{company}/edit', [ProgramCareerCompanyController::class, 'edit'])->name('career-company.edit');
+                        Route::put('/{pelatihan}/career-company/{company}', [ProgramCareerCompanyController::class, 'update'])->name('career-company.update');
+                        Route::delete('/{pelatihan}/career-company/{company}', [ProgramCareerCompanyController::class, 'destroy'])->name('career-company.destroy');
+                    });
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
