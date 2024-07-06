@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\PageContent\ProgramCareerCompanyController;
 use App\Http\Controllers\Admin\PageContent\ProgramCareerSalaryController;
 use App\Http\Controllers\Admin\PageContent\ProgramContentController;
 use App\Http\Controllers\Admin\PageContent\ProgramController;
+use App\Http\Controllers\Admin\PageContent\TestimonyController;
 use App\Http\Controllers\Admin\PageContent\VictorySectionController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SekolahController;
@@ -159,6 +160,8 @@ Route::prefix('admin')
             ->group(function (){
                 Route::get('victory', [VictorySectionController::class, 'edit'])->name('victory-section-edit');
                 Route::patch('victory', [VictorySectionController::class, 'update'])->name('victory-section-update');
+
+                Route::resource('testimoni', TestimonyController::class);
             });
     });
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');

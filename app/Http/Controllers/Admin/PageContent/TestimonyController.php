@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin\PageContent;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TestimonyRequest;
 use App\Models\Testimony;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
@@ -28,22 +30,25 @@ class TestimonyController extends Controller
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
-                                    <a class="dropdown-item" href="' . route('categories.edit', $item->id) . '">Edit</a>
+                                    <a class="dropdown-item" href="' . route('testimoni.edit', $item->id) . '">Edit</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="' . route('categories.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
+                                    <a class="dropdown-item" href="' . route('testimoni.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
                                 </li>
                             </ul>
                         </div>';
                 })
-                ->rawColumns(['action'])
+                ->editColumn('photo_url', function ($item) {
+                    return $item->photo_url ? '<img width="150" class="rounded-2" src="' . Storage::url($item->photo_url) . '"/>' : '';
+                })
+                ->rawColumns(['action', 'photo_url'])
                 ->make();
         }
         $title = 'Hapus Testimoni!';
         $text = "Apakah anda yakin ingin menghapus testimoni ini?";
         confirmDelete($title, $text);
 
-        return view('pages.admin.categories.index');
+        return view('pages.admin.section-content.testimony.index');
     }
 
     /**
@@ -51,19 +56,19 @@ class TestimonyController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.categories.create');
+        return view('pages.admin.section-content.testimony.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(TestimonyRequest $request)
     {
         $data = $request->validated();
         $data['photo_url'] = $request->file('photo_url')->store('assets/testimony-section', 'public');
         Testimony::create($data);
         Alert::success('Hore!', 'Testimony berhasil dibuat!');
-        return redirect()->route('categories.index')->with('status', 'Data testimony berhasil dibuat!');
+        return redirect()->route('testimoni.index')->with('status', 'Data testimony berhasil dibuat!');
     }
 
     /**
@@ -73,15 +78,15 @@ class TestimonyController extends Controller
     {
         $testimony = Testimony::findOrFail($id);
 
-        return view('pages.admin.section-content.programs.edit',[
-            'testimony' => $testimony
+        return view('pages.admin.section-content.testimony.edit',[
+            'testimoni' => $testimony
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(TestimonyRequest $request, string $id)
     {
         $data = $request->validated();
         $testimony = Testimony::findOrFail($id);
@@ -92,7 +97,7 @@ class TestimonyController extends Controller
         }
         $testimony->update($data);
         Alert::success('Hore!', 'Testimoni Berhasil Diupdate!');
-        return redirect()->route('pelatihan.edit', $testimony->id)->with('status', 'Data testimoni berhasil diupdate!');
+        return redirect()->route('testimoni.index')->with('status', 'Data testimoni berhasil diupdate!');
     }
 
     /**
@@ -103,6 +108,6 @@ class TestimonyController extends Controller
         $testimony = Testimony::findOrFail($id);
         $testimony->delete();
         alert()->success('Hore!','Testimoni berhasil dihapus!');
-        return redirect()->route('programs.index')->with('status', 'Data testimoni berhasil dihapus!');
+        return redirect()->route('testimoni.index')->with('status', 'Data testimoni berhasil dihapus!');
     }
 }

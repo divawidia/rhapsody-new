@@ -81,7 +81,14 @@
                 <li>
                     <a href="{{ route('victory-section-edit') }}">
                         <i class="bx bxs-school icon nav-icon"></i>
-                        <span class="menu-item" data-key="t-sekolah">Victory Section</span>
+                        <span class="menu-item" data-key="t-victory">Victory Section</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('testimoni.index') }}">
+                        <i class="bx bxs-school icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-testimoni">Testimony Section</span>
                     </a>
                 </li>
 
