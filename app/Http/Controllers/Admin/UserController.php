@@ -96,20 +96,12 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UserRequest $request, string $id)
+    public function update(Request $request, string $id)
     {
         $user = User::findOrFail($id);
-        $data = $request->validated();
-        if ($request->hasFile('photo_url')){
-            $data['photo_url'] = $request->file('photo_url')->store('assets/user-profile', 'public');
-        }
-
-        if ($request->status == '1'){
-            $data['status'] = 1;
-        }elseif ($request->status == '0') {
-            $data['status'] = 0;
-        }
-
+        $data = $request->validate([
+            'status' => ['required', 'in:1,0'],
+        ]);
         $user->update($data);
         Alert::success('Hore!', 'User Berhasil Diupdate!');
         return redirect()->route('users.index')->with('status', 'Data user berhasil diupdate!');

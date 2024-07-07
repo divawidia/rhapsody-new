@@ -23,7 +23,7 @@
                         <h4 class="card-title">User Management</h4>
                     </div>
                     <div class="card-body">
-                        <a href="{{  route('tags.create') }}" class="btn btn-primary mb-3">
+                        <a href="{{  route('users.create') }}" class="btn btn-primary mb-3">
                             + Tambah User Baru
                         </a>
                         <div class="table-responsive">

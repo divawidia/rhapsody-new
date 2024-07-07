@@ -118,7 +118,7 @@
                 <li class="menu-title" data-key="t-applications">User Management</li>
 
                 <li>
-                    <a href="javascript: void(0);">
+                    <a href="{{ route('users.index') }}">
                         <i class="bx bxs-user icon nav-icon"></i>
                         <span class="menu-item" data-key="t-sekolah">Users</span>
                     </a>
