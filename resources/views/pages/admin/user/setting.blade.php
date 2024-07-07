@@ -70,7 +70,8 @@
                                             </div>
                                         </div>
                                         <div class="mt-4">
-                                            <button type="submit" class="btn btn-primary w-md">Submit</button>
+                                            <button type="submit" class="btn btn-success w-md">Submit</button>
+                                            <a href="{{ route('change-password') }}" class="btn btn-primary w-md">Ubah Password</a>
                                         </div>
                                 </form>
                             </div>

@@ -24,6 +24,8 @@ use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\Admin\SiswaSmaSmkController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -94,12 +96,22 @@ Route::get('/registrasi-ulang-executive', function () {
 
 Route::prefix('blogs-news-events')
     ->group(function () {
-        Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('blogs-news-events');
-        Route::get('/{slug}', [\App\Http\Controllers\PostController::class, 'show'])->name('blogs-news-events-detail');
-        Route::get('/category/{slug}', [\App\Http\Controllers\PostController::class, 'index_by_category'])->name('blogs-news-events-category');
-        Route::get('/tag/{slug}', [\App\Http\Controllers\PostController::class, 'index_by_tag'])->name('blogs-news-events-tag');
-        Route::get('/user/{name}', [\App\Http\Controllers\PostController::class, 'index_by_user'])->name('blogs-news-events-user');
+        Route::get('/', [PostController::class, 'index'])->name('blogs-news-events');
+        Route::get('/{slug}', [PostController::class, 'show'])->name('blogs-news-events-detail');
+        Route::get('/category/{slug}', [PostController::class, 'index_by_category'])->name('blogs-news-events-category');
+        Route::get('/tag/{slug}', [PostController::class, 'index_by_tag'])->name('blogs-news-events-tag');
+        Route::get('/user/{name}', [PostController::class, 'index_by_user'])->name('blogs-news-events-user');
     });
+
+//Route::get('/password/forgot', [UserController::class, 'forgot_password_request'])->name('forgot-password.request');
+//Route::post('/password/forgot', [UserController::class, 'forgot_password_submit'])->name('forgot-password.submit');
+//
+//Route::get('/password/reset/{token}', [UserController::class, 'reset_password_request'])->name('reset-password.request');
+//Route::post('/password/reset', [UserController::class, 'reset_password_submit'])->name('reset-password.submit');
+Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
 Route::prefix('admin')
     ->namespace('App\Http\Controllers\Admin')
@@ -119,8 +131,12 @@ Route::prefix('admin')
         Route::get('/contact-forms', [ContactFormController::class, 'index'])->name('contact-forms.index');
 
         Route::resource('users', UserController::class);
+
         Route::get('/profile-setting', [UserController::class, 'setting'])->name('profile-setting.edit');
         Route::put('/profile-setting/update', [UserController::class, 'updateSetting'])->name('profile-setting.update');
+
+        Route::get('/profile-setting/change-password', [UserController::class, 'changePassword'])->name('change-password');
+        Route::put('/profile-setting/change-password/update', [UserController::class, 'changePasswordUpdate'])->name('change-password.update');
 
         Route::prefix('sosialisasi')
             ->group(function (){

@@ -5,10 +5,15 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rules;
+use Mockery\Generator\StringManipulation\Pass\Pass;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -159,4 +164,30 @@ class UserController extends Controller
         alert()->success('Hore!','User berhasil dihapus!');
         return redirect()->route('users.index')->with('status', 'Data user berhasil dihapus!');
     }
+
+    public function changePassword(){
+        return view('pages.admin.user.change_password');
+    }
+
+    public function changePasswordUpdate(Request $request){
+        $user = Auth::user();
+        $data = $request->validate([
+            'old_password' => 'required',
+            'password' => ['required', 'confirmed', Rules\Password::defaults()]
+        ]);
+
+        if (Hash::check($request->old_password, $user->password)) {
+            $user->fill([
+                'password' => Hash::make($request->password)
+            ])->save();
+
+            Alert::success('Hore!', 'Password berhasil dirubah!');
+            return redirect()->route('profile-setting.edit');
+
+        } else {
+            $request->session()->flash('error', 'Password does not match');
+            return redirect()->route('change-password');
+        }
+    }
+
 }

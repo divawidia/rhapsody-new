@@ -32,6 +32,12 @@
                                         <h5>Welcome Back !</h5>
                                         <p class="text-muted">Sign in to continue to Rhapsody Admin.</p>
                                     </div>
+                                    @if (session('status'))
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <strong>{{ session('status') }}</strong>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                    @endif
                                     <div class="p-2 mt-4">
                                         <form method="POST" action="{{ route('login') }}" class="auth-input">
                                             @csrf
@@ -48,10 +54,6 @@
                                             </div>
 
                                             <div class="mb-3">
-{{--                                                <div class="float-end">--}}
-{{--                                                    <a href="{{ route('password.update') }}"--}}
-{{--                                                       class="text-muted text-decoration-underline">Forgot password?</a>--}}
-{{--                                                </div>--}}
                                                 <label class="form-label" for="password-input">Password <span class="text-danger">*</span></label>
                                                 <div class="position-relative auth-pass-inputgroup input-custom-icon">
                                                     <span class="bx bx-lock-alt"></span>
@@ -65,6 +67,10 @@
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
+                                                <div class="float-end">
+                                                    <a href="{{ route('password.request') }}"
+                                                       class="text-muted text-decoration-underline">Lupa password?</a>
+                                                </div>
                                             </div>
 
 {{--                                            <div class="form-check">--}}

@@ -3,7 +3,6 @@
     Dashboard
 @endsection
 @section('css')
-    <!-- jsvectormap css -->
     <link href="{{ URL::asset('build/libs/jsvectormap/css/jsvectormap.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('page-title')
@@ -14,6 +13,12 @@
     <body>
     @endsection
     @section('content')
+        @if (session('status'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{ session('status') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
 
     @endsection
     @section('scripts')
