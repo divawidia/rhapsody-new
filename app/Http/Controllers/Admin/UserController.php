@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -30,12 +32,7 @@ class UserController extends Controller
                                     <a class="dropdown-item" href="' . route('users.edit', $item->id) . '">Edit</a>
                                 </li>
                                 <li>
-                                <form action="' . route('users.destroy', $item->id) . '" method="POST">
-                                    ' . method_field('delete') . csrf_field() . '
-                                    <button type="submit" class="dropdown-item">
-                                        Hapus
-                                    </button>
-                                </form>
+                                    <a class="dropdown-item" href="' . route('users.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
                                 </li>
                             </ul>
                         </div>';
@@ -58,6 +55,9 @@ class UserController extends Controller
                 ->rawColumns(['action', 'photo_url', 'created_at', 'status'])
                 ->make();
         }
+        $title = 'Hapus User!';
+        $text = "Apakah anda yakin ingin menghapus user ini?";
+        confirmDelete($title, $text);
         return view('pages.admin.user.index');
     }
 
@@ -69,22 +69,17 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        $data = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'photo_url' => ['image']
-        ]);
+        $data = $request->validated();
 
         $data['password'] = Hash::make($data['password']);
         $data['photo_url'] = $data['photo_url']->store('assets/user-profile', 'public');
         $data['roles'] = 'ADMIN';
 
         User::create($data);
-
-        return redirect()->route('users.index');
+        Alert::success('Hore!', 'Anda berhasil registrasi akun! mohon untuk menunggu konfirmasi dari admin agar bisa login');
+        return redirect()->route('users.index')->with('status', 'Registrasi akun berhasil');
     }
 
     /**
@@ -101,14 +96,10 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UserRequest $request, string $id)
     {
         $user = User::findOrFail($id);
-        $data = $request->validate([
-            'name' => ['string', 'max:255'],
-            'email' => ['string', 'email', 'max:255'],
-            'photo_url' => ['image']
-        ]);
+        $data = $request->validated();
         if ($request->hasFile('photo_url')){
             $data['photo_url'] = $request->file('photo_url')->store('assets/user-profile', 'public');
         }
@@ -120,8 +111,8 @@ class UserController extends Controller
         }
 
         $user->update($data);
-
-        return redirect()->route('users.index')->with('status', 'Data user berhasil diedit!');
+        Alert::success('Hore!', 'User Berhasil Diupdate!');
+        return redirect()->route('users.index')->with('status', 'Data user berhasil diupdate!');
     }
 
     /**
@@ -131,7 +122,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
-
+        alert()->success('Hore!','User berhasil dihapus!');
         return redirect()->route('users.index')->with('status', 'Data user berhasil dihapus!');
     }
 }
