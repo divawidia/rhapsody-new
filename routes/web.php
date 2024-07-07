@@ -119,6 +119,8 @@ Route::prefix('admin')
         Route::get('/contact-forms', [ContactFormController::class, 'index'])->name('contact-forms.index');
 
         Route::resource('users', UserController::class);
+        Route::get('/profile-setting', [UserController::class, 'setting'])->name('profile-setting.edit');
+        Route::put('/profile-setting/update', [UserController::class, 'updateSetting'])->name('profile-setting.update');
 
         Route::prefix('sosialisasi')
             ->group(function (){

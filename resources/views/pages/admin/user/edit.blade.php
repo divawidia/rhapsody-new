@@ -24,13 +24,16 @@
                             <div class="mb-3 row">
                                 <label for="status" class="col-md-2 col-form-label">Status Akun</label>
                                 <div class="col-md-10 d-flex align-items-center">
-                                    @foreach([1 => "Aktif", 0 => "Non Aktif"] AS $status => $status_label)
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="status" id="status" value={{ $status }} {{ old("status", $user->status) == $status ? "checked" : "" }}>
-                                            <label class="form-check-label" for="{{ $status }}">{{ $status_label }}</label>
-                                        </div>
-                                    @endforeach
+                                    @if($user->status == 1)
+                                        <input type="checkbox" name="status" id="status" switch="success" value="1" checked/>
+                                    @else
+                                        <input type="checkbox" name="status" id="status" switch="success" value="1" >
+                                    @endif
+                                    <label for="status" data-on-label="On" data-off-label="Off"></label>
                                 </div>
+                                @error('status')
+                                <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mt-4">
                                 <button type="submit" class="btn btn-primary w-md">Submit</button>

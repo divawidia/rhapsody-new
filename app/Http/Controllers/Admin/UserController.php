@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -93,15 +94,55 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    public function setting()
+    {
+        return view('pages.admin.user.setting',[
+            'user' => Auth::user()
+        ]);
+    }
+
     public function update(Request $request, string $id)
     {
         $user = User::findOrFail($id);
         $data = $request->validate([
-            'status' => ['required', 'in:1,0'],
+            'status' => ['in:1,0', 'nullable'],
         ]);
+        if ($request->status == null){
+            $data['status'] = '0';
+        }
+        $user->update([
+            'status' => $data['status']
+        ]);
+        Alert::success('Hore!', 'User Berhasil Diupdate!');
+        return redirect()->route('users.index')->with('status', 'Data user berhasil diupdate!');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function updateSetting(Request $request)
+    {
+        $userId = Auth::user()->getAuthIdentifier();
+        $user = User::findOrFail($userId);
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,'. $userId],
+            'photo_url' => ['image'],
+        ]);
+        if ($request->hasFile('photo_url')){
+            Storage::delete($user->photo_url);
+            $data['photo_url'] = $data['photo_url']->store('assets/user-profile', 'public');
+        }else{
+            $data['photo_url'] = $user->photo_url;
+        }
+        $data['roles'] = 'ADMIN';
+
+        if ($user->status == '1'){
+            $data['status'] = '1';
+        }else{
+            $data['status'] = '0';
+        }
+
         $user->update($data);
         Alert::success('Hore!', 'User Berhasil Diupdate!');
         return redirect()->route('users.index')->with('status', 'Data user berhasil diupdate!');
@@ -113,6 +154,7 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         $user = User::findOrFail($id);
+        Storage::delete($user->photo_url);
         $user->delete();
         alert()->success('Hore!','User berhasil dihapus!');
         return redirect()->route('users.index')->with('status', 'Data user berhasil dihapus!');

@@ -262,7 +262,7 @@
                                             @else
                                                 <input type="checkbox" name="victory_section_status" id="victory_section_status" switch="success" value="1" >
                                             @endif
-                                            <label for="victory_section_status" data-on-label="On" data-off-label="Off"></label>
+                                            <label for="victory_section_status" data-on-label="Aktif" data-off-label="Nonaktif"></label>
                                         </div>
                                         @error('victory_section_status')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
