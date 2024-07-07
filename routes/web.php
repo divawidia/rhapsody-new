@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\SectionContent\VictorySectionController;
 use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\Admin\SiswaSmaSmkController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -110,10 +111,15 @@ Route::prefix('admin')
         Route::resource('tags', TagController::class);
         Route::resource('posts', PostController::class);
         Route::resource('categories', CategoryController::class);
+
         Route::post('upload-blog-photo', [PostController::class, 'uploadPhoto'])->name('blog-photo-upload');
         Route::post('upload-blog-thumbnail', [PostController::class, 'uploadPhotoThumbnail'])->name('blog-thumbnail-upload');
         Route::get('delete-blog-photo/{id}', [PostController::class, 'deletePhoto'])->name('blog-photo-delete');
+
         Route::get('/contact-forms', [ContactFormController::class, 'index'])->name('contact-forms.index');
+
+        Route::resource('users', UserController::class);
+
         Route::prefix('sosialisasi')
             ->group(function (){
                 Route::resource('siswa-sma-smk', SiswaSmaSmkController::class);
