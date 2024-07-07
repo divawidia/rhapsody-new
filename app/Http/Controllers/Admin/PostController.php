@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
+use Yajra\DataTables\Facades\DataTables;
 
 class PostController extends Controller
 {
@@ -27,6 +28,50 @@ class PostController extends Controller
         return view('pages.admin.posts.index', [
             'posts' => $posts
         ]);
+    }
+
+    public function dashboard(){
+        if (request()->ajax()) {
+            $query = Post::with(['sekolah']);
+
+            return Datatables::of($query)
+                ->addColumn('action', function ($item) {
+                    return '
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bx bx-dots-horizontal-rounded"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="' . route('posts.edit', $item->id) . '">Edit</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="' . route('posts.show', $item->id) . '">Detail</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="' . route('posts.destroy', $item->id) . '" data-confirm-delete="true">Hapus</a>
+                                </li>
+                            </ul>
+                        </div>';
+                })
+                ->editColumn('created_at', function ($item){
+                    $date = strtotime($item->created_at);
+                    return date('l, M d, Y',$date);
+                })
+                ->editColumn('status', function ($item){
+                    if ($item->status == 1) {
+                        $badge = '<span class="badge bg-success">Published</span>';
+                    }else{
+                        $badge = '<span class="badge bg-danger">Private</span>';
+                    }
+                    return $badge;
+                })
+                ->rawColumns(['action'])
+                ->make();
+        }
+        $title = 'Hapus Artikel!';
+        $text = "Apakah anda yakin ingin menghapus artikel ini?";
+        confirmDelete($title, $text);
     }
 
     /**
