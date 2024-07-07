@@ -20,6 +20,57 @@
             </div>
         @endif
 
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Pertanyaan Form Kontak</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0" id="contactFormTable">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama</th>
+                                    <th>Email</th>
+                                    <th>No. Telp</th>
+                                    <th>Tgl. Dikirim</th>
+                                    <th>Pesan</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Artikel yang Telah Dibuat</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0" id="artikelTable">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Judul</th>
+                                        <th>Dibuat oleh</th>
+                                        <th>Tgl. Dibuat</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     @endsection
     @section('scripts')
         <!-- apexcharts -->
@@ -33,3 +84,25 @@
         <!-- App js -->
         <script src="{{ URL::asset('build/js/app.js') }}"></script>
     @endsection
+    @push('addon-script')
+        <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.8/datatables.min.js"></script>
+        <script>
+            // AJAX DataTable
+            var datatable = $('#contactFormTable').DataTable({
+                processing: true,
+                serverSide: true,
+                ordering: true,
+                ajax: {
+                    url: '{!! url()->route('contact-forms.index') !!}',
+                },
+                columns: [
+                    { data: 'id', name: 'id' },
+                    { data: 'nama', name: 'nama' },
+                    { data: 'email', name: 'email' },
+                    { data: 'no_telp', name: 'no_telp' },
+                    { data: 'pesan', name: 'pesan' },
+                    { data: 'created_at', name: 'created_at' },
+                ]
+            });
+        </script>
+    @endpush
