@@ -64,7 +64,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bxs-school icon nav-icon"></i>
+                        <i class='bx bx-file-blank'></i>
                         <span class="menu-item" data-key="t-sekolah">Pages</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -80,28 +80,28 @@
 
                 <li>
                     <a href="{{ route('victory-section-edit') }}">
-                        <i class="bx bxs-school icon nav-icon"></i>
+                        <i class='bx bx-file-blank'></i>
                         <span class="menu-item" data-key="t-victory">Victory Section</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('testimoni.index') }}">
-                        <i class="bx bxs-school icon nav-icon"></i>
+                        <i class='bx bx-file-blank'></i>
                         <span class="menu-item" data-key="t-testimoni">Testimony Section</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('company.index') }}">
-                        <i class="bx bxs-school icon nav-icon"></i>
+                        <i class='bx bx-file-blank'></i>
                         <span class="menu-item" data-key="t-company">Alumny Company Section</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('faq.index') }}">
-                        <i class="bx bxs-school icon nav-icon"></i>
+                        <i class='bx bx-file-blank'></i>
                         <span class="menu-item" data-key="t-sekolah">Frequently Asked Question</span>
                     </a>
                 </li>

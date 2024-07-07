@@ -32,7 +32,7 @@ class PostController extends Controller
 
     public function dashboard(){
         if (request()->ajax()) {
-            $query = Post::with(['sekolah']);
+            $query = Post::with(['user'])->latest()->get();
 
             return Datatables::of($query)
                 ->addColumn('action', function ($item) {
@@ -66,7 +66,7 @@ class PostController extends Controller
                     }
                     return $badge;
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'created_at', 'status'])
                 ->make();
         }
         $title = 'Hapus Artikel!';

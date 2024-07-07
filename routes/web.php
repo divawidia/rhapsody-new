@@ -122,6 +122,7 @@ Route::prefix('admin')
         Route::resource('calon-peserta-diploma', CalonPesertaDiplomaController::class);
         Route::resource('tags', TagController::class);
         Route::resource('posts', PostController::class);
+        Route::get('posts-dashboard', [PostController::class, 'dashboard'])->name('posts.dashboard');
         Route::resource('categories', CategoryController::class);
 
         Route::post('upload-blog-photo', [PostController::class, 'uploadPhoto'])->name('blog-photo-upload');
