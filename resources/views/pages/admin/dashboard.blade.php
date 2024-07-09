@@ -35,8 +35,8 @@
                                     <th>Nama</th>
                                     <th>Email</th>
                                     <th>No. Telp</th>
-                                    <th>Tgl. Dikirim</th>
                                     <th>Pesan</th>
+                                    <th>Tgl. Dikirim</th>
                                 </tr>
                                 </thead>
                                 <tbody>
