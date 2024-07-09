@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin\PageContent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AboutPageRequest;
 use App\Models\AboutPage;
+use App\Models\AlumnyCompany;
+use App\Models\Program;
+use App\Models\VictorySection;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AboutPageController extends Controller
@@ -15,7 +18,16 @@ class AboutPageController extends Controller
     public function show()
     {
         $aboutData = AboutPage::findOrFail(1);
-        return view('pages.about', ['aboutData' => $aboutData]);
+        $programs = Program::with('program_contents')->get()->all();
+        $victory = VictorySection::findOrFail(1);
+        $company = AlumnyCompany::all();
+
+        return view('pages.about', [
+            'aboutData' => $aboutData,
+            'programs' => $programs,
+            'victory' => $victory,
+            'companies' => $company
+        ]);
     }
 
     /**

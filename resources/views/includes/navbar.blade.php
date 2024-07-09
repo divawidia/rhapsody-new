@@ -7,9 +7,9 @@ Header Area
                 <div class="row align-items-center justify-content-between">
                     <div class="col-3 align-items-center">
                         <div class="vs-logo style2">
-                            <a href="{{ route('home') }}"
-                            ><img src="/img/logo.png" alt="logo"
-                                /></a>
+                            <a href="{{ route('home') }}">
+                                <img src="/img/logo.png" alt="logo"/>
+                            </a>
                         </div>
                     </div>
                     <div class="col-auto justify-content-end">
@@ -19,28 +19,38 @@ Header Area
                                 <li class="menu-item-has-children mega-menu-wrap">
                                     <a href="#">Program Kami</a>
                                     <ul class="mega-menu">
-                                        <li>
-                                            <a href="#">Diploma 1</a>
-                                            <ul>
-                                                <li><a href="{{ route('front-office') }}">Front Office</a></li>
-                                                <li><a href="{{ route('housekeeping') }}">Housekeeping</a></li>
-                                                <li>
-                                                    <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Executive Hybrid</a>
-                                            <ul>
-                                                <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>
-                                                <li>
-                                                    <a href="{{ route('galley&cook') }}">Galley & Cook</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        @foreach($programs as $program)
+                                            <li>
+                                                <a href="#">{{ $program->name }}</a>
+                                                <ul>
+                                                    @foreach($program->program_contents as $program_content)
+                                                        <li><a href="{{ route('program-detail', $program_content->slug) }}">{{ $program_content->name }}</a></li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                        @endforeach
+{{--                                        <li>--}}
+{{--                                            <a href="#">Diploma 1</a>--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="{{ route('front-office') }}">Front Office</a></li>--}}
+{{--                                                <li><a href="{{ route('housekeeping') }}">Housekeeping</a></li>--}}
+{{--                                                <li>--}}
+{{--                                                    <a href="{{ route('f&b-service') }}">Food & Beverage Service</a>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <a href="{{ route('f&b-product') }}">Food & Beverage Product</a>--}}
+{{--                                                </li>--}}
+{{--                                            </ul>--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <a href="#">Executive Hybrid</a>--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>--}}
+{{--                                                <li>--}}
+{{--                                                    <a href="{{ route('galley&cook') }}">Galley & Cook</a>--}}
+{{--                                                </li>--}}
+{{--                                            </ul>--}}
+{{--                                        </li>--}}
                                     </ul>
                                 </li>
                                 <li>
@@ -113,9 +123,9 @@ Header Area
         <div class="vs-menu-area text-center" id="mobileNavbarCollapse">
             <button class="vs-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbarCollapse" aria-expanded="false" aria-controls="mobileNavbarCollapse"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="{{ route('home') }}"
-                ><img src="/img/logo.png" alt="Rhapsody"
-                    /></a>
+                <a href="{{ route('home') }}">
+                    <img src="/img/logo.png" alt="Rhapsody"/>
+                </a>
             </div>
             <div class="vs-mobile-menu">
                 <ul>
@@ -125,34 +135,44 @@ Header Area
                     <li>
                         <a href="{{route('about-us')}}">Tentang Kami</a>
                     </li>
-                    <li>
-                        <a href="#">Diploma 1</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('front-office') }}">Front Office</a></li>
-                            <li><a href="{{ route('housekeeping') }}">House Keeping</a></li>
-                            <li>
-                                <a href="{{ route('f&b-service') }}">Food & Baverage Service</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('f&b-product') }}">Food & Baverage Product</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Executive Class Hybrid</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>
-                            <li>
-                                <a href="{{ route('galley&cook') }}">Galley & Cook</a>
-                            </li>
-                        </ul>
-                    </li>
+                    @foreach($programs as $program)
+                        <li class="menu-item-has-children">
+                            <a href="#">{{ $program->name }}</a>
+                            <ul class="sub-menu">
+                                @foreach($program->program_contents as $program_content)
+                                    <li><a href="{{ route('program-detail', $program_content->slug) }}">{{ $program_content->name }}</a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @endforeach
+{{--                    <li>--}}
+{{--                        <a href="#">Diploma 1</a>--}}
+{{--                        <ul class="sub-menu">--}}
+{{--                            <li><a href="{{ route('front-office') }}">Front Office</a></li>--}}
+{{--                            <li><a href="{{ route('housekeeping') }}">House Keeping</a></li>--}}
+{{--                            <li>--}}
+{{--                                <a href="{{ route('f&b-service') }}">Food & Baverage Service</a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="{{ route('f&b-product') }}">Food & Baverage Product</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                    <li class="menu-item-has-children">--}}
+{{--                        <a href="#">Executive Class Hybrid</a>--}}
+{{--                        <ul class="sub-menu">--}}
+{{--                            <li><a href="{{ route('laundry&housekeeping') }}">Laundry & Housekeeping</a></li>--}}
+{{--                            <li>--}}
+{{--                                <a href="{{ route('galley&cook') }}">Galley & Cook</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
 
                     <li class="menu-item-has-children">
                         <a href="{{ route('fasilitas') }}">Fasilitas</a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="{{ route('under-maintenance') }}">Blog</a>
+                        <a href="{{ route('blogs-news-events') }}">Blogs, News & Events</a>
                     </li>
                     <li>
                         <a href="{{ route('contact') }}">Kontak Kami</a>

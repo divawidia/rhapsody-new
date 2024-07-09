@@ -9,6 +9,7 @@ use App\Models\AlumnyCompany;
 use App\Models\FacilityContent;
 use App\Models\Home;
 use App\Models\Program;
+use App\Models\Testimony;
 use App\Models\VictorySection;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -21,17 +22,26 @@ class HomePageController extends Controller
     public function show()
     {
         $homeData = Home::findOrFail(1);
-        $program = Program::with('program_contents')->get()->all();
+        $programs = Program::with('program_contents')->get()->all();
         $fasilitas = FacilityContent::with('facility_photo')->get()->all();
         $victory = VictorySection::findOrFail(1);
         $company = AlumnyCompany::all();
+        $testimonies = Testimony::all();
 
         return view('pages.home', [
             'homeData' => $homeData,
-            'programs' => $program,
+            'programs' => $programs,
             'facilities' => $fasilitas,
             'victory' => $victory,
-            'companies' => $company
+            'companies' => $company,
+            'testimonies' => $testimonies
+        ]);
+    }
+
+    public function registrationComplete(){
+        $programs = Program::with('program_contents')->get()->all();
+        return view('pages.registration_complete', [
+            'programs' => $programs,
         ]);
     }
 

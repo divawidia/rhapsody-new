@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\PageContent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactPageRequest;
 use App\Models\ContactPage;
+use App\Models\Program;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -16,7 +17,11 @@ class ContactPageController extends Controller
     public function show()
     {
         $contactData = ContactPage::findOrFail(1);
-        return view('pages.contact', ['contactData' => $contactData]);
+        $programs = Program::with('program_contents')->get()->all();
+        return view('pages.contact', [
+            'contactData' => $contactData,
+            'programs' => $programs
+        ]);
     }
 
     /**

@@ -10,6 +10,7 @@ use App\Models\JadwalSosialisasi;
 use App\Models\ProgramDiploma;
 use App\Models\Sekolah;
 use App\Models\SiswaSmaSmk;
+use App\Models\Testimony;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -59,12 +60,18 @@ class SiswaSmaSmkController extends Controller
      */
     public function landing_page_create()
     {
-        return view('pages.landing_page_pendaftaran');
+        $testimonies = Testimony::all();
+        return view('pages.landing_page_pendaftaran',[
+            'testimonies' => $testimonies
+        ]);
     }
 
     public function landing_page_luar_bali_create()
     {
-        return view('pages.landing-page-promo-luar-bali');
+        $testimonies = Testimony::all();
+        return view('pages.landing-page-promo-luar-bali', [
+            'testimonies' => $testimonies
+        ]);
     }
 
     public function create()

@@ -381,7 +381,7 @@
             $('.owl-carousel.slider_carousel').owlCarousel({
                 dots: false,
                 rewind: true,
-                autoplay: false,
+                autoplay: true,
                 nav: true,
                 navText: ["<img src='/img/icon/left.png'>", "<img src='/img/icon/next.png'>"],
                 responsive: {
@@ -390,9 +390,6 @@
                     },
                     768: {
                         items: 2,
-                    },
-                    992: {
-                        items: 3
                     }
                 }
             });

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Artikel | LPK Rhapsody Hospitality Development Center
+    {{ $post->title }} | LPK Rhapsody Hospitality Development Center
 @endsection
 
 @section('content')

@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\CalonPesertaExecutive;
+use App\Models\Program;
 use App\Models\ProgramExecutive;
 use App\Models\Reference;
+use App\Models\Testimony;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -45,10 +47,15 @@ class CalonMahasiswaController extends Controller
     {
         $program_executives = ProgramExecutive::all();
         $references = Reference::all();
+        $testimonies = Testimony::all();
+        $programs = Program::with('program_contents')->get()->all();
+
 
         return view('pages.executive_registration', [
             'program_executives' => $program_executives,
-            'references' => $references
+            'references' => $references,
+            'testimonies' => $testimonies,
+            'programs' => $programs
         ]);
     }
 

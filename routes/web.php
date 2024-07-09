@@ -45,34 +45,10 @@ Route::get('/', [HomePageController::class, 'show'])->name('home');
 Route::get('/about-us', [AboutPageController::class, 'show'])->name('about-us');
 Route::get('/program-pelatihan/{slug}', [ProgramContentController::class, 'show'])->name('program-detail');
 
-Route::get('/programs/front-office', function () {
-    return view('pages.front_office');
-})->name('front-office');
-Route::get('/programs/housekeeping', function () {
-    return view('pages.housekeeping');
-})->name('housekeeping');
-Route::get('/programs/f&b-product', function () {
-    return view('pages.f&b_product');
-})->name('f&b-product');
-Route::get('/programs/f&b-service', function () {
-    return view('pages.f&b_service');
-})->name('f&b-service');
-Route::get('/programs/galley-&-cook', function () {
-    return view('pages.galley&cook');
-})->name('galley&cook');
-Route::get('/programs/laundry-&-housekeeping', function () {
-    return view('pages.laundry&housekeeping');
-})->name('laundry&housekeeping');
-Route::get('/programs/bar-&-service', function () {
-    return view('pages.bar&service');
-})->name('bar&service');
+Route::get('/fasilitas', [FacilityPageController::class, 'show'])->name('fasilitas');
 
-Route::get('/fasilitas', function () {
-    return view('pages.facilities');
-})->name('fasilitas');
-Route::get('/under-maintenance', function () {
-    return view('pages.under_maintenance');
-})->name('under-maintenance');
+Route::get('/under-maintenance', function () {return view('pages.under_maintenance');})->name('under-maintenance');
+
 Route::get('/contact-us', [ContactPageController::class, 'show'])->name('contact');
 Route::post('/contact-forms', [ContactFormController::class, 'store'])->name('contact-forms.store');
 
@@ -85,14 +61,13 @@ Route::post('/interview', [SiswaSmaSmkController::class, 'landing_page_store'])-
 Route::get('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_create'])->name('promo-luar-bali');
 Route::post('/promo', [SiswaSmaSmkController::class, 'landing_page_luar_bali_store'])->name('promo-luar-bali-store');
 
-
 Route::get('/registrasi-program-executive-hybrid', [\App\Http\Controllers\Admin\CalonMahasiswaController::class, 'create'])->name('registrasi-program-executive');
 Route::post('/registrasi-program-executive-hybrid', [\App\Http\Controllers\Admin\CalonMahasiswaController::class, 'store'])->name('registrasi-program-executive.store');
 
 Route::get('/registrasi-program-d1', [\App\Http\Controllers\Admin\CalonPesertaDiplomaController::class, 'create'])->name('registrasi-program-d1');
 Route::post('/registrasi-program-d1', [\App\Http\Controllers\Admin\CalonPesertaDiplomaController::class, 'store'])->name('registrasi-program-d1.store');
 
-Route::get('/registrasi-berhasil', function () {return view('pages.registration_complete');})->name('registrasi-berhasil');
+Route::get('/registrasi-berhasil', [HomePageController::class, 'registrationComplete'])->name('registrasi-berhasil');
 
 Route::get('/registrasi-ulang-executive', function () {
     return view('pages.executive_daftar_ulang');
@@ -100,11 +75,11 @@ Route::get('/registrasi-ulang-executive', function () {
 
 Route::prefix('blogs-news-events')
     ->group(function () {
-        Route::get('/', [PostController::class, 'index'])->name('blogs-news-events');
-        Route::get('/{slug}', [PostController::class, 'show'])->name('blogs-news-events-detail');
-        Route::get('/category/{slug}', [PostController::class, 'index_by_category'])->name('blogs-news-events-category');
-        Route::get('/tag/{slug}', [PostController::class, 'index_by_tag'])->name('blogs-news-events-tag');
-        Route::get('/user/{name}', [PostController::class, 'index_by_user'])->name('blogs-news-events-user');
+        Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('blogs-news-events');
+        Route::get('/{slug}', [\App\Http\Controllers\PostController::class, 'show'])->name('blogs-news-events-detail');
+        Route::get('/category/{slug}', [\App\Http\Controllers\PostController::class, 'index_by_category'])->name('blogs-news-events-category');
+        Route::get('/tag/{slug}', [\App\Http\Controllers\PostController::class, 'index_by_tag'])->name('blogs-news-events-tag');
+        Route::get('/user/{name}', [\App\Http\Controllers\PostController::class, 'index_by_user'])->name('blogs-news-events-user');
     });
 
 Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');

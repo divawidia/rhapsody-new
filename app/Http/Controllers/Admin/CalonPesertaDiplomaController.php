@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\CalonPesertaDiploma;
 use App\Models\CalonPesertaExecutive;
+use App\Models\Program;
 use App\Models\ProgramDiploma;
 use App\Models\Reference;
+use App\Models\Testimony;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -46,10 +48,14 @@ class CalonPesertaDiplomaController extends Controller
     {
         $jurusan_diplomas = ProgramDiploma::all();
         $references = Reference::all();
+        $testimonies = Testimony::all();
+        $programs = Program::with('program_contents')->get()->all();
 
         return view('pages.d1_registration', [
             'jurusan_diplomas' => $jurusan_diplomas,
-            'references' => $references
+            'references' => $references,
+            'testimonies' => $testimonies,
+            'programs' => $programs
         ]);
     }
 

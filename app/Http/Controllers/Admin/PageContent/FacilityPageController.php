@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FacilityPageRequest;
 use App\Models\FacilityContent;
 use App\Models\FacilityPage;
+use App\Models\Program;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
@@ -42,7 +43,14 @@ class FacilityPageController extends Controller
     public function show()
     {
         $facilityPageData = FacilityPage::findOrFail(1);
-        return view('pages.facilities', ['facilityPageData' => $facilityPageData]);
+        $facilities = FacilityContent::with('facility_photo')->get()->all();
+        $programs = Program::with('program_contents')->get()->all();
+
+        return view('pages.facilities', [
+            'facilityPageData' => $facilityPageData,
+            'facilities' => $facilities,
+            'programs' => $programs
+        ]);
     }
 
     /**

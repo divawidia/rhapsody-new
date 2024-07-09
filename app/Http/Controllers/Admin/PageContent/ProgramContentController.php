@@ -110,6 +110,7 @@ class ProgramContentController extends Controller
         $faqs = Faq::all();
         $program_pelatihan = ProgramContent::with('program')->get()->all();
         $testimonies = Testimony::all();
+        $programs = Program::with('program_contents')->get()->all();
 
         return view('pages.program-detail', [
             'program' => $program,
@@ -117,7 +118,8 @@ class ProgramContentController extends Controller
             'end_date' => $end_date,
             'faqs' => $faqs,
             'program_pelatihan' => $program_pelatihan,
-            'testimonies' => $testimonies
+            'testimonies' => $testimonies,
+            'programs' => $programs
         ]);
     }
 

@@ -53,7 +53,7 @@
                     @endforeach
                     @else
                         <div class="row mt-5">
-                            <h2 class="card-title text-center">Tidak Ada Data Artikel Saat Ini</h2>
+                            <h2 class="card-title text-center">Tidak Ada Data Artikel</h2>
                         </div>
                     @endif
                     <div class="vs-pagination">
@@ -88,15 +88,21 @@
                         <div class="widget   ">
                             <h3 class="widget_title">Artikel Terbaru</h3>
                             <div class="recent-post-wrap">
-                                @foreach($recent_posts as $post)
-                                    <div class="recent-post">
-                                        <div class="media-img"><img src="{{ Storage::url($post->thumbnail_photo ?? '') }}" alt="thing"></div>
-                                        <div class="media-body">
-                                            <h4 class="post-title"><a class="text-inherit" href="{{ route('blogs-news-events-detail', $post->slug) }}">{{ $post->title }}</a></h4>
-                                            <div class="recent-post-meta"><a href="#">{{ date("d F, Y",$created_date) }}</a></div>
+                                @if($posts->count() > 0)
+                                    @foreach($recent_posts as $post)
+                                        <div class="recent-post">
+                                            <div class="media-img"><img src="{{ Storage::url($post->thumbnail_photo ?? '') }}" alt="thing"></div>
+                                            <div class="media-body">
+                                                <h4 class="post-title"><a class="text-inherit" href="{{ route('blogs-news-events-detail', $post->slug) }}">{{ $post->title }}</a></h4>
+                                                <div class="recent-post-meta"><a href="#">{{ date("d F, Y",$created_date) }}</a></div>
+                                            </div>
                                         </div>
+                                    @endforeach
+                                @else
+                                    <div class="row mt-5">
+                                        <h3 class="card-title text-center">Tidak Ada Data Artikel</h3>
                                     </div>
-                                @endforeach
+                                @endif
                             </div>
                         </div>
                         <div class="widget widget_meta   ">

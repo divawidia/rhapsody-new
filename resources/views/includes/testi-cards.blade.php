@@ -2,10 +2,6 @@
     <div class="card_wrapper">
         <div class="container">
             <div class="row">
-{{--                <div class="title-area text-center wow fadeInUp" data-wow-delay="0.3s">--}}
-{{--                    <h2 class="sec-title h1 text-uppercase" data-aos="fade-up" data-aos-duration="1000">Beberapa Alumni Kami</h2>--}}
-{{--                    <span class="sec-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">LPK RHAPSODY HOSPITALITY DEVELOPMENT CENTER</span>--}}
-{{--                </div>--}}
                 <div class="col-12 mt-5">
                     <div class="owl-carousel slider_carousel">
                         @foreach($testimonies as $testimony)
