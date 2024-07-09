@@ -43,7 +43,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomePageController::class, 'show'])->name('home');
 Route::get('/about-us', [AboutPageController::class, 'show'])->name('about-us');
-Route::get('/programs/{slug}', [ProgramContentController::class, 'show'])->name('program-detail');
+Route::get('/program-pelatihan/{slug}', [ProgramContentController::class, 'show'])->name('program-detail');
+
 Route::get('/programs/front-office', function () {
     return view('pages.front_office');
 })->name('front-office');
@@ -65,6 +66,7 @@ Route::get('/programs/laundry-&-housekeeping', function () {
 Route::get('/programs/bar-&-service', function () {
     return view('pages.bar&service');
 })->name('bar&service');
+
 Route::get('/fasilitas', function () {
     return view('pages.facilities');
 })->name('fasilitas');
@@ -197,4 +199,4 @@ Route::prefix('admin')
     });
 Auth::routes();
 Route::post('login', [LoginController::class, 'login'])->name('login-admin');
-Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout-admin');

@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Admin\PageContent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProgramContentRequest;
 use App\Models\FacilityContent;
+use App\Models\Faq;
 use App\Models\Program;
 use App\Models\ProgramCareerCompany;
 use App\Models\ProgramCareerSalaries;
 use App\Models\ProgramContent;
 use App\Models\ProgramPhoto;
+use App\Models\Testimony;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -102,9 +104,20 @@ class ProgramContentController extends Controller
      */
     public function show(string $slug)
     {
-        $program = ProgramContent::with('program_photos', 'program_career_companies', 'program_career_salaries')->findOrFail($slug,'slug');
+        $program = ProgramContent::with('program','program_photos', 'program_career_companies', 'program_career_salaries')->where('slug', $slug)->first();
+        $start_date = date('d M, Y', strtotime($program->register_start));
+        $end_date = date('d M, Y', strtotime($program->register_end));
+        $faqs = Faq::all();
+        $program_pelatihan = ProgramContent::with('program')->get()->all();
+        $testimonies = Testimony::all();
+
         return view('pages.program-detail', [
-            'program' => $program
+            'program' => $program,
+            'start_date' => $start_date,
+            'end_date' => $end_date,
+            'faqs' => $faqs,
+            'program_pelatihan' => $program_pelatihan,
+            'testimonies' => $testimonies
         ]);
     }
 

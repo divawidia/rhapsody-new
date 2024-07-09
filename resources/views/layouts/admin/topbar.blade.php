@@ -69,7 +69,7 @@
                         <i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-2"></i>
                         <span class="align-middle me-3">Settings</span>
                     </a>
-                    <a class="dropdown-item" href="{{ route('logout') }}">
+                    <a class="dropdown-item" href="{{ route('logout-admin') }}">
                         <i class="mdi mdi-logout text-muted font-size-16 align-middle me-2"></i>
                         <span class="align-middle">Logout</span>
                     </a>

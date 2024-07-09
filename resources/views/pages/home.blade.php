@@ -166,7 +166,7 @@
                                     </div>
                                     <div class="course-content">
                                         <h3 class="h5 course-name">
-                                            <a href="{{ route('f&b-product') }}"
+                                            <a href="{{ route('program-detail', $program_content->slug) }}"
                                                class="text-inherit">
                                                 {{ $program_content->name }}
                                             </a>
