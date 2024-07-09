@@ -11,39 +11,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 class VictorySectionController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show()
-    {
-//        $victory = VictorySection::findOrFail(1);
-//        return view('pages.admin.section-content.victory', ['victory' => $victory]);
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit()

@@ -133,202 +133,54 @@
                         {{ $homeData->program_section_subtitle }}
                     </span>
                 </div>
-                <div class="left-border row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <h5 class="program-subtitle mt-2 text-white" data-aos="fade-right" data-aos-duration="1000"
-                        data-aos-delay="300">Program</h5>
-                    <h4 class="text-uppercase text-white mb-0" data-aos="fade-right" data-aos-duration="1000"
-                        data-aos-delay="400">Diploma 1</h4>
-                    <p class="text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">Ajak temanmu
-                        dan raih peluang mendapatkan beasiswa</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="course-style2">
-                            <div class="course-img">
-                                <a href="{{ route('f&b-product') }}">
-                                    <img class="w-100"
-                                         src="/img/category/category-2-3.png"
-                                         alt="fnb-product">
-                                </a>
-                            </div>
-                            <div class="row course-tag">
+                @foreach($programs as $program)
+                    <div class="left-border row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <h5 class="program-subtitle mt-2 text-white" data-aos="fade-right" data-aos-duration="1000"
+                            data-aos-delay="300">Program</h5>
+                        <h4 class="text-uppercase text-white mb-0" data-aos="fade-right" data-aos-duration="1000"
+                            data-aos-delay="400">{{ $program->name }}</h4>
+                        <p class="text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+                            Ajak temanmu dan raih peluang mendapatkan beasiswa</p>
+                    </div>
+                    <div class="row">
+                        @foreach($program->program_contents as $program_content)
+                            <div class="col-lg-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="course-style2">
+                                    <div class="course-img">
+                                        <a href="{{ route('program-detail', $program_content->slug) }}">
+                                            <img class="w-100"
+                                                 src="{{ Storage::url($program_content->program_photos[0]->photos_url) }}"
+                                                 alt="fnb-product">
+                                        </a>
+                                    </div>
+                                    <div class="row course-tag">
                                 <span class="col-auto course-price">
-                                    <img src="/img/icon/discount.svg"
-                                         style="width: 20px;
-                                         margin-bottom: 2px">
+                                    <img src="/img/icon/discount.svg" style="width: 20px; margin-bottom: 2px">
                                     Promo tersedia
                                 </span>
-                                <div class="col-auto ms-auto category-style1 p-0">
-                                    <div class="icon">
-                                        <img src="/img/icon/Cook.svg">
+                                        <div class="col-auto ms-auto category-style1 p-0">
+                                            <div class="icon">
+                                                <img src="{{ Storage::url($program_content->program_icon) }}" alt="{{ $program_content->name }}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="course-content">
+                                        <h3 class="h5 course-name">
+                                            <a href="{{ route('f&b-product') }}"
+                                               class="text-inherit">
+                                                {{ $program_content->name }}
+                                            </a>
+                                        </h3>
+                                        <div class="course-meta">
+                                            <span>{{ strip_tags($program_content->short_overview) }}</span>
+                                        </div>
+                                        <span class="interest-percentage">Minat<br>{{ $program_content->interest_percentage }}%</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name">
-                                    <a href="{{ route('f&b-product') }}"
-                                       class="text-inherit">
-                                        F&B Product
-                                    </a>
-                                </h3>
-                                <div class="course-meta">
-                                    <span>Keterampilan fundamental memasak beserta sanitasi & hygiene</span>
-                                </div>
-                                <span class="interest-percentage">Minat<br>28%</span>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-                    <div class="col-lg-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="course-style2">
-                            <div class="course-img">
-                                <a href="{{ route('f&b-service') }}"><img class="w-100" src="/img/category/bar.jpg"
-                                                                          alt="Front Office"></a>
-                            </div>
-                            <div class="row course-tag">
-                                <span class="col-auto course-price"><img src="/img/icon/discount.svg"
-                                                                         style="width: 20px; margin-bottom: 2px">  Promo tersedia</span>
-                                <div class="col-auto ms-auto category-style1 p-0">
-                                    <div class="icon">
-                                        <img src="/img/icon/Service.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name"><a href="{{ route('f&b-service') }}" class="text-inherit">F&B
-                                        Service</a></h3>
-                                <div class="course-meta">
-                                    <span>Pelayanan bintang 5 lengkap dengan mixology dan barista</span>
-                                </div>
-                                <span class="interest-percentage">Minat<br>41%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="course-style2">
-                            <div class="course-img">
-                                <a href="{{ route('front-office') }}"><img class="w-100"
-                                                                           src="/img/category/category-2-1.png"
-                                                                           alt="Front Office"></a>
-                            </div>
-                            <div class="row course-tag">
-                                <span class="col-auto course-price"><img src="/img/icon/discount.svg"
-                                                                         style="width: 20px; margin-bottom: 2px">  Promo tersedia</span>
-                                <div class="col-auto ms-auto category-style1 p-0">
-                                    <div class="icon">
-                                        <img src="/img/icon/FO.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name"><a href="{{ route('front-office') }}" class="text-inherit">Front
-                                        Office</a></h3>
-                                <div class="course-meta">
-                                    <span>Lini terdepan hotel yang merepresentasikan brand</span>
-                                </div>
-                                <span class="interest-percentage">Minat<br>7%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="course-style2">
-                            <div class="course-img">
-                                <a href="{{ route('housekeeping') }}"><img class="w-100"
-                                                                           src="/img/category/category-2-2.png"
-                                                                           alt="Front Office"></a>
-                            </div>
-                            <div class="row course-tag">
-                                <span class="col-auto course-price"><img src="/img/icon/discount.svg"
-                                                                         style="width: 20px; margin-bottom: 2px">  Promo tersedia</span>
-                                <div class="col-auto ms-auto category-style1 p-0">
-                                    <div class="icon">
-                                        <img src="/img/icon/HK.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name"><a href="{{ route('housekeeping') }}" class="text-inherit">Housekeeping</a>
-                                </h3>
-                                <div class="course-meta">
-                                    <span>Menjaga kenyamanan tamu melalui aspek kebersihan</span>
-                                </div>
-                                <span class="interest-percentage">Minat<br>24%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="left-border row" data-aos="fade-up" data-aos-duration="1000">
-                    <h5 class="program-subtitle mt-2 text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">Program</h5>
-                    <h4 class="text-uppercase mb-0 text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">Executive Hybrid</h4>
-                    <p class="text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                        *Umur minimal 21 tahun
-                    </p>
-                </div>
-                <div class="row" data-center-mode="true">
-                    <div class="col-lg-6 col-xxl-3" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="course-style2">
-                            <div class="course-img">
-                                <a href="{{ route('galley&cook') }}"><img class="w-100" src="/img/course/cook-galley.jpg"
-                                                                          alt="Front Office"></a>
-                            </div>
-                            <div
-                                class="row position-absolute translate-middle d-flex align-items-center hstack px-3 course-tag">
-                                <span class="col-auto course-price" style="background-color: #006687"><img
-                                        src="/img/icon/Online.svg" style="width: 20px; margin-bottom: 2px;">  Online</span>
-                                <span class="col-auto course-price"><img src="/img/icon/Speed.svg"
-                                                                         style="width: 20px; margin-bottom: 2px">  3 bulan lulus</span>
-                                <div class="col-auto category-style1 ms-auto p-0">
-                                    <div class="icon">
-                                        <img src="/img/icon/Cook.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name"><a href="{{ route('galley&cook') }}" class="text-inherit">Cook &
-                                        Galley</a></h3>
-                                <div class="course-meta">
-                                    <span>Kursus kilat seni kuliner dengan Bahasa Inggris industri</span>
-                                </div>
-                            </div>
-                            <div class="course-content2 text-white">
-                                <span class="col-auto"><img src="/img/icon/Graduate.svg"
-                                                            style="width: 30px; margin-bottom: 2px">  200+ Alumni</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-3 mt-5 mt-lg-0" data-aos="fade-up" data-aos-duration="1000"
-                         data-aos-delay="100">
-                        <div class="course-style2">
-                            <div class="course-img">
-                                <a href="{{ route('laundry&housekeeping') }}"><img class="w-100"
-                                                                                   src="/img/course/hk-laundry.jpg"
-                                                                                   alt="Front Office"></a>
-                            </div>
-                            <div
-                                class="row position-absolute translate-middle d-flex align-items-center hstack px-3 course-tag">
-                                <span class="col-auto course-price" style="background-color: #006687"><img
-                                        src="/img/icon/Online.svg" style="width: 20px; margin-bottom: 2px;">  Online</span>
-                                <span class="col-auto course-price"><img src="/img/icon/Speed.svg"
-                                                                         style="width: 20px; margin-bottom: 2px">  3 bulan lulus</span>
-                                <div class="col-auto category-style1 ms-auto p-0">
-                                    <div class="icon">
-                                        <img src="/img/icon/HK.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name"><a href="{{ route('laundry&housekeeping') }}"
-                                                              class="text-inherit">HK & Laundry</a></h3>
-                                <div class="course-meta">
-                                    <span>Kursus kilat tata graha dengan Bahasa Inggris industri</span>
-                                </div>
-                            </div>
-                            <div class="course-content2 text-white">
-                                <span class="col-auto"><img src="/img/icon/Graduate.svg"
-                                                            style="width: 30px; margin-bottom: 2px">  200+ Alumni</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
     @endif
@@ -387,101 +239,133 @@
     <section class="mt-5 space-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-xl-4"
-                     data-aos="fade-up"
-                     data-aos-duration="1000">
-                    <div class="course-style2">
-                        <div class="course-img2">
-                            <a href="{{ route('fasilitas') }}">
-                                <img class="w-100"
-                                    src="/img/course/fb-service.jpg"
-                                    alt="Course Img"/>
-                            </a>
-                        </div>
-                        <div class="course-content3">
-                            <div class="row">
-                                <span class="col-auto facility-tag-bg">Sensory Gastro Lab</span>
-                                <span class="col-auto facility-tag-bg2">Sensory Gastro Lab</span>
-                                <img src="/img/course/Restaurant.png" class="facility-tag-img ms-auto">
+                @foreach($facilities as $facility)
+                    <div class="col-sm-6 col-xl-4"
+                         data-aos="fade-up"
+                         data-aos-duration="1000">
+                        <div class="course-style2">
+                            <div class="course-img2">
+                                <a href="{{ route('fasilitas') }}">
+                                    <img class="w-100"
+                                         src="{{ Storage::url($facility->facility_photo[0]->photo_url) }}"
+                                         alt="Course Img"/>
+                                </a>
                             </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name">
-                                    <a href="course-details.html" class="text-inherit">
-                                        F&B Service, Mixology, Barista
-                                    </a>
-                                </h3>
-                                <div class="course-meta">
-                                    <span>Teaching factory dengan nuansa dan fasilitas standar industri yang mendukung pembelajaran fundamental dunia kuliner.</span>
+                            <div class="course-content3">
+                                <div class="row">
+                                    <span class="col-auto facility-tag-bg">{{ $facility->title }}</span>
+                                    <span class="col-auto facility-tag-bg2">{{ $facility->title }}</span>
+                                    <img src="{{ Storage::url($facility->icon) }}" class="facility-tag-img ms-auto">
+                                </div>
+                                <div class="course-content">
+                                    <h3 class="h5 course-name">
+                                        <a href="{{ route('fasilitas') }}" class="text-inherit">
+                                            {{ $facility->subtitle }}
+                                        </a>
+                                    </h3>
+                                    <div class="course-meta">
+                                        <span>{{ strip_tags($facility->short_description) }}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-xl-4"
-                     data-aos="fade-up"
-                     data-aos-duration="1000"
-                     data-aos-anchor-placement="top-bottom"
-                     data-aos-delay="100">
-                    <div class="course-style2">
-                        <div class="course-img2">
-                            <a href="{{ route('fasilitas') }}">
-                                <img class="w-100"
-                                    src="/img/course/alenia-kitchen.jpg"
-                                    alt="Course Img"/>
-                            </a>
-                        </div>
-                        <div class="course-content3">
-                            <div class="row">
-                                <span class="col-auto facility-tag-bg">Alenia Kitchen</span>
-                                <span class="col-auto facility-tag-bg2">Alenia Kitchen</span>
-                                <img src="/img/course/Kitchen.png" class="facility-tag-img ms-auto">
-                            </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name">
-                                    <a href="course-details.html"
-                                       class="text-inherit">
-                                        F&B Product, Hot Kitchen, Bakery
-                                    </a>
-                                </h3>
-                                <div class="course-meta">
-                                    <span>Teaching factory dengan nuansa dan fasilitas standar industri yang mendukung pembelajaran fundamental dunia kuliner.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-4"
-                     data-aos="fade-up"
-                     data-aos-duration="1000"
-                     data-aos-delay="200">
-                    <div class="course-style2">
-                        <div class="course-img2">
-                            <a href="{{ route('fasilitas') }}">
-                                <img class="w-100"
-                                    src="/img/course/alphasuite.jpg"
-                                    alt="Course Img"/>
-                            </a>
-                        </div>
-                        <div class="course-content3">
-                            <div class="row">
-                                <span class="col-auto facility-tag-bg">Alpha Suite</span>
-                                <span class="col-auto facility-tag-bg2">Alpha Suite</span>
-                                <img src="/img/course/Room.png" class="facility-tag-img ms-auto">
-                            </div>
-                            <div class="course-content">
-                                <h3 class="h5 course-name">
-                                    <a href="course-details.html"
-                                       class="text-inherit">
-                                        Housekeeping, Public Area
-                                    </a>
-                                </h3>
-                                <div class="course-meta">
-                                    <span>Ruangan simulasi dengan desain modern dan minimalis yang digunakan sebagai lingkungan praktek untuk menjelajahi konsep dasar operasional kamar.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+{{--                <div class="col-sm-6 col-xl-4"--}}
+{{--                     data-aos="fade-up"--}}
+{{--                     data-aos-duration="1000">--}}
+{{--                    <div class="course-style2">--}}
+{{--                        <div class="course-img2">--}}
+{{--                            <a href="{{ route('fasilitas') }}">--}}
+{{--                                <img class="w-100"--}}
+{{--                                    src="/img/course/fb-service.jpg"--}}
+{{--                                    alt="Course Img"/>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                        <div class="course-content3">--}}
+{{--                            <div class="row">--}}
+{{--                                <span class="col-auto facility-tag-bg">Sensory Gastro Lab</span>--}}
+{{--                                <span class="col-auto facility-tag-bg2">Sensory Gastro Lab</span>--}}
+{{--                                <img src="/img/course/Restaurant.png" class="facility-tag-img ms-auto">--}}
+{{--                            </div>--}}
+{{--                            <div class="course-content">--}}
+{{--                                <h3 class="h5 course-name">--}}
+{{--                                    <a href="course-details.html" class="text-inherit">--}}
+{{--                                        F&B Service, Mixology, Barista--}}
+{{--                                    </a>--}}
+{{--                                </h3>--}}
+{{--                                <div class="course-meta">--}}
+{{--                                    <span>Teaching factory dengan nuansa dan fasilitas standar industri yang mendukung pembelajaran fundamental dunia kuliner.</span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-sm-6 col-xl-4"--}}
+{{--                     data-aos="fade-up"--}}
+{{--                     data-aos-duration="1000"--}}
+{{--                     data-aos-anchor-placement="top-bottom"--}}
+{{--                     data-aos-delay="100">--}}
+{{--                    <div class="course-style2">--}}
+{{--                        <div class="course-img2">--}}
+{{--                            <a href="{{ route('fasilitas') }}">--}}
+{{--                                <img class="w-100"--}}
+{{--                                    src="/img/course/alenia-kitchen.jpg"--}}
+{{--                                    alt="Course Img"/>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                        <div class="course-content3">--}}
+{{--                            <div class="row">--}}
+{{--                                <span class="col-auto facility-tag-bg">Alenia Kitchen</span>--}}
+{{--                                <span class="col-auto facility-tag-bg2">Alenia Kitchen</span>--}}
+{{--                                <img src="/img/course/Kitchen.png" class="facility-tag-img ms-auto">--}}
+{{--                            </div>--}}
+{{--                            <div class="course-content">--}}
+{{--                                <h3 class="h5 course-name">--}}
+{{--                                    <a href="course-details.html"--}}
+{{--                                       class="text-inherit">--}}
+{{--                                        F&B Product, Hot Kitchen, Bakery--}}
+{{--                                    </a>--}}
+{{--                                </h3>--}}
+{{--                                <div class="course-meta">--}}
+{{--                                    <span>Teaching factory dengan nuansa dan fasilitas standar industri yang mendukung pembelajaran fundamental dunia kuliner.</span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-sm-6 col-xl-4"--}}
+{{--                     data-aos="fade-up"--}}
+{{--                     data-aos-duration="1000"--}}
+{{--                     data-aos-delay="200">--}}
+{{--                    <div class="course-style2">--}}
+{{--                        <div class="course-img2">--}}
+{{--                            <a href="{{ route('fasilitas') }}">--}}
+{{--                                <img class="w-100"--}}
+{{--                                    src="/img/course/alphasuite.jpg"--}}
+{{--                                    alt="Course Img"/>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                        <div class="course-content3">--}}
+{{--                            <div class="row">--}}
+{{--                                <span class="col-auto facility-tag-bg">Alpha Suite</span>--}}
+{{--                                <span class="col-auto facility-tag-bg2">Alpha Suite</span>--}}
+{{--                                <img src="/img/course/Room.png" class="facility-tag-img ms-auto">--}}
+{{--                            </div>--}}
+{{--                            <div class="course-content">--}}
+{{--                                <h3 class="h5 course-name">--}}
+{{--                                    <a href="course-details.html"--}}
+{{--                                       class="text-inherit">--}}
+{{--                                        Housekeeping, Public Area--}}
+{{--                                    </a>--}}
+{{--                                </h3>--}}
+{{--                                <div class="course-meta">--}}
+{{--                                    <span>Ruangan simulasi dengan desain modern dan minimalis yang digunakan sebagai lingkungan praktek untuk menjelajahi konsep dasar operasional kamar.</span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </section>

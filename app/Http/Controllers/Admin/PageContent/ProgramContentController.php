@@ -100,9 +100,12 @@ class ProgramContentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $slug)
     {
-        //
+        $program = ProgramContent::with('program_photos', 'program_career_companies', 'program_career_salaries')->findOrFail($slug,'slug');
+        return view('pages.program-detail', [
+            'program' => $program
+        ]);
     }
 
     /**

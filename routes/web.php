@@ -43,6 +43,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomePageController::class, 'show'])->name('home');
 Route::get('/about-us', [AboutPageController::class, 'show'])->name('about-us');
+Route::get('/programs/{slug}', [ProgramContentController::class, 'show'])->name('program-detail');
 Route::get('/programs/front-office', function () {
     return view('pages.front_office');
 })->name('front-office');

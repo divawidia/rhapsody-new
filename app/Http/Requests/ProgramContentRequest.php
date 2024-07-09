@@ -37,7 +37,7 @@ class ProgramContentRequest extends FormRequest
             'interest_percentage' => ['required', 'numeric'],
             'alumnies' => ['required'],
             'program_icon' => ['image'],
-            'programs.*' => ['required', 'exist:programs,id'],
+            'program_id' => ['required'],
             'status' => ['in:1,0'],
         ];
     }

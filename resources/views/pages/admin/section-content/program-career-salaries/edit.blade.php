@@ -21,7 +21,7 @@
         @endif
         <div class="row">
             <div class="col-12">
-                <form action="{{ route('career-company.update', ['pelatihan'=>$karir->program_content_id, 'company'=>$company]) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('prospek-karir.update', ['pelatihan'=>$karir->program_content_id, 'karir'=>$karir]) }}" method="post" enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
                     <div class="row">

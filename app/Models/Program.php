@@ -16,6 +16,6 @@ class Program extends Model
     ];
     protected $table = 'programs';
     public function program_contents(){
-        return $this->hasMany(FacilityContent::class, 'program_id', 'id');
+        return $this->hasMany(ProgramContent::class, 'program_id', 'id');
     }
 }
