@@ -25,6 +25,7 @@ use App\Http\Controllers\Admin\SiswaSmaSmkController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -103,15 +104,12 @@ Route::prefix('blogs-news-events')
         Route::get('/user/{name}', [PostController::class, 'index_by_user'])->name('blogs-news-events-user');
     });
 
-//Route::get('/password/forgot', [UserController::class, 'forgot_password_request'])->name('forgot-password.request');
-//Route::post('/password/forgot', [UserController::class, 'forgot_password_submit'])->name('forgot-password.submit');
-//
-//Route::get('/password/reset/{token}', [UserController::class, 'reset_password_request'])->name('reset-password.request');
-//Route::post('/password/reset', [UserController::class, 'reset_password_submit'])->name('reset-password.submit');
 Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+
+Route::get('/waiting-approval', function (){ return view('auth.verify');});
 
 Route::prefix('admin')
     ->namespace('App\Http\Controllers\Admin')
@@ -196,5 +194,6 @@ Route::prefix('admin')
                 Route::resource('faq', FaqController::class);
             });
     });
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout-admin');
 Auth::routes();
+Route::post('login', [LoginController::class, 'login'])->name('login-admin');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');

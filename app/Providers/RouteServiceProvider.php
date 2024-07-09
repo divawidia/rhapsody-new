@@ -18,6 +18,8 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/admin';
+    public const LOGIN = '/login';
+    public const WAITING_APPROVAL = '/waiting-approval';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.

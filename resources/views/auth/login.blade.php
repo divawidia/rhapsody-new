@@ -37,9 +37,14 @@
                                             <strong>{{ session('status') }}</strong>
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                         </div>
+                                    @elseif(session('error'))
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <strong>{{ session('error') }}</strong>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
                                     @endif
                                     <div class="p-2 mt-4">
-                                        <form method="POST" action="{{ route('login') }}" class="auth-input">
+                                        <form method="POST" action="{{ route('login-admin') }}" class="auth-input">
                                             @csrf
                                             <div class="mb-2">
                                                 <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
@@ -73,44 +78,9 @@
                                                 </div>
                                             </div>
 
-{{--                                            <div class="form-check">--}}
-{{--                                                <input class="form-check-input" type="checkbox" name="remember"--}}
-{{--                                                       id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
-{{--                                                <label class="form-check-label" for="remember">Remember--}}
-{{--                                                    me</label>--}}
-{{--                                            </div>--}}
-
-                                            <div class="mt-4">
-                                                <button class="btn btn-primary w-100" type="submit">Sign
-                                                    In</button>
+                                            <div class="my-5">
+                                                <button class="btn btn-primary w-100" type="submit">Sign In</button>
                                             </div>
-
-{{--                                            <div class="mt-4 text-center">--}}
-{{--                                                <div class="signin-other-title">--}}
-{{--                                                    <h5 class="font-size-14 mb-3 mt-2 title"> Sign in with </h5>--}}
-{{--                                                </div>--}}
-
-{{--                                                <ul class="list-inline mt-2">--}}
-{{--                                                    <li class="list-inline-item">--}}
-{{--                                                        <a href="javascript:void(0)"--}}
-{{--                                                           class="social-list-item bg-primary text-white border-primary">--}}
-{{--                                                            <i class="bx bxl-facebook"></i>--}}
-{{--                                                        </a>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li class="list-inline-item">--}}
-{{--                                                        <a href="javascript:void(0)"--}}
-{{--                                                           class="social-list-item bg-info text-white border-info">--}}
-{{--                                                            <i class="bx bxl-linkedin"></i>--}}
-{{--                                                        </a>--}}
-{{--                                                    </li>--}}
-{{--                                                    <li class="list-inline-item">--}}
-{{--                                                        <a href="javascript:void(0)"--}}
-{{--                                                           class="social-list-item bg-danger text-white border-danger">--}}
-{{--                                                            <i class="bx bxl-google"></i>--}}
-{{--                                                        </a>--}}
-{{--                                                    </li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
                                             <div class="mt-4 text-center">
                                                 <p class="mb-0">Don't have an account ? <a href="{{ route('register') }}"
                                                                                            class="fw-medium text-primary"> Register</a></p>

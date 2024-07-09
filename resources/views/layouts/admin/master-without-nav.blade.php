@@ -22,6 +22,7 @@
     <!-- vendor-scripts -->
 
     @include('layouts.admin.vendor-scripts')
+    @include('sweetalert::alert')
 
 </body>
 

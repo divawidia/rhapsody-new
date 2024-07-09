@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use http\Env\Request;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {
@@ -40,8 +42,28 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function logout() {
+    public function login(Request $request)
+    {
+        $data = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required', 'string']
+        ]);
+
+        if (Auth::attempt(['email' => $data['email'], 'password' => $data['password'], 'roles' => 'ADMIN', 'status' => '1'])){
+            Alert::success('Hore!', 'Anda berhasil login!');
+            $request->session()->regenerate();
+            return redirect($this->redirectTo);
+        }else{
+            Alert::error('Akun anda tidak valid!');
+            return back();
+        }
+    }
+
+    public function logout(Request $request): RedirectResponse {
         Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        Alert::success('Anda berhasil logout!');
         return redirect('/login');
     }
 }
