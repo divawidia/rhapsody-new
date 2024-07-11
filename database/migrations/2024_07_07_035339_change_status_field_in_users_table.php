@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->enum('status', [0,1])->change();
+            $table->enum('status', [0,1]);
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->tinyInteger('status')->change();
+            $table->dropColumn('status');
         });
     }
 };
