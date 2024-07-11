@@ -12,7 +12,7 @@ git reset --hard
 git pull origin main
 
 # Install composer dependencies
-composer update --no-dev --no-interaction --prefer-dist --optimize-autoloader
+composer update --optimize-autoloader --ignore-platform-reqs
 
 # Clear the old cache
 php artisan clear-compiled
