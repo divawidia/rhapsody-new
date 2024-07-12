@@ -28,6 +28,20 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="mb-3 row">
+                                <label class="col-md-2 col-form-label" for="status">Status Publish Kategori</label>
+                                <div class="col-md-10">
+                                    <select class="form-select" name="status" id="status" data-placeholder="Pilih Status Kategori" required>
+                                        <option value="" selected disabled>Pilih Status Artikel</option>
+                                        @foreach([1 => "Publish", 0 => "Private"] AS $status => $status_label)
+                                            <option value="{{ $status }}">{{ $status_label }}</option>
+                                        @endforeach
+                                        @error('status')
+                                        <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                        @enderror
+                                    </select>
+                                </div>
+                            </div>
                             <div class="mt-4">
                                 <button type="submit" class="btn btn-primary w-md">Submit</button>
                             </div>
@@ -38,7 +52,14 @@
         </div>
         <!-- end row -->
     @endsection
-    @section('scripts')
-        <!-- App js -->
-        <script src="{{ URL::asset('build/js/app.js') }}"></script>
-@endsection
+    @push('addon-script')
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#status').select2({
+                    placeholder: "Pilih Status Publikasi",
+                    width:'100%',
+                    theme: 'bootstrap-5'
+                });
+            });
+        </script>
+    @endpush

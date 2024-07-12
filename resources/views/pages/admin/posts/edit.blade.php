@@ -94,8 +94,6 @@
     @endsection
 
     @section('scripts')
-        <!-- App js -->
-        <script src="{{ URL::asset('build/js/app.js') }}"></script>
         <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
 
         <script>

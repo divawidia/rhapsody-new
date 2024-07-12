@@ -93,7 +93,6 @@
         <!-- end row -->
     @endsection
     @push('addon-script')
-        <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.8/datatables.min.js"></script>
         <script>
             // AJAX DataTable
             var datatable = $('#categoryTable').DataTable({
@@ -119,7 +118,6 @@
                 ]
             });
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#status').select2({

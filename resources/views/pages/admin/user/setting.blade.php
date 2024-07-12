@@ -85,8 +85,6 @@
 
     @section('scripts')
         <script src="{{ URL::asset('build/js/pages/profile.init.js') }}"></script>
-        <!-- App js -->
-        <script src="{{ URL::asset('build/js/app.js') }}"></script>
         <script>
             photo_url.onchange = evt => {
                 preview = document.getElementById('preview');

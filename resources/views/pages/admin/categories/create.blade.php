@@ -52,15 +52,3 @@
         </div>
         <!-- end row -->
     @endsection
-    @section('scripts')
-        <!-- App js -->
-        <script src="{{ URL::asset('build/js/app.js') }}"></script>
-{{--        <script type="text/javascript">--}}
-{{--            $(document).ready(function() {--}}
-{{--                $('#status').select2({--}}
-{{--                    width:'100%',--}}
-{{--                    theme: 'bootstrap-5'--}}
-{{--                });--}}
-{{--            });--}}
-{{--        </script>--}}
-@endsection

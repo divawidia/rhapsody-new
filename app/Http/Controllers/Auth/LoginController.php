@@ -51,6 +51,7 @@ class LoginController extends Controller
 
         if (Auth::attempt(['email' => $data['email'], 'password' => $data['password'], 'roles' => 'ADMIN', 'status' => '1'])){
             Alert::success('Hore!', 'Anda berhasil login!');
+            Alert::toast('Selamat datang ' . Auth::user()->name, 'success');
             $request->session()->regenerate();
             return redirect($this->redirectTo);
         }else{

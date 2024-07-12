@@ -431,64 +431,64 @@ File: Main Js File
         };
     }
 
-    function initSettings() {
-        // Eva Icons
-        eva.replace();
-
-        if (window.sessionStorage) {
-            var alreadyVisited = sessionStorage.getItem("is_visited");
-            if (!alreadyVisited) {
-                sessionStorage.setItem("is_visited", "layout-direction-ltr");
-            } else {
-                var value = document.querySelector("#" + alreadyVisited);
-                if (value !== null) {
-                    value.checked = true;
-                    changeDirection(alreadyVisited);
-                }
-            }
-        }
-
-        var body = document.getElementsByTagName("body")[0];
-        if (
-            body.hasAttribute("data-layout") &&
-            body.getAttribute("data-layout") == "horizontal"
-        ) {
-            updateRadio("layout-horizontal");
-            document.getElementById("sidebar-setting").style.display = "none";
-            document.getElementsByClassName("vertical-menu")[0].style.display =
-                "none";
-            document.getElementsByClassName(
-                "ishorizontal-topbar",
-            )[0].style.display = "block";
-            document.getElementsByClassName(
-                "isvertical-topbar",
-            )[0].style.display = "none";
-            document.getElementsByClassName("topnav")[0].style.display =
-                "block";
-            document.getElementsByClassName("footer")[0].style.display =
-                "block";
-            if (body.hasAttribute("data-topbar") == "light") {
-                updateRadio("topbar-color-light");
-                document.body.setAttribute("data-topbar", "light");
-            } else if (body.hasAttribute("data-topbar") == "dark") {
-                updateRadio("topbar-color-dark");
-                document.body.setAttribute("data-topbar", "dark");
-            }
-            document.body.removeAttribute("data-sidebar");
-        } else {
-            // document.body.setAttribute("data-sidebar", "light");
-            document.getElementsByClassName(
-                "isvertical-topbar",
-            )[0].style.display = "block";
-            updateRadio("layout-vertical");
-            document.getElementsByClassName("topnav")[0].style.display = "none";
-            // document.getElementsByClassName("vertical-menu")[0].style.display =
-            //     "block";
-            document.getElementsByClassName(
-                "ishorizontal-topbar",
-            )[0].style.display = "none";
-        }
-    }
+    // function initSettings() {
+    //     // Eva Icons
+    //     eva.replace();
+    //
+    //     if (window.sessionStorage) {
+    //         var alreadyVisited = sessionStorage.getItem("is_visited");
+    //         if (!alreadyVisited) {
+    //             sessionStorage.setItem("is_visited", "layout-direction-ltr");
+    //         } else {
+    //             var value = document.querySelector("#" + alreadyVisited);
+    //             if (value !== null) {
+    //                 value.checked = true;
+    //                 changeDirection(alreadyVisited);
+    //             }
+    //         }
+    //     }
+    //
+    //     var body = document.getElementsByTagName("body")[0];
+    //     if (
+    //         body.hasAttribute("data-layout") &&
+    //         body.getAttribute("data-layout") == "horizontal"
+    //     ) {
+    //         updateRadio("layout-horizontal");
+    //         document.getElementById("sidebar-setting").style.display = "none";
+    //         document.getElementsByClassName("vertical-menu")[0].style.display =
+    //             "none";
+    //         document.getElementsByClassName(
+    //             "ishorizontal-topbar",
+    //         )[0].style.display = "block";
+    //         document.getElementsByClassName(
+    //             "isvertical-topbar",
+    //         )[0].style.display = "none";
+    //         document.getElementsByClassName("topnav")[0].style.display =
+    //             "block";
+    //         document.getElementsByClassName("footer")[0].style.display =
+    //             "block";
+    //         if (body.hasAttribute("data-topbar") == "light") {
+    //             updateRadio("topbar-color-light");
+    //             document.body.setAttribute("data-topbar", "light");
+    //         } else if (body.hasAttribute("data-topbar") == "dark") {
+    //             updateRadio("topbar-color-dark");
+    //             document.body.setAttribute("data-topbar", "dark");
+    //         }
+    //         document.body.removeAttribute("data-sidebar");
+    //     } else {
+    //         // document.body.setAttribute("data-sidebar", "light");
+    //         document.getElementsByClassName(
+    //             "isvertical-topbar",
+    //         )[0].style.display = "block";
+    //         updateRadio("layout-vertical");
+    //         document.getElementsByClassName("topnav")[0].style.display = "none";
+    //         // document.getElementsByClassName("vertical-menu")[0].style.display =
+    //         //     "block";
+    //         document.getElementsByClassName(
+    //             "ishorizontal-topbar",
+    //         )[0].style.display = "none";
+    //     }
+    // }
 
     function changeDirection(id) {
         if (
@@ -522,241 +522,240 @@ File: Main Js File
             document.getElementById(radioId).checked = true;
     }
 
-    function layoutSetting() {
-        var body = document.body;
-        var rightSidebar = document.getElementsByClassName("right-bar-toggle");
-
-        rightSidebar.forEach(function (element) {
-            element.addEventListener("click", function (e) {
-                body.classList.toggle("right-bar-enabled");
-            });
-        });
-
-        body.addEventListener("click", function (e) {
-            if (
-                e.target.parentElement.classList.contains(
-                    "right-bar-toggle-close",
-                )
-            ) {
-                document.body.classList.remove("right-bar-enabled");
-                return;
-            } else if (e.target.closest(".right-bar-toggle, .right-bar")) {
-                return;
-            }
-            document.body.classList.remove("right-bar-enabled");
-            return;
-        });
-        var body = document.getElementsByTagName("body")[0];
-        if (
-            body.hasAttribute("data-layout") &&
-            body.getAttribute("data-layout") == "horizontal"
-        ) {
-            updateRadio("layout-horizontal");
-            if (body.hasAttribute("data-topbar") == "light") {
-                updateRadio("topbar-color-light");
-                document.body.setAttribute("data-topbar", "light");
-            } else if (body.hasAttribute("data-topbar") == "dark") {
-                updateRadio("topbar-color-dark");
-                document.body.setAttribute("data-topbar", "dark");
-            }
-
-            document.getElementById("sidebar-setting").style.display = "none";
-            document.body.removeAttribute("data-sidebar");
-
-            //    (body.hasAttribute("data-topbar") ? body.removeAttribute("data-topbar") : body.setAttribute("data-topbar", ""));
-        }
-        // else {
-        //     updateRadio('layout-vertical');
-        //     document.getElementById('sidebar-setting').style.display = "block";
-        // }
-        body.hasAttribute("data-layout-mode") &&
-        body.getAttribute("data-layout-mode") == "dark"
-            ? updateRadio("layout-mode-dark")
-            : updateRadio("layout-mode-light");
-        body.hasAttribute("data-layout-size") &&
-        body.getAttribute("data-layout-size") == "boxed"
-            ? updateRadio("layout-width-boxed")
-            : updateRadio("layout-width-fluid");
-        body.hasAttribute("data-layout-scrollable") &&
-        body.getAttribute("data-layout-scrollable") == "true"
-            ? updateRadio("layout-position-scrollable")
-            : updateRadio("layout-position-fixed");
-        body.hasAttribute("data-topbar") &&
-        body.getAttribute("data-topbar") == "dark"
-            ? updateRadio("topbar-color-dark")
-            : updateRadio("topbar-color-light");
-        body.hasAttribute("data-sidebar-size") &&
-        body.getAttribute("data-sidebar-size") == "sm"
-            ? updateRadio("sidebar-size-small")
-            : body.hasAttribute("data-sidebar-size") &&
-              body.getAttribute("data-sidebar-size") == "md"
-            ? updateRadio("sidebar-size-compact")
-            : updateRadio("sidebar-size-default");
-        body.hasAttribute("data-sidebar") &&
-        body.getAttribute("data-sidebar") == "brand"
-            ? updateRadio("sidebar-color-brand")
-            : body.hasAttribute("data-sidebar") &&
-              body.getAttribute("data-sidebar") == "dark"
-            ? updateRadio("sidebar-color-dark")
-            : updateRadio("sidebar-color-light");
-        document.getElementsByTagName("html")[0].hasAttribute("dir") &&
-        document.getElementsByTagName("html")[0].getAttribute("dir") == "rtl"
-            ? updateRadio("layout-direction-rtl")
-            : updateRadio("layout-direction-ltr");
-
-        // on layout change
-        document
-            .querySelectorAll("input[name='layout'")
-            .forEach(function (input) {
-                input.addEventListener("change", function (e) {
-                    if (e && e.target && e.target.value == "vertical") {
-                        updateRadio("layout-vertical");
-                        updateRadio("topbar-color-light");
-                        document.body.setAttribute("data-layout", "vertical");
-                        document.body.setAttribute("data-topbar", "light");
-                        document.getElementsByClassName(
-                            "isvertical-topbar",
-                        )[0].style.display = "block";
-                        document.getElementsByClassName(
-                            "ishorizontal-topbar",
-                        )[0].style.display = "none";
-                        document.getElementsByClassName(
-                            "vertical-menu",
-                        )[0].style.display = "block";
-                        document.getElementById(
-                            "sidebar-setting",
-                        ).style.display = "block";
-                        document.getElementsByClassName(
-                            "topnav",
-                        )[0].style.display = "none";
-                        if (window.innerWidth <= 992) {
-                            document
-                                .getElementsByClassName("vertical-menu")[0]
-                                .removeAttribute("style");
-                        }
-                        document.getElementsByClassName(
-                            "footer",
-                        )[0].style.display = "none";
-                    } else {
-                        updateRadio("layout-horizontal");
-                        updateRadio("topbar-color-light");
-                        document.body.setAttribute("data-topbar", "light");
-                        document.body.setAttribute("data-layout", "horizontal");
-                        document.body.removeAttribute("data-sidebar");
-                        document.getElementById(
-                            "sidebar-setting",
-                        ).style.display = "none";
-                        document.getElementsByClassName(
-                            "vertical-menu",
-                        )[0].style.display = "none";
-                        document.getElementsByClassName(
-                            "ishorizontal-topbar",
-                        )[0].style.display = "block";
-
-                        document.getElementsByClassName(
-                            "isvertical-topbar",
-                        )[0].style.display = "none";
-
-                        document.getElementsByClassName(
-                            "topnav",
-                        )[0].style.display = "block";
-                        document.getElementsByClassName(
-                            "footer",
-                        )[0].style.display = "block";
-                    }
-                });
-            });
-
-        // on layout light mode change
-        document
-            .querySelectorAll("input[name='layout-mode']")
-            .forEach(function (input) {
-                input.addEventListener("change", function (e) {
-                    if (e && e.target && e.target.value) {
-                        if (e.target.value == "light") {
-                            document.body.setAttribute(
-                                "data-layout-mode",
-                                "light",
-                            );
-                            document.body.setAttribute("data-topbar", "light");
-                            document.body.setAttribute("data-sidebar", "light");
-                            body.hasAttribute("data-layout") &&
-                            body.getAttribute("data-layout") == "horizontal"
-                                ? ""
-                                : document.body.setAttribute(
-                                      "data-sidebar",
-                                      "light",
-                                  );
-                            updateRadio("topbar-color-light");
-                            updateRadio("sidebar-color-light");
-                        } else if (e.target.value == "dark") {
-                            document.body.setAttribute(
-                                "data-layout-mode",
-                                "dark",
-                            );
-                            document.body.setAttribute("data-topbar", "dark");
-                            document.body.setAttribute("data-sidebar", "dark");
-                            body.hasAttribute("data-layout") &&
-                            body.getAttribute("data-layout") == "horizontal"
-                                ? ""
-                                : document.body.setAttribute(
-                                      "data-sidebar",
-                                      "dark",
-                                  );
-                            updateRadio("topbar-color-dark");
-                            // updateRadio('sidebar-color-dark');
-                        } else if (e.target.value == "bordered") {
-                            document.body.setAttribute(
-                                "data-layout-mode",
-                                "bordered",
-                            );
-                        }
-                    }
-                });
-            });
-
-        // on layout direction change
-        document
-            .querySelectorAll("input[name='layout-direction']")
-            .forEach(function (input) {
-                input.addEventListener("change", function (e) {
-                    if (e && e.target && e.target.value) {
-                        if (e.target.value == "ltr") {
-                            document
-                                .getElementsByTagName("html")[0]
-                                .removeAttribute("dir");
-                            document
-                                .getElementById("bootstrap-style")
-                                .setAttribute(
-                                    "href",
-                                    "build/css/bootstrap.min.css",
-                                );
-                            document
-                                .getElementById("app-style")
-                                .setAttribute("href", "build/css/app.min.css");
-                            sessionStorage.setItem(
-                                "is_visited",
-                                "layout-direction-ltr",
-                            );
-                        } else {
-                            document
-                                .getElementById("app-style")
-                                .setAttribute(
-                                    "href",
-                                    "build/css/app.min.rtl.css",
-                                );
-                            document
-                                .getElementsByTagName("html")[0]
-                                .setAttribute("dir", "rtl");
-                            sessionStorage.setItem(
-                                "is_visited",
-                                "layout-direction-rtl",
-                            );
-                        }
-                    }
-                });
-            });
-    }
+    // function layoutSetting() {
+    //     var body = document.body;
+    //     var rightSidebar = document.getElementsByClassName("right-bar-toggle");
+    //
+    //     rightSidebar.forEach(function (element) {
+    //         element.addEventListener("click", function (e) {
+    //             body.classList.toggle("right-bar-enabled");
+    //         });
+    //     });
+    //
+    //     body.addEventListener("click", function (e) {
+    //         if (
+    //             e.target.parentElement.classList.contains(
+    //                 "right-bar-toggle-close",
+    //             )
+    //         ) {
+    //             document.body.classList.remove("right-bar-enabled");
+    //             return;
+    //         } else if (e.target.closest(".right-bar-toggle, .right-bar")) {
+    //             return;
+    //         }
+    //         document.body.classList.remove("right-bar-enabled");
+    //         return;
+    //     });
+    //     var body = document.getElementsByTagName("body")[0];
+    //     if (
+    //         body.hasAttribute("data-layout") &&
+    //         body.getAttribute("data-layout") == "horizontal"
+    //     ) {
+    //         updateRadio("layout-horizontal");
+    //         if (body.hasAttribute("data-topbar") == "light") {
+    //             updateRadio("topbar-color-light");
+    //             document.body.setAttribute("data-topbar", "light");
+    //         } else if (body.hasAttribute("data-topbar") == "dark") {
+    //             updateRadio("topbar-color-dark");
+    //             document.body.setAttribute("data-topbar", "dark");
+    //         }
+    //
+    //         document.getElementById("sidebar-setting").style.display = "none";
+    //         document.body.removeAttribute("data-sidebar");
+    //
+    //         //    (body.hasAttribute("data-topbar") ? body.removeAttribute("data-topbar") : body.setAttribute("data-topbar", ""));
+    //     } else {
+    //         updateRadio("layout-vertical");
+    //         document.getElementById("sidebar-setting").style.display = "block";
+    //     }
+    //     body.hasAttribute("data-layout-mode") &&
+    //     body.getAttribute("data-layout-mode") == "dark"
+    //         ? updateRadio("layout-mode-dark")
+    //         : updateRadio("layout-mode-light");
+    //     body.hasAttribute("data-layout-size") &&
+    //     body.getAttribute("data-layout-size") == "boxed"
+    //         ? updateRadio("layout-width-boxed")
+    //         : updateRadio("layout-width-fluid");
+    //     body.hasAttribute("data-layout-scrollable") &&
+    //     body.getAttribute("data-layout-scrollable") == "true"
+    //         ? updateRadio("layout-position-scrollable")
+    //         : updateRadio("layout-position-fixed");
+    //     body.hasAttribute("data-topbar") &&
+    //     body.getAttribute("data-topbar") == "dark"
+    //         ? updateRadio("topbar-color-dark")
+    //         : updateRadio("topbar-color-light");
+    //     body.hasAttribute("data-sidebar-size") &&
+    //     body.getAttribute("data-sidebar-size") == "sm"
+    //         ? updateRadio("sidebar-size-small")
+    //         : body.hasAttribute("data-sidebar-size") &&
+    //           body.getAttribute("data-sidebar-size") == "md"
+    //         ? updateRadio("sidebar-size-compact")
+    //         : updateRadio("sidebar-size-default");
+    //     body.hasAttribute("data-sidebar") &&
+    //     body.getAttribute("data-sidebar") == "brand"
+    //         ? updateRadio("sidebar-color-brand")
+    //         : body.hasAttribute("data-sidebar") &&
+    //           body.getAttribute("data-sidebar") == "dark"
+    //         ? updateRadio("sidebar-color-dark")
+    //         : updateRadio("sidebar-color-light");
+    //     document.getElementsByTagName("html")[0].hasAttribute("dir") &&
+    //     document.getElementsByTagName("html")[0].getAttribute("dir") == "rtl"
+    //         ? updateRadio("layout-direction-rtl")
+    //         : updateRadio("layout-direction-ltr");
+    //
+    //     // on layout change
+    //     document
+    //         .querySelectorAll("input[name='layout'")
+    //         .forEach(function (input) {
+    //             input.addEventListener("change", function (e) {
+    //                 if (e && e.target && e.target.value == "vertical") {
+    //                     updateRadio("layout-vertical");
+    //                     updateRadio("topbar-color-light");
+    //                     document.body.setAttribute("data-layout", "vertical");
+    //                     document.body.setAttribute("data-topbar", "light");
+    //                     document.getElementsByClassName(
+    //                         "isvertical-topbar",
+    //                     )[0].style.display = "block";
+    //                     document.getElementsByClassName(
+    //                         "ishorizontal-topbar",
+    //                     )[0].style.display = "none";
+    //                     document.getElementsByClassName(
+    //                         "vertical-menu",
+    //                     )[0].style.display = "block";
+    //                     document.getElementById(
+    //                         "sidebar-setting",
+    //                     ).style.display = "block";
+    //                     document.getElementsByClassName(
+    //                         "topnav",
+    //                     )[0].style.display = "none";
+    //                     if (window.innerWidth <= 992) {
+    //                         document
+    //                             .getElementsByClassName("vertical-menu")[0]
+    //                             .removeAttribute("style");
+    //                     }
+    //                     document.getElementsByClassName(
+    //                         "footer",
+    //                     )[0].style.display = "none";
+    //                 } else {
+    //                     updateRadio("layout-horizontal");
+    //                     updateRadio("topbar-color-light");
+    //                     document.body.setAttribute("data-topbar", "light");
+    //                     document.body.setAttribute("data-layout", "horizontal");
+    //                     document.body.removeAttribute("data-sidebar");
+    //                     document.getElementById(
+    //                         "sidebar-setting",
+    //                     ).style.display = "none";
+    //                     document.getElementsByClassName(
+    //                         "vertical-menu",
+    //                     )[0].style.display = "none";
+    //                     document.getElementsByClassName(
+    //                         "ishorizontal-topbar",
+    //                     )[0].style.display = "block";
+    //
+    //                     document.getElementsByClassName(
+    //                         "isvertical-topbar",
+    //                     )[0].style.display = "none";
+    //
+    //                     document.getElementsByClassName(
+    //                         "topnav",
+    //                     )[0].style.display = "block";
+    //                     document.getElementsByClassName(
+    //                         "footer",
+    //                     )[0].style.display = "block";
+    //                 }
+    //             });
+    //         });
+    //
+    //     // on layout light mode change
+    //     document
+    //         .querySelectorAll("input[name='layout-mode']")
+    //         .forEach(function (input) {
+    //             input.addEventListener("change", function (e) {
+    //                 if (e && e.target && e.target.value) {
+    //                     if (e.target.value == "light") {
+    //                         document.body.setAttribute(
+    //                             "data-layout-mode",
+    //                             "light",
+    //                         );
+    //                         document.body.setAttribute("data-topbar", "light");
+    //                         document.body.setAttribute("data-sidebar", "light");
+    //                         body.hasAttribute("data-layout") &&
+    //                         body.getAttribute("data-layout") == "horizontal"
+    //                             ? ""
+    //                             : document.body.setAttribute(
+    //                                   "data-sidebar",
+    //                                   "light",
+    //                               );
+    //                         updateRadio("topbar-color-light");
+    //                         updateRadio("sidebar-color-light");
+    //                     } else if (e.target.value == "dark") {
+    //                         document.body.setAttribute(
+    //                             "data-layout-mode",
+    //                             "dark",
+    //                         );
+    //                         document.body.setAttribute("data-topbar", "dark");
+    //                         document.body.setAttribute("data-sidebar", "dark");
+    //                         body.hasAttribute("data-layout") &&
+    //                         body.getAttribute("data-layout") == "horizontal"
+    //                             ? ""
+    //                             : document.body.setAttribute(
+    //                                   "data-sidebar",
+    //                                   "dark",
+    //                               );
+    //                         updateRadio("topbar-color-dark");
+    //                         // updateRadio('sidebar-color-dark');
+    //                     } else if (e.target.value == "bordered") {
+    //                         document.body.setAttribute(
+    //                             "data-layout-mode",
+    //                             "bordered",
+    //                         );
+    //                     }
+    //                 }
+    //             });
+    //         });
+    //
+    //     // on layout direction change
+    //     document
+    //         .querySelectorAll("input[name='layout-direction']")
+    //         .forEach(function (input) {
+    //             input.addEventListener("change", function (e) {
+    //                 if (e && e.target && e.target.value) {
+    //                     if (e.target.value == "ltr") {
+    //                         document
+    //                             .getElementsByTagName("html")[0]
+    //                             .removeAttribute("dir");
+    //                         document
+    //                             .getElementById("bootstrap-style")
+    //                             .setAttribute(
+    //                                 "href",
+    //                                 "build/css/bootstrap.min.css",
+    //                             );
+    //                         document
+    //                             .getElementById("app-style")
+    //                             .setAttribute("href", "build/css/app.min.css");
+    //                         sessionStorage.setItem(
+    //                             "is_visited",
+    //                             "layout-direction-ltr",
+    //                         );
+    //                     } else {
+    //                         document
+    //                             .getElementById("app-style")
+    //                             .setAttribute(
+    //                                 "href",
+    //                                 "build/css/app.min.rtl.css",
+    //                             );
+    //                         document
+    //                             .getElementsByTagName("html")[0]
+    //                             .setAttribute("dir", "rtl");
+    //                         sessionStorage.setItem(
+    //                             "is_visited",
+    //                             "layout-direction-rtl",
+    //                         );
+    //                     }
+    //                 }
+    //             });
+    //         });
+    // }
 
     function initCheckAll() {
         var checkAll = document.getElementById("checkAll");
@@ -774,7 +773,7 @@ File: Main Js File
 
     function init() {
         initPreloader();
-        initSettings();
+        // initSettings();
         initMetisMenu();
         initCounterNumber();
         initLeftMenuCollapse();
@@ -784,7 +783,7 @@ File: Main Js File
         initDropdownMenu();
         initComponents();
         initLanguage();
-        layoutSetting();
+        // layoutSetting();
         initMenuItemScroll();
         initCheckAll();
     }
